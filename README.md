@@ -50,7 +50,7 @@ Naming convention is inspired BEM and exists to keep all elements and components
 
 ### HTML
 
-- ```<Element class="element _component_name --state_1 --state_2 />"
+- ```<Element class="element _component_name --state_1 --state_2 />```
 
 ### Tips
 - using the `-` dash to separate names and descriptors helps with double-click selecting the entire name, whereas underscores are included in the selection, dashes are not
