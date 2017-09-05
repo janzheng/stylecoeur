@@ -45,6 +45,7 @@ Naming convention is inspired BEM and exists to keep all elements and components
 - ```_component``` Styling component like Button, Form, etc. denoted with a leading underscore
 - ```_component_name_one``` Long multi-word names uses underscore 
 - ```_component--attribute``` Attributes are descriptors of the element or the component, like a 'container' or  'element--intro' to describe a certain part
+- ```_component-minor-cascading-attribute``` Cascading attributes are denoted with a simple dash. ```._color-bg-yellow``` defines a color component, the effect (bg), and yellow, or ```._font-sans``` defines a font component, sans-serif. I guess this follows the French way of following a noun with adjectives. (It's my preference!)
 - ```--state``` States describe the component or element, and are "floating" - in BEM these are ```.button--state-success``` but I prefer separating state from the element or component. This way you can reuse the --state flag for different elements and components, like ```._form --success``` and ```._button --success```
 
 
