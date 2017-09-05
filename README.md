@@ -45,7 +45,7 @@ Naming convention is inspired BEM and exists to keep all elements and components
 - ```_component``` Styling component like Button, Form, etc. denoted with a leading underscore
 - ```_component_name_one``` Long multi-word names uses underscore 
 - ```_component--attribute``` Attributes are descriptors of the element or the component, like a 'container' or  'element--intro' to describe a certain part
-- ```--state``` States describe the component or element, and are "floating" - in BEM these are ```.button--state-success``` but I prefer separating state from the element or component. This way you can reuse the --state flag for different elements and components, like ```._form --success``` and ```._button ---success```
+- ```--state``` States describe the component or element, and are "floating" - in BEM these are ```.button--state-success``` but I prefer separating state from the element or component. This way you can reuse the --state flag for different elements and components, like ```._form --success``` and ```._button --success```
 
 
 ### HTML
@@ -53,7 +53,7 @@ Naming convention is inspired BEM and exists to keep all elements and components
 - ```<Element class="element _component_name --state_1 --state_2 />```
 
 ### Tips
-- using the `-` dash to separate names and descriptors helps with double-click selecting the entire name, whereas underscores are included in the selection, dashes are not
+- using the `-` dash to separate names and descriptors helps with double-click selecting the entire name, whereas underscores are included in the selection, dashes are not. The original BEM syntax ```.my-component__list-item``` is annoying b/c double clicking the component name selects the wrong parts of the name. Instead, give it the name of ```.my_component--list_item``` allows you to select the right parts with a simple double-click
 - In your SCSS, avoid the use of &--state as much as possible, as these are hard to search for with cmd-f
 - Keep reusability and extensibility in mind
 
