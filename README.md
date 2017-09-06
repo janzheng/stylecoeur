@@ -1,4 +1,4 @@
-# [stylecore]
+# _stylecoeur
 
 Core extensible collection of useful SCSS modules. Not a framework, just a bunch of ideas tied together.
 
@@ -15,7 +15,7 @@ Each project will import stylecore, then implement its own styles on top of the 
 
 
 
-### How to use it / Installing
+### How to use it / 'Installing'
 
 Use it out of the box (I'm using it for my projects) or add/remove whatever you want. Clone this project into a folder, and create an alias to this folder in your SCSS folder. I prefer creating a symlinked / aliased external 'stylecore' folder where you can then cherry-pick whatever components you'd like to include.
 
@@ -33,6 +33,7 @@ I prefer the latter option, because you can now import the folder as a whole:
 
 or pick specific compontents ```@import 'stylecore/components/form';```
 
+(Symlinks are simpler than using an npm module, since not all projects might even use npm or such)
 
 
 ## Naming Convention
