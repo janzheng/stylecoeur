@@ -1,0 +1,24 @@
+
+._sidebar {
+  max-width: 200px;
+
+  a {
+    font-weight: 500;
+    font-size: $base;
+    line-height: $base*1.5;
+    padding-bottom:$base/6;
+    margin-bottom: $base/2;
+    display: inline-block;
+    color: $color-blue;
+    border-color: rgba($color-blue, 0.5);
+    &:hover {
+      color: $color-red;
+      border-color: rgba($color-red, 1);
+    }
+  }
+  
+  @include screen-xs { 
+    margin: 0;
+  }
+}
+

@@ -1,0 +1,108 @@
+
+// Typography
+
+// size, baseline, line-heights defined in main index file
+// don't add any color-dependent copy here. use layout
+// or create another component-contextual sheet
+
+
+%font-sans,
+%font-basic,
+%font-body {
+  font-family: "San Franciso", -apple-system, system-ui, Roboto, "Encode Sans", "Open Sans", "Helvetica Neue", arial, sans-serif;
+}
+
+%font-serif {
+  font-family: "Georgia", serif;
+}
+
+%font-mono {
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+}
+
+%font-display {
+  // reduce relational in core
+  // @extend %font-sans;
+}
+
+
+%font-light, ._font-light {font-weight: 300;}
+%font-bold, ._font-bold {font-weight: 700;}
+
+%font-bigger, ._font-bigger { font-size: $base + 6px !important; line-height: ($base + 6px) * 1.5 !important; }
+%font-big, ._font-big { font-size: $base + 2px !important; line-height: ($base + 2px) * 1.5 !important; }
+%font-small, ._font-small { font-size: $base - 2px !important; line-height: ($base - 2px) * 1.5 !important; }
+%font-smaller, ._font-smaller { font-size: $base - 6px !important; line-height: ($base - 6px) * 1.5 !important; }
+// %font-smallest, ._font-smallest { font-size: $base-m3 !important; }
+
+
+
+// 
+// Contextual typography styles
+// 
+
+%font-body {
+  @extend %font-sans;
+  font-size: $base;
+  line-height: $baseline;
+  color: $color-copy;
+}
+
+
+h1 {
+  font-size: $base * 3;
+  line-height: $base * 3 * 1.5;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin: $base 0;
+  margin-bottom: $base*2;
+  @extend %font-display;
+}
+
+h2 {
+  font-size: $base * 2;
+  line-height: $base * 2 * 1.5;
+  font-weight: 700;
+  margin: $base 0;
+  // margin-bottom: $base*3;
+  @extend %font-display;
+}
+
+h3 {
+  font-size: $base * 2;
+  line-height: $base * 2 * 1.5;
+  margin: $base 0;
+  @extend %font-display;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: $base * 1.5;
+  line-height: $base * 1.5 * 1.5;
+  font-weight: 700;
+  padding-bottom: $base/2;
+  @extend %font-display;
+}
+
+
+
+
+p {
+  @extend %font-body;
+}
+  p+p,
+  p+ul,
+  p+ol, { 
+    padding-top: $base;
+  }
+
+  p+h1, p+h2, p+h3, p+h4, p+h5, p+h6,
+  pre+h1, pre+h2, pre+h3, pre+h4,  {
+    padding-top: $base*2;
+    padding-bottom: $base;
+  }
+
+
+
+
+

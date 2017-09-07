@@ -1,0 +1,20 @@
+
+
+// message: like a Bert-style popup message on page
+// or an on-page one/two-liner alert
+// v1.0.0--8-28-17
+._message {
+  border-radius: $radius-lg;
+  padding: $base/2 $base;
+  margin-bottom: $base;
+
+  &.--warning {
+    color: $color-black;
+    background-color: $color-warning;
+  }
+
+  &.--success {
+    color: $color-black;
+    background-color: $color-success;
+  }
+}

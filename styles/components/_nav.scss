@@ -1,0 +1,19 @@
+
+// 
+//    NAV 
+// 
+._nav {
+  margin-top: $base;
+  position: relative; 
+  text-transform: capitalize;
+
+  a {
+    font-size: $base * 1.1;
+    position: relative; 
+    display: inline-block;
+    border-bottom: none;
+    margin-right: $base;
+    @extend ._font-light;
+  }
+
+}

@@ -1,0 +1,97 @@
+
+
+// 
+//  The Heart.
+//  [ core dependencies ]
+// 
+
+@import 'heart'; // coeur
+
+// @import 'arteries/index'; // mass import the _index.scss file
+@import 'arteries/reset';   
+@import 'arteries/screen';
+@import 'arteries/colors';
+@import 'arteries/helpers';
+@import 'arteries/animation';
+@import 'arteries/typography';
+@import 'arteries/griddick'; 
+
+// 
+//  The Vessels.
+//  [ dependent on heart and arteries ]
+// 
+
+// @import 'vessels/index'; 
+@import 'vessels/links'; 
+@import 'vessels/buttons'; 
+@import 'vessels/message'; 
+@import 'vessels/card'; 
+@import 'vessels/layout';
+@import 'vessels/code';
+
+// 
+//  The Components 
+//  [ larger components that will be most likely overridden ]
+// 
+
+// @import 'components/index';
+@import 'components/footer'; 
+@import 'components/nav'; 
+@import 'components/sidebar'; 
+
+
+
+body {
+  @extend %font-body;
+}
+
+summary,
+article,
+section, ._section,
+// footer {
+{
+  padding: $base 0;
+  border-radius: 0;
+
+  margin: 0 auto;
+  @extend %width-content-max;
+}
+
+._content {
+  padding: 4vh $base*2;
+}
+
+._container {
+  padding: 0 $base;
+}
+
+
+
+// 
+//    [ hairs and nails and stuff ]
+//    Keep stuff here until it's large enough to warrant another file
+// 
+
+
+// 
+//    SHADOWS
+// 
+
+$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43);
+$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18);
+$shadow_edge: 0px 5px 14px rgba(0,0,0,1);
+$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

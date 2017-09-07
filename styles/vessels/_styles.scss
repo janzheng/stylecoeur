@@ -1,0 +1,49 @@
+
+// 
+//    A bin of styles. Lots of stuff
+// 
+
+
+// 
+//  Links
+// 
+a {
+  // color: rgba(#000, 0.7);
+  text-decoration: none;
+  @extend %ease;
+  padding-bottom: $base/8;
+  border-bottom: solid 1px $color-main;
+
+  &, &:focus, &:active, &:visited {
+    color: $color-main;
+  }
+
+  &:hover {
+    color: $color-hover;
+    border-color: $color-hover;
+    @extend %ease;
+  }
+}
+
+
+
+// 
+//  Border Styles
+// 
+
+$border-line: 1px;
+$border-thin: 2px;
+$border-medium: 3px;
+$border-thick: 6px;
+$border-massive: 12px;
+
+$border: $border-thin; // general border width
+
+$border-light: $color-silver;
+
+  %border-medium-light,
+  ._border-medium-light { 
+    border-color: $border-light; 
+    border-width: $border-medium;
+    border-style: solid;
+  }

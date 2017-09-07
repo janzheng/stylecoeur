@@ -1,0 +1,15 @@
+
+// 
+//  Standard Footer
+// 
+
+._footer {
+  background: $color-black;
+  color: $color-white;
+  font-size: $base - 2px;
+  padding: $base*2 $base;
+}
+  ._footer--sub {
+    background: $color-gray-light;
+    color: $color-pureblack;
+  }

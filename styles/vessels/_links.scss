@@ -1,0 +1,18 @@
+
+a {
+  // color: rgba(#000, 0.7);
+  text-decoration: none;
+  @extend %ease;
+  padding-bottom: $base/8;
+  border-bottom: solid 1px $color-copy;
+
+  &, &:focus, &:active, &:visited {
+    color: $color-copy;
+  }
+
+  &:hover {
+    color: $color-hover;
+    border-color: $color-hover;
+    @extend %ease;
+  }
+}
