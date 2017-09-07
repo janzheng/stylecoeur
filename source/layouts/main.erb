@@ -18,14 +18,9 @@
   </head>
   <body class="_content">
 
-    <div class="gr-one-three">
-      <div> <!-- spacing --> </div>
-      <!-- <h1 class="_logo">StyleCoeur</h1> -->
-    </div>
+    <%= yield %>
+      
+    <%= partial '/partials/footer' %>
 
-    <div class="gr-one-three">
-      <%= yield %>
-    </div>
-    
   </body>
 </html>
