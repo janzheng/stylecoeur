@@ -20,11 +20,10 @@
     <div class="_styleguide-nav">
     </div>
 
-    <div class="_styleguide-main gr-one-three">
+    <div class="_styleguide-main _gr-one-three">
 
-      <aside>
-        <div class="_font-small"><a href="/">Home</a></div>
-        <h3>Style Guide</h3>
+      <aside class="_margin-top">
+        <!-- <h4>Style Guide</h4> -->
         <div class="_sidebar">
           <%= partial '/partials/style-menu' %>
         </div>
@@ -41,16 +40,13 @@
 
 <script>
 
-var max_search_entries = 50;
-
-var result = []; //initialize empty array
-
-lunrIndex.search(request.term).forEach( function (item, index) {
-  if ( index < max_search_entries ) {
-    result.push(lunrData.docs[item.ref]);
-  }
-});
-
-console.log(result)
+// var max_search_entries = 50;
+// var result = []; //initialize empty array
+// lunrIndex.search(request.term).forEach( function (item, index) {
+//   if ( index < max_search_entries ) {
+//     result.push(lunrData.docs[item.ref]);
+//   }
+// });
+// console.log(result)
 
 </script>

@@ -14,7 +14,7 @@ Core extensible collection of useful SCSS modules. Not a framework, just a bunch
 
 
 
-<article class="gr-one-three">
+<article class="_gr-one-three">
 
 <nav class="_sidebar">
   <div><a href="/landing.html">Example Page</a></div>
