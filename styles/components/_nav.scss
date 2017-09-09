@@ -16,4 +16,18 @@
     @extend ._font-light;
   }
 
+  // used in conjunction with scrollMagic or similar
+  /*
+    var stickyController = new ScrollMagic.Controller();
+    var nav = new ScrollMagic.Scene({triggerElement: "#nav-tr", triggerHook: "onLeave"})
+            .setPin("#nav")
+            .setClassToggle("#nav", "_pinned") // add class toggle
+            .addTo(stickyController);
+  */
+  &._pinned {
+    @extend %ease-slow;
+    background-color: rgba($color-whitest, 0.93);
+    @extend %box_shadow-raised;
+  }
+
 }

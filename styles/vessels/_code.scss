@@ -1,8 +1,22 @@
 
+
 code {
   font-size: $base-smaller;
   padding: $base/2 $base;
   background-color: $color-silver-light;
   line-height: $base-p4;
   white-space: pre-wrap;
+}
+
+pre {
+  // code block
+  background-color: $color-silver-light;
+  // padding-left: 0;
+  
+  border-radius: $radius;
+  margin-bottom: $base;
+  code {
+    line-height: $base !important;
+    padding-left: 0 !important;
+  }
 }

@@ -12,15 +12,25 @@
   padding-top: 4vh;
   padding-bottom: 4vh;
 }
+
+._container-large {
+  // padding: 0 $base*2;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+}
+
 // 
 ._content {
   padding-left: $base*2;
   padding-right: $base*2;
 }
 
-
 ._block {
   padding-bottom: $base*2;
+}
+
+._element {
+  margin: $base*2;
 }
 
 
@@ -36,6 +46,8 @@ ul, ol {
 }
 
 li {
-  margin-bottom: $base;
+  margin-bottom: $base/2;
+  list-style-position: outside;
+  margin-left: $base + 3px; // this shifts wrapped text 'inside' the list 
 }
 

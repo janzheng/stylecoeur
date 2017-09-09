@@ -132,12 +132,11 @@
   grid-gap: 0;
 }
 ._grid-gap-large {
+  grid-gap: $base*2;
+}
+._grid-gap-larger {
   grid-gap: $base*4;
 }
-
-
-
-
 
 
 
@@ -362,15 +361,18 @@
       ] 
   */
   padding: $base;
-  @include screen-xs {
-    // padding-bottom: $base;
-    &:last-child {
-      padding-bottom: 0;
-    }
+  // @include screen-xs {
+  //   // padding-bottom: $base;
+  //   &:last-child {
+  //     padding-bottom: 0;
+  //   }
+  // }
+
+  &.--silver {
+    @extend ._color-bg-silver-light;
+    @extend %box_shadow-raised;
   }
-
 }
-
 
 
 $width-block-max: 55%;
@@ -395,17 +397,28 @@ $width-block-max: 55%;
   @extend ._align-center;
 
   // left-side copy
+  // _grid-content-image--content 
   &--content {
     @extend ._align-right;
     @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 2;
+    }
     * {
       width: $width-block-max;
     }
   }
+  // _grid-content-image--image
   &--image {
     @extend ._align-middle;
     @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 1; // reflow so image is on top
+    }
   }
+
 }
 
 ._grid-image-content {
@@ -428,16 +441,26 @@ $width-block-max: 55%;
   @extend ._align-center;
 
   // left-side copy
+  // _grid-image-content--content
   &--content {
     @extend ._align-left;
     @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
     * {
       width: $width-block-max;
     }
   }
+  // _grid-image-content--image
   &--image {
     @extend ._align-middle;
     @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
   }
 }
 

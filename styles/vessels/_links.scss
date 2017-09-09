@@ -8,11 +8,18 @@ a {
 
   &, &:focus, &:active, &:visited {
     color: $color-copy;
+    @extend %ease;
   }
 
   &:hover {
     color: $color-hover;
     border-color: $color-hover;
+    @extend %ease;
+  }
+
+  &.active {
+    color: $color-active !important;
+    border-color: $color-active !important;
     @extend %ease;
   }
 }

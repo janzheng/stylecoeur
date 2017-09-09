@@ -64,7 +64,7 @@ $width-content-max: $width-sm-max; // max content block width
 
 $width-content-max-narrow: $width-magic; // max content block width
 %width-content-max-narrow { max-width: $width-content-max-narrow; }
-
+  ._width-content-max-narrow { @extend %width-content-max-narrow; }
 
 
 // // max-width for any type of content

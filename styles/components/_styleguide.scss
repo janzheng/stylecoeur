@@ -1,0 +1,30 @@
+
+
+// these are mainly used for styleguides
+// if they apply anywhere else, then sure.
+
+
+// color swatches used mostly for styleguides
+
+._swatch {
+
+}
+
+  ._swatch-color {
+    // color block
+    height: 120px;
+    width: 100%;
+    border-radius: $radius;
+    margin-bottom: $base;
+  }
+
+  ._swatch-description {
+    @extend %font-small;
+  }
+
+._styleguide-example {
+  border: $border-thin solid $color-silver-light;
+  border-radius: $radius;
+  padding: $base;
+  margin-bottom: $base*3;
+}

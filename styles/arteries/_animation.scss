@@ -94,13 +94,13 @@ $speed-fast: 180ms;
 %ease-fast{@include ease($speed-fast);}
 %ease-slow{@include ease($speed-slow);}
 %ease-vslow{@include ease($speed-slow);}
-%ease-none{
-    -webkit-transition: initial;
-    -moz-transition: initial;
-    -ms-transition: initial;
-    -o-transition: initial;
-    transition: initial;
-}
+%ease-none {
+    -webkit-transition: initial !important;
+    -moz-transition: initial !important;
+    -ms-transition: initial !important;
+    -o-transition: initial !important;
+    transition: initial !important;
+} ._ease-none { @extend %ease-none; }
 
 
 

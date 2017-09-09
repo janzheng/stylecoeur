@@ -127,7 +127,7 @@ button, ._button {
 
 
   ._button-thin {
-    line-height: $base;
+    line-height: $base/2;
     text-transform: lowercase;
   }
     ._button-thin-light {
@@ -148,8 +148,8 @@ button, ._button {
   }
 
   ._button-tall {
-    padding-top: $base-p1;
-    padding-bottom: $base-p1;
+    padding-top: $base*2;
+    padding-bottom: $base*2;
   }
 
   ._button-width-inherit {
@@ -160,8 +160,8 @@ button, ._button {
     width: 100%;
   }
   ._button-wide {
-    padding-left: $base*3;
-    padding-right: $base*3;
+    padding-left: $base*4;
+    padding-right: $base*4;
   }
 
 ._button-shadow {
