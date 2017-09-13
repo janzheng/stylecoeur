@@ -78,6 +78,25 @@ $box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16); // looks like a raised
 %box_shadow-raised { box-shadow: $box_shadow-raised; }
 
 
+// 
+//    On Focus Styles
+// 
+
+%focus-yellow {
+  border: $border-thin solid darken($color-yellow, 5%);
+  // border-color: $color-yellow;
+
+  outline: none;
+  // box-shadow: 2px 2px 6px rgba($color-yellow, 0.6);
+  // above is too light
+  box-shadow: 0px 0px 12px rgba($color-yellow, 1);
+}
+%focus-blue {
+  border-color: rgba($color-blue, 0.64);
+  outline: none;
+  box-shadow: 0px 0px 2px 0px rgba($color-blue, 0.6);
+}
+
 
 
 

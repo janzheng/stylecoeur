@@ -1,6 +1,5 @@
 
 $base: 16px;
-$base-ui: $base; // sometimes you want these larger
 $baseline: $base * 1.5; // baseline; base lineheight; line-heights follow 1.5 rule
 
 // attempt at using "standardized" sizes. success may vary. (fonts are different sized, etc.)
@@ -20,13 +19,24 @@ $base-p6:       89px;
 $base-p7:       119px;
 $base-p8:       159px;
 
-// border sizes
+// radius sizes
 $radius: 4px;
 $radius-md: $base;
 $radius-lg: 24px;
 $radius-xl: 36px;
 $radius-sm: 2px; // subtle borders; nothing should be a jagged 90 degrees
 $gutter: $base/2;
+
+// border sizes
+$border-line: 1px;
+$border-thin: 2px;
+$border-medium: 3px;
+$border-thick: 6px;
+$border-massive: 12px;
+
+// general border width
+$border-width: $border-thin;
+
 
 // these are just the bootstrap defaults converted to my own vars
 

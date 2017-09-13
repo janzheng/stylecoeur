@@ -47,6 +47,11 @@
 // %font-smallest, ._font-smallest { font-size: $base-m3 !important; }
 
 
+$font-size: $base;
+$font-lineheight: $base * 1.5;
+
+$font-ui: $base + 2px;
+$font-ui-lineheight: $font-ui * 1.5;
 
 // 
 // Contextual typography styles
@@ -54,19 +59,21 @@
 
 %font-body {
   @extend %font-sans;
-  font-size: $base;
-  line-height: $baseline;
+  font-size: $font-size;
+  line-height: $font-lineheight;
   color: $color-copy;
 }
 
+// side note: use padding instead of margin
+// to prevent margin-folding headers w/ paragraphs
 
 h1 {
   font-size: $base * 3;
   line-height: ($base * 3) * 1.5;
   font-weight: 700;
   letter-spacing: -0.8px;
-  margin: $base 0;
-  margin-bottom: $base*2;
+  padding: $base 0;
+  padding-bottom: $base*2;
   @extend %font-display;
 }
 
@@ -74,15 +81,15 @@ h2 {
   font-size: $base * 2.2;
   line-height: $base * 2.2 * 1.5;
   font-weight: 700;
-  margin: $base 0;
-  // margin-bottom: $base*3;
+  padding: $base 0;
+  // padding-bottom: $base*3;
   @extend %font-display;
 }
 
 h3 {
   font-size: $base * 2.2;
   line-height: $base * 2.2 * 1.5;
-  margin: $base 0;
+  padding: $base 0;
   @extend %font-display;
   font-weight: 300;
 }
@@ -91,21 +98,32 @@ h4 {
   font-size: $base * 1.5;
   line-height: $base * 1.5 * 1.5;
   font-weight: 700;
-  padding-bottom: $base/2;
+  padding-top: $base/2;
+  padding-bottom: $base;
   @extend %font-display;
 }
 
 h5 {
   font-weight: 700;
-  @extend %font-display;
+  @extend %font-sans;
   padding-bottom: $base;
 }
 
+h6 {
+  // font-weight: 700;
+  @extend %font-sans;
+  padding-bottom: $base;
+}
 
 p {
   @extend %font-body;
-  padding-bottom: $base;
+  // padding-bottom: $base;
+
+  // using margins here allows for margin folding
+  // margin-top: $base;
+  margin-bottom: $base;
 }
+
   // p+p,
   // p+ul,
   // p+ol, { 

@@ -277,6 +277,7 @@
 ._right {
   text-align: right;
 }
+  ._right-sm,
   ._right-unless-xs {
     text-align: right;
     @media (max-width: $width-xs-max) {

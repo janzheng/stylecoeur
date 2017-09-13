@@ -8,13 +8,20 @@
   padding: $base/2 $base;
   margin-bottom: $base;
 
+  background-color: $color-silver-light;
+
+  &.--danger {
+    color: $color-white;
+    background-color: $color-danger;
+  }
+
   &.--warning {
     color: $color-black;
     background-color: $color-warning;
   }
 
   &.--success {
-    color: $color-black;
+    color: $color-whitest;
     background-color: $color-success;
   }
 }

@@ -36,6 +36,11 @@
 
 */
 
+$button-color-main: $color-whitest;
+$button-color-bg:   $color-black;
+
+$button-color-main-hover: $color-gray-light;
+$button-color-bg-hover:   $color-blacker;
 
 
 %button-shadow {
@@ -70,15 +75,16 @@
 }
 
 
-button, ._button {
+button,
+._button {
 
   @extend %button;
   @extend %ease;
   display: inline-block;
 
-  color: $color-whitest;
-  background-color: $color-black;
-  font-size: $base-ui;
+  color: $button-color-main;
+  background-color: $button-color-bg;
+  font-size: $font-ui;
   
   // default
   &:hover {
@@ -93,12 +99,26 @@ button, ._button {
   border-radius: $radius-lg;
 }
 
+._button-outline {
+  color: $button-color-main ;
+  border-color: $button-color-main ;
+  border-width: $border-thin ;
+  border-style: solid;
+  background-color: transparent;
 
-._button-text {
+  &:hover {
+    color: $button-color-main-hover ;
+    border-color: $button-color-main-hover ;
+  }
+}
+
+._button-text,
+._button-transparent {
   background-color: transparent !important;
   font-size: $base-m1 !important;
   padding-left: $base/2;
   padding-right: $base/2;
+
 }
 
 
