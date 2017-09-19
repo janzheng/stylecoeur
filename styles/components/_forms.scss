@@ -98,6 +98,11 @@ $font-size-form: $font-size; // $base ;
 }
 ._form-label {
   padding-bottom: $base/4;
+
+  &[for=message] {
+    // spacing for these is a bit off
+    padding-bottom: $base/2;
+  }
 }
 // this icon is placed inside inputs
 ._form-label-icon {

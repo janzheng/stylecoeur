@@ -151,7 +151,7 @@
   display: grid;
   grid-gap: $base; 
   grid-template-rows:    1fr;
-  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-columns: repeat(auto-fit, 350px);
   @extend %grid-mobile-full;
 }
 

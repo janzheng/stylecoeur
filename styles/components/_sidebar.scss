@@ -1,6 +1,15 @@
 
+$sidebar-width-max: 200px;
+$sidebar-width: $sidebar-width-max;
+
+$sidebar-color-link: $color-main;
+$sidebar-color-hover: $color-active;
+
 ._sidebar {
-  max-width: 200px;
+  max-width: $sidebar-width-max;
+  width: $sidebar-width;
+  overflow-y: scroll;
+  padding-bottom: $base*2;
 
   a {
     font-weight: 500;
@@ -9,16 +18,29 @@
     padding-bottom:$base/8;
     margin-bottom: $base/2;
     display: inline-block;
-    color: $color-blue;
-    border-color: rgba($color-blue, 0.5);
+    color: $sidebar-color-link;
+    border-color: $sidebar-color-link;
+
     &:hover {
-      color: $color-red;
-      border-color: rgba($color-red, 1);
+      color: $sidebar-color-hover;
+      border-color: $sidebar-color-hover
     }
   }
   
   @include screen-xs { 
     margin: 0;
+  }
+
+  
+  @include screen-sm { 
+    &.--pinned {
+      height: 100vh;
+      padding-top: $base * 2;
+      padding-bottom: $base * 2;
+
+      position: sticky;
+      top: 0;
+    }
   }
 }
 
