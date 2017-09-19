@@ -38,12 +38,13 @@
 %font-light, ._font-light {@extend %font-300;}
 %font-normal, ._font-normal {@extend %font-500;}
 %font-bold, ._font-bold {@extend %font-700;}
+  strong {@extend %font-bold}
 %font-heavy, ._font-heavy {@extend %font-900;}
 
 %font-bigger, ._font-bigger { font-size: $base + 6px !important; line-height: ($base + 6px) * 1.5 !important; }
 %font-big, ._font-big { font-size: $base + 3px !important; line-height: ($base + 2px) * 1.5 !important; }
 %font-small, ._font-small { font-size: $base - 2px !important; line-height: ($base - 1px) * 1.5 !important; }
-%font-smaller, ._font-smaller { font-size: $base - 6px !important; line-height: ($base - 5px) * 1.5 !important; }
+%font-smaller, ._font-smaller { font-size: $base - 6px !important; /*line-height: ($base - 5px) * 1.5 !important;*/ }
 // %font-smallest, ._font-smallest { font-size: $base-m3 !important; }
 
 
@@ -56,6 +57,11 @@ $font-ui-lineheight: $font-ui * 1.5;
 // 
 // Contextual typography styles
 // 
+
+%font-italic, ._font-italic {
+  font-style: italic;
+}
+  em {@extend %font-italic}
 
 %font-body {
   @extend %font-sans;

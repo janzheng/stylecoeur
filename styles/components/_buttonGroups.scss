@@ -1,0 +1,47 @@
+
+// 
+//    Button Groups
+//    buttons groups are a bit more "mature" than buttons,
+//    as it may rely on elements from buttons 
+// 
+
+._buttonGroup {
+  // margin-top: $base;
+  position: relative;
+  display: inline-block;
+  clear: both;
+
+  ._button {
+    margin: 0 !important;
+    float: left;
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0 !important;
+    }
+    &:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &.--outline {
+    ._button {
+      @extend ._button-outline;
+
+      &:not(:last-child) {
+        border-right: none;
+        &:hover {
+          &+._button {
+          border-left-color: $button-color-main-hover;
+          }
+        }
+      }
+    }
+  }
+
+
+}

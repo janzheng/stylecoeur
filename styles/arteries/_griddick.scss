@@ -144,6 +144,20 @@
 //    ONE CONTAINER SECTIONS
 // 
 
+// Row Organized Grids
+// grid-row-one means one row, multi columns
+// responsive will remain column-oriented
+%grid-row-one, ._grid-row-one {
+  display: grid;
+  grid-gap: $base; 
+  grid-template-rows:    1fr;
+  grid-template-columns: repeat(auto-fit, 250px);
+  @extend %grid-mobile-full;
+}
+
+// Column Organized Grids
+// grid-one means one column, multi rows
+
 %grid-one, ._grid-one {
   @extend %gr;
   @include griddick("one", 1);
@@ -227,6 +241,17 @@
     grid-template-rows:    1fr;
     grid-template-columns: 1fr 3fr;
   }
+
+%grid-one-four, ._grid-one-four {
+  @extend %gr;
+  @extend %grid-mobile-full;
+
+  @include screen-sm {
+    grid-template-areas: "one four";
+    grid-template-rows:    1fr;
+    grid-template-columns: 1fr 4fr;
+  }
+}
 
 %grid-one-seven, ._grid-one-seven {
   @extend %gr;

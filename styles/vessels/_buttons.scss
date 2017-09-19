@@ -69,7 +69,7 @@ $button-color-bg-hover:   $color-blacker;
   border-style: solid; 
   border-radius: $border;
   border: 0;
-  padding: $base $base*3/2;
+  padding: ($base - 0.5) $base*3/2;
 
   @extend %font-sans;
 }
@@ -95,20 +95,20 @@ button,
 
 
 // Pill button
-._button-pill {
+._button-pill, ._button.--pill {
   border-radius: $radius-lg;
 }
 
-._button-outline {
-  color: $button-color-main ;
-  border-color: $button-color-main ;
-  border-width: $border-thin ;
+._button-outline, ._button.--outline {
+  color: $button-color-bg;
+  border-color: $button-color-bg;
+  border-width: $border-thin;
   border-style: solid;
-  background-color: transparent;
+  background-color: $button-color-main;
 
   &:hover {
-    color: $button-color-main-hover ;
-    border-color: $button-color-main-hover ;
+    color: $button-color-main-hover;
+    border-color: $button-color-main-hover;
   }
 }
 
@@ -176,13 +176,18 @@ button,
     width: inherit;
   }
 
-  ._button-wide-full {
-    width: 100%;
-  }
   ._button-wide {
     padding-left: $base*4;
     padding-right: $base*4;
   }
+
+button,
+._button {
+  &.--width-full {
+    width: 100%;
+  }
+}
+
 
 ._button-shadow {
   @extend %button-shadow;

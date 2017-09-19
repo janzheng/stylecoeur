@@ -27,4 +27,16 @@
   border-radius: $radius;
   padding: $base;
   margin-bottom: $base*3;
+
+  & + pre { // fuse code together w/ example
+    margin-top: -$base*3 - 3px;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+  }
+}
+
+._styleguide {
+  h5 {
+    padding-top: $base * 2; // subheaders need room
+  }
 }
