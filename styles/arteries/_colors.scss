@@ -37,8 +37,8 @@ $color-gray-dark:     #4A4A4A !default;    ._color-gray-dark { color: $color-gra
 
 $color-black:         #333333 !default;    ._color-black { color: $color-black; }                      ._color-bg-black { background: $color-black; }
 $color-blacker:       #1A1A1A !default;    ._color-blacker { color: $color-blacker; }                  ._color-bg-blacker { background: $color-blacker; }
-$color-pureblack:     #111111 !default;    ._color-pureblack { color: $color-pureblack; }              ._color-bg-pureblack { background: $color-pureblack; }
-$color-blackest:      #000000 !default;    ._color-blackest { color: $color-blackest; }                ._color-bg-blackest { background: $color-blackest; } 
+$color-blackest:      #111111 !default;    ._color-blackest { color: $color-blackest; }                ._color-bg-blackest { background: $color-blackest; } 
+$color-pureblack:     #000000 !default;    ._color-pureblack { color: $color-pureblack; }              ._color-bg-pureblack { background: $color-pureblack; }
 
 
 
@@ -47,21 +47,21 @@ $color-blackest:      #000000 !default;    ._color-blackest { color: $color-blac
 //    CONTEXTUAL THEMES
 // 
 
-$color-main:        $color-blue !default;       
-$color-secondary:   $color-yellow !default;   
+$color-main:        $color-blue !default;      ._color-main { color: $color-main }                 ._color-bg-main { background-color: $color-main; }
+$color-secondary:   $color-yellow !default;    ._color-secondary { color: $color-secondary }       ._color-bg-secondary { background-color: $color-secondary; }
 
 //     Supporting Colors
 
 $color-bg: $color-white !default;              ._color-bg { color: $color-bg }                     ._color-bg-bg { background-color: $color-bg; }
 
 $color-hover: $color-yellow !default;          ._color-hover { color: $color-hover }               ._color-bg-hover { background-color: $color-hover; }
-$color-active: $color-blue !default;           ._color-active { color: $color-active; }            ._color-bg-active { background-color: $color-active; }
+$color-active: $color-orange !default;         ._color-active { color: $color-active; }            ._color-bg-active { background-color: $color-active; }
 $color-inactive: $color-gray-light !default;   ._color-inactive { color: $color-inactive; }        ._color-bg-inactive { background-color: $color-inactive; }
 
 $color-warning: $color-yellow !default;        ._color-warning { color: $color-warning; }          ._color-bg-warning { background-color: $color-warning; }
 $color-danger: $color-red !default;            ._color-danger { color: $color-danger; }            ._color-bg-danger { background-color: $color-danger; }
 $color-success: $color-green !default;         ._color-success { color: $color-success; }          ._color-bg-success { background-color: $color-success; }
-$color-disabled: $color-gray-light !default;         ._color-disabled { color: $color-disabled; }          ._color-bg-success { background-color: $color-success; }
+$color-disabled: $color-gray-light !default;   ._color-disabled { color: $color-disabled; }        ._color-bg-success { background-color: $color-success; }
 
 $color-transparent: transparent !default; // sometimes this actually needs to be a solid color; using a var can re-define it
 
@@ -71,8 +71,10 @@ $color-copy: $color-body !default;   // text-specific color; sometimes should be
 
 // UI Colors
 // for borders and stuff
-$color-ui: $color-silver !default;
-$color-ui-hover: $color-silver-dark !default;
+$color-ui-light: $color-silver-light !default;  ._color-ui-light { color: $color-ui-light; }        ._color-bg-ui-light { background-color: $color-ui-light; }
+$color-ui: $color-silver !default;              ._color-ui { color: $color-ui; }                    ._color-bg-ui { background-color: $color-ui; }
+$color-ui-dark: $color-gray-lightest !default;  ._color-ui-dark { color: $color-ui-dark; }          ._color-bg-ui-dark { background-color: $color-ui-dark; }
+$color-ui-hover: $color-silver-dark !default;   ._color-ui-hover { color: $color-ui-hover; }        ._color-bg-ui-hover { background-color: $color-ui-hover; }
 
 
 // 
@@ -107,6 +109,19 @@ $box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16); // looks like a raised
   -webkit-filter: sepia(0.2) saturate(0.5);
   filter: sepia(0.2) saturate(0.5);
 }
+
+
+
+
+// 
+//    SHADOWS
+// 
+
+$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43);
+$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18);
+$shadow_edge: 0px 5px 14px rgba(0,0,0,1);
+$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8);
+
 
 
 

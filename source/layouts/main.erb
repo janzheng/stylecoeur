@@ -1,26 +1,19 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <!-- <title><%= current_page.data.title || "Middleman" %></title> -->
+    <%= partial '/partials/head' %>
     <title>_stylecoeur</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-   <!--  <link rel="stylesheet" id="tmm_google_fonts-css" href="https://fonts.googleapis.com/css?family=Quicksand&amp;subset=latin%2Clatin-ext&amp;ver=4.8.1" type="text/css" media="all"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
   </head>
   <body class="_content">
 
-    <%= yield %>
-      
-    <%= partial '/partials/footer' %>
+    <div class="_grid-one-three">
+      <div> <!-- spacing --> </div>
+      <h1 class="_logo">B<i>a</i>b<o>u</o></h1>
+    </div>
 
+    <div class="_grid-one-three">
+      <%= yield %>
+    </div>
+    
   </body>
 </html>

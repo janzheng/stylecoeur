@@ -1,11 +1,16 @@
-
+<% $section_name = '' %>
 
 <div>
-  <a href="/styleguide.html">Intro</a>
   <% sitemap.resources.select { |r| r.data.type == 'styleguide' }
     .sort_by{|r| r.url }
     .each do |resource| 
   %>
-    <div><a href="<%= resource.url %>"><%= resource.data.title %></a></div>
+    <% if $section_name != resource.data.section 
+          $section_name = resource.data.section 
+      %>
+      <div class="_sidebar-section_title"> <%= $section_name %></div>
+    <% end %>
+
+    <div><a href="../<%= resource.path %>" class="<%= '--active' if current_page.data.name == resource.data.name %> <%= resource.data.status %>"><%= resource.data.title %></a></div>
   <% end %>
 </div>

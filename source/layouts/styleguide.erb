@@ -1,30 +1,19 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <!-- <title><%= current_page.data.title || "Middleman" %></title> -->
-    <title>Style Guide &amp; Documentation</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-   <!--  <link rel="stylesheet" id="tmm_google_fonts-css" href="https://fonts.googleapis.com/css?family=Quicksand&amp;subset=latin%2Clatin-ext&amp;ver=4.8.1" type="text/css" media="all"> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <title>_stylecoeur</title>
+    <%= partial '/partials/head' %>
   </head>
-  <body class="_styleguide _content">
+  <body class="_styleguide _content _container">
     <div class="_styleguide-nav">
     </div>
 
-    <div class="_styleguide-main _gr-one-three">
+    <div class="_styleguide-main _grid-one-three">
 
-      <aside class="_margin-top">
-        <!-- <h4>Style Guide</h4> -->
-        <div class="_sidebar">
+      <aside>
+        <!-- <h1 class="_transparent">menu</h1> -->
+        <span class="_sticky-tr"></span>
+        <div class="_sidebar --divider">
           <%= partial '/partials/style-menu' %>
         </div>
       </aside>
@@ -41,12 +30,15 @@
 <script>
 
 // var max_search_entries = 50;
+
 // var result = []; //initialize empty array
+
 // lunrIndex.search(request.term).forEach( function (item, index) {
 //   if ( index < max_search_entries ) {
 //     result.push(lunrData.docs[item.ref]);
 //   }
 // });
+
 // console.log(result)
 
 </script>

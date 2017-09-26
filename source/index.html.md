@@ -8,7 +8,11 @@ layout: main
 
 # _stylecoeur
 
-Core extensible collection of useful SCSS modules. Not a framework, just a bunch of loose concepts, ideas, and useful SCSS tied together. Like duct tape.
+This is your toolkit.
+
+Be fast, be efficient, and stop reinventing stuff.
+
+This is not a framework, just a bunch of loose concepts, ideas, SCSS, tools and Javascript bundled together. Like a toolbox made of duct tape.
 
 </summary>
 

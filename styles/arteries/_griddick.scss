@@ -90,53 +90,6 @@
 }
 
 
-// 
-//  Alignment w/ grids can be confusing, so I use the same words, but:
-//  [ justify-items ]:  start/middle/end — left/"center"/right horizontal alignment 
-//  [ align-items ]:    start/middle/end — top/center/bottom vertical alignment 
-// 
-._align-left {
-  display: grid;
-  justify-items: start; // align to left
-}
-._align-right {
-  display: grid;
-  justify-items: end; // align to right
-}
-._align-middle {
-  display: grid;
-  justify-items: center; // horizontally align middle
-}
-  ._align-middle-xs {
-    @include screen-xs {
-      display: grid;
-      justify-items: center; // align to right
-    }
-  }
-
-
-._align-top {
-  display: grid;
-  align-items: end; // bottom of grid
-}
-._align-center {
-  display: grid;
-  align-items: center; // vertical middle of grid
-}
-._align-bottom {
-  display: grid;
-  align-items: end; // bottom of grid
-}
-
-._grid-gap-none {
-  grid-gap: 0;
-}
-._grid-gap-large {
-  grid-gap: $base*2;
-}
-._grid-gap-larger {
-  grid-gap: $base*4;
-}
 
 
 
@@ -153,6 +106,10 @@
   grid-template-rows:    1fr;
   grid-template-columns: repeat(auto-fit, 350px);
   @extend %grid-mobile-full;
+
+  @include screen-xs {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
 }
 
 // Column Organized Grids
@@ -190,6 +147,24 @@
     @include griddick("one", 1);
   }
   @include griddick("four four four four", 4);
+}
+
+%grid-five, ._grid-five {
+  @extend %gr;
+
+  @include screen-xs {
+    @include griddick("one", 1);
+  }
+  @include griddick("five five five five five", 5);
+}
+
+%grid-six, ._grid-six {
+  @extend %gr;
+  @extend %grid-mobile-full;
+
+  @include screen-sm {
+    @include griddick("six six six six six six", 6);
+  }
 }
 
 %grid-seven, ._grid-seven {
@@ -327,16 +302,37 @@
 
 %grid-one-six-one, ._grid-one-six-one {
   @extend %gr;
-  grid-template-areas: "one six one";
-  grid-template-rows:    1fr;
-  grid-template-columns: 1fr 6fr 1fr;
+
+  @include screen-sm {
+    grid-template-areas: "one six one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+
+  @extend %grid-mobile-full;
 }
 
 %grid-two-one-one, ._grid-two-one-one {
   @extend %gr;
-  grid-template-areas: "two one one";
-  grid-template-rows:    1fr;
-  grid-template-columns: 2fr 1fr 1fr;
+
+  @include screen-sm {
+    grid-template-areas: "two one one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  @extend %grid-mobile-full;
+}
+%grid-two-two-one, ._grid-two-two-one {
+  @extend %gr;
+
+  @include screen-sm {
+    grid-template-areas: "two two one";
+    grid-template-rows:    1fr;
+    grid-template-columns: 2fr 2fr 1fr;
+  }
+
+  @extend %grid-mobile-full;
 }
 
 
@@ -487,6 +483,71 @@ $width-block-max: 55%;
       justify-items: center;
     }
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+//    HELPFUL OVERRIDES 
+// 
+
+
+
+// 
+//  Alignment w/ grids can be confusing, so I use the same words, but:
+//  [ justify-items ]:  start/middle/end — left/"center"/right horizontal alignment 
+//  [ align-items ]:    start/middle/end — top/center/bottom vertical alignment 
+// 
+._align-left {
+  display: grid;
+  justify-items: start; // align to left
+}
+._align-right {
+  display: grid;
+  justify-items: end; // align to right
+}
+._align-middle {
+  display: grid;
+  justify-items: center; // horizontally align middle
+}
+  ._align-middle-xs {
+    @include screen-xs {
+      display: grid;
+      justify-items: center; // align to right
+    }
+  }
+
+
+._align-top {
+  display: grid;
+  align-items: end; // bottom of grid
+}
+._align-center {
+  display: grid;
+  align-items: center; // vertical middle of grid
+}
+._align-bottom {
+  display: grid;
+  align-items: end; // bottom of grid
+}
+
+._grid-gap-none {
+  grid-gap: 0;
+}
+._grid-gap-large {
+  grid-gap: $base*2;
+}
+._grid-gap-larger {
+  grid-gap: $base*4;
 }
 
 

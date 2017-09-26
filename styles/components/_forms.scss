@@ -5,10 +5,14 @@
 $color-form-bg: $color-silver; // rgba($color-silver-dark, 0.25);
 $color-form-bg-hover: $color-silver-light; // rgba($color-silver-dark, 0.25);
 
+
 $color-input-bg: $color-silver-lighter; //rgba($color-white, 0.84);
 $color-input-bg-hover: $color-silver-light;
 $color-input-border: $color-gray-lightest;
 $color-input-active: $color-blue;
+
+$color-input-underline: $color-gray-light; // color-input-bg
+$color-input-underline-hover: $color-gray;
 
 
 $form-border-width: $border-thin;
@@ -185,7 +189,7 @@ input, .input {
   // @extend ._margin-bottom-2;
 
   // border: $form-border-width solid $color-input-border;
-  border-color: $color-input-bg;
+  border-color: $color-input-underline;
   border-style: solid;
 
   margin-right: $base/2;
@@ -219,13 +223,18 @@ input, .input {
 
 }
 
-  input[type="email"], input[type="text"], input[type="number"] {
+  input[type="email"], input[type="text"], input[type="number"], input[type="password"] {
     // width: 100%;
     @extend %ease-fast;
+
+    border-width: 0;
+    border-bottom: $color-input-underline $border-thin solid;
 
     &:hover {
       @extend %ease-fast;
       background-color: $color-input-bg-hover;
+      border-color: $color-input-underline-hover;
+
     }
     &:hover:focus {
       @extend %ease-fast;
@@ -432,21 +441,54 @@ textarea, .textarea {
 // Option / Select / Dropdowns 
 // 
 
-select {
-  min-width: 200px;
-  padding: $base/2;
-
-  &:focus {
-    @extend %focus-blue;
-  }
-
-  option {
-    padding: $base/4;
-  }
-    option:checked {
-      background-color: $color-red;
-    }
+._form-select {
+  position: relative;
 }
+  ._form-select-element {
+    position: relative;
+  }
+
+._form-select-dropdown {
+  z-index: 9;
+  position: absolute;
+  right: 20px;
+
+  .fa {
+    vertical-align: bottom;
+    // line-height: 12px;
+  }
+  
+  & + select {
+    @extend %form-style;
+    min-width: 200px;
+    cursor: pointer;
+
+    padding: $base/2;
+    padding-right: $base * 2;
+
+    z-index: 10;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-appearance: none;
+    -moz-border-radius: 0;
+    background: transparent;
+
+    position: relative;
+    top: -2px; // align with label
+    
+    &:focus {
+      @extend %focus-blue;
+    }
+
+    option {
+      padding: $base/4;
+    }
+      option:checked {
+        background-color: $color-red;
+      }
+  }
+}
+
 
 
 
@@ -473,6 +515,7 @@ $range-track-height: $base/4 !default;
   input {
 
     -webkit-appearance: none;
+    -moz-appearance: none;
     width: 100%;
     height: $range-track-height;
     border-radius: $radius;
@@ -482,9 +525,12 @@ $range-track-height: $base/4 !default;
     margin: 0;
 
     // Range Handle
-    &::-webkit-slider-thumb {
+    &::-webkit-slider-thumb,
+    &::-moz-slider-thumb,
+     {
       appearance: none;
       -webkit-appearance: none;
+      -moz-appearance: none;
       width: $range-handle-size;
       height: $range-handle-size;
       border-radius: 50%;
@@ -498,7 +544,8 @@ $range-track-height: $base/4 !default;
       }
     }
 
-    &:active::-webkit-slider-thumb {
+    &:active::-webkit-slider-thumb,
+    &:active::-moz-slider-thumb, {
       background: $range-handle-color-hover;
       transition: background $speed-fast ease-in-out;
     }

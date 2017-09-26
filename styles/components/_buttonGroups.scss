@@ -5,6 +5,8 @@
 //    as it may rely on elements from buttons 
 // 
 
+$btnGrp-radius-pill: $radius-lg;
+
 ._buttonGroup {
   // margin-top: $base;
   position: relative;
@@ -28,15 +30,33 @@
     }
   }
 
+  &.--pill {
+    ._button {
+      
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0 !important;
+      }
+      &:first-child {
+        border-top-left-radius: $btnGrp-radius-pill;
+        border-bottom-left-radius: $btnGrp-radius-pill;
+      }
+      &:last-child {
+        border-top-right-radius: $btnGrp-radius-pill;
+        border-bottom-right-radius: $btnGrp-radius-pill;
+      }
+    }
+  }
+
   &.--outline {
     ._button {
       @extend ._button-outline;
 
       &:not(:last-child) {
-        border-right: none;
+        border-right-width: 0;
         &:hover {
+          // border-right-color: $button-outline-color-border-hover;
           &+._button {
-          border-left-color: $button-color-main-hover;
+          border-left-color: $button-outline-color-border-hover;
           }
         }
       }

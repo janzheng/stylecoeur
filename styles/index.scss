@@ -27,9 +27,9 @@
 @import 'vessels/buttons'; 
 @import 'vessels/message'; 
 @import 'vessels/card'; 
-@import 'vessels/layout';
 @import 'vessels/code';
 
+@import 'vessels/layout';
 // 
 //  The Components 
 //  [ larger components that will be most likely overridden ]
@@ -44,54 +44,95 @@
 @import 'components/tabs'; 
 @import 'components/buttonGroups'; 
 @import 'components/toggle'; 
-@import 'components/modals'; 
+@import 'components/modal'; 
 
 
-
-body {
-  @extend %font-body;
-}
-
-summary,
-article,
-section, ._section,
-// footer {
-{
-  padding: $base 0;
-  border-radius: 0;
-
-  margin: 0 auto;
-  @extend %width-content-max;
-}
-
-._content {
-  padding: 4vh $base*2;
-}
-
-._container {
-  padding: 0 $base;
-}
-
+// re-import to let colors take precedence
+@import 'arteries/colors';
 
 
 // 
-//    [ hairs and nails and stuff ]
+//    Basics. 
+//    Every site should probably override these
 //    Keep stuff here until it's large enough to warrant another file
 // 
 
 
+
 // 
-//    SHADOWS
+// base layout styles
 // 
+body {
+  @extend %font-body;
+  background-color: $color-bg;
+  color: $color-copy;
+  margin: 0;
+}
 
-$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43);
-$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18);
-$shadow_edge: 0px 5px 14px rgba(0,0,0,1);
-$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8);
 
 
 
+// 
+// nav
+// // 
+// ._nav ._logo {
+//   width: 200px;
+//   font-size: $base * 2.8;
+//   background-color: transparent;
+//   @extend %ease;
+// }
+//   // separator
+//   ._nav--separator {
+//     margin-left: $base;
+//     &:before {
+//       content: ' ';
+//       display: block;
+//       position: absolute;
 
+//       // border-left: $border-medium;
+//       // border-left-color: $border-light;
+//       // border-left-style: solid;
+
+//       width: 10px;
+//       height: 42px;
+//       left: -18px;
+//       top: -6px;
+
+//     }
+//   }
+
+
+
+// .nav-logo {
+//   @include screen-xs {
+//     padding-bottom: $base*2;
+//     text-align: center;
+//   }
+// }
+
+
+// 
+// Main Page / Deliverable
+// 
+._main, ._styleguide-main {
+  @extend %grid-one-three;
+}
+
+
+// 
+// landing page
+// 
+._intro {
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+
+  h1 {
+    margin: 0;
+  }
+  button {
+    margin: 4vh 0;
+  }
+}
 
 
 

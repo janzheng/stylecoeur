@@ -47,6 +47,7 @@
 // 
 ._width-full {
   width: 100%;
+  max-width: 100%;
 }
 
 
@@ -102,6 +103,11 @@
     ._margin-bottom-2 {
       margin-bottom: $base*2;
     }
+    ._margin-bottom-xs {
+      @include screen-xs-only {
+        margin-bottom: $base;
+      }
+    }
 
   ._margin-left {
     margin-left: $base;
@@ -152,6 +158,9 @@
   }
     ._padding-2 {
       padding: $base*2;
+      &-i {
+        padding: $base*2 !important;
+      }
     }
   ._padding-half {
     padding: $base/2;
@@ -159,10 +168,9 @@
   ._padding-top {
     padding-top: $base;
   }
-    ._padding-top-unless-xs {
-      padding-top: $base;
-      @media (max-width: $width-xs-max) {
-        padding-top: inherit;
+    ._padding-top-sm {
+      @include screen-sm {
+        padding-top: $base;
       }
     }
     ._padding-top-2 {
@@ -185,6 +193,7 @@
     }
     ._padding-bottom-none {
       padding-bottom: 0;
+      &.--i { padding-bottom: 0 !important;}
     }
       ._padding-bottom-none-i {
         padding-bottom: 0 !important;
@@ -232,6 +241,12 @@
   ._padding-left {
     padding-left: $base;
   }
+    ._padding-left-2 {
+      padding-left: $base*2;
+    }
+    ._padding-left-half {
+      padding-left: $base/2;
+    }
     ._padding-left_none {
       padding-left: 0 !important;
     }
@@ -319,7 +334,15 @@
    }
 }
 
-
+._v-top {
+  vertical-align: top;
+}
+._v-middle {
+  vertical-align: middle;
+}
+._v-bottom {
+  vertical-align: bottom;
+}
 
 
 

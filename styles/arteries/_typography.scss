@@ -22,7 +22,7 @@
 
 %font-display {
   // reduce relational in core
-  // @extend %font-sans;
+  @extend %font-sans;
 }
 
 
@@ -47,6 +47,9 @@
 %font-smaller, ._font-smaller { font-size: $base - 6px !important; /*line-height: ($base - 5px) * 1.5 !important;*/ }
 // %font-smallest, ._font-smallest { font-size: $base-m3 !important; }
 
+%font-lower, ._font-lower { text-transform: lowercase; }
+%font-upper, ._font-upper { text-transform: uppercase; }
+%font-capitalize, ._font-capitalize { text-transform: capitalize; }
 
 $font-size: $base;
 $font-lineheight: $base * 1.5;
@@ -67,7 +70,7 @@ $font-ui-lineheight: $font-ui * 1.5;
   @extend %font-sans;
   font-size: $font-size;
   line-height: $font-lineheight;
-  color: $color-copy;
+  // color: $color-copy;
 }
 
 // side note: use padding instead of margin
