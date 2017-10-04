@@ -3,50 +3,70 @@
 //    NAV 
 // 
 
+
 $nav-color-bg: $color-bg;
 
 
-._nav {
-  margin-top: $base;
-  position: relative; 
-  text-transform: capitalize;
-  // padding-top: $base;
-  // padding-bottom: $base;
-  padding: $base;
+nav {
+  font-size: $base;
 
-  background-color: transparent;
-  @extend %ease-slow;
-
-  &.--pinned {
-    @extend %ease-slow;
-    background-color: $nav-color-bg;
-    // @extend %box_shadow-raised;
-    top: 0 !important;
+ a {
+    border-bottom: 0;
   }
 
-  a {
-    font-size: $base;
-    position: relative; 
-    display: inline-block;
-    border-bottom: none;
-    margin-right: $base;
-    // @extend ._font-light;
-  }
-
-  .nav-links {
+  ._nav-content,
+  ._nav-links,
+  svg {
     text-align: right;
-    @include screen-xs {
-      text-align: center;
-    }
+    vertical-align: middle;
   }
-
-  &.--simple {
-    background-color: $color-bg;
-    padding-left: 0;
-    &.--pinned {
-      box-shadow: none;
-      background-color: $color-bg;
-    }
-  }
-
 }
+
+
+
+
+
+// ._nav {
+//   margin-top: $base;
+//   position: relative; 
+//   text-transform: capitalize;
+//   // padding-top: $base;
+//   // padding-bottom: $base;
+//   padding: $base;
+
+//   background-color: transparent;
+//   @extend %ease-slow;
+
+//   &.--pinned {
+//     @extend %ease-slow;
+//     background-color: $nav-color-bg;
+//     // @extend %box_shadow-raised;
+//     top: 0 !important;
+//   }
+
+//   a {
+//     font-size: $base;
+//     position: relative; 
+//     display: inline-block;
+//     border-bottom: none;
+//     margin-right: $base;
+//     // @extend ._font-light;
+//   }
+
+//   .nav-links {
+//     text-align: right;
+//     @include screen-xs {
+//       text-align: center;
+//     }
+//   }
+
+//   &.--simple {
+//     background-color: $color-bg;
+//     padding-left: 0;
+//     &.--pinned {
+//       box-shadow: none;
+//       background-color: $color-bg;
+//     }
+//   }
+
+// }

@@ -17,6 +17,12 @@
 
 
 
+// notes
+// instead of align-items, use align-self and justify-self
+
+
+
+
 // 
 // Base griddick setup
 // 
@@ -35,7 +41,10 @@
 
 // Mobile Setup
 
-%grid-mobile-full {
+// take up the entire row
+// on mobile screens
+%grid-xs-full,
+  ._grid-xs-full {
   @include screen-xs {
     @include griddick("one", 1);
     grid-gap: 0;
@@ -105,7 +114,7 @@
   grid-gap: $base; 
   grid-template-rows:    1fr;
   grid-template-columns: repeat(auto-fit, 350px);
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-xs {
     grid-template-columns: repeat(auto-fit, 100%);
@@ -123,7 +132,7 @@
 
 %grid-two, ._grid-two {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     @include griddick("two two", 2);
@@ -133,7 +142,7 @@
 
 %grid-three, ._grid-three {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     @include griddick("three three three", 3);
@@ -160,7 +169,7 @@
 
 %grid-six, ._grid-six {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     @include griddick("six six six six six six", 6);
@@ -169,7 +178,7 @@
 
 %grid-seven, ._grid-seven {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     @include griddick("seven seven seven seven seven seven seven ", 7);
@@ -201,7 +210,7 @@
 
 %grid-one-three, ._grid-one-three {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     grid-template-areas: "one three";
@@ -219,7 +228,7 @@
 
 %grid-one-four, ._grid-one-four {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     grid-template-areas: "one four";
@@ -237,7 +246,7 @@
 
 %grid-two-one, ._grid-two-one {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     grid-template-areas: "two one";
@@ -248,7 +257,7 @@
 
 %grid-three-one, ._grid-three-one {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     grid-template-areas: "three one";
@@ -259,7 +268,7 @@
 
 %grid-two-four, ._grid-two-four {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     grid-template-areas: "two four";
@@ -270,7 +279,7 @@
 
 %grid-four-one, ._grid-four-one {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     grid-template-areas: "four one";
@@ -281,7 +290,7 @@
 
 %grid-seven-one, ._grid-seven-one {
   @extend %gr;
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 
   @include screen-sm {
     grid-template-areas: "seven one";
@@ -309,7 +318,7 @@
     grid-template-columns: 1fr 6fr 1fr;
   }
 
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 }
 
 %grid-two-one-one, ._grid-two-one-one {
@@ -321,7 +330,7 @@
     grid-template-columns: 2fr 1fr 1fr;
   }
 
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 }
 %grid-two-two-one, ._grid-two-two-one {
   @extend %gr;
@@ -332,7 +341,7 @@
     grid-template-columns: 2fr 2fr 1fr;
   }
 
-  @extend %grid-mobile-full;
+  @extend %grid-xs-full;
 }
 
 
@@ -487,8 +496,15 @@ $width-block-max: 55%;
 
 
 
+._grid-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15ch, 1fr));
+  grid-gap: $base;
+}
 
-
+._dense {
+  grid-auto-flow: dense;
+}
 
 
 
@@ -515,7 +531,8 @@ $width-block-max: 55%;
   display: grid;
   justify-items: end; // align to right
 }
-._align-middle {
+._align-middle,
+._align-horizontally {
   display: grid;
   justify-items: center; // horizontally align middle
 }
@@ -531,7 +548,8 @@ $width-block-max: 55%;
   display: grid;
   align-items: end; // bottom of grid
 }
-._align-center {
+._align-center,
+._align-vertically {
   display: grid;
   align-items: center; // vertical middle of grid
 }
@@ -543,19 +561,53 @@ $width-block-max: 55%;
 ._grid-gap-none {
   grid-gap: 0;
 }
+  ._grid-gap-row-none {grid-row-gap: 0;}
+  ._grid-gap-column-none {grid-row-gap: 0;}
+
+._grid-gap-small {grid-gap: $base/2;}
+  ._grid-gap-row-small {grid-row-gap: $base/2;}
+  ._grid-gap-column-small {grid-row-gap: $base/2;}
+
 ._grid-gap-large {
   grid-gap: $base*2;
 }
+  ._grid-gap-row-large {grid-row-gap: $base*2;}
+  ._grid-gap-column-large {grid-row-gap: $base*2;}
+
 ._grid-gap-larger {
   grid-gap: $base*4;
 }
+  ._grid-gap-row-larger {grid-row-gap: $base*2;}
+  ._grid-gap-column-larger {grid-row-gap: $base*2;}
+
+// item spans
+// these are not generated b/c I like extending them :\ (I know I know)
+._span-row-2 { grid-row: span 2; }
+._span-row-3 { grid-row: span 3; }
+._span-row-4 { grid-row: span 4; }
+._span-row-5 { grid-row: span 5; }
+._span-row-6 { grid-row: span 6; }
+._span-row-7 { grid-row: span 7; }
+._span-row-8 { grid-row: span 8; }
+
+._span-col-2 { grid-column: span 2; } ._span-xs-col-2 { @include screen-xs-only {grid-column: span 2;} } ._span-sm-col-2 { @include screen-sm-only {grid-column: span 2;} }
+._span-col-3 { grid-column: span 3; } ._span-xs-col-3 { @include screen-xs-only {grid-column: span 3;} } ._span-sm-col-3 { @include screen-sm-only {grid-column: span 3;} }
+._span-col-4 { grid-column: span 4; } ._span-xs-col-4 { @include screen-xs-only {grid-column: span 4;} } ._span-sm-col-4 { @include screen-sm-only {grid-column: span 4;} }
+._span-col-5 { grid-column: span 5; } ._span-xs-col-5 { @include screen-xs-only {grid-column: span 5;} } ._span-sm-col-5 { @include screen-sm-only {grid-column: span 5;} }
+._span-col-6 { grid-column: span 6; } ._span-xs-col-6 { @include screen-xs-only {grid-column: span 6;} } ._span-sm-col-6 { @include screen-sm-only {grid-column: span 6;} }
+._span-col-7 { grid-column: span 7; } ._span-xs-col-7 { @include screen-xs-only {grid-column: span 7;} } ._span-sm-col-7 { @include screen-sm-only {grid-column: span 7;} }
+._span-col-8 { grid-column: span 8; } ._span-xs-col-8 { @include screen-xs-only {grid-column: span 8;} } ._span-sm-col-8 { @include screen-sm-only {grid-column: span 8;} }
 
 
 
 
-
-
-
-
-
+// for xs screen,
+// overrides default 1 row behavior
+// to try to fit as much stuff as possible
+// into one row. useful for lists
+._grid-xs-autofit {
+  @include screen-xs {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
 

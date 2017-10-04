@@ -44,7 +44,7 @@ $font-size-form: $font-size; // $base ;
 
 %form-style {
   @extend %ease-fast;
-  @extend %font-sans;
+  // @extend %font-sans;
   font-size: $font-size-form;
   // @extend %font-bold;
   // @extend %font-light;
@@ -172,7 +172,7 @@ textarea + .error,
 
 label {
   display: block;
-  @extend %font-sans;
+  // @extend %font-sans;
   vertical-align: top;
   cursor: default;
 }
@@ -443,9 +443,13 @@ textarea, .textarea {
 
 ._form-select {
   position: relative;
+  // white-space: nowrap; // or the dropdown does misalignment things
 }
   ._form-select-element {
     position: relative;
+    @include screen-xs {
+      
+    }
   }
 
 ._form-select-dropdown {
@@ -486,6 +490,14 @@ textarea, .textarea {
       option:checked {
         background-color: $color-red;
       }
+
+    @include screen-xs {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+
   }
 }
 

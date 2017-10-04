@@ -1,9 +1,15 @@
 
 
 
-# _stylecoeur
+# stylecoeur
 
 Core extensible collection of useful SCSS modules. Not a framework, just a bunch of loose concepts, ideas, and useful SCSS tied together. Like duct tape.
+
+For quick design and prototyping iterations.
+
+This shortcut is not a replacement for creativity.
+
+
 
 
 
@@ -127,8 +133,10 @@ Other ideas to explore:
 - smooth scroll
 - horizontal + vertical scroll
 - ad block detect?
-
-
+- menu: open, hiden, transition: https://www.skinn.be/en/work/salt
+- menu slide down to hide; slide up to show: https://www.skinn.be/en/work/salt
+- microservices and express api hookup
+- page transition techniques
 
 -- Vertical Tabs
 
@@ -149,10 +157,48 @@ Other ideas to explore:
 
 - github update trick adding version: ?=v0.1
 
+- middleman ruby resources for prototyping
+
+- coding style and linting
+
+- tools page
+  - real time board
+  - slack
+  - tinyjpg
+  - svgomg: https://jakearchibald.github.io/svgomg/
+  - barbajs.org: page transitions
+  - google forms email script
+  - fluid typography: https://www.smashingmagazine.com/2016/05/fluid-typography/#controlling-the-rate-of-scale
+  - stripe payments: https://stripe.com/elements
+
+  on design + typography:
+   - p 98 thinking with type: " style sheets compel designers to think globally and systematically instead of focusing on the fixed construction of a particular surface" - as opposed to 20th century artists and designers who integrated form and content; and "used typography to create texts whose content was inextricable from the concrete" layout of specific letterforms
+   - don't fall into the trap of the modular adaptive system + distancing away from old typography
+   - using js and/or css, getting deviceheight and devicewidth we can understand the limits of the screen
+   - headlines subheads, and such can be precisely set based on the dimensions of the particular screen
+   - responsive design with play with forms, alignment, space and meaning...
 
 
+- adblock detection
+
+- front-matter flags
+  - page.show_footer
+  - page.show_nav
+  - page.transition
+  - etc. applied to the page
+
+- basic react pages, accounts pages, etc. use jststrt as a start
+  - basic user stories and pages!
+  - account, login, signup, password recovery, etc.
 
 
+- stylecoeur for ux prototyping
+  - site and relation map
+  - page layout map / show all the pages, like invision or powerpoint edit mode
+  - https://medium.com/proof-of-concept/growing-free-ux-design-tool-prototype-with-ui-wireframing-and-user-scenarios-f2b0015516ef
 
 
+- functional design page
+  - every project should have its own stylesheet page that includes all the design variations
+  - a much simpler distillation of the "real" styleguide
 

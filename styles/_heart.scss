@@ -20,19 +20,20 @@ $base-p7:       119px;
 $base-p8:       159px;
 
 // radius sizes
-$radius: 4px;
-$radius-md: $base;
-$radius-lg: 24px;
-$radius-xl: 36px;
-$radius-sm: 2px; // subtle borders; nothing should be a jagged 90 degrees
+$radius-none: 0px;  ._radius-none { border-radius: 0 }
+$radius: 4px;       ._radius { border-radius: $radius }
+$radius-md: $base;  ._radius-md { border-radius: $radius-md }
+$radius-lg: 24px;   ._radius-lg { border-radius: $radius-lg }
+$radius-xl: 36px;   ._radius-xl { border-radius: $radius-xl }
+$radius-sm: 2px;    ._radius-sm { border-radius: $radius-sm }// subtle borders; nothing should be a jagged 90 degrees
 $gutter: $base/2;
 
 // border sizes
-$border-line: 1px;
-$border-thin: 2px;
-$border-medium: 3px;
-$border-thick: 6px;
-$border-massive: 12px;
+$border-line: 1px;      ._border-line { border-width: $border-line }
+$border-thin: 2px;      ._border-thin { border-width: $border-thin }
+$border-medium: 3px;    ._border-medium { border-width: $border-medium }
+$border-thick: 6px;     ._border-thick { border-width: $border-thick }
+$border-massive: 12px;  ._border-massive { border-width: $border-massive }
 
 // general border width
 $border-width: $border-thin;
