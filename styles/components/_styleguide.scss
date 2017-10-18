@@ -4,7 +4,11 @@
 // if they apply anywhere else, then sure.
 
 
-$styleguide-border: $border-thin solid $color-ui-dark;
+$styleguide-border: none; // $border-thin solid $color-ui-dark;
+$styleguide-bg: $color-blacker; // $border-thin solid $color-ui-dark;
+$styleguide-link: $color-silver;
+$styleguide-link-hover: $color-secondary;
+
 // color swatches used mostly for styleguides
 
 ._swatch {
@@ -50,10 +54,16 @@ $styleguide-border: $border-thin solid $color-ui-dark;
   padding-right: $base;
   border-bottom: $styleguide-border;
 
+  background: $styleguide-bg;
+
   a {
+    color: $styleguide-link;
     display: inline-block;
     vertical-align: middle;
     border: 0;
+    &:hover {
+      color: $styleguide-link-hover;
+    }
   }
   ._logo-heart {
     vertical-align: middle;

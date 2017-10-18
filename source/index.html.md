@@ -52,6 +52,8 @@ Each project will import stylecoeur, then implement its own styles on top of the
 
 Use it out of the box (I'm using it for my projects) or add/remove whatever you want. Clone this project into a folder, and create a symlink to this folder in your SCSS folder. I prefer creating a symlinked / aliased external 'stylecoeur' folder where you can then cherry-pick whatever components you'd like to include. Don't forget that @importing a folder in SCSS automatically imports the index.scss file, if one exists. NOTE: right-click to create an alias doesn't always work, so use the CLI instead.
 
+I've also had some better success just copying over all the styles into a stylecoer folder local to the project. 
+
 Using the command-line interface, go to your new project's SCSS folder, then:
 
 Creating a symlink file: 
@@ -104,6 +106,7 @@ Compiling the example:
 bundle exec middleman build
 ~~~
 
+Happy frameworking. I mean tool kitting.
 
 
 </main>
