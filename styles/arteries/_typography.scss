@@ -41,12 +41,6 @@
   strong {@extend %font-bold}
 %font-heavy, ._font-heavy {@extend %font-900;}
 
-%font-bigger, ._font-bigger { font-size: $base + 6px; line-height: ($base + 6px) * 1.5; }
-%font-big, ._font-big { font-size: $base + 3px; line-height: ($base + 2px) * 1.5; }
-%font-small, ._font-small { font-size: $base - 2px; line-height: ($base - 1px) * 1.5; }
-%font-smaller, ._font-smaller { font-size: $base - 6px; /*line-height: ($base - 5px) * 1.5 !important;*/ }
-// %font-smallest, ._font-smallest { font-size: $base-m3 !important; }
-
 %font-lower, ._font-lower { text-transform: lowercase; }
 %font-upper, ._font-upper { text-transform: uppercase; }
 %font-capitalize, ._font-capitalize { text-transform: capitalize; }
@@ -56,6 +50,17 @@ $font-lineheight: $base * 1.5;
 
 $font-ui: $base + 2px;
 $font-ui-lineheight: $font-ui * 1.5;
+
+$font-bigger:   $base + 6px; $line_height-bigger: ($base + 6px) * 1.5;
+$font-big:      $base + 3px; $line_height-big: ($base + 2px) * 1.5;
+$font-small:    $base - 2px; $line_height-small: ($base - 1px) * 1.5;
+$font-smaller:  $base - 6px; $line_height-smaller: inherit;
+
+%font-bigger, ._font-bigger {   font-size: $font-bigger; line-height: $line_height-bigger; }
+%font-big, ._font-big {         font-size: $font-big; line-height: $line_height-big; }
+%font-small, ._font-small {     font-size: $font-small; line-height: $line_height-small;  }
+%font-smaller, ._font-smaller { font-size: $font-smaller; line-height: $line_height-smaller; /*line-height: ($base - 5px) * 1.5 !important;*/ }
+// %font-smallest, ._font-smallest { font-size: $base-m3 !important; }
 
 // 
 // Contextual typography styles

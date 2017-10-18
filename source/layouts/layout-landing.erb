@@ -1,0 +1,15 @@
+
+<% title = current_page.data.title || "_stylecoeur" %>
+
+<!doctype html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%= partial '/partials/head' %>
+  </head>
+  <%= partial '/partials/nav' %>
+  <body>
+    <%= yield %>
+    <%= partial '/partials/footer' %>
+  </body>
+</html>

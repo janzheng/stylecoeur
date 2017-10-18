@@ -96,7 +96,106 @@ $button-outline-color-bg-hover:     transparent;
   padding: ($base - 0.5) $base*3/2;
 
   // @extend %font-sans;
+
+
+
+  // 
+  //    Button Attributes
+  // 
+
+  // usually I don't like using & because attributes
+  // become hard to find. It's useful here
+  // b/c & attaches to both ._button and <button>
+
+  &-active,
+  ._button.--active {
+    border-width: $border-massive;
+  }
+
+  &-disabled,
+  &.--disabled {
+    &, &:hover {
+      background-color: $color-gray-lightest;
+      color: $color-white;
+    }
+  }
+
+  &-opacity-half,
+  &.--opacity-half {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  &-short,
+  &.--short {
+    padding-top: $base-m3;
+    padding-bottom: $base-m3;
+  }
+
+  &-thin, &.--thin {
+    line-height: $base;
+    // text-transform: lowercase;
+  }
+    &-thin-light,
+    &.--thin-light {
+      line-height: $base;
+      // text-transform: lowercase;
+      border-width: $border-thin;
+    }
+    &-tiny,
+    &.--tiny {
+      line-height: $base-m1;
+      // text-transform: lowercase;
+      font-size: $base-m1;
+      border-width: $border-line;
+    }
+
+  &-tall,
+  &.--tall, {
+    padding-top: $base*2;
+    padding-bottom: $base*2;
+  }
+
+  &-width-inherit
+  &.--width-inherit, {
+    width: inherit;
+  }
+
+  &-wide,
+  &.--wide, {
+    padding-left: $base*4;
+    padding-right: $base*4;
+  }
+
+  &.--width-full {
+    width: 100%;
+  }
+
+  &-shadow,
+  &.--shadow {
+    @extend %button-shadow;
+
+    &:hover {
+      @extend %button-shadow-hover;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 button,
@@ -140,6 +239,9 @@ button,
   }
 }
 
+// Button w/o borders
+// useful for links that align with other buttons
+// but need to be "less loud"
 ._button-text,
 ._button-transparent {
   background-color: transparent !important;
@@ -149,81 +251,6 @@ button,
 
 }
 
-
-
-// 
-//    Button Attributes
-// 
-
-  ._button-active {
-    border-width: $border-massive;
-  }
-
-  ._button-disabled {
-    &, &:hover {
-      background-color: $color-gray-lightest;
-      color: $color-white;
-    }
-  }
-
-  ._button-opacity-half {
-    opacity: 0.5;
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-
-  ._button-thin {
-    line-height: $base/2;
-    // text-transform: lowercase;
-  }
-    ._button-thin-light {
-      line-height: $base;
-      // text-transform: lowercase;
-      border-width: $border-thin;
-    }
-    ._button-tiny {
-      line-height: $base-m1;
-      // text-transform: lowercase;
-      font-size: $base-m1;
-      border-width: $border-line;
-    }
-
-  ._button-short {
-    padding-top: $base-m3;
-    padding-bottom: $base-m3;
-  }
-
-  ._button-tall {
-    padding-top: $base*2;
-    padding-bottom: $base*2;
-  }
-
-  ._button-width-inherit {
-    width: inherit;
-  }
-
-  ._button-wide {
-    padding-left: $base*4;
-    padding-right: $base*4;
-  }
-
-button,
-._button {
-  &.--width-full {
-    width: 100%;
-  }
-}
-
-
-._button-shadow {
-  @extend %button-shadow;
-
-  &:hover {
-    @extend %button-shadow-hover;
-  }
-}
 
 
 

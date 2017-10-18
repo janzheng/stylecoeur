@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="80px" viewBox="0 0 100 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="49.8186384%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#F63636" offset="0%"></stop>
+            <stop stop-color="#FBAF66" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(0.000000, -11.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-3" transform="translate(0.000000, 11.000000)">
+                <polygon id="Path-Copy-12" points="38 5.80129789e-16 20 5.80129789e-16 15.8519665 5.39244349 0 26 37.8651191 66.8943287 71.8830858 0 63 5.80129789e-16 50 11"></polygon>
+                <polygon id="Path-Copy-13" fill-opacity="0.7" points="45 76 50 80 67.6609237 60.9262024 71.952893 56.2908756 100 26 82 4"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

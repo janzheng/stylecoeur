@@ -28,7 +28,7 @@
 @import 'vessels/message'; 
 @import 'vessels/card'; 
 @import 'vessels/code';
-
+@import 'vessels/quote'; 
 @import 'vessels/layout';
 // 
 //  The Components 
@@ -110,34 +110,6 @@ body {
 //     text-align: center;
 //   }
 // }
-
-
-// 
-// Main Page / Deliverable
-// 
-._main, ._styleguide-main {
-  @extend %grid-one-three;
-}
-
-
-// 
-// landing page
-// 
-._intro {
-  padding-top: 12vh;
-  padding-bottom: 12vh;
-
-  h1 {
-    margin: 0;
-  }
-  button {
-    margin: 4vh 0;
-  }
-}
-
-
-
-
 
 
 

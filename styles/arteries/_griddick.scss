@@ -496,6 +496,12 @@ $width-block-max: 55%;
 
 
 
+._grid-content-small {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-gap: $base;
+}
+
 ._grid-content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15ch, 1fr));
@@ -610,4 +616,12 @@ $width-block-max: 55%;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+
+
+._span-xs-reset { // forces xs to start at first column for responsive views
+  @include screen-xs {
+    grid-column-start: 1 !important;
+  }
+}
+
 

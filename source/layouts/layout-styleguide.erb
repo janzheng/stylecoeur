@@ -1,0 +1,59 @@
+
+
+<% title = current_page.data.title || "_stylecoeur" %>
+
+<!doctype html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%= partial '/partials/head' %>
+  </head>
+  <body class="_styleguide">
+
+    <div class="_styleguide-nav">
+      <a class="_margin-right" href="../index.html"><%= partial '/partials/logo' %></a>
+      <a class="_margin-right" href="../design.html">Design System</a>
+      <a class="_margin-right" href="../styleguide.html">Styleguide</a>
+      <a class="_margin-right" href="../notes.html">Notes</a>
+    </div>
+
+    <div class="_container">
+
+      <div class="_styleguide-main _grid-one-four">
+
+        <aside>
+          <!-- <h1 class="_transparent">menu</h1> -->
+          <span class="_sticky-tr"></span>
+          <div class="_sidebar --divider">
+            <%= partial '/partials/styleguide-index' %>
+          </div>
+        </aside>
+
+        <div class="_width-content-max _padding-2">
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="_styleguide-footer">
+    </div>
+  </body>
+</html>
+
+
+<script>
+
+// var max_search_entries = 50;
+
+// var result = []; //initialize empty array
+
+// lunrIndex.search(request.term).forEach( function (item, index) {
+//   if ( index < max_search_entries ) {
+//     result.push(lunrData.docs[item.ref]);
+//   }
+// });
+
+// console.log(result)
+
+</script>

@@ -1,9 +1,10 @@
 
-$sidebar-width-max: 200px;
+$sidebar-width-max: 100%; // 200px;
 $sidebar-width: $sidebar-width-max;
 
 $sidebar-color-link: $color-main;
 $sidebar-color-hover: $color-active;
+$sidebar-border: $border-line solid $color-ui;
 
 ._sidebar {
   max-width: $sidebar-width-max;
@@ -44,9 +45,14 @@ $sidebar-color-hover: $color-active;
     }
 
     &.--divider {
-      border-right: $border-line solid $color-ui;
+      border-right: $sidebar-border;
       // padding-right: $base;
       // margin-right: $base;
+
+      &-left {
+        border-right: 0;
+        border-left: $sidebar-border;
+      }
     }
   }
 }
@@ -59,6 +65,6 @@ $sidebar-color-hover: $color-active;
   padding-bottom: $base/4;
   margin-bottom: $base/4;
   // margin-right: $base*2;
-  border-bottom: $border-line solid $color-ui;
+  border-bottom: $sidebar-border;
 }
 

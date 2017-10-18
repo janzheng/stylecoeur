@@ -14,6 +14,8 @@ gem "middleman", "~> 4.1"
 gem "middleman-blog"
 gem 'middleman-search' # https://github.com/manastech/middleman-search
 
+gem "middleman-syntax"
+
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 # For feed.xml.builder
