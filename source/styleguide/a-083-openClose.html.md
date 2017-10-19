@@ -3,7 +3,7 @@ title: Open close
 type: styleguide
 layout: layout-styleguide
 name: openClose
-section: interactive
+section: scriptcoeur
 status: --tbd
 source: ../../
 ---

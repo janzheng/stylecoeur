@@ -3,7 +3,7 @@ title: Sticky
 type: styleguide
 layout: layout-styleguide
 name: sticky
-section: interactive
+section: scriptcoeur
 status: --tbd
 source: ../../
 ---

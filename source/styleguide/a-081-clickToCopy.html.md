@@ -3,7 +3,7 @@ title: Click to Copy
 type: styleguide
 layout: layout-styleguide
 name: clickToCopy
-section: interactive
+section: scriptcoeur
 status: --tbd
 source: ../../
 ---

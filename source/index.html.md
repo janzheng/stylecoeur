@@ -21,9 +21,9 @@ Like a toolkit. Made of duct tape.
 
 <div class="_margin-bottom-2">
   <div class="_buttonGroup --outline">
-    <a class="_button --short" target="_blank" href="/system.html">Design System</a>
-    <a class="_button --short" target="_blank" href="/styleguide.html">Style Guide</a>
-    <a class="_button --short" target="_blank" href="/notes.html">Notes &amp; Todos</a>
+    <a class="_button --short" target="_blank" href="./system.html">Design System</a>
+    <a class="_button --short" target="_blank" href="./styleguide.html">Style Guide</a>
+    <a class="_button --short" target="_blank" href="./notes.html">Notes &amp; Todos</a>
   </div>
 </div>
 
@@ -38,8 +38,6 @@ Like a toolkit. Made of duct tape.
 
 ## Overview
 
-### What is this for?
-
 If you have a ton of projects that use very similar styles, why reinvent the wheel? Create a reusable collection of SCSS modules (you can loosely call it a 'framework') to save yourself some time. This is NOT a framework. It's a collection of useful modules, and a starting point for you to build out your own framework.
 
 The idea is to centralize all your styles to reduce the amount of work. This will also help you standardize naming conventions. I prefer my own simplified version of BEM syntax: [http://getbem.com/introduction/](http://getbem.com/introduction/)
@@ -48,11 +46,18 @@ Each project will import stylecoeur, then implement its own styles on top of the
 
 
 
-### Getting Started
+### Usage
 
-Use it out of the box (I'm using it for my projects) or add/remove whatever you want. Clone this project into a folder, and create a symlink to this folder in your SCSS folder. I prefer creating a symlinked / aliased external 'stylecoeur' folder where you can then cherry-pick whatever components you'd like to include. Don't forget that @importing a folder in SCSS automatically imports the index.scss file, if one exists. NOTE: right-click to create an alias doesn't always work, so use the CLI instead.
+The style guide is very modular, so only link the SCSS components you need.
 
-I've also had some better success just copying over all the styles into a stylecoer folder local to the project. 
+
+#### Static Copy
+
+__Preferred Usage.__ Copy the full `styles` folder over to a new project. If the core changes, just make sure to copy the newest one over. Eventually there might be a build task to ensure it stays up to date. This method is preferred, as it prevents accidental changes to the core.
+
+#### Symlink
+
+Create a symlink to this project from your project, which gives you control of editing the core. This is powerful but dangerous, since changes might ripple across projects. Don't forget that @importing a folder in SCSS automatically imports the index.scss file, if one exists. NOTE: right-click to create an alias doesn't always work, so use the CLI instead.
 
 Using the command-line interface, go to your new project's SCSS folder, then:
 
@@ -88,7 +93,9 @@ or pick specific compontents
 
 
 
-### Running the Style Guide
+
+
+### Running the Guide
 
 The documentation is written in a combination of ERB, Kramdown (variant of Markdown), and HTML, supported by SCSS.
 Go to the source/ folder and use the following commands. Note that the source example uses a symlink itself. The site is built on top of [Middleman](http://middlemanapp.com)

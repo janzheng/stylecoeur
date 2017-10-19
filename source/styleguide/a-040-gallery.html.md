@@ -3,7 +3,7 @@ title: Gallery
 type: styleguide
 layout: layout-styleguide
 name: gallery
-section: interactive
+section: scriptcoeur
 status: --tbd
 source: ../../
 ---

@@ -3,7 +3,7 @@ title: Lightbox
 type: styleguide
 layout: layout-styleguide
 name: lightbox
-section: interactive
+section: scriptcoeur
 status: --tbd
 source: ../../
 ---
