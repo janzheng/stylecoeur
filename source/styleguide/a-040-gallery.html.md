@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: gallery
 section: scriptcoeur
 status: --tbd
-source: ../../
+source: ../
 ---
 
 <main markdown="1">

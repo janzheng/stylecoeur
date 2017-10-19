@@ -39,4 +39,8 @@ $color-success-bg: $color-success;
     color: $color-success-copy;
     background-color: $color-success-bg;
   }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

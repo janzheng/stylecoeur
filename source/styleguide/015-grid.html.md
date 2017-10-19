@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: grid
 section: basics
-source: ../../
+source: ../
 ---
 
 
@@ -34,9 +34,9 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
 ## Grid Examples
 
 
-~~~
+~~~html
 <div class="_grid-one _align-center">
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>One block grid </p>
   </div>
 </div>
@@ -44,22 +44,22 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
 
 <div class="_styleguide-example">
   <div class="_grid-one">
-    <div class="_grid-block _color-bg-silver-light">
+    <div class="_grid-block _color-bg-white">
         <p>One block grid </p>
     </div>
   </div>
 </div>
 
 
-~~~
+~~~html
 <div class="_grid-three _align-center">
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>Three block grid </p>
   </div>
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>Three block grid </p>
   </div>
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>Three block grid </p>
   </div>
 </div>
@@ -67,13 +67,13 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
 
 <div class="_styleguide-example">
   <div class="_grid-three">
-    <div class="_grid-block _color-bg-silver-light">
+    <div class="_grid-block _color-bg-white">
         <p>Three block grid </p>
     </div>
-    <div class="_grid-block _color-bg-silver-light">
+    <div class="_grid-block _color-bg-white">
         <p>Three block grid </p>
     </div>
-    <div class="_grid-block _color-bg-silver-light">
+    <div class="_grid-block _color-bg-white">
         <p>Three block grid </p>
     </div>
   </div>
@@ -81,12 +81,12 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
 
 
 
-~~~
+~~~html
 <div class="_grid-one-three _align-center">
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>One block grid </p>
   </div>
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>Three block grid </p>
   </div>
 </div>
@@ -94,10 +94,10 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
 
 <div class="_styleguide-example">
 <div class="_grid-one-three">
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>One block grid </p>
   </div>
-  <div class="_grid-block _color-bg-silver-light">
+  <div class="_grid-block _color-bg-white">
       <p>Three block grid </p>
   </div>
 </div>

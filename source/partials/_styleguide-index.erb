@@ -1,6 +1,14 @@
+
 <% $section_name = '' %>
+<% source = current_page.data.source || "" %>
+
+<!-- styleguide pages are one / deep and currently using relative links -->
+<% if current_page.data.rel %>
+  <% source = current_page.data.rel %>
+<% end %>
 
 <div>
+  <h5>Style Guide</h5>
   <% sitemap.resources.select { |r| r.data.type == 'styleguide' }
     .sort_by{|r| r.url }
     .each do |resource| 
@@ -11,6 +19,8 @@
       <div class="_sidebar-section_title"> <%= $section_name %></div>
     <% end %>
 
-    <div><a href="../<%= resource.path %>" class="<%= '--active' if current_page.data.name == resource.data.name %> <%= resource.data.status %>"><%= resource.data.title %></a></div>
+    <div><a href="<%= source %><%= resource.path %>" class="<%= '--active' if current_page.data.name == resource.data.name %> <%= resource.data.status %>"><%= resource.data.title %></a></div>
   <% end %>
 </div>
+
+

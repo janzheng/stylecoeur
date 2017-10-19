@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: forms
 section: components
-source: ../../
+source: ../
 ---
 
 
@@ -93,7 +93,7 @@ Flags:
 <button class="_button" type="submit"> Send Message </button>
 </form>
 </div>
-~~~
+~~~html
 <form class="" method="post">
 <p><strong>Comment submission form</strong></p>
 <div class="_form-control">
@@ -142,7 +142,7 @@ Flags:
 <button class="_button" type="submit"> Sign Up </button> <span class="_form-note"> Free signup, no credit card required</span>
 </form>
 </div>
-~~~
+~~~html
 <form class="" method="post">
 <p><strong>Sign Up or Sign In form</strong></p>
 <div class="_grid-two">
@@ -269,7 +269,7 @@ Basic input form
 
 </div>
 
-~~~
+~~~html
 <div class="_form-control --optional">
   <label class="_form-label">Text Input <span class="_font-small">- optional</span></label>
   <input id="year" class="_form-input" type="text" name="year" placeholder='Some text' />
@@ -322,7 +322,7 @@ File inputs are supported as well.
   </div>
 </div>
 
-~~~
+~~~html
 <div class="_form-control">
   <input id="fileInput" type="file" />  
   <label for="fileInput" class="_form-input-file _button _button-short " >
@@ -363,7 +363,7 @@ All the regular input skin options apply to date, whenever possible. Also make s
     <input id="when" name="when" type="date" min="2016-01-01" max="2016-12-01">
   </div>
 </div>
-~~~
+~~~html
 <div class="_form-control">
   <label for="when">Date:</label>
   <input id="when" name="when" type="date">
@@ -388,7 +388,7 @@ All the regular input skin options apply to date, whenever possible. Also make s
 
 </div>
 
-~~~
+~~~html
 <div class="_form-control">
   <label for="description" class="_form-label">Text area block </label>
   <textarea rows="4" id="description" class="_form-input"  type="text" name="description" placeholder="Text area placeholder goes here" ></textarea>
@@ -419,7 +419,7 @@ Multi-handle sliders are not natively supported, but many plugins exist. Feel fr
   </div>
 </div>
 
-~~~
+~~~html
 <div class="_form-control">
     <div class="_form-slider">
       <label for="rangeSlider" class="_form-label">Range Slider </label>
@@ -478,7 +478,7 @@ Multi-handle sliders are not natively supported, but many plugins exist. Feel fr
 
 </div>
 
-~~~
+~~~html
 <div class="_form-control _form-radiogroup --required">
   <label class="_form-radiogroup-title" htmlFor="windowTint">Window Tint</label>
   <div class="_form-radio --inline">
@@ -538,7 +538,7 @@ Multi-handle sliders are not natively supported, but many plugins exist. Feel fr
 
 </div>
 
-~~~
+~~~html
 <div class="_form-control">
   <div class="_form-checkbox --inline">
     <label for="isCheckbox">
@@ -621,7 +621,7 @@ Dropdowns can be custom replaced with a radio list, and multiple select lists wi
 
 </div>
 
-~~~
+~~~html
 <div class="_form-select _margin-bottom">
   <label for="dropdownExample">Example option / dropdown</label>
   <select id="dropdownExample">

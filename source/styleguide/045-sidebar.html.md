@@ -4,7 +4,8 @@ type: styleguide
 layout: layout-styleguide
 name: sidebar
 section: components
-source: ../../
+status: --tbd
+source: ../
 ---
 
 
@@ -20,35 +21,4 @@ A little javascript with MagicScroll is required to keep the menu to stick the l
 
 Note: The pinned state uses the somewhat-supported `position: sticky` element.
 
-HTML:
-
-~~~html
-<aside>
-  <h1 class="_transparent">menu</h1>
-  <span class="_sticky-tr"></span>
-  <div class="_sidebar">
-    <%= partial '/partials/styleguide-index' %>
-  </div>
-</aside>
-~~~
-
-`<head>` requirements:
-
-~~~html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
-~~~
-
-Javascript:
-
-~~~js
-var sidebar = new ScrollMagic.Scene({triggerElement: "._sidebar-tr", triggerHook: "onLeave"})
-    .setClassToggle("._sidebar", "--pinned") // add class toggle
-    .addTo(stickyController);
-
-~~~
-
-</main>
-
+[ more to come ]

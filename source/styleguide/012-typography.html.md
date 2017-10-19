@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: typography
 section: basics
-source: ../../
+source: ../
 ---
 
 
@@ -16,16 +16,21 @@ source: ../../
 
 [Quicksand v2](https://fonts.google.com/specimen/Quicksand) is used for display styles while the system font is used for everything else (Segoe UI for Windows, and San Francisco or Helvetica Neue for Mac OS X. There is currently no established vertical rhythm or baseline grid, but all the sizing inherits from `$base: 16px`. Sizes are established in `_heart.scss`, where you can spot `$base-p1 ...` and `$base-m1 ...`  which provide quick access to slightly more consistent plus and minus sizes.
 
-# h1 Main Heading 
 
-## h2 Sub Page Title 
+<div class="_styleguide-example" markdown="1">
 
-### h3 Section Header
+# h1. Main Heading 
 
-#### h4 Sub Section Header 
+## h2. Sub Heading 
 
-##### h5 Paragraph Header 
+### h3. Section Header
 
-###### h6 Light Header 
+#### h4. Sub Section Header 
+
+##### h5. Paragraph Header 
+
+###### h6. Light Header 
+
+</div>
 
 </main>

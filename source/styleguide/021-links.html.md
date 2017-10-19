@@ -4,8 +4,8 @@ type: styleguide
 layout: layout-styleguide
 name: links
 section: simple
-status: tbd
-source: ../../
+status: --tbd
+source: ../
 ---
 
 

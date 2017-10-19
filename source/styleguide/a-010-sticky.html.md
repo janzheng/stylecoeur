@@ -1,20 +1,28 @@
+---
+title: Sticky
+type: styleguide
+layout: layout-styleguide
+name: sticky
+section: scriptcoeur
+status: --tbd
+source: ../
+---
 
-<div class="_changelog _padding _sidebar --divider-left --pinned" markdown="1">
+<main markdown="1">
 
-#### Change Log
+## Sticky Components
 
-<div class="_color-ui-dark">
-  [major.minor.micro]
+Sticky nav, sticky sidebar, etc.
+
+Uses ScrollMagic to attach classes.
+
+[more to come]
+
+
 </div>
 
-- __[0.0.2]__ _10-18-17_
-  - too much to add
-  - keeping it quiet for now
+</main>
 
-- __[0.0.1]__ _10-18-16_
-  - add change log
-
-</div>
 
 
 <script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>

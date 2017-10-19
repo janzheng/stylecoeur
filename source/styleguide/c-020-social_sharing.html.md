@@ -4,10 +4,16 @@ type: styleguide
 layout: layout-styleguide
 name: social_sharing
 section: external
-source: ../../
+source: ../
 ---
 
 <main markdown="1">
+
+## Social Sharing
+
+The following meta tags make a site look good when it's shared over social media (Facebook, Twitter).
+
+
 
 Here's an example social sharing and meta tags from the verge:
 

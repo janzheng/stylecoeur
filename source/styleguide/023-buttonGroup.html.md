@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: buttongroups
 section: simple
-source: ../../
+source: ../
 ---
 
 

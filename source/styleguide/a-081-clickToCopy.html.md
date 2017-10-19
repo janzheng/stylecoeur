@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: clickToCopy
 section: scriptcoeur
 status: --tbd
-source: ../../
+source: ../
 ---
 
 <main markdown="1">

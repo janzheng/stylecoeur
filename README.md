@@ -53,7 +53,7 @@ or pick specific compontents ```@import 'stylecoeur/components/form';```
 
 
 
-### Middleman Styleguide
+### Middleman Style Guide
 
 The documentation is written in a combination of ERB, Kramdown (variant of Markdown), and HTML, supported by SCSS.
 Go to the source/ folder and use the following commands. Note that the source example uses a symlink itself.

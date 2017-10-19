@@ -26,6 +26,8 @@ code {
 
 // rendered code + content
 .highlight {
+  margin-bottom: $base*2;
+  
   // spacing for content
   &+p, &+ul {
     margin-top: $base;

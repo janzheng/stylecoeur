@@ -92,22 +92,23 @@ function verticalScroll(_target) {
 
 $(document).ready(function() {
 
-  var windowHeight = $(window).height();
-  windowWidth = $(window).width();
-  $("a[href^='#'], html, body").unbind();
+  // this affects <a> onclick events!!!
+  //  if this is attached, onclick won't propagate
+  // var windowHeight = $(window).height();
+  // windowWidth = $(window).width();
+  // $("a[href^='#'], html, body").unbind();
 
-  console.log('window height/width: ' + windowHeight + ' | ' + windowWidth);
+  // console.log('window height/width: ' + windowHeight + ' | ' + windowWidth);
 
 
-  // intercept hash load
-  let hash = location.hash;
-  console.log(hash);
+  // // intercept hash load
+  // let hash = location.hash;
 
-  if(hash !== '') {
-    verticalScroll(hash);
-  } else {
-    verticalScroll();
-  }
+  // if(hash !== '') {
+  //   verticalScroll(hash);
+  // } else {
+  //   verticalScroll();
+  // }
 
 
 
@@ -117,21 +118,22 @@ $(document).ready(function() {
   // 
 
   // animation controller
-  var stickyController = new ScrollMagic.Controller();
+  // var stickyController = new ScrollMagic.Controller();
 
-  // sticky nav
-  var nav = new ScrollMagic.Scene({triggerElement: "#nav", triggerHook: "onLeave"})
-          .setPin("#nav")
-          .setClassToggle("#nav", "--pinned") // add class toggle
-          .addTo(stickyController);
+  // // sticky nav
+  // var nav = new ScrollMagic.Scene({triggerElement: "#nav", triggerHook: "onLeave"})
+  //         .setPin("#nav")
+  //         .setClassToggle("#nav", "--pinned") // add class toggle
+  //         .addTo(stickyController);
 
-  // execute above function
-  // initPhotoSwipeFromDOM('.gallery');
+  // // execute above function
+  // // initPhotoSwipeFromDOM('.gallery');
 
-  // sidebar element
-  var sidebar = new ScrollMagic.Scene({triggerElement: "._sidebar-tr", triggerHook: "onLeave"})
-          .setClassToggle("._sidebar", "--pinned") // add class toggle
-          .addTo(stickyController);
+  // // sidebar element
+  // var sidebar = new ScrollMagic.Scene({triggerElement: "._sidebar-tr", triggerHook: "onLeave"})
+  //         .setClassToggle("._sidebar", "--pinned") // add class toggle
+  //         .addTo(stickyController);
+
 
 });
 

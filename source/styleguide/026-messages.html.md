@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: messages
 section: simple
-source: ../../
+source: ../
 ---
 
 

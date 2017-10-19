@@ -25,6 +25,7 @@ set :fonts_dir, 'fonts'
 
 
 
+# activate :asset_hash # github cache buster
 
 
 # With alternative layout

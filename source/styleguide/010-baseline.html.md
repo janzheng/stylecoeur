@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: baseline
 section: basics
 status: --tbd
-source: ../../
+source: ../
 ---
 
 

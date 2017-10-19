@@ -4,8 +4,8 @@ type: styleguide
 layout: layout-styleguide
 name: adblock
 section: scriptcoeur
-status: --tbd
-source: ../../
+<!-- status: --tbd -->
+source: ../
 ---
 
 <main markdown="1">
@@ -14,7 +14,8 @@ source: ../../
 
 ## Adblock Detection
 
-Very basic but surprisingly effective method at [detectadblock.com](http://www.detectadblock.com/).
+Very basic method at [detectadblock.com](http://www.detectadblock.com/).
+This matches the `ads.js?` rule, but you can match others from [EasyList](https://easylist.to/easylist/easylist.txt).
 
 <div class="_message">
 </div>
@@ -29,12 +30,12 @@ e.style.display='none';
 document.body.appendChild(e);
 ~~~
 
-    Basically creates an empty div. Lots of adblockers look for the "ads.js" file name.
+    Basically creates an empty div. Lots of adblockers look for the "ads.js?" file name. Note the way the file is included.
 
 2\. Check if `ads.js` was loaded
 
 ~~~ html
-<script src="/ads.js" type="text/javascript"></script>
+<script src="../javascripts/scriptcoeur/ads.js?" type="text/javascript"></script>
 <script type="text/javascript">
 
 if(document.getElementById('rIMfJLoGNRzs')){
@@ -50,7 +51,7 @@ if(document.getElementById('rIMfJLoGNRzs')){
 </main>
 
 
-<script src="../../javascripts/scriptcoeur/ads.js" type="text/javascript"></script>
+<script src="../javascripts/scriptcoeur/ads.js?" type="text/javascript"></script>
 <script type="text/javascript">
 
 if(document.getElementById('rIMfJLoGNRzs')){

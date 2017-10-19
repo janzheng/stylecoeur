@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: using-middleman
 section: middleman
 status: --tbd
-source: ../../
+source: ../
 ---
 
 <main markdown="1">
@@ -109,12 +109,19 @@ Partials can also take variables, as used in the Colors section. Usage:
 
 <div class="_color-inactive" markdown="1">
 
-### YAML
+### YAML &amp; Front Matter
 
 - front matter
 - source: structure / head
 - configuring head
 - accessing front matter
+
+- front-matter flags
+  - page.show_footer
+  - page.show_nav
+  - page.transition
+  - etc. applied to the page
+
 
 
 ### Layouts
@@ -186,3 +193,4 @@ To deploy under `/docs` you actually don't need middleman-deploy. You can set th
 </div>
 
 </main>
+

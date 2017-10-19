@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: design
 section: about
-source: ../../
+source: ../
 ---
 
 <main markdown="1">

@@ -115,6 +115,9 @@
     ._margin-top-none {
       margin-top: 0;
     }
+      ._margin-top-none-i {
+        margin-top: 0 !important;
+      }
     ._margin-top-2 {
       margin-top: $base*2;
     }

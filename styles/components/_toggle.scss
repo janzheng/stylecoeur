@@ -23,12 +23,14 @@ $toggle-color-slider: $color-white;
   display: inline-block;
   width: $toggle-width; // set to button-thin height for now; need a baseline later
   height: $toggle-height; 
+  @extend %ease;
 
   input {
     display:none;
 
-    &:checked + ._toggle-slider {
-      background-color: $toggle-color-bg-active;
+    ._toggle-slider {
+      @extend %ease;
+      justify-items: left;
     }
     &:focus + ._toggle-slider {
       box-shadow: 0 0 3px $toggle-color-bg-active;
@@ -37,6 +39,7 @@ $toggle-color-slider: $color-white;
        & + ._toggle-slider {
         justify-items: end;
         @extend %ease;
+        background-color: $toggle-color-bg-active;
       }
       & ~ ._off {
         display: none !important;
@@ -47,6 +50,10 @@ $toggle-color-slider: $color-white;
     }
   }
 
+  &:hover {
+    color: $color-active;
+    @extend %ease;
+  }
 
   &.--pill {
     ._toggle-slider {
@@ -67,6 +74,7 @@ $toggle-color-slider: $color-white;
     padding-left: $toggle-width + $base;
     position: absolute;
     top: 0;
+    cursor: pointer;
   }
   ._off {
     display: inline-block;

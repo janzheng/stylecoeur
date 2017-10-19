@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: buttons
 section: simple
-source: ../../
+source: ../
 ---
 
 
@@ -38,11 +38,11 @@ Standard Navigation:
 <div id="nav-tr" >
   <nav id="nav" class="_nav _container _content">
     <div class="_grid-one-three _grid-center-h">
-      <a class="nav-logo" href="/"><span class="_logo">B<i>a</i>b<o>u</o></span></a>
+      <a class="nav-logo" href="/"><span class="_logo">Logo</span></a>
       <div class="nav-links">
-        <a href="#intro" data-offset-scroll="-100">Features</a>
-        <a href="#privacy" data-offset-scroll="-100">Privacy</a>
-        <a href="#pricing" data-offset-scroll="-100">Pricing</a>
+        <a href="#intro">Nav Linke</a>
+        <a href="#privacy">Nav Linke</a>
+        <a href="#pricing">Nav Linke</a>
         <a class="_nav--separator">login</a>
       </div>
     </div>
@@ -54,8 +54,8 @@ Simple Navigation:
 <div id="nav-tr" >
   <nav id="nav" class="_nav --simple _ease-none _container ">
     <div class="">
-      <a href="#inspiration" data-offset-scroll="-100">Nav Option 1</a>
-      <a href="#inspiration" data-offset-scroll="-100">Nav Option 2 </a>
+      <a href="#inspiration">Nav Option 1</a>
+      <a href="#inspiration">Nav Option 2 </a>
     </div>
   </nav>
 </div>
@@ -74,8 +74,12 @@ Note that the links in the navigation do not have the underline.
 
 Buttons come in two variations, a default rectangular one and a slimmer call to action. The default can be used anywhere, whereas the slimmer round "pill" button should be used as "calls to action" ('CTA') where users are led down a path to either unerstand more about your app or sign up or pay for services. The pill is in lowercase to appear "friendlier" and lower pressure as well.
 
-<button class="_button">Press Me!</button> <button class="_button-pill _button-thin">Press Me!</button>
-
+<div class="_styleguide-example">
+  <button class="_button">Press Me!</button> <button class="_button-pill _button-thin">Press Me!</button>
+</div>
+~~~html 
+  <button class="_button">Press Me!</button> <button class="_button-pill _button-thin">Press Me!</button>
+~~~
 
 
 

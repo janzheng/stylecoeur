@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: intro
 section: about
-source: ../../
+source: ../
 ---
 
 

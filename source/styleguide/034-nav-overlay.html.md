@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: nav-overlay
 section: components
 status: --tbd
-source: ../../
+source: ../
 ---
 
 

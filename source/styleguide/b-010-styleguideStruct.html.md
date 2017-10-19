@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: styleguide-structure
 section: middleman
 status: --tbd
-source: ../../
+source: ../
 ---
 
 <main markdown="1">

@@ -34,4 +34,8 @@ $card-radius: $radius !default;
     padding: 0;
     box-shadow: none;
   }
+
+  &.--padding-light {
+    padding: $base;
+  }
 }

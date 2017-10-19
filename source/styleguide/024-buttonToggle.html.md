@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: toggleswitch
 section: simple
-source: ../../
+source: ../
 ---
 
 
@@ -18,39 +18,42 @@ Toggle buttons are essentially checkboxes with an associated text (e.g. on or of
 
 Left position means "off", and right position means "on". Make sure the labels always describe the current state (e.g. "Disabled") and not future (e.g. "Turn On") as that gets confusing quickly.  
 
-~~~
-<label class="_toggle">
-  <input type="checkbox">
-  <span class="_toggle-slider"></span>
-  <label class="_off">Disabled</label>
-  <label class="_on">Enabled</label>
-</label>
 
-<label class="_toggle --pill">
-  <input type="checkbox">
-  <span class="_toggle-slider"></span>
-  <label class="_off">Off</label>
-  <label class="_on">On</label>
-</label>
-~~~
-<div class="_margin-bottom-2">
-  <div class="_margin-bottom">
-    <label class="_toggle">
-      <input type="checkbox">
-      <span class="_toggle-slider"></span>
-      <label class="_off">Disabled</label>
-      <label class="_on">Enabled</label>
-    </label>
-  </div>
-  <div class="_margin-bottom">
-    <label class="_toggle --pill">
-      <input type="checkbox">
-      <span class="_toggle-slider"></span>
-      <label class="_off">Off</label>
-      <label class="_on">On</label>
-    </label>
+<div class="_styleguide-example">
+  <div class="_margin-bottom-2">
+    <div class="_margin-bottom">
+      <label class="_toggle">
+        <input id="toggle-1" type="checkbox">
+        <span class="_toggle-slider"></span>
+        <label for="toggle-1" class="_off">Disabled</label>
+        <label for="toggle-1" class="_on">Enabled</label>
+      </label>
+    </div>
+    <div class="_margin-bottom">
+      <label class="_toggle --pill">
+        <input type="checkbox">
+        <span class="_toggle-slider"></span>
+        <label class="_off">Off</label>
+        <label class="_on">On</label>
+      </label>
+    </div>
   </div>
 </div>
+~~~
+  <label class="_toggle">
+    <input type="checkbox">
+    <span class="_toggle-slider"></span>
+    <label class="_off">Disabled</label>
+    <label class="_on">Enabled</label>
+  </label>
+
+  <label class="_toggle --pill">
+    <input type="checkbox">
+    <span class="_toggle-slider"></span>
+    <label class="_off">Off</label>
+    <label class="_on">On</label>
+  </label>
+~~~
 
 
 

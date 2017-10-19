@@ -1,13 +1,17 @@
 ---
-title: Design
+title: User Stories
 type: styleguide
 layout: layout-styleguide
-name: user stories
+name: userStories
 section: about
-source: ../../
+status: --tbd
+source: ../
 ---
 
 <main markdown="1">
+
+DESIGN NEEDS GO INTO THE DESIGN SySTEM PAGE
+
 
 # Design
 

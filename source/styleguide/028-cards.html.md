@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: cards
 section: simple
-source: ../../
+source: ../
 ---
 
 
@@ -20,21 +20,21 @@ Use these to draw attention to a box of special information, maybe even conclude
 
 
 <div class="_styleguide-example">
-<div class="_grid-block">
-  <div class="_color-bg-ui _card ">
-    <h3>Interesting Topic</h3>
-    <div class="_padding-bottom"><i class="fa fa-bolt fa-2x"></i></div>
-    <p class="_padding-none">This is fairly interesting to talk about. Hey look, there's a bolt. It's Harry Potter's icon! Or is it?
-    </p>
+  <div class="_grid-block">
+    <div class="_card _color-bg-white ">
+      <h3>Interesting Topic</h3>
+      <div class="_padding-bottom"><i class="fa fa-bolt fa-2x"></i></div>
+      <p class="_padding-none">This is fairly interesting to talk about. Hey look, there's a bolt. It's Harry Potter's icon! Or is it?
+      </p>
 
-    <p>Ready to check it out?</p>
+      <p>Ready to check it out?</p>
 
-    <a href="#" class="_button _button-thin _button-blue _button-pill _margin-none">Find out now!</a>
+      <a href="#" class="_button _button-thin _button-blue _button-pill _margin-none">Find out now!</a>
 
+    </div>
   </div>
 </div>
-</div>
-~~~
+~~~ html
 <div class="_card _color-bg-ui">
   <h3>Interesting Topic</h3>
   <div class="_padding-bottom"><i class="fa fa-bolt fa-2x"></i></div>

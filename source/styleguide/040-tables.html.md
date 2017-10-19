@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: tables
 section: components
 status: --tbd
-source: ../../
+source: ../
 ---
 
 <main markdown="1">

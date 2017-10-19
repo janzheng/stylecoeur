@@ -1,11 +1,21 @@
 
 
+
+/* 
+
+    This may need to be refactored out of _stylecoeur
+
+ */
+
+
 // these are mainly used for styleguides
 // if they apply anywhere else, then sure.
 
 
 $styleguide-border: none; // $border-thin solid $color-ui-dark;
-$styleguide-bg: $color-blacker; // $border-thin solid $color-ui-dark;
+$styleguide-nav-bg: $color-black; // $border-thin solid $color-ui-dark;
+$styleguide-bg: $color-ui-light;
+$styleguide-example-color: $color-ui-dark;
 $styleguide-link: $color-silver;
 $styleguide-link-hover: $color-secondary;
 
@@ -31,12 +41,28 @@ $styleguide-link-hover: $color-secondary;
   border: $styleguide-border;
   border-radius: $radius;
   padding: $base;
-  margin-bottom: $base*3;
+  padding-top: $base;
+  margin-bottom: $base*2;
+  background-color: $styleguide-bg;
 
   & + pre { // fuse code together w/ example
     margin-top: -$base*3 - 3px;
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
+  }
+
+  &:before {
+    content: ' example ';
+    font-size: $font-small;
+    display: block;
+    padding-bottom: $base;
+    // font-style: italic;
+    color: $styleguide-example-color;
+  }
+
+  // example + code should be connected
+  & + .highlight {
+    margin-top: -$base*2;
   }
 }
 
@@ -54,7 +80,7 @@ $styleguide-link-hover: $color-secondary;
   padding-right: $base;
   border-bottom: $styleguide-border;
 
-  background: $styleguide-bg;
+  background: $styleguide-nav-bg;
 
   a {
     color: $styleguide-link;
@@ -71,3 +97,100 @@ $styleguide-link-hover: $color-secondary;
     height: auto;
   }
 }
+
+._styleguide-tools {
+  ._card {
+    padding: $base;
+  }
+  ._card p:first-child {
+    margin-bottom: $base/2;
+  }
+  ._card p:last-child {
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+._styleguide-contact {
+
+  form {
+    $color-border-off: rgba($color-main, 0.3);
+    $color-border-on: $color-active;
+
+    %form-style {
+      @extend %font-body;
+      font-size: $base + 2px;
+      @extend %ease;
+    }
+
+    ._inline {
+      margin-left: $base/2;
+      margin-right: $base/2;
+    }
+    p {
+      line-height: $base*3;
+    }
+
+    input {
+      border: 0;
+      border-bottom: $border-medium solid $color-border-off !important;
+      background-color: transparent;
+      border-radius: 0;
+
+      &:active, &:focus, &:hover {
+        border-bottom: $border-medium solid $color-border-on !important;
+        @extend %ease;
+        box-shadow: none !important;
+      }
+      @extend %form-style;
+
+    }
+
+    textarea {
+      max-width: 450px;
+      outline: $border-medium solid $color-border-off;
+      // outline: none !important;
+      border:  $border-medium solid $color-border-off;
+      // box-shadow: 0 0 10px $color-border-off;
+      @extend %form-style;
+
+      &:active, &:focus, &:hover {
+      outline: $border-medium solid $color-border-on;
+      border:  $border-medium solid $color-border-on;
+        @extend %ease;
+      }
+    }
+
+    ._form-select-dropdown {
+
+      @include screen-xs {
+        & + select {
+          border: $border-medium solid $color-border-off;
+          margin-right: 4px !important; // alignment
+
+          &:active, &:focus, &:hover {
+            // outline: $border-medium solid $color-border-on;
+            border:  $border-medium solid $color-border-on;
+            outline: none;
+          }
+        }
+      .fa {
+        vertical-align: bottom;
+        line-height: 9px;
+      }
+      }
+      
+    }
+  }
+
+
+
+}
+

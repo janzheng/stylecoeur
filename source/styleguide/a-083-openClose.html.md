@@ -5,7 +5,7 @@ layout: layout-styleguide
 name: openClose
 section: scriptcoeur
 status: --tbd
-source: ../../
+source: ../
 ---
 
 <main markdown="1">

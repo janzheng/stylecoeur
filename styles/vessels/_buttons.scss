@@ -59,8 +59,8 @@ $button-outline-border:             $border-thin;
 $button-outline-color-main:         $color-copy;
 $button-outline-color-border:       $color-copy;
 $button-outline-color-bg:           transparent; // $color-black;
-$button-outline-color-main-hover:   $color-gray-lighter;
-$button-outline-color-border-hover: $color-gray-lighter;
+$button-outline-color-main-hover:   $color-hover; // $color-gray-lighter;
+$button-outline-color-border-hover: $color-hover; // $color-gray-lighter;
 $button-outline-color-bg-hover:     transparent;
 
 

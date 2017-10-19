@@ -17,10 +17,11 @@ $sidebar-border: $border-line solid $color-ui;
     font-size: $base;
     line-height: $base*1.5;
     // padding-bottom:$base/8;
-    margin-bottom: $base/2;
+    margin-bottom: $base/4;
     margin-right: $base*2;
     display: inline-block;
     color: $sidebar-color-link;
+    border: 0;
     border-color: $sidebar-color-link;
 
     &:hover {
