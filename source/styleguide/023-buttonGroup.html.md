@@ -51,7 +51,7 @@ Modifiers:
   </div>
 </div>
 </div>
-~~~
+~~~html
 <div class="_margin-bottom-2">
   <div class="_buttonGroup">
     <button class="_button">Button One</button>

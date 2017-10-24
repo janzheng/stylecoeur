@@ -20,7 +20,7 @@ This is not a framework, just a bunch of loose concepts, ideas, SCSS, tools and 
 Like a toolkit. Made of duct tape.
 
 <div class="_margin-bottom-2">
-  <div class="_buttonGroup --outline">
+  <div class="_buttonGroup --font-body-xs --outline">
     <a class="_button --short" target="_blank" href="./system.html">Design System</a>
     <a class="_button --short" target="_blank" href="./styleguide.html">Style Guide</a>
     <a class="_button --short" target="_blank" href="./notes.html">Notes &amp; Todos</a>
@@ -34,7 +34,7 @@ Like a toolkit. Made of duct tape.
 <article class="_width-content-max-narrow _margin-center">
 
 
-<main markdown="1">
+<main class="_padding-2" markdown="1">
 
 ## Overview
 

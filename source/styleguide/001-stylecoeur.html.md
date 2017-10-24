@@ -9,11 +9,29 @@ source: ../
 
 <main markdown="1">
 
-# Philosophy
+## Philosophy
 
 The idea behind this style guide and the 'framework' is to bring together a group of useful tools to make prototyping or development both quick and look professional. This is a speed-first, readability-second approach, which lends to easy prototyping and spitting out new good-looking pages. It might not work as well as an enterprise app.
 
 Everything is put together to be as quickly understandable and deployable as possible, hence the modified "BEM" styling. These are implemented as loose rules-of-thumb, and not hard rules.
+
+
+### Core Philosophy
+
+Stylecoeur isn't for everyone. It's for prototyping.
+
+- Production Speed is King!
+- (Product speed > Performance)
+- Less complex is better, use helpers as much as possible
+- Style Guide and scriptcoeur is a collection of examples
+- Use as much open source as possible
+- Don't reinvent the wheel
+- The Core will ALWAYS change
+- This documentation will ALWAYS be behind (even changelog)
+- Use the code as documentation
+- Extensive use of grids. [Modern browsers only]
+
+
 
 ## Stylecoeur
 

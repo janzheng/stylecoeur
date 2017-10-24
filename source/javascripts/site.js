@@ -127,7 +127,7 @@ $(document).ready(function() {
   //         .addTo(stickyController);
 
   // // execute above function
-  // // initPhotoSwipeFromDOM('.gallery');
+  // // initPhotoSwipeFromDOM('._gallery');
 
   // // sidebar element
   // var sidebar = new ScrollMagic.Scene({triggerElement: "._sidebar-tr", triggerHook: "onLeave"})

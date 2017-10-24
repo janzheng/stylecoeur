@@ -1,0 +1,111 @@
+
+
+$dropdown-bg: $color-bg;
+$dropdown-color: $color-body;
+$dropdown-offset-v: 60px;
+$dropdown-offset-h: 0px;
+$dropdown-z: 1000; // z-manager in the future
+
+// basic example
+$dropdown-loading-bg: $color-hover;
+$dropdown-loading-color: $color-black;
+
+._dropdown {
+  position: relative;
+  cursor: pointer;
+  @extend %ease-slow;
+
+
+  // CLOSED neutral STATE
+  ._dropdown-container {
+    height: 0px; // content is hidden
+    overflow: hidden;
+
+    cursor: default; // preserver cursor behavior
+    position: absolute;
+    top: 40px;
+    left: $dropdown-offset-h;
+    @extend %ease-slow;
+
+    &.--button-width{
+      width: 100%;
+    }
+    &.--right {
+      left: inherit;
+      right: $dropdown-offset-h;
+    }
+  }
+
+
+
+  // neutral state opening animation
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%; 
+    height: 0; // 100%;
+    top: 0; left: 0;
+  }
+  // loading animation effects
+  &.--opening { // attached w/ js
+    * {
+      color: $dropdown-loading-color !important;
+    }
+    &:after { 
+      height: 100%;
+      @extend %ease-fast;
+      background-color: $dropdown-loading-bg;
+    }
+  }
+
+  ._dropdown-content {
+    // display: none;
+    opacity: 0;
+    @extend %ease;
+    @extend ._format-last-bottom_none;
+  }
+
+  // OPEN STATE 
+  &:not(.--opening) {
+    &:hover,
+    &.--open,
+    {
+      @extend %ease-slow;
+
+      // hidden hit target for smooth hovering
+      &:before {
+        content: ' ';
+        display: block;
+        opacity: 0;
+        position: absolute;
+        height: $dropdown-offset-v;
+        width: 100%;
+      }
+      ._dropdown-container {
+        height: inherit;
+        z-index: $dropdown-z;
+        top: $dropdown-offset-v;
+        @extend %ease-slow;
+      }
+      ._dropdown-content {
+        // display: block;
+        opacity: 1;
+        height: 100%;
+        @extend %ease-slow;
+      }
+
+    }
+  }
+
+
+}
+
+
+// Default styling
+._dropdown-content {
+  background-color: $dropdown-bg;
+  color: $dropdown-color;
+}
+
+

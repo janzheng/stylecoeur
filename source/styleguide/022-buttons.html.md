@@ -10,7 +10,7 @@ source: ../
 
 <main markdown="1">
 
-# Buttons
+## Buttons
 
 `_buttons.scss`
 

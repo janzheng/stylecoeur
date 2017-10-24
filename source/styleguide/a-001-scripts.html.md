@@ -14,10 +14,17 @@ source: ../
 
 Some components require JS to work properly. Examples are provided to each component in separate js files, under the `_scriptcoeur` folder.
 
+- Focus on production speed
+- Use as much open source as possible
+- Don't reinvent the wheel
+
+Almost everything makes extensive usage of jQuery, so it's included in scriptcoeur `scriptcoeur/plugins/jquery.min.js`.
+
+A
 
 ### Usage
 
-Easiest way is to just include the js file in html and call the corresponding function (This is quick for development), but you can also integrate it into your own code.
+Easiest way is to just include the js file in html and call the corresponding function (This is quick for development), but you can also integrate it into your own code (copypasta).
 
 ~~~html
 <script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
@@ -36,10 +43,9 @@ $(document).ready(function() {
 <main class="_styleguide-tools" markdown="1">
 
 
-## 3rd Party Tools
+## Plugins 3rd Party Tools
 
-
-These useful tools will require external, 3rd-party tools. They need to be included separately. Some of them have examples here.
+These useful tools will require external, 3rd-party tools, which should be in `scriptcoeur/plugins/[pluginName]`. For organization, both CSS and JS files should be in the same folder.
 
 
 #### Tricks
@@ -58,7 +64,7 @@ Typography that scales with the window.
 
 
 
-#### Page-Building Tools
+#### Useful Tools
 
 <div class="_grid-three" >
 

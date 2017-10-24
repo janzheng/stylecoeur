@@ -15,7 +15,7 @@ source: ../
 
 `_sidebar.scss`
 
-The sidebar is used for styling the sidebar (like the one used for this style guide).
+The sidebar is used for styling the sidebar (like the one used for this style guide). It's slightly similar in functionality to the sidenav.
 
 A little javascript with MagicScroll is required to keep the menu to stick the left side, if needed: just add a span with the class `_sticky-tr` to make it work.
 

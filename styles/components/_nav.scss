@@ -6,7 +6,10 @@
 
 $nav-color-bg: $color-bg;
 
+$nav-separator-color: $color-ui;
+$nav-separator-style: solid;
 
+._nav,
 nav {
   font-size: $base;
 
@@ -14,6 +17,7 @@ nav {
     border-bottom: 0;
   }
 
+  ._nav-right,
   ._nav-content,
   ._nav-links,
   svg {
@@ -24,49 +28,95 @@ nav {
 
 
 
+// Side Nav
+
+$sidenav-min-height: 500px;
+$sidenav-min-width: $width-xs-max;
+$sidenav-width: 150px;
+$sidenav-width-open: 300px;
+$sidenav-border: $border-line solid $color-ui;
+$sidenav-bg: rgba($color-white, 0.88);
+
+// "mobile first" 
+// this is fall-back; shows across top
+// v-small screens
+._nav-sidenav-container {
+  @extend %ease;
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: $base;
+    @extend %ease;
+  }
+  nav + div {
+    @extend %ease;
+    left: 0;
+    position: relative;
+  }
+}
+
+// if conditions are met, display down the left
+@media (min-height: $sidenav-min-height) 
+       and (min-width: $sidenav-min-width)  {
+  ._nav-sidenav-container {
+    display: grid;
+    grid-template-columns: $sidenav-width auto;
+  
+    nav {
+      display: block;
+      position: relative;
+      // height: 100vh;
+      width: 100%;
+      border-right: $sidenav-border;
+      padding-right: $base;
 
 
-// ._nav {
-//   margin-top: $base;
-//   position: relative; 
-//   text-transform: capitalize;
-//   // padding-top: $base;
-//   // padding-bottom: $base;
-//   padding: $base;
+      div { // all nav elements on their own line
+        display: block;
+      }
+      ._nav-links {
+        text-align: left;
+      }
+      a {
+        display: block;
+      }
 
-//   background-color: transparent;
-//   @extend %ease-slow;
+      // only slide if nav has --slide
+      &.--slide:hover {
+        width: $sidenav-width-open;
+        z-index: 3000;
 
-//   &.--pinned {
-//     @extend %ease-slow;
-//     background-color: $nav-color-bg;
-//     // @extend %box_shadow-raised;
-//     top: 0 !important;
-//   }
 
-//   a {
-//     font-size: $base;
-//     position: relative; 
-//     display: inline-block;
-//     border-bottom: none;
-//     margin-right: $base;
-//     // @extend ._font-light;
-//   }
+        // only slide main content if
+        // main container has --slide
+        & + .--slide {
+          // this might get annoying
+          left: $sidenav-width-open - $sidenav-width;
+          position: relative;
+        }
+      }
+    }
+  }
+}
 
-//   .nav-links {
-//     text-align: right;
-//     @include screen-xs {
-//       text-align: center;
+
+// }
+
+// // across top
+// @media (max-height: sidenav-min-height - 1) 
+//        , (max-width: $width-xs-max)  {
+
+//   ._nav-content {
+//     padding: $base;
+//     // display: grid;
+//     span, a {
+//       display: inline-block;
 //     }
 //   }
-
-//   &.--simple {
-//     background-color: $color-bg;
-//     padding-left: 0;
-//     &.--pinned {
-//       box-shadow: none;
-//       background-color: $color-bg;
-//     }
+//   // ._nav-links {
+//   //   grid-row-start: 2;
+//   // }
+//   nav {
+//     border-bottom: $sidenav-border;
 //   }
-
 // }

@@ -605,7 +605,15 @@ $width-block-max: 55%;
 ._span-col-8 { grid-column: span 8; } ._span-xs-col-8 { @include screen-xs-only {grid-column: span 8;} } ._span-sm-col-8 { @include screen-sm-only {grid-column: span 8;} }
 
 
-
+// this forces grids to obey min sizes
+// https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+._grid-size-force {
+  overflow:hidden;
+  * {
+    min-height: 0;   /* NEW; needed for Firefox */
+    min-width: 0;   /* NEW; needed for Firefox */
+  }
+}
 
 // for xs screen,
 // overrides default 1 row behavior

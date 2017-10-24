@@ -29,7 +29,7 @@ Use these to draw attention to a box of special information, maybe even conclude
 
       <p>Ready to check it out?</p>
 
-      <a href="#" class="_button _button-thin _button-blue _button-pill _margin-none">Find out now!</a>
+      <span class="_button --thin --pill _margin-none">Find out now!</span>
 
     </div>
   </div>
@@ -43,7 +43,7 @@ Use these to draw attention to a box of special information, maybe even conclude
 
   <p>Ready to check it out?</p>
 
-  <a href="#" class="_button _button-thin _button-blue _button-pill _margin-none">Find out now!</a>
+  <span class="_button --thin --pill _margin-none">Find out now!</span>
 
 </div>
 ~~~

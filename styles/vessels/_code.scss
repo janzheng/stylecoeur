@@ -27,10 +27,17 @@ code {
 // rendered code + content
 .highlight {
   margin-bottom: $base*2;
-  
+  // @extend ._width-content-max-narrow;
+  max-width: 100%;
+  overflow: scroll;
+
   // spacing for content
   &+p, &+ul {
     margin-top: $base;
+  }
+
+  * {
+    max-width: 100%;
   }
 }
 

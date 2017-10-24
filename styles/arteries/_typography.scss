@@ -48,7 +48,7 @@
 $font-size: $base;
 $font-lineheight: $base * 1.5;
 
-$font-ui: $base + 2px;
+$font-ui: $base; // $base + 2px;
 $font-ui-lineheight: $font-ui * 1.5;
 
 $font-bigger:   $base + 6px; $line_height-bigger: ($base + 6px) * 1.5;
@@ -71,7 +71,7 @@ $font-smaller:  $base - 6px; $line_height-smaller: inherit;
 }
   em {@extend %font-italic}
 
-%font-body {
+%font-body, ._font-body {
   @extend %font-sans;
   font-size: $font-size;
   line-height: $font-lineheight;

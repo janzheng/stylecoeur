@@ -79,6 +79,7 @@ $button-outline-color-bg-hover:     transparent;
   @extend %ease;
   outline: none;
   display: inline-block; 
+  line-height: normal;
 
   margin-bottom: $base;
   margin-right: $base;
@@ -182,6 +183,19 @@ $button-outline-color-bg-hover:     transparent;
       @extend %button-shadow-hover;
     }
   }
+
+  &.--shadow {
+    @extend %button-shadow;
+
+    &:hover {
+      @extend %button-shadow-hover;
+    }
+  }
+
+  &.--font-body-xs {
+    font-size: $font-size;
+  }
+  
 }
 
 
@@ -214,6 +228,7 @@ button,
     @extend %ease; 
     color: $button-color-main-hover;
     background-color: $button-color-bg-hover;
+    border-color: $button-color-bg-hover;
   }
 }
 

@@ -14,19 +14,28 @@ $btnGrp-radius-pill: $radius-lg;
   clear: both;
 
   ._button {
-    margin: 0 !important;
+    margin: 0;
     float: left;
 
-    &:not(:first-child):not(:last-child) {
-      border-radius: 0 !important;
+    @include screen-xs-only {
+      font-size: $font-size;
+      margin-bottom: $base/2; 
+      width: 100%;
     }
-    &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    &:last-child {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+
+
+    @include screen-sm {
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0 !important;
+      }
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
     }
   }
 
@@ -51,12 +60,14 @@ $btnGrp-radius-pill: $radius-lg;
     ._button {
       @extend ._button-outline;
 
-      &:not(:last-child) {
-        border-right-width: 0;
-        &:hover {
-          // border-right-color: $button-outline-color-border-hover;
-          &+._button {
-          border-left-color: $button-outline-color-border-hover;
+      @include screen-sm {
+        &:not(:last-child) {
+          border-right-width: 0;
+          &:hover {
+            // border-right-color: $button-outline-color-border-hover;
+            &+._button {
+            border-left-color: $button-outline-color-border-hover;
+            }
           }
         }
       }

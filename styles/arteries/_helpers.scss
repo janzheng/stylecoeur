@@ -100,7 +100,7 @@
   margin: 0;
 }
   ._margin-none-xs {
-    @include screen-xs {
+    @include screen-xs-only {
       margin: 0;
     }
   }
@@ -250,18 +250,18 @@
       padding-bottom: $base*2;
     }
     ._padding-bottom-xs {
-      @media (max-width: $width-xs-max) {
+      @include screen-xs-only {
         padding-bottom: $base !important;
       }
     }
     ._padding-bottom-sm_up {
-      @media (min-width: $width-sm-min) {
+      @include screen-sm {
         padding-bottom: $base !important;
       }
     }
 
       ._padding-bottom-three-xs {
-        @include screen-xs {
+        @include screen-xs-only {
           padding-bottom: $base*3;
         }
       }
@@ -289,6 +289,16 @@
   ._padding-left {
     padding-left: $base;
   }
+    ._padding-left-xs {
+      @include screen-xs-only {
+        padding-left: $base;
+      }
+    }
+    ._padding-left-sm_up {
+      @include screen-sm {
+        padding-left: $base;
+      }
+    }
     ._padding-left-2 {
       padding-left: $base*2;
     }
@@ -391,6 +401,58 @@
 ._v-bottom {
   vertical-align: bottom;
 }
+
+
+
+// Sticky / Pinned
+
+._pinned, .--pinned {
+  padding-bottom: $base * 2;
+  position: sticky;
+  top: 0;
+}
+  // can't extend outside of media so...
+  // this pins it only sm screens and up
+  ._pinned-sm, .--pinned-sm {
+    @include screen-sm { 
+      // height: 100vh;
+      padding-bottom: $base * 2;
+
+      position: sticky;
+      top: 0;
+    }
+  }
+
+
+
+
+// Container Formatting
+// formats enclosing content
+// useful for markdown
+
+
+// last object in container has no padding
+._format-padding-last-bottom_none {
+  *:last-child {
+    padding-bottom: 0;
+  }
+}
+._format-margin-last-bottom_none {
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// last object in container has no
+// margin or padding (no extra whitespace)
+._format-last-bottom_none {
+  @extend ._format-padding-last-bottom_none;
+  @extend ._format-margin-last-bottom_none;
+}
+
+
+
+
 
 
 

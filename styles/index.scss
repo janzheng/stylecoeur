@@ -46,6 +46,8 @@
 @import 'components/buttonGroups'; 
 @import 'components/toggle'; 
 @import 'components/modal'; 
+@import 'components/changelog'; 
+@import 'components/dropdown';
 @import 'components/expander'; // NEEDS CLEANUP 
 
 
@@ -70,48 +72,6 @@ body {
   color: $color-copy;
   margin: 0;
 }
-
-
-
-
-// 
-// nav
-// // 
-// ._nav ._logo {
-//   width: 200px;
-//   font-size: $base * 2.8;
-//   background-color: transparent;
-//   @extend %ease;
-// }
-//   // separator
-//   ._nav--separator {
-//     margin-left: $base;
-//     &:before {
-//       content: ' ';
-//       display: block;
-//       position: absolute;
-
-//       // border-left: $border-medium;
-//       // border-left-color: $border-light;
-//       // border-left-style: solid;
-
-//       width: 10px;
-//       height: 42px;
-//       left: -18px;
-//       top: -6px;
-
-//     }
-//   }
-
-
-
-// .nav-logo {
-//   @include screen-xs {
-//     padding-bottom: $base*2;
-//     text-align: center;
-//   }
-// }
-
 
 
 

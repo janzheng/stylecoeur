@@ -45,4 +45,8 @@ a {
     @extend %ease;
   }
 
+  &.--border-none {
+    border: 0;
+  }
+
 }

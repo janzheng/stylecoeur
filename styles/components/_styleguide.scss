@@ -21,52 +21,11 @@ $styleguide-link-hover: $color-secondary;
 
 // color swatches used mostly for styleguides
 
-._swatch {
-
-}
-
-  ._swatch-color {
-    // color block
-    height: 120px;
-    width: 100%;
-    border-radius: $radius;
-    margin-bottom: $base;
-  }
-
-  ._swatch-description {
-    @extend %font-small;
-  }
-
-._styleguide-example {
-  border: $styleguide-border;
-  border-radius: $radius;
-  padding: $base;
-  padding-top: $base;
-  margin-bottom: $base*2;
-  background-color: $styleguide-bg;
-
-  & + pre { // fuse code together w/ example
-    margin-top: -$base*3 - 3px;
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
-  }
-
-  &:before {
-    content: ' example ';
-    font-size: $font-small;
-    display: block;
-    padding-bottom: $base;
-    // font-style: italic;
-    color: $styleguide-example-color;
-  }
-
-  // example + code should be connected
-  & + .highlight {
-    margin-top: -$base*2;
-  }
-}
 
 ._styleguide {
+  h1 {
+    // padding-bottom: 0;
+  }
   h5 {
     padding-top: $base * 2; // subheaders need room
   }
@@ -114,6 +73,59 @@ $styleguide-link-hover: $color-secondary;
 
 
 
+
+
+// used all over
+._styleguide-example {
+  border: $styleguide-border;
+  border-radius: $radius;
+  padding: $base;
+  padding-top: $base;
+  margin-bottom: $base*2;
+  background-color: $styleguide-bg;
+
+  & + pre { // fuse code together w/ example
+    margin-top: -$base*3 - 3px;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+  }
+
+  &:before {
+    content: ' example ';
+    font-size: $font-small;
+    display: block;
+    padding-bottom: $base;
+    // font-style: italic;
+    color: $styleguide-example-color;
+  }
+
+  // example + code should be connected
+  & + .highlight {
+    margin-top: -$base*2;
+  }
+}
+  ._styleguide-example-code {
+    max-width: 70vw;
+  }
+
+
+
+// colors
+._swatch {
+
+}
+
+  ._swatch-color {
+    // color block
+    height: 120px;
+    width: 100%;
+    border-radius: $radius;
+    margin-bottom: $base;
+  }
+
+  ._swatch-description {
+    @extend %font-small;
+  }
 
 
 
