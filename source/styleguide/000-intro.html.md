@@ -46,6 +46,7 @@ Other style guides:
 
 - [Trello](https://design.trello.com/)
 - [Mailchimp](https://ux.mailchimp.com/)
+- [Corpus](http://jamiewilson.io/corpus/)
 
 </main>
 

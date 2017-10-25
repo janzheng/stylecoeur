@@ -61,7 +61,7 @@ $color-inactive: $color-gray-light !default;   ._color-inactive { color: $color-
 $color-warning: $color-yellow !default;        ._color-warning { color: $color-warning; }          ._color-bg-warning { background-color: $color-warning; }
 $color-danger: $color-red !default;            ._color-danger { color: $color-danger; }            ._color-bg-danger { background-color: $color-danger; }
 $color-success: $color-green !default;         ._color-success { color: $color-success; }          ._color-bg-success { background-color: $color-success; }
-$color-disabled: $color-gray-light !default;   ._color-disabled { color: $color-disabled; }        ._color-bg-success { background-color: $color-success; }
+$color-disabled: $color-gray-light !default;   ._color-disabled { color: $color-disabled; }        ._color-bg-disabled { background-color: $color-disabled; }
 
 $color-transparent: transparent !default; // sometimes this actually needs to be a solid color; using a var can re-define it
 

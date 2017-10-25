@@ -10,44 +10,88 @@ source: ../
 
 <main markdown="1">
 
-# Cards
+## Cards
 
 `_cards.scss`
+
 
 Cards are floating information boxes, similar to what is used on Google's material design, though without the strict usage rules. These are made to stand out, and a box-shadow effect makes them feel like they "pop" out of the screen.
 
 Use these to draw attention to a box of special information, maybe even concluded with a call-to-action.
 
+Good source of info: [Cards Best Practices](https://medium.com/@CanvasFlip/best-practices-for-designing-cards-a19f53cab052)
 
 <div class="_styleguide-example">
-  <div class="_grid-block">
-    <div class="_card _color-bg-white ">
-      <h3>Interesting Topic</h3>
-      <div class="_padding-bottom"><i class="fa fa-bolt fa-2x"></i></div>
-      <p class="_padding-none">This is fairly interesting to talk about. Hey look, there's a bolt. It's Harry Potter's icon! Or is it?
-      </p>
-
-      <p>Ready to check it out?</p>
-
-      <span class="_button --thin --pill _margin-none">Find out now!</span>
-
-    </div>
+  <div class="_card _color-bg-white ">
+    <h3>Interesting Topic</h3>
+    <p class="_padding-none">This is fairly interesting to talk about
+    </p>
+    <span class="_button --short --outline _margin-none">Find out now!</span>
   </div>
 </div>
 ~~~ html
-<div class="_card _color-bg-ui">
+<div class="_card _color-bg-white ">
   <h3>Interesting Topic</h3>
-  <div class="_padding-bottom"><i class="fa fa-bolt fa-2x"></i></div>
-  <p class="_padding-none">This is fairly interesting to talk about. Hey look, there's a bolt. It's Harry Potter's icon! Or is it?
+  <p class="_padding-none">This is fairly interesting to talk about
   </p>
-
-  <p>Ready to check it out?</p>
-
-  <span class="_button --thin --pill _margin-none">Find out now!</span>
-
+  <span class="_button --short --outline _margin-none">Find out now!</span>
 </div>
 ~~~
 
+
+<div class="_styleguide-example">
+  
+  <div class="_grid-two _margin-top-2">
+    <a href="#" class="_card-fun-item" style="background-image: url('../images/grumpy.jpg')">
+      <div>
+        <div class="_card-fun-title"><span>Grumpy Cat</span></div>
+        <div class="_card-fun-tags"><span>merf.</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="_card-fun-item" style="background-image: url('../images/grumpy.jpg')">
+      <div>
+        <div class="_card-fun-title"><span>Grumpy Cat</span></div>
+        <div class="_card-fun-tags"><span>merf.</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="_card-fun-item" style="background-image: url('../images/grumpy.jpg')">
+      <div>
+        <div class="_card-fun-title"><span>Grumpy Cat</span></div>
+        <div class="_card-fun-tags"><span>merf.</span></div>
+      </div>
+    </a>
+    
+  </div>
+
+</div>
+~~~html
+
+  <div class="_grid-two _margin-top-2">
+    <a href="#" class="_card-fun-item" style="background-image: url('../images/grumpy.jpg')">
+      <div>
+        <div class="_card-fun-title"><span>Grumpy Cat</span></div>
+        <div class="_card-fun-tags"><span>merf.</span></div>
+      </div>
+    </a>
+    
+    <a href="#" class="_card-fun-item" style="background-image: url('../images/grumpy.jpg')">
+      <div>
+        <div class="_card-fun-title"><span>Grumpy Cat</span></div>
+        <div class="_card-fun-tags"><span>merf.</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="_card-fun-item" style="background-image: url('../images/grumpy.jpg')">
+      <div>
+        <div class="_card-fun-title"><span>Grumpy Cat</span></div>
+        <div class="_card-fun-tags"><span>merf.</span></div>
+      </div>
+    </a>
+    
+  </div>
+~~~
 
 
 </main>

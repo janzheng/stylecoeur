@@ -175,6 +175,7 @@ label {
   // @extend %font-sans;
   vertical-align: top;
   cursor: default;
+  padding-bottom: $base/4;
 }
 
 input, .input {
@@ -497,7 +498,15 @@ textarea, .textarea {
       margin-right: 0 !important;
     }
 
+    & + .fa-angle-down {
+      position: absolute;
+      right: $base;
+      top: 0px;
 
+      @include screen-xs {
+        top: 60%;
+      }
+    }
   }
 }
 

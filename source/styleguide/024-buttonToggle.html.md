@@ -10,7 +10,7 @@ source: ../
 
 <main markdown="1">
 
-# Toggle Switch Buttons
+## Toggle Switch Buttons
 
 `_toggle.scss`
 

@@ -46,8 +46,10 @@
 %grid-xs-full,
   ._grid-xs-full {
   @include screen-xs {
-    @include griddick("one", 1);
-    grid-gap: 0;
+
+    // @include griddick("one", 1);
+    // grid-gap: 0;
+    display: block;
 
     // center on mobile
     & > * {
@@ -138,6 +140,11 @@
     @include griddick("two two", 2);
   }
 
+  &.--always {
+    @include screen-xs {
+      @include griddick("two two", 2);
+    }
+  }
 }
 
 %grid-three, ._grid-three {
@@ -263,6 +270,14 @@
     grid-template-areas: "three one";
     grid-template-rows:    1fr;
     grid-template-columns: 3fr 1fr;
+  }
+
+  &.--always {
+    @include screen-xs {
+      grid-template-areas: "three one";
+      grid-template-rows:    1fr;
+      grid-template-columns: 3fr 1fr;
+    }
   }
 }
 

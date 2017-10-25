@@ -11,7 +11,7 @@ source: ../
 
 <main markdown="1">
 
-# Baseline
+## Baseline
 
 `_baseline.scss`
 

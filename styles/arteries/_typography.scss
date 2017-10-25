@@ -45,8 +45,8 @@
 %font-upper, ._font-upper { text-transform: uppercase; }
 %font-capitalize, ._font-capitalize { text-transform: capitalize; }
 
-$font-size: $base;
-$font-lineheight: $base * 1.5;
+$font-size: $base - 1px;
+$font-lineheight: $font-size * 1.5;
 
 $font-ui: $base; // $base + 2px;
 $font-ui-lineheight: $font-ui * 1.5;
@@ -92,7 +92,7 @@ h1 {
 }
 
 h2 {
-  font-size: $base * 2.2;
+  font-size: $base * 2;
   line-height: $base * 2.2 * 1.5;
   font-weight: 700;
   padding: $base 0;
@@ -101,8 +101,8 @@ h2 {
 }
 
 h3 {
-  font-size: $base * 2.2;
-  line-height: $base * 2.2 * 1.5;
+  font-size: $base * 1.8;
+  line-height: $base * 1.8 * 1.5;
   padding: $base 0;
   @extend %font-display;
   font-weight: 300;

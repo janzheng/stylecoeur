@@ -46,9 +46,14 @@
 @import 'components/buttonGroups'; 
 @import 'components/toggle'; 
 @import 'components/modal'; 
-@import 'components/changelog'; 
 @import 'components/dropdown';
-@import 'components/expander'; // NEEDS CLEANUP 
+@import 'components/changelog';
+@import 'components/expander'; // requires js to function
+@import 'components/infobox';
+@import 'components/carousel';
+@import 'components/expander';
+@import 'components/blog';
+@import 'components/gridmarkers';
 
 
 // re-import to let colors take precedence
@@ -72,6 +77,8 @@ body {
   color: $color-copy;
   margin: 0;
 }
+
+
 
 
 

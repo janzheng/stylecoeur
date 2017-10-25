@@ -56,6 +56,43 @@ There are three different types of subsections: `stylecoeur/arteries` provide th
 This combination creates an environment that allows very quick static site development, which is helpful for launching proofs of concepts, user tests, styleguides, and landing pages
 
 
+
+#### Other Resources
+
+- Tympanus Codrops
+  - Good for ideas, inspiration, and implementation
+- Tympanus [Blueprints](https://tympanus.net/codrops/category/blueprints/)
+  - Multi-level side nav w/ nice transitions
+    - Great for more complex sidenavs, admin sidenavs
+  - [Stacked Navigation](https://tympanus.net/Blueprints/PageStackNavigation/)
+    - Looks and feels like a menu / foldering system
+  - [Zoom slider](https://tympanus.net/Blueprints/ZoomSlider/)
+    - Landing page, product view, transitions; cool for shopping grids too
+  - [Shopping Grid w/ Filters](https://tympanus.net/Blueprints/FilterableProductGrid/)
+    - cool slider within products, filters, masonry
+  - [Product Comparison](https://tympanus.net/Blueprints/ProductComparison/)
+  - [Grid Gallery](https://tympanus.net/Blueprints/GridGallery/)
+    - Combines a product grid with a gallery (cool for shopping, food menu, etc.)
+  - [Split Layout](https://tympanus.net/Blueprints/SplitLayout/)
+    - Cool idea with showing vertical strips and cool animation
+  - [On Scroll effects](https://tympanus.net/Blueprints/OnScrollEffectLayout/)
+  - [View mode switch](https://tympanus.net/Blueprints/ViewModeSwitch/)
+    - Grid v. List views
+  - [Animated Header](https://tympanus.net/Blueprints/AnimatedHeader/)
+    - Header nav shrinks a bit when scrolled down
+  - [Tooltip Menu](https://tympanus.net/Blueprints/TooltipMenu/)
+    - Like a 'dropdown' but can appear above if more space above
+  - [Responsive Prod Grid](https://tympanus.net/Blueprints/ProductGridLayout/)
+    - I like the hover effects for each product item
+  - [Slide-out massive nav menu](https://tympanus.net/Blueprints/HorizontalSlideOutMenu/#)
+  - [Vertical Timeline](https://tympanus.net/Blueprints/VerticalTimeline/)
+  - [Fixed Background Scrolling](https://tympanus.net/Blueprints/ScrollingLayout/)
+  - [Background Slideshow](https://tympanus.net/Blueprints/BackgroundSlideshow/)
+  - [Slide/Push Off-Canvas Menus](https://tympanus.net/Blueprints/SlidePushMenus/)
+  - [Quotes Rotator](https://tympanus.net/Blueprints/QuotesRotator/)
+  - [Nested Accordion](https://tympanus.net/Blueprints/NestedAccordion/)
+  - [Vertical Icon Menu](https://tympanus.net/Blueprints/VerticalIconMenu/#)
+  - [Horizontal Dropdown Mega Menu](https://tympanus.net/Blueprints/HorizontalDropDownMenu/)
 </main>
 
 

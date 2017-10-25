@@ -12,8 +12,12 @@
 
 */
 
+$expander-border: $border-line solid $color-ui;
+$expander-color-hover: $color-main;
+$expander-color-hover-bg: $color-silver-light;
+
 ._expander {
-  // border:  $border-line solid $color-ui; 
+  border:  $expander-border; 
   padding: $base;
   // border-radius: $radius;
   cursor: pointer;
@@ -24,22 +28,22 @@
 
   ._expander-icon {
     text-align: center;
-    color: $color-hover;
+    color: $expander-color-hover;
     @extend %ease-fast;
-    height: $base*2; // keeps the rotation in check
+    height: $base; // keeps the rotation in check
   }
 
   ._anim-right { 
-    color: $color-hover;
+    color: $expander-color-hover;
     position: relative;
     left: 0;
     @extend %ease-fast;
   }
   &:hover {
-    color: $color-hover;
-    background-color: $color-silver-light;
+    color: $expander-color-hover;
+    background-color: $expander-color-hover-bg;
     ._anim-right {
-      color: $color-hover;
+      color: $expander-color-hover;
       left: $base/2;
       @extend %ease-fast;
 
@@ -50,29 +54,38 @@
     }
   }
 
-  ._expander-content {
+  
+  &:not(.--open) {
+    @extend %ease;
+    // ._expander-content {
     ._expander-title {
-
-      & ~ * {
-        display: none;
-        height: 0;
-        opacity: 0;
+        & ~ * {
+          // display: none;
+          visibility: hidden;
+          height: 0;
+          opacity: 0;
+          margin: 0;
+          padding: 0;
+          @extend %ease-fast;
+        }
       }
-    }
+    // }
   }
 
   &.--open {
     @extend %ease-fast;
     ._expander-icon {
+      height: $base*2; // keeps the rotation in check
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg); 
     }
     ._expander-title {
       & ~ * {
         overflow: inherit;
-        display: block;
+        visibility: visible;
         height: 100%;
         opacity: 1;
+        @extend %ease-fast;
       }
     }
 

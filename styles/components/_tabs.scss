@@ -2,6 +2,11 @@
 // 
 //    TABS 
 // 
+
+$tab-size: font-size;
+$tab-border: $color-ui solid $border-line;
+$tab-color-active: $color-active;
+
 ._tabs {
   margin-top: $base;
   margin-bottom: $base;
@@ -9,7 +14,7 @@
   text-transform: capitalize;
 
   a {
-    font-size: $base;
+    font-size: $tab-size;
     position: relative; 
     display: inline-block;
     border-bottom: none;
@@ -19,12 +24,12 @@
     bottom: -$border-line;
 
     &.--active {
-      color: $color-active;
+      color: $tab-color-active;
     }
   }
 
   &.--border {
-    border-bottom: $color-ui solid $border-line;
+    border-bottom: $tab-border;
     @extend %ease;
 
     ._tabs-item {
@@ -32,7 +37,7 @@
     }
     .--active {
       // border: $color-ui solid $border-line;
-      border-bottom-color: $color-active;
+      border-bottom-color: $tab-color-active;
       @extend %ease;
     }
   }
@@ -45,3 +50,4 @@
     display: inherit;
   }
 }
+

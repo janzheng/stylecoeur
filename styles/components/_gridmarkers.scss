@@ -1,0 +1,18 @@
+
+
+$gridmarker-color: $color-ui-light;
+
+._grid-markers {
+  display: grid;
+  // grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  div {
+    background-color: $gridmarker-color;
+  }
+}

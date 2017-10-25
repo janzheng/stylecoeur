@@ -98,6 +98,9 @@
   }
 ._margin-none {
   margin: 0;
+  &-i {
+    margin: 0 !important;
+  }
 }
   ._margin-none-xs {
     @include screen-xs-only {

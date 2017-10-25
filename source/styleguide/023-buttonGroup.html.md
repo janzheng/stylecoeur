@@ -10,7 +10,7 @@ source: ../
 
 <main markdown="1">
 
-# Button Groups
+## Button Groups
 
 `_buttonGroups.scss`
 

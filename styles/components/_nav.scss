@@ -11,7 +11,8 @@ $nav-separator-style: solid;
 
 ._nav,
 nav {
-  font-size: $base;
+  font-size: $font-size;
+  cursor: default; // prevents text cursor
 
  a {
     border-bottom: 0;

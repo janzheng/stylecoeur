@@ -8,3 +8,20 @@ $border-massive: 12px;  ._border-massive { border-width: $border-massive }
 
 // general border width
 $border-width: $border-thin;
+
+
+._border-divider-skinny {
+  display: block;
+  border-top: 0;
+  border-bottom: $color-main solid $border-line;
+  width: 14vw;
+  padding-top: $base/2;
+  margin-top: 0;
+  margin-bottom: $base/2;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+

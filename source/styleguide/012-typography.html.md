@@ -10,7 +10,7 @@ source: ../
 
 <main markdown="1">
 
-# Typography
+## Typography
 
 `_typography.scss`
 

@@ -5,6 +5,7 @@ $dropdown-color: $color-body;
 $dropdown-offset-v: 60px;
 $dropdown-offset-h: 0px;
 $dropdown-z: 1000; // z-manager in the future
+$dropdown-title-z: 1010; // z-manager in the future
 
 // basic example
 $dropdown-loading-bg: $color-hover;
@@ -36,7 +37,11 @@ $dropdown-loading-color: $color-black;
     }
   }
 
-
+  // title helps w/ delay positioning
+  ._dropdown-delay-title {
+    position: relative;
+    z-index: $dropdown-title-z;
+  }
 
   // neutral state opening animation
   &:after {
@@ -46,16 +51,19 @@ $dropdown-loading-color: $color-black;
     width: 100%; 
     height: 0; // 100%;
     top: 0; left: 0;
+    background-color: $dropdown-loading-bg;
+    color: $dropdown-loading-color;
+    
+    overflow: hidden;
   }
   // loading animation effects
   &.--opening { // attached w/ js
-    * {
-      color: $dropdown-loading-color !important;
+    ._dropdown-delay-title {
+      color: $dropdown-loading-color;
     }
     &:after { 
       height: 100%;
       @extend %ease-fast;
-      background-color: $dropdown-loading-bg;
     }
   }
 
@@ -79,6 +87,7 @@ $dropdown-loading-color: $color-black;
         display: block;
         opacity: 0;
         position: absolute;
+        left: 0;
         height: $dropdown-offset-v;
         width: 100%;
       }
