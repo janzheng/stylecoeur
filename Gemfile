@@ -16,7 +16,7 @@ gem 'middleman-search' # https://github.com/manastech/middleman-search
 
 gem "middleman-syntax"
 
-gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+# gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

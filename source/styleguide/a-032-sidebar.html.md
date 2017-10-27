@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: sidebar
 section: components
-status: --tbd
+status: --draft
 source: ../
 ---
 
@@ -21,4 +21,7 @@ A little javascript with MagicScroll is required to keep the menu to stick the l
 
 Note: The pinned state uses the somewhat-supported `position: sticky` element.
 
+- add writeup on submenu 
+
+- add another middleman section on how it works
 [ more to come ]

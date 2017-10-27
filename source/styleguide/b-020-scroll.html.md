@@ -4,7 +4,7 @@ name: smoothScroll
 type: styleguide
 layout: layout-styleguide
 section: scriptcoeur
-<!-- status: --tbd -->
+<!-- status: --draft -->
 source: ../
 ---
 

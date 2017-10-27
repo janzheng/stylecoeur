@@ -31,101 +31,12 @@ The following works for modals smaller than the window. A special class `._modal
 </div>
 
 <div class="_styleguide-example">
-  <div class="_button" onclick="openWindow()">Open Modal Window</div>
+  <div class="_button" onclick="openModal()">Open Modal Window</div>
 
-  <div class="_modal-container "  >
-    <div class="_modal-popup-container "  >
-      <div class="_modal _modal-effect-slideUp">
-        <div class="_modal-content">
-          <div class="_modal-close" onclick="closeWindow()"><i class="fa fa-close"></i></div>
-          <div class="_modal-wrapper">
-            <h3>This is a header for the modal</h3>
-            <p>This is an example of a really long modal, and how it scrolls. Note how a special class is added to the html tag to prevent the body from scrolling in the background / doubling up on scroll bars when the modal is up.</p>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-            <div>Modal content goes in here</div>
-          </div>
-        </div>
-      </div>
-      <div class="_modal-overlay" onclick="closeWindow()"></div>
-    </div>
-
-  <script>
-    function openWindow() {
-      console.log('open!')
-      $('._modal-popup-container').addClass('--open');
-      $('html').addClass('_modal-html');
-      $('._modal').addClass('--open');
-    }
-
-    function closeWindow() {
-      console.log('close...!');
-      $('._modal-popup-container').removeClass('--open');
-      $('html').removeClass('_modal-html');
-      $('._modal').removeClass('--open');
-    }
-  </script>
-  </div>
-</div>
-
-
-
-~~~ html
-
-<div class="_button" onclick="openWindow()">Open Modal Window</div>
-
-<div class="_modal-container "  >
   <div class="_modal-popup-container "  >
     <div class="_modal _modal-effect-slideUp">
       <div class="_modal-content">
-        <div class="_modal-close" onclick="closeWindow()"><i class="fa fa-close"></i></div>
+        <div class="_modal-close" onclick="closeModal()"><i class="fa fa-close"></i></div>
         <div class="_modal-wrapper">
           <h3>This is a header for the modal</h3>
           <p>This is an example of a really long modal, and how it scrolls. Note how a special class is added to the html tag to prevent the body from scrolling in the background / doubling up on scroll bars when the modal is up.</p>
@@ -135,22 +46,150 @@ The following works for modals smaller than the window. A special class `._modal
           <div>Modal content goes in here</div>
           <div>Modal content goes in here</div>
           <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
+          <div>Modal content goes in here</div>
         </div>
       </div>
     </div>
-    <div class="_modal-overlay" onclick="closeWindow()"></div>
+    <div class="_modal-overlay" onclick="closeModal()"></div>
+
   </div>
 
+  <script>
+    function openModal() {
+      $('._modal-popup-container').addClass('--open');
+      $('html').addClass('_modal-html');
+      $('._modal').addClass('--open');
+    }
+
+    function closeModal() {
+      $('._modal-popup-container').removeClass('--open');
+      $('html').removeClass('_modal-html');
+      $('._modal').removeClass('--open');
+    }
+  </script>
+</div>
+
+
+
+~~~ html
+
+<div class="_button" onclick="openModal()">Open Modal Window</div>
+
+<div class="_modal-popup-container "  >
+  <div class="_modal _modal-effect-slideUp">
+    <div class="_modal-content">
+      <div class="_modal-close" onclick="closeModal()"><i class="fa fa-close"></i></div>
+      <div class="_modal-wrapper">
+        <h3>This is a header for the modal</h3>
+        <p>This is an example of a really long modal, and how it scrolls. Note how a special class is added to the html tag to prevent the body from scrolling in the background / doubling up on scroll bars when the modal is up.</p>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+        <div>Modal content goes in here</div>
+      </div>
+    </div>
+  </div>
+  <div class="_modal-overlay" onclick="closeModal()"></div>
+
+</div>
+
 <script>
-  function openWindow() {
-    console.log('open!')
+  function openModal() {
     $('._modal-popup-container').addClass('--open');
     $('html').addClass('_modal-html');
     $('._modal').addClass('--open');
   }
 
-  function closeWindow() {
-    console.log('close...!');
+  function closeModal() {
     $('._modal-popup-container').removeClass('--open');
     $('html').removeClass('_modal-html');
     $('._modal').removeClass('--open');

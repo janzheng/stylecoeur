@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: scroll-animations
 section: scriptcoeur
-status: --tbd
+status: --draft
 source: ../
 ---
 

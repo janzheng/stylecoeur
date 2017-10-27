@@ -26,7 +26,7 @@ Expander is a simple open/close box. It's not intended to be an accordion, but a
 
 <div class="_styleguide-example">
   
-  <div id="mvp" class="_expander">
+  <div class="_expander">
     <div class="_expander-icon"> 
       <span class="_anim-right">&rarr;</span> 
     </div>
@@ -52,7 +52,7 @@ Expander is a simple open/close box. It's not intended to be an accordion, but a
   </script>
 </div>
 ~~~html
-<div id="mvp" class="_expander">
+<div class="_expander">
   <div class="_expander-icon"> 
     <span class="_anim-right">&rarr;</span> 
   </div>

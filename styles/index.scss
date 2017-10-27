@@ -7,15 +7,17 @@
 
 @import 'heart'; // coeur
 
-// @import 'arteries/index'; // mass import the _index.scss file
+//  [ depends on the heart ]
+// @import 'arteries/index';
 @import 'arteries/reset';   
+@import 'arteries/prefixer';   
 @import 'arteries/screen';
 @import 'arteries/colors';
 @import 'arteries/helpers';
 @import 'arteries/animation';
 @import 'arteries/typography';
 @import 'arteries/griddick'; 
-@import 'arteries/mixins'; 
+@import 'arteries/mixins'; // depends on prefixer
 @import 'arteries/borders'; 
 
 // 

@@ -1,10 +1,10 @@
 ---
-title: Scripts
+title: Scripts & Tools
 type: styleguide
 layout: layout-styleguide
 name: scripts
 section: scriptcoeur
-<!-- status: --tbd -->
+<!-- status: --draft -->
 source: ../
 ---
 
@@ -41,9 +41,9 @@ $(document).ready(function() {
 <main class="_styleguide-tools" markdown="1">
 
 
-## Plugins 3rd Party Tools
+## Plugins & Tools
 
-These useful tools will require external, 3rd-party tools, which should be in `scriptcoeur/plugins/[pluginName]`. For organization, both CSS and JS files should be in the same folder.
+Some of these are tools, others are plugins. Plugins can be found at `scriptcoeur/plugins/[pluginName]` and may be required for some of the scripts. To keep things together, both CSS and JS files should be under the same plugin folder.
 
 
 #### Tricks
@@ -62,7 +62,7 @@ Typography that scales with the window.
 
 
 
-#### Useful Tools
+#### Tools
 
 <div class="_grid-three" >
 

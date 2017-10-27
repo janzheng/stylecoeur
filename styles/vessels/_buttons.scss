@@ -225,7 +225,7 @@ button,
   
   // default
   &:hover {
-    @extend %ease; 
+    // @extend %ease; 
     color: $button-color-main-hover;
     background-color: $button-color-bg-hover;
     border-color: $button-color-bg-hover;

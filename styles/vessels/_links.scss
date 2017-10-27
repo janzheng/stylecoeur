@@ -39,7 +39,7 @@ a {
     @extend %ease;
   }
 
-  &.--inactive, &.--tbd {
+  &.--inactive, &.--draft {
     color: $link-color-inactive !important;
     border-color: $link-color-inactive-border !important;
     @extend %ease;

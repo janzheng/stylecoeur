@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: using-middleman
 section: middleman
-status: --tbd
+status: --draft
 source: ../
 ---
 

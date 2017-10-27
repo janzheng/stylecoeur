@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: chat
 section: components
-status: --tbd
+status: --draft
 source: ../
 ---
 

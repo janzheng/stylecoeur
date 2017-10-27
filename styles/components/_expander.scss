@@ -61,7 +61,7 @@ $expander-color-hover-bg: $color-silver-light;
     ._expander-title {
         & ~ * {
           // display: none;
-          visibility: hidden;
+          // visibility: hidden;
           height: 0;
           opacity: 0;
           margin: 0;
@@ -81,8 +81,8 @@ $expander-color-hover-bg: $color-silver-light;
     }
     ._expander-title {
       & ~ * {
-        overflow: inherit;
-        visibility: visible;
+        // overflow: inherit;
+        // visibility: visible;
         height: 100%;
         opacity: 1;
         @extend %ease-fast;

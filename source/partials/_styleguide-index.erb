@@ -2,25 +2,56 @@
 <% $section_name = '' %>
 <% source = current_page.data.source || "" %>
 
-<!-- styleguide pages are one / deep and currently using relative links -->
-<% if current_page.data.rel %>
-  <% source = current_page.data.rel %>
-<% end %>
-
-<div>
-  <h5>Cheat Sheet ;)</h5>
-  <% sitemap.resources.select { |r| r.data.type == 'styleguide' }
-    .sort_by{|r| r.url }
-    .each do |resource| 
-  %>
-    <% if $section_name != resource.data.section 
-          $section_name = resource.data.section 
-      %>
-      <div class="_sidebar-section_title"> <%= $section_name %></div>
-    <% end %>
-
-    <div><a href="<%= source %><%= resource.path %>" class="<%= '--active' if current_page.data.name == resource.data.name %> <%= resource.data.status %>"><%= resource.data.title %></a></div>
+<span class="_sidebar-trigger"></span>
+<div class="_sidebar --divider">
+  <!-- styleguide pages are one / deep and currently using relative links -->
+  <% if current_page.data.rel %>
+    <% source = current_page.data.rel %>
   <% end %>
+
+  <div>
+    <h5>Cheat Sheet ;)</h5>
+    <% sitemap.resources.select { |r| r.data.type == 'styleguide' }
+      .sort_by{|r| r.url }
+      .each do |resource| 
+    %>
+      <% if $section_name != resource.data.section 
+            $section_name = resource.data.section 
+        %>
+        <div class="_sidebar-section_title"> <%= $section_name %></div>
+      <% end %>
+
+      <div>
+        <% if defined?(resource.data.submenu) %>
+          <span class='_sidebar-submenu_trigger
+                       <%= '--open' if defined?(current_page.data.submenu) && resource.data.submenu == current_page.data.submenu %>
+          '><i class="fa fa-angle-right"></i></span>
+        <% end %>
+        <a href="<%= source %><%= resource.path %>" class="
+            <%= '--active' if current_page.data.name == resource.data.name %>
+            <%= '--submenu' if defined?(resource.data.submenu) %>
+            <%= '--open' if defined?(current_page.data.submenu) && resource.data.submenu == current_page.data.submenu %>
+            <%= resource.data.status if defined?(resource.data.status) %>
+            "
+        >
+          <%= resource.data.title %> 
+        </a>
+        <% if resource.data.submenu %>
+          <div class="_sidebar-submenu">
+            <% resource.data.submenu.each do |item| %>
+              <div><a href=<%= source %><%= resource.path %>#<%= item[1] %>><%= item[0] %></a></div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
+    <% end %>
+  </div>
 </div>
 
+<script>
+  $('._sidebar-submenu_trigger').on('click', function() {
+    $(this).toggleClass('--open');
+  });
+</script>
 

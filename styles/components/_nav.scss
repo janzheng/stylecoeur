@@ -101,23 +101,65 @@ $sidenav-bg: rgba($color-white, 0.88);
 }
 
 
-// }
 
-// // across top
-// @media (max-height: sidenav-min-height - 1) 
-//        , (max-width: $width-xs-max)  {
 
-//   ._nav-content {
-//     padding: $base;
-//     // display: grid;
-//     span, a {
-//       display: inline-block;
-//     }
-//   }
-//   // ._nav-links {
-//   //   grid-row-start: 2;
-//   // }
-//   nav {
-//     border-bottom: $sidenav-border;
-//   }
-// }
+
+
+
+
+
+// # Off-Canvas Navigation
+
+._nav-offcanvas {
+  position: fixed;
+  // visibility: hidden;
+  // opacity: 0;
+  top: 0;
+  height: 100vh;
+  width: 200px; // default, but should be set using data-attr
+  @extend %ease-slow;
+
+  &.--left {
+    left: -200px;
+    &.--open {
+      left: 0 !important;
+    }
+  }
+  &.--right {
+    right: -200px;
+    &.--open {
+      right: 0 !important;
+    }
+  }
+  &.--open {
+    // visibility: visible;
+    opacity: 1;
+  }
+}
+._nav-offcanvas-target {
+  @extend %ease-slow;
+  position: relative;
+  right: 0;
+  // left: 0;
+
+  &.--left {
+    left: 0;
+  }
+  &.--right {
+    right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

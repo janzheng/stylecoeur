@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: sizer
 section: scriptcoeur
-<!-- status: --tbd -->
+<!-- status: --draft -->
 source: ../
 ---
 

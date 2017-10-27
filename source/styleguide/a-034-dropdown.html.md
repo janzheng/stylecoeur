@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: dropdowns
 section: components
-<!-- status: --tbd -->
+<!-- status: --draft -->
 source: ../
 ---
 

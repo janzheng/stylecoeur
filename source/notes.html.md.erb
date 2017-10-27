@@ -7,11 +7,65 @@ title: notes
 
 <article class="_padding _width-content-max" markdown="1">
 
-## Todos
+## Notes
+
+A random ramblin' wreck of a good time
+
+---
+
+
+#### Next Up
+
+- better way to organize layout / helpers
+- better writeup on the style helpers / core parts and make them more understandable?
+  - refer to the DESIGN SYSTEM writeup / take notes
+  - BASELINE
+- edit design philosophy, how the pieces connect; semantic BEM rules; layout
+  - refer to [corpus](http://jamiewilson.io/corpus/) for missing stuff
+- create rules on creating updating, changelogging
+  - like always using $vars instead of inserting values
+- janzheng - rss feed inserter / generalize it w/ input, callback, etc.
+- new project cheat sheet / quick way to launch new projects
 
 
 
-scroll-to-slide-up (spotify)
+
+
+
+Cheat Sheet
+- set timeout
+- repeat timer
+- ajax / promise
+- throttle
+- lodash helpers (useful)
+
+
+typography: smoothing
+- when it's good, when it doesn't look good (Affects readability)
+- mixin; use selectively (light on dark vs. dark on light; serif fonts like Georgia)
+-     -webkit-font-smoothing: antialiased;
+
+
+
+handling mail / setup
+  - subscriptions: mailchimp
+  - mailing out: mailgun
+    - github spam warning!!!
+  - tinyletter
+
+github deployment
+  - cname file
+  - how github deployment works
+  - **.github.io trap / how to deploy vs. repo
+  - jekyll vs. middleman deploy
+  - set up A records hint
+  - 
+
+scroll-to-slide-up (spotify) / refer to the codrops article but it might be old; maybe use scrollmagic for a set of mixins and helpers
+- https://ihatetomatoes.net/svg-scrolling-animation-triggered-scrollmagic/
+
+
+animation mixins
 
 
 DESIGN SYSTEM
@@ -23,14 +77,20 @@ Reformat the Style guide and Design Systems pages with concepts from
 - [Design System language](https://medium.com/@marcintreder/design-systems-are-a-language-and-thats-changing-software-development-forever-ae914a197de)
 
 
-THINGS TO BRING IN
 
-- All products need to STAY SEMANTIC
-  - stylecoeur bem rules
 
-- janzheng
-  - rss feed inserter / generalize it w/ input, callback, etc.
-  
+
+Mixins
+document all mixins, esp. for animation
+  - ease
+  - highlight color
+  - no select
+  - other random stuff
+  - 
+
+
+
+
 - Project Cheat Sheet
   - Github
   - Copy Stylecoeur
@@ -38,8 +98,6 @@ THINGS TO BRING IN
   - Keeping Notes + Todo
   - Optional: styleguide 
 
-
-- talk about Helpers, slightly-haphazard layout system
 
 
 
@@ -76,16 +134,15 @@ Design Process:
 
 
 Other ideas to explore:
-- Progressive image loading
+- Progressive image loading / on page load
 - Masonry
 - scroll-fade-in-load effect (wordpress thing)
-- tinyjpg
-- google forms contact hack
-- ad block detect?
 - menu: open, hiden, transition: https://www.skinn.be/en/work/salt
 - menu slide down to hide; slide up to show: https://www.skinn.be/en/work/salt
 - microservices and express api hookup
 - page transition techniques
+
+
 
 - design:
   - process
@@ -106,12 +163,6 @@ Other ideas to explore:
   - Consumer Product
 
 - middleman ruby resources for prototyping
-
-Useful mixins
-  - ease
-  - highlight color
-  - no select
-  - other random stuff
 
   on design + typography:
    - p 98 thinking with type: " style sheets compel designers to think globally and systematically instead of focusing on the fixed construction of a particular surface" - as opposed to 20th century artists and designers who integrated form and content; and "used typography to create texts whose content was inextricable from the concrete" layout of specific letterforms
@@ -139,7 +190,7 @@ Useful mixins
 
 
 
-### Future / Other Thoughts
+#### Future / Other Thoughts
 
 - change name/branding to sassyPants??? Maybe v2
 - stylecoeur style cards https://www.greatsimple.io/

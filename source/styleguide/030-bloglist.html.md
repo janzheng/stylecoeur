@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: bloglist
 section: simple
-status: --tbd
+status: --draft
 source: ../
 ---
 

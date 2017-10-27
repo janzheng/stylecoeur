@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: userStories
 section: about
-status: --tbd
+status: --draft
 source: ../
 ---
 

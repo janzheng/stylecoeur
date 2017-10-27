@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: zindex
 section: basics
-status: --tbd
+status: --draft
 source: ../
 ---
 

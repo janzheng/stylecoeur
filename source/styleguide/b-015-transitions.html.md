@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: transitions
 section: scriptcoeur
-status: --tbd
+status: --draft
 source: ../
 ---
 

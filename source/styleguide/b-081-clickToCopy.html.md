@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: clickToCopy
 section: scriptcoeur
-status: --tbd
+status: --draft
 source: ../
 ---
 

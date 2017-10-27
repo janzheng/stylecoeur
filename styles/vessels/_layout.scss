@@ -5,6 +5,7 @@
 // Layouts / Lost and found / Parts Bin
 // random typography elements like code, etc.
 // 
+// 
 
 
 // 
@@ -66,13 +67,17 @@ section, ._section,
 
 
 ._narrow {
-  max-width: width-content-max-narrow;
+  max-width: $width-content-max-narrow;
   margin: 0 auto;
 }
 
 
 ul, ol {
   padding-bottom: $base;
+
+  ul {
+    padding-bottom: 0;
+  }
 }
 
 li {

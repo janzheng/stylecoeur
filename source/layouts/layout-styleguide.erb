@@ -18,13 +18,10 @@
 
         <aside>
           <!-- <h1 class="_transparent">menu</h1> -->
-          <span class="_sidebar-trigger"></span>
-          <div class="_sidebar --divider">
-            <%= partial '/partials/styleguide-index' %>
-          </div>
+          <%= partial '/partials/styleguide-index' %>
         </aside>
 
-        <div class="_width-content-max _grid-size-force _padding-2">
+        <div class="_styleguide-content _width-content-max _grid-size-force _padding-2">
           <%= yield %>
         </div>
       </div>
