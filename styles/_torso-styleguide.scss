@@ -1,0 +1,292 @@
+
+
+
+/* 
+
+    This may need to be refactored out of _stylecoeur
+
+ */
+
+
+// these are mainly used for styleguides
+// if they apply anywhere else, then sure.
+
+
+$styleguide-border: none; // $border-thin solid $color-ui-dark;
+$styleguide-nav-bg: $color-black; // $border-thin solid $color-ui-dark;
+$styleguide-bg: $color-ui-light;
+$styleguide-example-color: $color-ui-dark;
+$styleguide-link: $color-silver;
+$styleguide-link-hover: $color-secondary;
+
+// color swatches used mostly for styleguides
+
+
+._styleguide {
+  h1 {
+    // padding-bottom: 0;
+  }
+  h5 {
+    padding-top: $size-base * 2; // subheaders need room
+  }
+}
+
+// top nav on styleguide
+._styleguide-nav {
+  padding-top: $size-base/2;
+  padding-bottom: $size-base/2;
+  padding-left: $size-base;
+  padding-right: $size-base;
+  border-bottom: $styleguide-border;
+
+  background: $styleguide-nav-bg;
+
+  a {
+    color: $styleguide-link;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    &:hover {
+      color: $styleguide-link-hover;
+    }
+  }
+  ._logo-heart {
+    vertical-align: middle;
+    width: 40px;
+    height: auto;
+  }
+}
+
+._styleguide-tools {
+  ._card {
+    padding: $size-base;
+  }
+  ._card p:first-child {
+    margin-bottom: $size-base/2;
+  }
+  ._card p:last-child {
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+// used all over
+._styleguide-example {
+  border: $styleguide-border;
+  border-radius: $radius;
+  padding: $size-base;
+  padding-top: $size-base;
+  margin-bottom: $size-base*2;
+  background-color: $styleguide-bg;
+
+  & + pre { // fuse code together w/ example
+    margin-top: -$size-base*3 - 3px;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+  }
+
+  &:before {
+    content: ' example ';
+    font-size: $font-small;
+    display: block;
+    padding-bottom: $size-base;
+    // font-style: italic;
+    color: $styleguide-example-color;
+  }
+
+  // example + code should be connected
+  & + .highlight {
+    margin-top: -$size-base*2;
+  }
+}
+  ._styleguide-example-code {
+    max-width: 70vw;
+  }
+
+
+
+// colors
+._swatch {
+
+}
+
+  ._swatch-color {
+    // color block
+    height: 120px;
+    width: 100%;
+    border-radius: $radius;
+    margin-bottom: $size-base;
+  }
+
+  ._swatch-description {
+    @extend %font-small;
+  }
+
+
+
+
+._styleguide-contact {
+
+  form {
+    $color-border-off: rgba($color-main, 0.3);
+    $color-border-on: $color-active;
+
+    %form-style {
+      @extend %font-body;
+      font-size: $size-base + 2px;
+      @extend %ease;
+    }
+
+    ._inline {
+      margin-left: $size-base/2;
+      margin-right: $size-base/2;
+    }
+    p {
+      line-height: $size-base*3;
+    }
+
+    input {
+      border: 0;
+      border-bottom: $border-medium solid $color-border-off !important;
+      background-color: transparent;
+      border-radius: 0;
+
+      &:active, &:focus, &:hover {
+        border-bottom: $border-medium solid $color-border-on !important;
+        @extend %ease;
+        box-shadow: none !important;
+      }
+      @extend %form-style;
+
+    }
+
+    textarea {
+      max-width: 450px;
+      outline: $border-medium solid $color-border-off;
+      // outline: none !important;
+      border:  $border-medium solid $color-border-off;
+      // box-shadow: 0 0 10px $color-border-off;
+      @extend %form-style;
+
+      &:active, &:focus, &:hover {
+      outline: $border-medium solid $color-border-on;
+      border:  $border-medium solid $color-border-on;
+        @extend %ease;
+      }
+    }
+
+    ._form-select-dropdown {
+
+      @include screen-xs {
+        & + select {
+          border: $border-medium solid $color-border-off;
+          margin-right: 4px !important; // alignment
+
+          &:active, &:focus, &:hover {
+            // outline: $border-medium solid $color-border-on;
+            border:  $border-medium solid $color-border-on;
+            outline: none;
+          }
+        }
+      .fa {
+        vertical-align: bottom;
+        line-height: 9px;
+      }
+      }
+      
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// very specific teeth example
+
+
+
+
+
+// teeth
+
+html {
+  // helps position these absolutely
+  position: relative;
+}
+
+.teeth-collection {
+
+}
+
+
+// used by js as the real "tooth"
+._tooth, ._teethRain, ._teethField {
+  padding: 0 !important;
+  position: absolute;
+  left: -99999px;
+  z-index: -99999;
+}
+
+._teeth-field {
+  position: relative;
+  left: -65px;
+  top: -40px;
+}
+  // tooth obj in the field
+  ._teethField img {
+    opacity: 0.01;
+  }
+
+
+._tooth-container {
+  padding: 0 !important;
+}
+._tooth-tr {
+  padding: 0 !important;
+}
+
+
+.tooth-1 {
+  opacity: 0.05;
+  left: 10px;
+  top: 2140px;
+}
+
+.tooth-2 {
+  opacity: 0.037;
+  left: 360px;
+  top: 1300px;
+  transform: rotateY(170);
+}
+
+.tooth-3 {
+  opacity: 0.037;
+  left: 410px;
+  top: 2650px;
+  transform: rotateY(-90);
+}
+
+.tooth-4 {    
+  opacity: 0.11;
+  right: 180px;
+  top: 2300px;
+  transform: rotateY(120);
+}
+

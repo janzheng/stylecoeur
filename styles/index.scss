@@ -5,70 +5,25 @@
 //  [ core dependencies ]
 // 
 
+//  Heart [base values]
+//    Head
+//      Neck
+//        Torso [components]
+
 @import 'heart'; // coeur
 
 //  [ depends on the heart ]
-// @import 'arteries/index';
-@import 'arteries/reset';   
-@import 'arteries/prefixer';   
-@import 'arteries/screen';
-@import 'arteries/colors';
-@import 'arteries/helpers';
-@import 'arteries/animation';
-@import 'arteries/typography';
-@import 'arteries/griddick'; 
-@import 'arteries/mixins'; // depends on prefixer
-@import 'arteries/borders'; 
+@import 'head';
 
-// 
-//  The Vessels.
-//  [ dependent on heart and arteries ]
-// 
+//  [ depends on heart and head ]
+@import 'neck'; 
 
-// @import 'vessels/index'; 
-@import 'vessels/links'; 
-@import 'vessels/buttons'; 
-@import 'vessels/message'; 
-@import 'vessels/card'; 
-@import 'vessels/code';
-@import 'vessels/quote'; 
-@import 'vessels/layout';
-// 
-//  The Components 
-//  [ larger components that will be most likely overridden ]
-// 
-
-// @import 'components/index';
-@import 'components/footer'; 
-@import 'components/nav'; 
-@import 'components/sidebar'; 
-@import 'components/forms'; 
-@import 'components/styleguide'; 
-@import 'components/tabs'; 
-@import 'components/buttonGroups'; 
-@import 'components/toggle'; 
-@import 'components/modal'; 
-@import 'components/dropdown';
-@import 'components/changelog';
-@import 'components/expander'; // requires js to function
-@import 'components/infobox';
-@import 'components/carousel';
-@import 'components/expander';
-@import 'components/blog';
-@import 'components/gridmarkers';
-@import 'components/scrollReveal';
-@import 'components/footnote';
-
+//  [ depends on heart, head, neck — components] 
+@import 'torso';
 
 // re-import to let colors take precedence
-@import 'arteries/colors';
+@import 'head-colors';
 
-
-// 
-//    Basics. 
-//    Every site should probably override these
-//    Keep stuff here until it's large enough to warrant another file
-// 
 
 
 

@@ -1,0 +1,463 @@
+
+
+
+
+
+// 
+//    TAG POSITIONING
+// 
+
+._block {
+  display: block;
+}
+  ._block-xs {
+    @include screen-xs-only {
+      display: block;
+    }
+  }
+
+
+._inline-block {
+  display: inline-block;
+}
+
+._inline {
+  display: inline !important;
+}
+
+
+
+// 
+//    DISPLAY STYLES
+// 
+
+._hidden {
+  display: none !important;
+}
+  ._hidden-xs {
+    @include screen-xs-only {
+      display: none;
+    }
+  }
+  ._hidden-sm-down {
+    @include screen-sm-down {
+      display: none;
+    }
+  }
+._pointer {
+  cursor: pointer;
+}
+._transparent {
+  opacity: 0.001; // setting to 0 invokes browser bugs
+}
+
+
+// 
+//    HEIGHT
+// 
+._width-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
+
+// 
+//    SPACING, MARGINS, PADDING
+// 
+
+%margin-section {
+  margin: $size-base*3 auto;
+}
+
+
+
+// 
+//    MARGIN
+// 
+
+._margin-center {
+  margin: 0 auto;
+}
+
+._margin-half {
+  margin-top: $size-base/2;
+  margin-bottom: $size-base/2;
+}
+._margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+._margin-2 {
+  margin: $size-base*2 ;
+}
+  ._margin-2-i {
+    margin: 0 $size-base*2 !important;
+  }
+._margin-none {
+  margin: 0;
+  &-i {
+    margin: 0 !important;
+  }
+}
+  ._margin-none-xs {
+    @include screen-xs-only {
+      margin: 0;
+    }
+  }
+  ._margin-top {
+    margin-top: $size-base;
+  }
+    ._margin-top-xs {
+      @include screen-xs-only {
+        margin-top: $size-base;
+      }
+    }
+    ._margin-top-none {
+      margin-top: 0;
+    }
+      ._margin-top-none-i {
+        margin-top: 0 !important;
+      }
+    ._margin-top-2 {
+      margin-top: $size-base*2;
+    }
+
+  ._margin-bottom {
+    margin-bottom: $size-base;
+  }
+
+    ._margin-bottom-i {
+      margin-bottom: $size-base !important;
+    }
+    ._margin-bottom-none { margin-bottom: 0; }
+      ._margin-bottom-none-i { margin-bottom: 0 !important; }
+
+    ._margin-bottom-2 {
+      margin-bottom: $size-base*2;
+    }
+    ._margin-bottom-xs {
+      @include screen-xs-only {
+        margin-bottom: $size-base;
+      }
+    }
+
+  ._margin-left {
+    margin-left: $size-base;
+  }
+    ._margin-left-sm {
+      @include screen-sm {
+        margin-left: $size-base;
+      }
+    }
+    ._margin-left-2 {
+      margin-left: $size-base*2;
+    }
+    ._margin-left-none {
+      margin-left: 0 ;
+    }
+    ._margin-left-none-i { margin-left: 0 !important; }
+
+  ._margin-right {
+    margin-right: $size-base;
+  }
+    ._margin-right-2 {
+      margin-right: $size-base*2;
+    }
+    ._margin-right-none {
+      margin-right: 0;
+    }
+    ._margin-right-none-i { margin-right: 0 !important; }
+
+
+// 
+//    PADDING
+// 
+
+%padding-container-top {
+  padding-top: $size-base*3;
+}
+
+%padding-container-bottom {
+  padding-top: $size-base*3;
+}
+
+%padding-section {
+  // padding: $size-base*3;
+  padding-bottom: $size-base*3;
+}
+
+._padding-top-bottom {
+  padding-top: $size-base;
+  padding-bottom: $size-base;
+}
+._padding-top-bottom-2 {
+  padding-top: $size-base*2;
+  padding-bottom: $size-base*2;
+}
+
+._padding-none {
+  padding: 0 !important;
+}
+  ._padding {
+    padding: $size-base
+  }
+    ._padding-2 {
+      padding: $size-base*2;
+      &-i {
+        padding: $size-base*2 !important;
+      }
+    }
+  ._padding-half {
+    padding: $size-base/2;
+  }
+  ._padding-top {
+    padding-top: $size-base;
+  }
+    ._padding-top-sm {
+      @include screen-sm {
+        padding-top: $size-base;
+      }
+    }
+    ._padding-top-2 {
+      padding-top: $size-base*2;
+    }
+    ._padding-top-3 {
+      padding-top: $size-base*3;
+    }
+    ._padding-top-half {
+      padding-top: $size-base/2;
+    }
+    ._padding-top-none {
+      padding-top: 0;
+    }
+  ._padding-bottom {
+    padding-bottom: $size-base;
+  }
+    ._padding-bottom-large {
+      padding-bottom: 12vh;
+    }
+    ._padding-bottom-none {
+      padding-bottom: 0;
+      &.--i { padding-bottom: 0 !important;}
+    }
+      ._padding-bottom-none-i {
+        padding-bottom: 0 !important;
+      }
+    ._padding-bottom-half {
+      padding-bottom: $size-base/2;
+    }
+    ._padding-bottom-2 {
+      padding-bottom: $size-base*2;
+    }
+    ._padding-bottom-xs {
+      @include screen-xs-only {
+        padding-bottom: $size-base !important;
+      }
+    }
+    ._padding-bottom-sm_up {
+      @include screen-sm {
+        padding-bottom: $size-base !important;
+      }
+    }
+
+      ._padding-bottom-three-xs {
+        @include screen-xs-only {
+          padding-bottom: $size-base*3;
+        }
+      }
+
+    ._padding-bottom-none {
+      padding-bottom: 0;
+    }
+  ._padding-left-right {
+    padding-left: $size-base/2;
+    padding-right: $size-base/2;
+  }
+
+  ._padding-right {
+    padding-right: $size-base;
+  }
+    ._padding-right-2 {
+      padding-right: $size-base*2;
+    }
+    ._padding-right-half {
+      padding-right: $size-base/2;
+    }
+    ._padding-right-none {
+      padding-right: 0;
+    }
+  ._padding-left {
+    padding-left: $size-base;
+  }
+    ._padding-left-xs {
+      @include screen-xs-only {
+        padding-left: $size-base;
+      }
+    }
+    ._padding-left-sm_up {
+      @include screen-sm {
+        padding-left: $size-base;
+      }
+    }
+    ._padding-left-2 {
+      padding-left: $size-base*2;
+    }
+    ._padding-left-half {
+      padding-left: $size-base/2;
+    }
+    ._padding-left_none {
+      padding-left: 0 !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 
+//    ALIGNMENT 
+// 
+// 
+
+._center {
+  text-align: center;
+}
+  ._center-xs {
+    @media (max-width: $width-xs-max) {
+      text-align: center !important;
+    }
+  }
+._left {
+  text-align: left;
+}
+._right {
+  text-align: right;
+}
+  ._right-sm,
+  ._right-unless-xs {
+    text-align: right;
+    @media (max-width: $width-xs-max) {
+      text-align: inherit;
+    }
+  }
+
+._justify {
+  text-align: justify;
+}
+
+
+._float-right {
+  float: right;
+}
+
+._clear-both {
+  clear: both;
+}
+
+
+
+
+// prevents double click highlighting
+// use on buttons and text CTAs
+%user-select-none {
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+%hide-scrollbar{
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { 
+      display: none; 
+   }
+}
+
+._v-top {
+  vertical-align: top;
+}
+._v-middle {
+  vertical-align: middle;
+}
+._v-bottom {
+  vertical-align: bottom;
+}
+
+
+
+// Sticky / Pinned
+
+._pinned, .--pinned {
+  padding-bottom: $size-base * 2;
+  position: sticky;
+  top: 0;
+}
+  // can't extend outside of media so...
+  // this pins it only sm screens and up
+  ._pinned-sm, .--pinned-sm {
+    @include screen-sm { 
+      // height: 100vh;
+      padding-bottom: $size-base * 2;
+
+      position: sticky;
+      top: 0;
+    }
+  }
+
+
+
+
+// Container Formatting
+// formats enclosing content
+// useful for markdown
+
+
+// last object in container has no padding
+._format-padding-last-bottom_none {
+  *:last-child {
+    padding-bottom: 0;
+  }
+}
+._format-margin-last-bottom_none {
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// last object in container has no
+// margin or padding (no extra whitespace)
+._format-last-bottom_none {
+  @extend ._format-padding-last-bottom_none;
+  @extend ._format-margin-last-bottom_none;
+}
+
+
+
+
+
+
+
+
+

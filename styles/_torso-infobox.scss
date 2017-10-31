@@ -1,0 +1,75 @@
+
+
+$infobox-border: $border-line solid $color-ui;
+$infobox-hover: $color-main;
+$infobox-hover-bg: $color-ui-light;
+
+// side-by-side info box
+// good for landing pages, blogs, etc.
+// first child is each content box
+._infobox {
+  grid-gap: 0 !important;
+
+  // &, * {
+  //   @extend %ease-fast;
+  // }
+  border: $infobox-border;
+  border-radius: $radius;
+
+  ._infobox-content {
+    padding: $size-base;
+    @extend %ease-fast;
+
+    @include screen-sm {
+      border-bottom: $infobox-border; 
+      border-right: $infobox-border; 
+      // border: 0;
+      &:nth-child(2n) {
+        border-right: 0;
+      }
+      &:nth-last-child(-n+2) {
+        border-bottom: 0;
+      }
+    }
+
+    @include screen-xs {
+      border-bottom: $infobox-border;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    ._anim-right { 
+      color: $infobox-hover;
+      position: relative;
+      left: 0;
+      @extend %ease-fast;
+    }
+
+    // add --hover-none to prevent hover effects
+    &:not(.--hover-none):hover {
+      color: $infobox-hover;
+      background-color: $infobox-hover-bg;
+      ._anim-right {
+        color: $infobox-hover;
+        left: $size-base/2;
+        @extend %ease-fast;
+      }
+    }
+  }
+
+  // other kinds of grid configs
+  &._grid-one {
+    ._infobox-content {
+      border: 0;
+      border-bottom: $infobox-border; 
+      &:last-child {
+        border-bottom: 0; 
+      }
+    }
+  }
+  
+}
+
+

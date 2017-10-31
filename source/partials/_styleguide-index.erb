@@ -10,7 +10,7 @@
   <% end %>
 
   <div>
-    <h5>Cheat Sheet ;)</h5>
+    <div class="_padding-top-2"><a class="_font-bold" href="<%= source %>styleguide.html">Cheat Sheet</a></div>
     <% sitemap.resources.select { |r| r.data.type == 'styleguide' }
       .sort_by{|r| r.url }
       .each do |resource| 

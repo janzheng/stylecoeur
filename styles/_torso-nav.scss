@@ -1,0 +1,165 @@
+
+// 
+//    NAV 
+// 
+
+
+$nav-color-bg: $color-bg;
+
+$nav-separator-color: $color-ui;
+$nav-separator-style: solid;
+
+._nav,
+nav {
+  font-size: $font-size-base;
+  cursor: default; // prevents text cursor
+
+ a {
+    border-bottom: 0;
+  }
+
+  ._nav-right,
+  ._nav-content,
+  ._nav-links,
+  svg {
+    text-align: right;
+    vertical-align: middle;
+  }
+}
+
+
+
+// Side Nav
+
+$sidenav-min-height: 500px;
+$sidenav-min-width: $width-xs-max;
+$sidenav-width: 150px;
+$sidenav-width-open: 300px;
+$sidenav-border: $border-line solid $color-ui;
+$sidenav-bg: rgba($color-white, 0.88);
+
+// "mobile first" 
+// this is fall-back; shows across top
+// v-small screens
+._nav-sidenav-container {
+  @extend %ease;
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: $size-base;
+    @extend %ease;
+  }
+  nav + div {
+    @extend %ease;
+    left: 0;
+    position: relative;
+  }
+}
+
+// if conditions are met, display down the left
+@media (min-height: $sidenav-min-height) 
+       and (min-width: $sidenav-min-width)  {
+  ._nav-sidenav-container {
+    display: grid;
+    grid-template-columns: $sidenav-width auto;
+  
+    nav {
+      display: block;
+      position: relative;
+      // height: 100vh;
+      width: 100%;
+      border-right: $sidenav-border;
+      padding-right: $size-base;
+
+
+      div { // all nav elements on their own line
+        display: block;
+      }
+      ._nav-links {
+        text-align: left;
+      }
+      a {
+        display: block;
+      }
+
+      // only slide if nav has --slide
+      &.--slide:hover {
+        width: $sidenav-width-open;
+        z-index: 3000;
+
+
+        // only slide main content if
+        // main container has --slide
+        & + .--slide {
+          // this might get annoying
+          left: $sidenav-width-open - $sidenav-width;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// # Off-Canvas Navigation
+
+._nav-offcanvas {
+  position: fixed;
+  // visibility: hidden;
+  // opacity: 0;
+  top: 0;
+  height: 100vh;
+  width: 200px; // default, but should be set using data-attr
+  @extend %ease-slow;
+
+  &.--left {
+    left: -200px;
+    &.--open {
+      left: 0 !important;
+    }
+  }
+  &.--right {
+    right: -200px;
+    &.--open {
+      right: 0 !important;
+    }
+  }
+  &.--open {
+    // visibility: visible;
+    opacity: 1;
+  }
+}
+._nav-offcanvas-target {
+  @extend %ease-slow;
+  position: relative;
+  right: 0;
+  // left: 0;
+
+  &.--left {
+    left: 0;
+  }
+  &.--right {
+    right: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

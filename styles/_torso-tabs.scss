@@ -1,0 +1,53 @@
+
+// 
+//    TABS 
+// 
+
+$tab-size: font-size;
+$tab-border: $color-ui solid $border-line;
+$tab-color-active: $color-active;
+
+._tabs {
+  margin-top: $size-base;
+  margin-bottom: $size-base;
+  position: relative; 
+  text-transform: capitalize;
+
+  a {
+    font-size: $tab-size;
+    position: relative; 
+    display: inline-block;
+    border-bottom: none;
+    @extend ._font-light;
+    padding: $size-base/2 $size-base;
+    position: relative;
+    bottom: -$border-line;
+
+    &.--active {
+      color: $tab-color-active;
+    }
+  }
+
+  &.--border {
+    border-bottom: $tab-border;
+    @extend %ease;
+
+    ._tabs-item {
+      border: transparent solid $border-line;
+    }
+    .--active {
+      // border: $color-ui solid $border-line;
+      border-bottom-color: $tab-color-active;
+      @extend %ease;
+    }
+  }
+}
+
+._tabs-content {
+  display: none;
+
+  &.--selected {
+    display: inherit;
+  }
+}
+

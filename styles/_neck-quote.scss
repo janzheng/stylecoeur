@@ -1,0 +1,28 @@
+
+// 
+//  Standard Footer
+// 
+
+$quote-size: $font-big;
+$quote-padding: $size-base*2;
+$quote-border: $border-medium $color-active solid;
+
+blockquote {
+  // font-size: $quote-size;
+  padding-left: $quote-padding;
+  padding-right: $quote-padding;
+  padding-top: $size-base/2;
+  padding-bottom: $size-base/2;
+  margin-bottom: $size;
+  
+  border-left: $quote-border;
+
+  &, * {
+    // @extend %font-big;
+    font-style: italic;
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+}

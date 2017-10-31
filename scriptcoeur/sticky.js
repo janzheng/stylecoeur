@@ -11,8 +11,10 @@ var _sticky = function(_triggerElement, _triggerTarget, _targetClass, _duration,
   stickyScene.addTo(stickyController);
 }
 
-// common usage examples 
-$(document).ready(function() {
-  var triggerElement = "._sidebar-trigger", target = "._sidebar", targetClass = "--pinned";
-  _sticky(triggerElement, target, targetClass);
-});
+// // common usage examples 
+// $(document).ready(function() {
+//   if($("._sidebar-trigger").length > 0) {
+//     var triggerElement = "._sidebar-trigger", target = "._sidebar", targetClass = "--pinned";
+//     _sticky(triggerElement, target, targetClass);
+//   }
+// });
