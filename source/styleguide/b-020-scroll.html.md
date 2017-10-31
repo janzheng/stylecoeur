@@ -1,5 +1,5 @@
 ---
-title: Smooth Scroll*
+title: Smooth Scroll
 name: smoothScroll
 type: styleguide
 layout: layout-styleguide
@@ -12,7 +12,7 @@ source: ../
 
 ## Smooth Scroll
 
-<div class="_styleguide-todo _message --warning" markdown="1">
+<div class="_message --warning" markdown="1">
   add complex / targeted scrolling, horizontal scrolling; convert into reusable component
 </div>
 
@@ -36,11 +36,18 @@ Smooth scroll intercepts anchor links and tags, and URL anchors (e.g. `http://my
 <script src="../javascripts/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
 ~~~
 
+Scrolling to a specific target in a specific container:
+
+<div class="_styleguide-example">
+  <div class="_button --short --outline" onclick="verticalScrollTo(-50, '#smooth', 'html, body')">Targeted scroll</div>
+</div>
+~~~html
+<div class="_button --short --outline" onclick="verticalScrollTo(0, '#smooth', 'html, body')">Targeted scroll</div>
+~~~
 
 
 
-
-<div class="" id="smooth">
+<div class="" id="smooth" style="margin-top: 400px">
   So smooth.
 </div>
 

@@ -2,7 +2,7 @@
 title: Using Middleman
 type: styleguide
 layout: layout-styleguide
-name: using-middleman
+name: usingMiddleman
 section: middleman
 status: --draft
 source: ../
@@ -21,21 +21,26 @@ You can access a special middleman config page: `http://127.0.0.1:4567/__middlem
 `bundle exec middleman build` - builds the flat html files
 
 
+#### Middleman Variables
 
+- `current_page`
+- using the `resource` loop / array
+- using the config page for help / hints
+- docs
+- 
 
-
-### File Naming
+#### File Naming
 
 Files are named in rendering order: `[filename].aaa.bbb.ccc` where the `ccc` is processed first, then `bbb`, and final output is in `aaa`. For example: `webpage.html.md` is a markdown file processed down into html, and `rubyfile.html.erb` is an ERB file processed into html. 
 
 Regardless of naming convention, all files can have YAML front-matter (with the exception of layouts).
 
 
-### ERB
+#### ERB
 
 ERB is the templating language.
 
-Comments:
+Creating comments in ERB is unwieldy:
 
 ~~~ erb
 <% 
@@ -51,6 +56,12 @@ Defining variables:
 
 ~~~ erb
 <% $section_name = '' %>
+~~~
+
+Printing code or variable:
+
+~~~ erb
+<%= $section_name %>
 ~~~
 
 Manipulating Middleman with loops example (for sidebar):
@@ -74,7 +85,7 @@ ERB uses Ruby, so refer to Rubydocs for the full things.
 
 
 
-### Partials
+#### Partials
 
 Partials are useful short reusable components. Very useful with `navigation` and other components that appear more than once, or to be organizationally dropped into another page (like a sidebar or changelog).
 
@@ -122,9 +133,14 @@ Partials can also take variables, as used in the Colors section. Usage:
   - page.transition
   - etc. applied to the page
 
+<div class='_message --warning' markdown="1">
+
+- handling arrays
+
+</div>
 
 
-### Layouts
+#### Layouts
 
 (regular and nested layouts w/ ruby)
 
@@ -132,12 +148,12 @@ Partials can also take variables, as used in the Colors section. Usage:
 
 
 
-### Gems and Bundle
+#### Gems and Bundle
 
 Installing Gems is easy. Just add the gem to the `Gemfile`: `gem 'middleman-deploy', '~> 2.0.0.pre.alpha'` and then run in the console: `bundle install` to make middleman recognize it.
 
 
-### Github
+#### Github
 
 Nothing special. Just add / commit / push your updates.
 
@@ -147,7 +163,7 @@ Nothing special. Just add / commit / push your updates.
 
 
 
-### Deployment
+#### Deployment
 
 Make sure you have the gem installed in the gemfile `gem 'middleman-deploy', '~> 2.0.0.pre.alpha'`. Note that I'm using an earlier one as the later ones are buggy. Don't forget to run `bundle install` in the console.
 

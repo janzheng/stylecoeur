@@ -2,7 +2,7 @@
 title: Styleguide Structure
 type: styleguide
 layout: layout-styleguide
-name: styleguide-structure
+name: styleguideStructure
 section: middleman
 status: --draft
 source: ../

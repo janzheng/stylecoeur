@@ -2,7 +2,7 @@
 title: Navigation
 type: styleguide
 layout: layout-styleguide
-name: navigation*
+name: navigation
 section: components
 <!-- status: --draft -->
 source: ../
@@ -379,8 +379,8 @@ These are usually triggered by hamburger icons for mobile views, but there are a
       <div class="_modal-content">
         <div class="_modal-close" onclick="closeModal()"><i class="fa fa-close"></i></div>
         <div class="_modal-wrapper">
-          <h3>Menu Crap</h3>
-          <p>This is an example of a popup menu. It's pretty much a modal, so it reuses the modal code.</p>
+          <h3>Menu Content</h3>
+          <p>This is an example of a popup menu. It's pretty much a modal, so it reuses the modal code. It's completely unstyled, but you can style it on top of the default modal styling</p>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 title: Email Form*
 type: styleguide
 layout: layout-styleguide
-name: Email Form
+name: emailForm
 section: scriptcoeur
 <!-- status: --draft -->
 source: ../

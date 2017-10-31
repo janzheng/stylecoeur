@@ -6,12 +6,13 @@
 
 // Variables
 
-$speed-vslow: 410ms;
+$speed-xxxslow: 1600ms;
+$speed-xxslow: 1200ms;
+$speed-xslow: 890ms;
+$speed-vslow: 450ms;
 $speed-slow: 320ms;
 $speed-medium: 230ms;
 $speed-fast: 180ms;
-
-
 
 
 // Mixins
@@ -25,11 +26,11 @@ $speed-fast: 180ms;
 }
 
 @mixin ease($speed, $elem:all){
-    -webkit-transition: $elem $speed ease;
-    -moz-transition: $elem $speed ease;
-    -ms-transition: $elem $speed ease;
-    -o-transition: $elem $speed ease;
-    transition: $elem $speed ease;
+  -webkit-transition: $elem $speed ease;
+  -moz-transition: $elem $speed ease;
+  -ms-transition: $elem $speed ease;
+  -o-transition: $elem $speed ease;
+  transition: $elem $speed ease;
 }
 
 @mixin ease-background{
@@ -90,17 +91,20 @@ $speed-fast: 180ms;
 
 %ease-in{@include ease-in($speed-medium);}
 
-%ease{@include ease($speed-medium);}
-%ease-fast{@include ease($speed-fast);}
-%ease-slow{@include ease($speed-slow);}
-%ease-vslow{@include ease($speed-slow);}
-%ease-none {
+%ease,        ._ease {@include ease($speed-medium);}
+%ease-fast,   ._ease-fast {@include ease($speed-fast);}
+%ease-slow,   ._ease-slow {@include ease($speed-slow);}
+%ease-vslow,  ._ease-vslow {@include ease($speed-vslow);}
+%ease-xslow,  ._ease-xslow {@include ease($speed-xslow);}
+%ease-xxslow, ._ease-xxslow {@include ease($speed-xxslow);}
+%ease-xxxslow,._ease-xxxslow {@include ease($speed-xxxslow);}
+%ease-none,   ._ease-none  {
     -webkit-transition: initial !important;
     -moz-transition: initial !important;
     -ms-transition: initial !important;
     -o-transition: initial !important;
     transition: initial !important;
-} ._ease-none { @extend %ease-none; }
+}
 
 
 

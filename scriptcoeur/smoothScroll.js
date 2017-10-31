@@ -1,33 +1,24 @@
 
+
+// 
 // Smooth Scrolling 
-// - can link to a # of another page, and smooth-scroll down to that #
+// [0.0.2] - added verticalScrollTo - separate target-based scrolling fn
 
 
-// function verticalScroll(_target = undefined, offsetY = 0) {
+// this one only intercepts anchor link hashes as they're being pressed
 function verticalScroll(offsetY = 0) {
-  // console.log('scrolling to ', _target)
   var scrollElement = 'html, body';
-  event.preventDefault();
   
   // Smooth scrolling for internal links
   $("a[href^='#']").click(function(event) {
     event.preventDefault();
 
     // var $this = $(this),
-    var target = this.hash || _target,
-        $target = $(target),
+    var $target = $(this.hash),
         offset = $('a[href='+target+']').data('offset-scroll') || 0; // <... data-offset-scroll="400"> 
         offset += offsetY;
 
-    // console.log('scroll: ' , target, $('a[href='+target+']'), $('a[href='+target+']').data('offset-scroll'))
-    // if(_target) {
-    //   offset = $('a[href=#'+'target]').data('offset-scroll') || 0;
-    //   console.log('new target offset: ', offset, _target)
-    // }
-    // console.log('start vScroll')
-
     if( typeof $target.offset() !== "undefined") {
-      // window.location.hash = target;
       $(scrollElement).stop().animate({
         'scrollTop': $target.offset().top + offset
       }, 500, 'swing', function() {
@@ -39,13 +30,42 @@ function verticalScroll(offsetY = 0) {
         window.location.hash = target
         elem.id = id
 
-        // window.location.hash = target;
         event.preventDefault();
-        // console.log('finished vScroll: ', target)
       });
     }
   });
 }
+
+// scrolls to a set target; does NOT intercept hashes
+// does NOT set the hash
+function verticalScrollTo(offsetY = 0, _target=undefined, _scrollElem='html, body') {
+  // console.log('scrolling to ', _target)
+  var scrollElement = _scrollElem;
+
+  var target = _target,
+      $target = $(target),
+      offset = offsetY;
+
+  // console.log('scroll: ' , target, $('a[href='+target+']'), $('a[href='+target+']').data('offset-scroll'))
+  // if(_target) {
+  //   offset = $('a[href=#'+'target]').data('offset-scroll') || 0;
+  //   console.log('new target offset: ', offset, _target)
+  // }
+  // console.log('start vScroll')
+
+  if( typeof $target.offset() !== "undefined") {
+    var scrollDistance = $target.offset().top + offset;
+    // console.log('wheee', scrollElement, scrollDistance, $(scrollElement).height())
+    $(scrollElement).animate({
+      'scrollTop': scrollDistance
+    }, 500, 'swing', function() {
+      // console.log('finished vScroll: ', target)
+    });
+  } else {
+    console.log('Target not found: ', $target)
+  }
+}
+
 
 $(document).ready(function() { 
   // intercept hash on load
@@ -57,9 +77,8 @@ $(document).ready(function() {
 
 
 
+
 /*
-
-
 
 // 
 // Smooth Scrolling 
@@ -137,3 +156,6 @@ function verticalScroll(_target) {
     }
   });
 }
+
+
+*/

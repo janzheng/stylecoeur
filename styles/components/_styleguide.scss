@@ -203,6 +203,90 @@ $styleguide-link-hover: $color-secondary;
   }
 
 
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// very specific teeth example
+
+
+
+
+
+// teeth
+
+html {
+  // helps position these absolutely
+  position: relative;
+}
+
+.teeth-collection {
+
+}
+
+
+// used by js as the real "tooth"
+._tooth, ._teethRain, ._teethField {
+  padding: 0 !important;
+  position: absolute;
+  left: -99999px;
+  z-index: -99999;
+}
+
+._teeth-field {
+  position: relative;
+  left: -65px;
+  top: -40px;
+}
+  // tooth obj in the field
+  ._teethField img {
+    opacity: 0.01;
+  }
+
+
+._tooth-container {
+  padding: 0 !important;
+}
+._tooth-tr {
+  padding: 0 !important;
+}
+
+
+.tooth-1 {
+  opacity: 0.05;
+  left: 10px;
+  top: 2140px;
+}
+
+.tooth-2 {
+  opacity: 0.037;
+  left: 360px;
+  top: 1300px;
+  transform: rotateY(170);
+}
+
+.tooth-3 {
+  opacity: 0.037;
+  left: 410px;
+  top: 2650px;
+  transform: rotateY(-90);
+}
+
+.tooth-4 {    
+  opacity: 0.11;
+  right: 180px;
+  top: 2300px;
+  transform: rotateY(120);
 }
 

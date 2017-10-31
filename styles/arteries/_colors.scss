@@ -42,7 +42,6 @@ $color-pureblack:     #000000 !default;    ._color-pureblack { color: $color-pur
 
 
 
-
 // 
 //    CONTEXTUAL THEMES
 // 
@@ -64,6 +63,7 @@ $color-success: $color-green !default;         ._color-success { color: $color-s
 $color-disabled: $color-gray-light !default;   ._color-disabled { color: $color-disabled; }        ._color-bg-disabled { background-color: $color-disabled; }
 
 $color-transparent: transparent !default; // sometimes this actually needs to be a solid color; using a var can re-define it
+  ._color-bg-transparent {background-color: $color-transparent};
 
 $color-body: $color-black !default;  // UI, copy, etc.
 $color-copy: $color-body !default;   // text-specific color; sometimes should be lighter
