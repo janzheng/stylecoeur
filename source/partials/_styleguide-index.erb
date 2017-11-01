@@ -10,7 +10,24 @@
   <% end %>
 
   <div>
-    <div class="_padding-top-2"><a class="_font-bold" href="<%= source %>styleguide.html">Cheat Sheet</a></div>
+
+    <!-- header -->
+    <div class="_padding-top">
+      <a class="_font-bold  --submenu
+                <%= '--active --open' if current_page.data.title == 'styleguide' %>
+               " href="<%= source %>styleguide.html"><h4 class=_padding-bottom-none>Style Guide.</h4></a>
+      <div class="_font-small _font-italic">A cheat sheet for prototypes </div>
+
+      <% if current_page.data.title == 'styleguide' %>
+        <div class="_sidebar-submenu _margin-top">
+          <% current_page.data.submenu.each do |item| %>
+            <div><a href=#<%= item[1] %>><%= item[0] %></a></div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+
     <% sitemap.resources.select { |r| r.data.type == 'styleguide' }
       .sort_by{|r| r.url }
       .each do |resource| 

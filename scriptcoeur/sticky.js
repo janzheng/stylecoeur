@@ -1,7 +1,7 @@
 
 // _sticky.js [0.0.6] / added triggerhook, offset
 // _sticky.js [0.0.5] / sticky sidebar controller
-var _sticky = function(_triggerElement, _triggerTarget, _targetClass, _duration, isPinned, _triggerHook="onLeave", _offset=0) {
+var _sticky = function(_triggerElement, _triggerTarget, _targetClass, _duration=0, isPinned=false, _triggerHook="onLeave", _offset=0) {
   var stickyController = new ScrollMagic.Controller();
   var stickyScene = new ScrollMagic.Scene({triggerElement: _triggerElement, duration: _duration, triggerHook: _triggerHook, offset: _offset});
           

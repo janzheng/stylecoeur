@@ -34,13 +34,14 @@
 </html>
 
 
+<script src="../javascripts/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
 
 <script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
 <script>
 $(document).ready(function() {
   if($("._sidebar-trigger").length > 0) {
     var triggerElement = "._sidebar-trigger", target = "._sidebar", targetClass = "--pinned";
-    _sticky(triggerElement, target, targetClass);
+    _sticky(triggerElement, target, targetClass, 0 );
   }
 });
 

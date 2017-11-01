@@ -1,9 +1,10 @@
 ---
 title: Design
-type: styleguide
+type: design
 layout: layout-styleguide
 name: design
 section: about
+status: --draft
 source: ../
 ---
 

@@ -79,6 +79,10 @@ $sidebar-submenu-border: $border-line solid $color-main;
     padding-left: $size-base;
     border-left: $sidebar-submenu-border;
     @extend %ease;
+    
+    a {
+      font-size: $font-small;
+    }
   }
   
   &.--pinned {

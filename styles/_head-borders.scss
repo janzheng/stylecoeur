@@ -24,4 +24,7 @@ $border-width: $border-thin;
 }
 
 
-
+._border {
+  border: $border-thin solid $color-ui;
+  border-radius: $radius;
+}

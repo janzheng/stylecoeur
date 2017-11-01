@@ -221,6 +221,9 @@
         padding-top: $size-base;
       }
     }
+    ._padding-top-half {
+      padding-top: $size-base/2;
+    }
     ._padding-top-2 {
       padding-top: $size-base*2;
     }

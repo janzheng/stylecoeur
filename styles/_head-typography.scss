@@ -82,8 +82,8 @@ $font-smaller:  $size - 6px; $line_height-smaller: inherit;
 // to prevent margin-folding headers w/ paragraphs
 
 h1 {
-  font-size: $size-base * 3;
-  line-height: ($size-base * 3) * 1.5;
+  font-size: $size-base * 3.5;
+  line-height: ($size-base * 3.4) * 1.5;
   font-weight: 700;
   letter-spacing: -0.8px;
   padding: $size-base 0;
@@ -92,8 +92,8 @@ h1 {
 }
 
 h2 {
-  font-size: $size-base * 2;
-  line-height: $size-base * 2.2 * 1.5;
+  font-size: $size-base * 2.7;
+  line-height: $size-base * 2.7 * 1.5;
   font-weight: 700;
   padding: $size-base 0;
   // padding-bottom: $size*3;
@@ -101,16 +101,16 @@ h2 {
 }
 
 h3 {
-  font-size: $size-base * 1.8;
-  line-height: $size-base * 1.8 * 1.5;
+  font-size: $size-base * 2.2;
+  line-height: $size-base * 2.2 * 1.5;
   padding: $size-base 0;
   @extend %font-display;
   font-weight: 300;
 }
 
 h4 {
-  font-size: $size-base * 1.5;
-  line-height: $size-base * 1.5 * 1.5;
+  font-size: $size-base * 1.7;
+  line-height: $size-base * 1.7 * 1.5;
   font-weight: 700;
   padding-top: $size-base/2;
   padding-bottom: $size-base;

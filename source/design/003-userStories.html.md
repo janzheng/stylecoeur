@@ -1,6 +1,6 @@
 ---
 title: User Stories
-type: styleguide
+type: design
 layout: layout-styleguide
 name: userStories
 section: about

@@ -26,7 +26,7 @@ code {
 
 // rendered code + content
 .highlight {
-  margin-bottom: $size-base*2;
+  margin-bottom: $size-base;
   // @extend ._width-content-max-narrow;
   max-width: 100%;
   overflow: scroll;

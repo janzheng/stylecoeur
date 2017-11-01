@@ -67,3 +67,27 @@ This is a living, growing document. The Notes section denotes all the changes ov
 </div>
 
 
+
+## Other Guides
+
+Refer to other style guides and design to gain useful insight.
+
+<div class="_grid-three">
+<div markdown="1">
+
+##### Style Guides
+
+- [Trello](https://design.trello.com/)
+- [Mailchimp](https://ux.mailchimp.com/)
+- [Corpus](http://jamiewilson.io/corpus/)
+
+</div>
+<div markdown="1">
+##### Design Systems
+- [Saleforce](https://www.lightningdesignsystem.com/)
+- [IBM](http://www.carbondesignsystem.com/)
+- [Airbnb](http://airbnb.design/building-a-visual-language/)
+- [Atlassian](https://design.atlassian.com/product/)
+</div>
+</div>
+
