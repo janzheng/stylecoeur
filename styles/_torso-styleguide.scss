@@ -21,13 +21,27 @@ $styleguide-link-hover: $color-secondary;
 
 // color swatches used mostly for styleguides
 
+$styleguide-example-color: $color-gray-lighter;
+.styleguide-example-color {
+  color: $styleguide-example-color;
+}
 
 ._styleguide {
   h1 {
     // padding-bottom: 0;
   }
   h5 {
-    padding-top: $size-base * 2; // subheaders need room
+    // padding-top: $size-base * 2; // subheaders need room
+  }
+}
+
+
+// heart / baseline
+
+.box-example {
+  color: $styleguide-example-color;
+  & > div {
+    padding-bottom: $size;
   }
 }
 
@@ -111,6 +125,7 @@ $styleguide-link-hover: $color-secondary;
 
 
 // colors
+
 ._swatch {
 
 }
@@ -121,6 +136,7 @@ $styleguide-link-hover: $color-secondary;
     width: 100%;
     border-radius: $radius;
     margin-bottom: $size-base;
+    border: $border-thin solid $color-main;
   }
 
   ._swatch-description {

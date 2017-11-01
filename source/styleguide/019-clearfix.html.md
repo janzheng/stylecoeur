@@ -3,7 +3,7 @@ title: Clearfix
 type: styleguide
 layout: layout-styleguide
 name: icons
-section: basics
+section: fundamental
 source: ../
 ---
 

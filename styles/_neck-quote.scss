@@ -3,7 +3,7 @@
 //  Standard Footer
 // 
 
-$quote-size: $font-big;
+$quote-size: $font-large;
 $quote-padding: $size-base*2;
 $quote-border: $border-medium $color-active solid;
 
@@ -18,7 +18,7 @@ blockquote {
   border-left: $quote-border;
 
   &, * {
-    // @extend %font-big;
+    // @extend %font-large;
     font-style: italic;
 
     p:last-child {

@@ -12,16 +12,19 @@
   font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif;
 }
 
-%font-serif {
+%font-serif,
+._font-serif {
   font-family: "Georgia", serif;
 }
 
-%font-mono {
+%font-mono,
+._font-mono {
   font-family: Courier, Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', monospace;
 } ._font-mono, ._font-code { @extend %font-mono; }
 
-%font-display {
-  // reduce relational in core
+%font-display,
+._font-display {
+  // nothing here for stylecoeur
   @extend %font-sans;
 }
 
@@ -45,19 +48,29 @@
 %font-upper, ._font-upper { text-transform: uppercase; }
 %font-capitalize, ._font-capitalize { text-transform: capitalize; }
 
-$font-size-base: $size-base; // - 1px;
-$font-lineheight: $font-size-base * 1.5;
+$font-size-base: $size-base !default; // - 1px;
+$font-lineheight: $font-size-base * 1.5 !default;
 
 $font-ui: $size-base; // $size + 2px;
-$font-ui-lineheight: $font-ui * 1.5;
+$font-ui-lineheight: $font-ui * 1.5 !default;
 
-$font-bigger:   $size + 6px; $line_height-bigger: ($size-base + 6px) * 1.5;
-$font-big:      $size + 3px; $line_height-big: ($size-base + 2px) * 1.5;
-$font-small:    $size - 2px; $line_height-small: ($size-base - 1px) * 1.5;
-$font-smaller:  $size - 6px; $line_height-smaller: inherit;
+$font-larger:   $font-size-base + 6px !default; 
+  $line_height-larger: ($font-size-base + 6px) * 1.5 !default;
 
-%font-bigger, ._font-bigger {   font-size: $font-bigger; line-height: $line_height-bigger; }
-%font-big, ._font-big {         font-size: $font-big; line-height: $line_height-big; }
+$font-large:    $font-size-base + 3px !default; 
+  $line_height-large: ($font-size-base + 2px) * 1.5 !default;
+
+$font-base:     $font-size-base !default; 
+  $line_height-base: ($font-size-base - 1px) * 1.5 !default;
+
+$font-small:    $font-size-base - 2px !default; 
+  $line_height-small: ($font-size-base - 1px) * 1.5 !default;
+
+$font-smaller:  $font-size-base - 6px !default; 
+  $line_height-smaller: $font-size-base - 3px !default;
+
+%font-larger, ._font-larger {   font-size: $font-larger; line-height: $line_height-larger; }
+%font-large, ._font-large {     font-size: $font-large; line-height: $line_height-large; }
 %font-small, ._font-small {     font-size: $font-small; line-height: $line_height-small;  }
 %font-smaller, ._font-smaller { font-size: $font-smaller; line-height: $line_height-smaller; /*line-height: ($size - 5px) * 1.5 !important;*/ }
 // %font-smallest, ._font-smallest { font-size: $size-m3 !important; }
@@ -81,52 +94,79 @@ $font-smaller:  $size - 6px; $line_height-smaller: inherit;
 // side note: use padding instead of margin
 // to prevent margin-folding headers w/ paragraphs
 
+$font-h1: $size-p4 !default;
+._headline,
 h1 {
-  font-size: $size-base * 3.5;
-  line-height: ($size-base * 3.4) * 1.5;
+  font-size: $font-h1; //$size-base * 3.5;
+  line-height: $font-h1 * 1.7;
   font-weight: 700;
   letter-spacing: -0.8px;
-  padding: $size-base 0;
-  padding-bottom: $size-base*2;
   @extend %font-display;
+  // &.--padding {
+    padding: $size-base 0;
+    padding-bottom: $size-base*2;
+  // }
 }
 
+$font-h2: $size-p3 !default;
+._subhead,
 h2 {
-  font-size: $size-base * 2.7;
-  line-height: $size-base * 2.7 * 1.5;
+  font-size: $font-h2;
+  line-height: $font-h2 * 1.5;
   font-weight: 700;
-  padding: $size-base 0;
-  // padding-bottom: $size*3;
   @extend %font-display;
+  // &.--padding {
+    padding: $size-base 0;
+  // }
 }
 
+$font-h3: $size-p2 !default;
+._sectionhead,
 h3 {
-  font-size: $size-base * 2.2;
-  line-height: $size-base * 2.2 * 1.5;
-  padding: $size-base 0;
+  font-size: $font-h3 ;
+  line-height: $font-h3 * 1.5;
   @extend %font-display;
-  font-weight: 300;
+  font-weight: 700;
+  // &.--padding {
+    padding: $size-base 0;
+  // }
 }
 
+$font-h4: $size-p1 !default;
+._subsectionhead,
 h4 {
-  font-size: $size-base * 1.7;
-  line-height: $size-base * 1.7 * 1.5;
+  font-size: $font-h4;
+  line-height: $font-h4 * 1.5;
   font-weight: 700;
-  padding-top: $size-base/2;
-  padding-bottom: $size-base;
   @extend %font-display;
+  // &.--padding {
+    padding-top: $size-base/2;
+    padding-bottom: $size-base;
+  // }
 }
 
+$font-h5: $font-size-base !default;
+._parahead,
 h5 {
+  font-size: $font-h5;
   font-weight: 700;
   @extend %font-sans;
-  padding-bottom: $size;
+  // &.--padding {
+    padding-bottom: $size;
+  // }
 }
 
+$font-h6: $size-m1 !default;
+._microhead,
 h6 {
-  // font-weight: 700;
+  font-weight: 700;
+  font-size: $font-h6;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
   @extend %font-sans;
-  padding-bottom: $size-base;
+  // &.--padding {
+    padding-bottom: $size-base;
+  // }
 }
 
 p {

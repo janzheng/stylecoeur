@@ -3,7 +3,7 @@ title: Links
 type: styleguide
 layout: layout-styleguide
 name: links
-section: simple
+section: fundamental
 status: --draft
 source: ../
 ---

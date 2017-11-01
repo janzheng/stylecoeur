@@ -3,7 +3,7 @@ title: Iconography
 type: styleguide
 layout: layout-styleguide
 name: icons
-section: basics
+section: fundamental
 source: ../
 ---
 
@@ -11,7 +11,7 @@ source: ../
   
 ## Iconography
 
-For icons, please refer to [Font Awesome](http://fontawesome.io). These provide some quick and easy pictograms and visuals. Font Awesome has been included as a CDN: https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+For icons, please refer to [Font Awesome](http://fontawesome.io). These provide some quick and easy pictograms and visuals. Font Awesome has been included as a CDN: `https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`
 
 To use the icons, simple create an element tag with the desired icon and attributes as classes:
 

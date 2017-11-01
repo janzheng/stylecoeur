@@ -31,10 +31,10 @@ Left position means "off", and right position means "on". Make sure the labels a
     </div>
     <div class="_margin-bottom">
       <label class="_toggle --pill">
-        <input type="checkbox">
+        <input id="toggle-2" type="checkbox">
         <span class="_toggle-slider"></span>
-        <label class="_off">Off</label>
-        <label class="_on">On</label>
+        <label for="toggle-2" class="_off">Off</label>
+        <label for="toggle-2" class="_on">On</label>
       </label>
     </div>
   </div>

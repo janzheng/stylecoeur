@@ -199,7 +199,10 @@
 }
 
 ._padding-none {
-  padding: 0 !important;
+  padding: 0;
+  &-i {
+    padding: 0 !important;
+  }
 }
   ._padding {
     padding: $size-base

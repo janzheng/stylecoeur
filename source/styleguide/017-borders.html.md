@@ -3,7 +3,7 @@ title: Borders
 type: styleguide
 layout: layout-styleguide
 name: border
-section: basics
+section: fundamental
 source: ../
 ---
 
@@ -11,10 +11,14 @@ source: ../
 <main markdown="1">
 
 ## Borders
+{: .--padding}
 
 `_borders.scss`
 
 All kinds of borders. Borders are defined as the following, with 2px borders as the main width.
+
+define a $border-base (w/ border-thin) and find+replace all other occurrences to reinforce using -base width
+{: ._message .--warning }
 
 ~~~scss
 $border-line: 1px;      ._border-line { border-width: $border-line }

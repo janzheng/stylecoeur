@@ -18,7 +18,7 @@
 
 
 
-$size: 14px; // 16px;
+$size: 16px; // 16px;
 $sizeline: $size * 1.5; // baseline; base lineheight; line-heights follow 1.5 rule
 
 // attempt at using "standardized" sizes. success may vary. (fonts are different sized, etc.)
@@ -37,6 +37,9 @@ $size-p5:       67px;
 $size-p6:       89px;
 $size-p7:       119px;
 $size-p8:       159px;
+
+
+
 
 // radius sizes
 $radius-none: 0px;  ._radius-none { border-radius: 0 }

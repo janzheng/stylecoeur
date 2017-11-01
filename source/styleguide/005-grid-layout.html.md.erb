@@ -1,18 +1,23 @@
 ---
-title: Grid & Layout
+title: Grid &amp; Layout
 type: styleguide
 layout: layout-styleguide
-name: grid
-section: basics
+name: grid-layout
+section: fundamental
 source: ../
+reference: _head-griddick.scss
 ---
 
 
 <main markdown="1">
 
-## Grid & Layout
+## Grid &amp; Layout
+{: .--padding}
 
-`_griddick.scss`
+<%= partial '/partials/styleguide-ref', 
+    :locals => { :refName => current_page.data.reference } %>
+
+The layout system makes extensive use of CSS Grids and some use of flexbox.
 
 The Grid system uses the newer HTML5 specced 'CSS Grids'. Support exists for most modern browsers, which means some older browsers will not support CSS grids, which will result in a mobile-look. (No polyfill exists for these users, as it's a smaller demographic at this point. No worries for IE6 anymore!)
 
@@ -20,7 +25,8 @@ The Grid (named 'Griddick') should be fairly straightforward if you're familiar 
 
 For mobile and smaller screens, Griddick works with the responsive settings setup in `_heart.scss` to collapse blocks into a single column.  
 
-## Responsive Sizes
+### Responsive Sizes
+{: .--padding}
 
 The responsive grid is setup with the screen sizes from Bootstrap. Instead of "mobile" and "desktop" breakpoints, the different widths are setup from extra-small to large:
 
@@ -31,16 +37,10 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
 - `magic: 640px` useful breakpoint for content
 
 
-## Grid Examples
+### Grid Examples
+{: .--padding}
 
 
-~~~html
-<div class="_grid-one _align-center">
-  <div class="_grid-block _color-bg-white">
-      <p>One block grid </p>
-  </div>
-</div>
-~~~
 
 <div class="_styleguide-example">
   <div class="_grid-one">
@@ -49,21 +49,15 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
     </div>
   </div>
 </div>
-
-
 ~~~html
-<div class="_grid-three _align-center">
+<div class="_grid-one _align-center">
   <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
-  </div>
-  <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
-  </div>
-  <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
+      <p>One block grid </p>
   </div>
 </div>
 ~~~
+
+
 
 <div class="_styleguide-example">
   <div class="_grid-three">
@@ -78,19 +72,22 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
     </div>
   </div>
 </div>
-
-
-
 ~~~html
-<div class="_grid-one-three _align-center">
+<div class="_grid-three _align-center">
   <div class="_grid-block _color-bg-white">
-      <p>One block grid </p>
+      <p>Three block grid </p>
+  </div>
+  <div class="_grid-block _color-bg-white">
+      <p>Three block grid </p>
   </div>
   <div class="_grid-block _color-bg-white">
       <p>Three block grid </p>
   </div>
 </div>
 ~~~
+
+
+
 
 <div class="_styleguide-example">
 <div class="_grid-one-three">
@@ -102,17 +99,29 @@ The responsive grid is setup with the screen sizes from Bootstrap. Instead of "m
   </div>
 </div>
 </div>
+~~~html
+<div class="_grid-one-three _align-center">
+  <div class="_grid-block _color-bg-white">
+      <p>One block grid </p>
+  </div>
+  <div class="_grid-block _color-bg-white">
+      <p>Three block grid </p>
+  </div>
+</div>
+~~~
 
 
 Please check the `_griddick.scss` file for all the different variations, and add more to fit your needs.
 
 
-## Helpers
+### Helpers
+{: .--padding}
 
 Helpers like `._align` exist to both make CSS Grids easier to implement and to expose grid functionality to the HTML-side. For example, `_align-center` exists to vertically align elements on a row. Again, please check the `_griddick.scss` file for the various helper options.
 
 
-## Layouts
+### Layouts
+{: .--padding}
 
 Layouts are more generalized patterns. Currently there's only two layout patterns, the `_grid-content-image` and `_grid-image-content` patterns used to lay out content and images side by side, like one would normally see on marketing landing pages. Note that `grid-row-start` is used to reflow content in mobile view so that images will always appear above the content.
 

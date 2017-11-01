@@ -1,5 +1,5 @@
 ---
-title: Email Form*
+title: Email Form
 type: styleguide
 layout: layout-styleguide
 name: emailForm

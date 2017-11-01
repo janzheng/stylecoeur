@@ -48,7 +48,7 @@ Some of these are tools, others are plugins. Plugins can be found at `scriptcoeu
 
 #### Tricks
 
-<div class="_grid-three" >
+<div class="_grid-three _margin-bottom" >
 
 <div class="_card " markdown="1">
 __[Fluid Typography](
@@ -60,14 +60,9 @@ Typography that scales with the window.
 </div>
 
 
-
-
-## Tools & Resources
-
-
 #### Creative Resources
 
-<div class="_grid-three" >
+<div class="_grid-three _margin-bottom" >
 
 <div class="_card" markdown="1">
 __[SVG OMG](https://jakearchibald.github.io/svgomg/)__
@@ -90,11 +85,12 @@ Color Palette Discovery
 
 
 
+
 </div>
 
 #### Code
 
-<div class="_grid-three" >
+<div class="_grid-three _margin-bottom" >
 
 <div class="_card " markdown="1">
 __[lodash](https://lodash.com/)__
@@ -132,6 +128,14 @@ __[Paypal](https://paypal.com/)__
 
 Less-integrated payment. Can connect [Venmo now](https://help.venmo.com/hc/en-us/articles/217042888-How-It-Works)
 </div>
+
+<div class="_card" markdown="1">
+__[Rough JS](https://roughjs.com/)__
+
+Creates a sketchy-look for components
+</div>
+
+
 
 </div>
 

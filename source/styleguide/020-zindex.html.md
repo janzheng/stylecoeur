@@ -3,7 +3,7 @@ title: Z-Index
 type: styleguide
 layout: layout-styleguide
 name: zindex
-section: basics
+section: fundamental
 status: --draft
 source: ../
 ---

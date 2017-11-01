@@ -57,6 +57,14 @@ Kramdown allows a combination of html and markdown. Just use `markdown="1"` in y
 <div class="" markdown="1">
 ~~~
 
+Adding classes to styles
+
+~~~html
+< A nice blockquote
+{: title="blockquote title" .class1 .class 2 #an-id}
+
+
+
 
 #### Syntax Highlighting
 

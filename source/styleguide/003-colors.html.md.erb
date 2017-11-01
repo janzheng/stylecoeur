@@ -3,19 +3,22 @@ title: Colors
 type: styleguide
 layout: layout-styleguide
 name: colors
-section: basics
+section: fundamental
 source: ../
+reference: _head-colors.scss
 ---
 
 <main markdown="1">
 
 ## Colors
+{: .--padding}
 
-`_colors.scss`
+<%= partial '/partials/styleguide-ref', 
+    :locals => { :refName => current_page.data.reference } %>
 
 Colors are kept light and playful, but neutral. Colors are provided as contextual accessories and supporting colors, not as brand colors.
 
-Note that colors have supporting classes like `_color-facebook` and `_color-bg-facebook` to make them easily available to the front-end.
+Note that colors have supporting classes like `_color-red` and `_color-bg-red` to make them easily available to the front-end.
 
 Any site should override whatever colors they need to match their brand.
 
@@ -49,7 +52,7 @@ Any site should override whatever colors they need to match their brand.
 It seems silly to have all these gray/white gradients, but they all come in handy.
 Also note the color descriptor system with `-light` and `-dark`.
 
-<div class="_grid-six _block _color-bg-reddit _padding-2">
+<div class="styleguide-colors _grid-six _block _padding-2">
 
 <%= partial '/partials/swatch', 
     :locals => { :name => 'Purewhite', :varName => 'purewhite', :swatch => '#FFFFFF' } %>

@@ -5,7 +5,7 @@ source: ./
 submenu:
   - [Philosophy, philosophy]
   - [Stylecoeur, stylecoeur]
-  - [Naming, component-names]
+  - ["> Component Names", component-names]
   - [Using Stylecoeur, using-stylecoeur]
   - [Developing Stylecoeur, developing-stylecoeur]
   - [Other Resources, other-resources]
@@ -52,10 +52,10 @@ The base framework is `stylecoeur` and is loosely based on _atomic design_.
   <div class=" _font-bold _padding-top-2 ">Torso</div> 
 </div>
 
-- `heart` — contains units, sizes and other base definitions
-- `head` — provides the core dependencies, like typography, color, animation mixins, and grids
-- `neck` — consists of basic display assets like links, cards, and buttons
-- `torso` — is all the components that depend on the heart, head and neck. These may also require js
+- `_heart.scss` — contains units, sizes and other base definitions
+- `/head` — provides the core dependencies, like typography, color, animation mixins, and grids
+- `/neck` — consists of basic display assets like links, cards, and buttons
+- `/torso` — is all the components that depend on the heart, head and neck. These may also require js
 
 
 
@@ -157,7 +157,7 @@ or pick specific compontents
 
 
 
-#### Developing Stylecoeur
+## Developing Stylecoeur
 
 Please refer to the [developing stylecoeur](./styleguide/z-001-using-middleman.html) section for running, building, deploying and developing Stylecouer further.
 
