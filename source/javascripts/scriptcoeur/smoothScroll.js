@@ -3,6 +3,8 @@
 // 
 // Smooth Scrolling 
 // [0.0.2] - added verticalScrollTo - separate target-based scrolling fn
+// [0.0.3] - added verticalScrollIntercept - experimental
+// [0.0.4] - changed href starts with # to contains #; added currenturl v. futureurl check; for sidebar that always contains url#location, now will correctly scrollTo or go to  new location
 
 
 // this one only intercepts anchor link hashes as they're being pressed
@@ -10,8 +12,8 @@ function verticalScroll(offsetY = 0) {
   var scrollElement = 'html, body';
   
   // Smooth scrolling for internal links
-  $("a[href^='#']").click(function(event) {
-    event.preventDefault();
+  // $("a[href^='#']").click(function(event) { // starts with hash
+  $("a[href*='#']").click(function(event) { // contains hash
 
     // var $this = $(this),
     var target = this.hash,
@@ -19,7 +21,24 @@ function verticalScroll(offsetY = 0) {
         offset = $('a[href='+target+']').data('offset-scroll') || 0; // <... data-offset-scroll="400"> 
         offset += offsetY;
 
-    console.log ('auto verticallScroll to ', $target);
+
+    // need to check if the link and the page is the same
+    // if it IS the same, we prevent default and scroll
+    // otherwise we go to the linked page
+    // edit: there's a ugly flash if we do a check and then prevent
+    // so we flip it: if the Urls are NOT the same, we go to the future Url
+
+    var currentUrl = $(target).context.location.pathname,
+        futureUrl = $(this).context.pathname;
+
+    event.preventDefault();
+    console.log ('auto verticallScroll to ', $target, ' current location: ', $(target).context.location.pathname, ' future location',  $(this).context.pathname);
+
+    if (currentUrl != futureUrl) {
+      // event.preventDefault();
+      // console.log('go to ', currentUrl, futureUrl);
+      window.location = futureUrl;
+    }
 
     if( typeof $target.offset() !== "undefined") {
       $(scrollElement).stop().animate({

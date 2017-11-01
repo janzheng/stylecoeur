@@ -67,10 +67,10 @@ Naming convention is inspired BEM, and keeps elements and components organzied. 
 < element class="element _component_name-attribute1-attr2 --state_1 --state_2 ></element>
 ~~~
 
-- `.element` Local page objects are called elements
-- `._elemnt_one` Use underscore to separate words
-- `._component` Supported component like buttons are denoted with a leading underscore
-- `_form-section-one` Attributes can cascade using dashes: `.element-descriptor-descriptor`, `._color-bg-yellow` compounds `color` with a `-bg` (background attribute), and `-yellow` to describe the background color as yellow
+- `.element` _Local_ objects are called elements and only exists for the page or component
+- `._component` Global stylecoeur components (like buttons) contain a leading underscore
+- `.element_one` `. Use underscore to separate words
+- `_form-section-one` Use dashes to add attributes: `.element-descriptor-attribute`, `._color-bg-yellow` describes `color` with a `-bg` (background color), and `-yellow` (yellow background color)
 - `_component .--descriptor` State descriptors, are defined with `--state` flags, like `.container .--open`
  or `._message .--success`. Descriptor flags are useful when they can be reused. 
 
@@ -89,7 +89,7 @@ Here's a quick example of how this would work in SCSS:
 }
 ~~~
 
-- When defining styles use separate variables ofr definitions and context, but make sure to always refer to the context variable when possible. This separation makes changing context colors easier in the future (like switching `$color-success` to `$color-blue`):
+- When defining styles use separate variables for definitions and context, but make sure to always refer to the context variable when possible. This separation makes changing context colors easier in the future (like switching `$color-success` to `$color-blue`):
 
 ~~~scss
  $color-green: #00ff00;         // definition
@@ -99,12 +99,10 @@ Here's a quick example of how this would work in SCSS:
 - Options for SCSS rules exist as `%placeholders`, `._classes` for ease. Sometimes it makes more sense to drop in styling like margins, paddings, and alignment straight into html with `class="_padding-top"` instead of creating lots of stylesheets 
 
 
-- using the `-` dash to separate names and descriptors helps with double-click selecting the entire name, whereas underscores includes all words in the selection, dashes do not. The original BEM syntax ```.my-component__list-item``` is annoying b/c double clicking the component name selects the wrong parts of the name. Instead, give it the name of ```.my_component--list_item``` allows you to select the right parts with a simple double-click
-- In your SCSS, avoid the use of &--state as much as possible, as these are hard to search for with cmd-f
+- Using `-` to separate names and descriptors helps with double-click selecting the entire name. BEM syntax `.my-component__list-item` is annoying b/c double clicking the component name selects the wrong parts of the name. Instead, `.my_component-list_item` allows you to select the right parts with a simple double-click
+- Avoid the use of &--state as much as possible, as these are hard to search for with `cmd-f`
 - Keep reusability and extensibility in mind
-
-
-
+- Use contextual variables!! Don't just copy rule definitions like colors or font size.
 
 Just remember to maintain modularity, and separate context from the definition. Helpers and components should be as reusable as possible.
 

@@ -16,17 +16,25 @@ A random ramblin' wreck of a good time
 
 #### Next Up
 
-- better way to organize layout / helpers
 - better writeup on the style helpers / core parts and make them more understandable?
-  - refer to the DESIGN SYSTEM writeup / take notes
   - BASELINE
-- edit design philosophy, how the pieces connect; semantic BEM rules; layout
   - refer to [corpus](http://jamiewilson.io/corpus/) for missing stuff
-- create rules on creating updating, changelogging
-  - like always using $vars instead of inserting values
-- janzheng - rss feed inserter / generalize it w/ input, callback, etc.
-- new project cheat sheet / quick way to launch new projects
+- new project cheat sheet / quick way to launch new static site projects
+  - how to copy
+  - setting up stylecoeur
+  - setting up github
+  - setting up domains / A records
+  - setting up mailchimp, mailgun
+  - setting up contact form
 
+
+
+
+
+
+#### Future
+
+- janzheng - rss feed inserter / generalize it w/ input, callback, etc.
 
 Mixins:
 https://engageinteractive.co.uk/blog/top-10-scss-mixins
@@ -52,11 +60,6 @@ On building Middleman prototypes:
 
 
 Note on keeping your CSS neat: https://medium.com/samsung-internet-dev/success-with-css-33215f481422
-
-- how I keep my CSS neat
-- "global" CSS (stylecoeur) vs. local CSS (usage of '_name')
-- SIMPLE RULES, BEM and SMACSS get confusing, using __ doesn't allow for double click
-
 
 Cheat Sheet
 - set timeout
@@ -120,30 +123,6 @@ Grids:
 
 
 
-
-Client Onboarding Process:
-- Client acquisition questions
-  - $ / size / etc.
-- contract
-- work orders
-- invoices
-- client notes + tracking
-
-
-Design Process:
-- Content, IA, Branding
-- design goals, business goals, constraints
-- accessibility + usability + human factors
-  - where / how / who are using it
-- track work + thoughts in progress, thoughts, screenshots, and how you got here
-  - esp. w/ test-driven design
-  - inputs + outputs
-- BA-type work
-  - wireframes
-  - business requirements
-  - component inputs + outputs (I/Os)
-
-
 Other ideas to explore:
 - Progressive image loading / on page load
 - Masonry
@@ -155,23 +134,15 @@ Other ideas to explore:
 
 
 
-- design:
-  - process
-  - requirements
+#### Chatbots
 
-- functional 
-  - implementation
-  - test-driven components
-    - design & development
-    - inputs and outputs
-  - react components
-  - data model
-  - api
+[Best practices](https://medium.com/@eunjinnyseo/11-more-best-ux-practices-for-building-chatbots-67362d1104d9)
+
+Chatbots are the new phone trees.
 
 
-- Product
-  - Business Product
-  - Consumer Product
+
+
 
 - middleman ruby resources for prototyping
 
@@ -200,10 +171,85 @@ Other ideas to explore:
 
 
 
+---
+
+## Project Documentation System
+
+Documentation system - should be done soon, take into account design process/decisions, will help future decision-making and review
+
+- How to document decisions? How to take notes, and where is it appropriate?
+- Change log
+- Build tool to take screenshots of old designs; easier to review changes 
+  - https://github.com/danielhusar/gulp-local-screenshots
+
+
+---
 
 
 ## Design Concepts 
 
+
+#### Workflow
+
+- From concept
+- To Branding
+- To Business Goals and Requirements
+- To Information architecture
+- To setting up views
+- To wireframing / basic to complex
+- to using components
+- to prototype
+- to production
+
+Concept of creating views (static prototypes) and tying them together to create user flows
+  - all in code
+  - simplified version of [air/shots](https://airbnb.design/the-way-we-build/)
+
+Storyboarding and Concepting using existing assets
+
+
+
+
+#### Client Onboarding Process:
+
+- Client acquisition questions
+  - $ / size / etc.
+- contract
+- work orders
+- invoices
+- client notes + tracking
+
+
+Design Process:
+- Content, IA, Branding
+- design goals, business goals, constraints
+- accessibility + usability + human factors
+  - where / how / who are using it
+- track work + thoughts in progress, thoughts, screenshots, and how you got here
+  - esp. w/ test-driven design
+  - inputs + outputs
+- BA-type work
+  - wireframes
+  - business requirements
+  - component inputs + outputs (I/Os)
+
+- design:
+  - process
+  - requirements
+
+- functional 
+  - implementation
+  - test-driven components
+    - design & development
+    - inputs and outputs
+  - react components
+  - data model
+  - api
+
+
+- Product
+  - Business Product
+  - Consumer Product
 
 #### Design System
 
@@ -227,12 +273,8 @@ How do you "tell a story" around your design system? [typography example](http:/
   - cards   
 
 - should the design system follow the construction of stylecoeur? probably not...
--
 - baseline (should be part of typography? layout?)
 - complex layouts
-
-
-
 
 
 
@@ -260,7 +302,7 @@ Reformat the Style guide and Design Systems pages with concepts from
 - The end-goal needs to be consistent with the system itself
 - Guide to __consistent experience__, __efficient workflow__
 
-#### Design Sys ARticle
+#### Design System Article
 
 ##### [0](https://medium.com/@marcintreder/design-systems-sprint-0-the-silver-bullet-of-product-development-8c0ed83bf00d)
 
@@ -411,10 +453,12 @@ salesforce:
 
 
 
+---
 
 
 
-#### Future / Other Thoughts
+
+## Future / Other Thoughts
 
 - change name/branding to sassyPants??? Maybe v2
 - stylecoeur style cards https://www.greatsimple.io/
@@ -428,13 +472,7 @@ salesforce:
 
 
 
-
-#### Chatbots
-
-[Best practices](https://medium.com/@eunjinnyseo/11-more-best-ux-practices-for-building-chatbots-67362d1104d9)
-
-Chatbots are the new phone trees.
-
+---
 
 
 #### Inspiration
@@ -450,7 +488,7 @@ Chatbots are the new phone trees.
 5. https://www.awwwards.com/ onepage Web Design inspiration One Page Love is a One Page website design gallery showcasing the best Single Page websites, templates and resources.
 
 
-
+---
 
 ### Future Blog Posts
 

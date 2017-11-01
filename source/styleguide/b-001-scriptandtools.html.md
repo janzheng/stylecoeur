@@ -1,8 +1,8 @@
 ---
-title: Scripts & Tools
+title: Scripts, Tools, Resources
 type: styleguide
 layout: layout-styleguide
-name: scripts
+name: scriptsandtools
 section: scriptcoeur
 <!-- status: --draft -->
 source: ../
@@ -62,10 +62,39 @@ Typography that scales with the window.
 
 
 
-#### Tools
+## Tools & Resources
+
+
+#### Creative Resources
 
 <div class="_grid-three" >
 
+<div class="_card" markdown="1">
+__[SVG OMG](https://jakearchibald.github.io/svgomg/)__
+
+Minimizes SVG files.
+</div>
+
+<div class="_card" markdown="1">
+__[tinyJPG](http://tinyjpg.com/)__
+
+Minimizes JPG and PNG files by a lot.
+</div>
+
+<div class="_card" markdown="1">
+__[Color Hunt](http://colorhunt.co/)__
+
+Color Palette Discovery
+</div>
+
+
+
+
+</div>
+
+#### Code
+
+<div class="_grid-three" >
 
 <div class="_card " markdown="1">
 __[lodash](https://lodash.com/)__
@@ -85,22 +114,11 @@ __[Barba JS](http://barbajs.org/)__
 Fluid static page transitions
 </div>
 
-<div class="_card " markdown="1">
-__[SVG OMG](https://jakearchibald.github.io/svgomg/)__
-
-Minimizes SVG files.
-</div>
-
-<div class="_card" markdown="1">
-__[tinyJPG](http://tinyjpg.com/)__
-
-Minimizes JPG and PNG files by a lot.
-</div>
 
 <div class="_card" markdown="1">
 __[Transfonter](https://transfonter.org/)__
 
-Minimizes JPG and PNG files by a lot.
+Converts fonts into web fonts, w/ CSS
 </div>
 
 <div class="_card" markdown="1">

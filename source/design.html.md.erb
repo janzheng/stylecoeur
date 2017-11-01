@@ -7,8 +7,82 @@ title: notes
 
 ## Design
 
-[Read this from airBnB](https://airbnb.design/building-a-visual-language/)
+
+
+### Readings &amp; Notes
+
+[airBnB Visual Styleguide](https://airbnb.design/building-a-visual-language/)
+
+- one-off solutions: not inherently bad, but if they aren’t built upon a solid foundation, we eventually find ourselves having to pay back accrued technical and design debts.
+- Design is about systems, and creating products in a scalable and repeatable way.
+- A unified design system is essential to building better and faster; better because a cohesive experience is more easily understood by our users, and faster because it gives us a common language to work with.
+- too few constraints - leads to disjointed user experiences 
+- multiple designers and stakeholders - new solutions and styles causes divergence and incoherence
+- multiple platforms - repeated work required to keep things synchronized
+- software as a continuum - years-old code and designs will still stick around, even after product has shifted, requiring maintnenance and upgrades
+- faster development: product engineers can focus more on writing the feature logic rather than the view code; share a common language w/ design
+- patterns need to be fundamentally simple
+
+
+#### airBnB Design Language System / Design Ops
+
+- auditing and printing out many of our designs, both old and new; Laying the flows side by side on a board, we could see where and how the experiences were breaking and where we needed to start making changes
+- Design Principles:
+  - Unified: Each piece is part of a greater whole and should contribute positively to the system at scale. There should be no isolated features or outliers.
+  - Universal: Airbnb is used around the world by a wide global community. Our products and visual language should be welcoming and accessible.
+  - Iconic: We’re focused when it comes to both design and functionality. Our work should speak boldly and clearly to this focus.
+  - Conversational: Our use of motion breathes life into our products, and allows us to communicate with users in easily understood ways.
+- Foundation
+  - typography
+    - title 1 44/56, title 2 32/36, title 3 24/28, large 19/24, regular 17/22, small 14/18, micro 8/8
+  - colors
+    - accessibility (a11y) compliant w/ websafe scores
+  - icons
+  - spacing / grids
+    - they use blocks of tiny:8 / small:16 / base:24/ large:48 / x-large:64 instead of baseline
+  - information architecture 
+- atoms and molecule guides opens door for disjointed experiences, difficult maintainability
+  - redefine components w/ personality, not just rules; evolving ecosystem
+  - end use of a component (e.g. avatar) can take on hundreds of permutations
+  - each component and variations are diligently recorded in the library; some elements can be turned on / off depending on need
+- library:
+  - framework + library helps prototyping speed; based on needs
+  - content component artboards like Navigation, Marquees, Content, Image and Speciality: group similar components
+  - different sets for iOS, Android, and responsively adapted
+  - simple layout concepts called Views for diff. devices: combined components, focuses on content and jobs to be done, rather than building components themselves
+  - built on top of their own technical framework
+
+![View example](https://airbnb.design/wp-content/uploads/2016/04/Organized-airbnb-dls-components-sample.png)
+
+
+##### Learnings
+
+- Some patterns / subcomponents repeat often across many components; think about how these can be extracted into their own, w/ their own patterns (e.g. rows, table-cells)
+- Sketch as a master component library is hard to maintain
+- Documentation system - should be done soon, take into account design process/decisions, will help future decision-making and review
+- 
+
+
+#### [airBnB Design and Culture](https://airbnb.design/defining-product-design/)
+
+- Fuse Engineering, Product and Design from the start: engineering, product and design teams are hitched and commonly referred to as EPD. By design, each function is involved and aligned from a product’s inception to its launch. For example, a working group for a new feature, product marketing or user feedback will involve at least one member from each of the three teams. This coalition not only assembles the key builders of the product, but, as a byproduct, it also formalizes the professional pathways that a person who wants to create a product can consider
+- Design lead to focus design-work
+- Grow designers w/ product and engineering hires; every project needs a designer to keep tabs on things / design responsibility
+- Three elements define a product: the business, the code and the pixels. Give each a voice in all product decisions
+  - Retention. In craft-based disciplines like design or engineering, you can allow people to continue to hone their core competency, rather than manage the development of others. Many people leave when this transition is forced, and there should be checkpoints for individual contributors who want to try on management.
+  - Concurrent cohort growth. By allowing ICs to work on high-priority projects and make bigger decisions, they can keep advancing with their engineering and product counterparts, rather than be left to work on projects that don’t flex their full skill set. They can continue to build, bond and grow with their cross-functional peers.
+  - Mobility. Level titles and on-the-job exposure facilitates more opportunities for expertise by osmosis — or the diffusion of knowledge — across functions. As a designer becomes more senior, she picks up more and different expertise from her engineering and product counterparts. With a greater working knowledge, designers have the option to move to “other legs of the stool” based on past projects, interest level and skill set.
+
+
+[airBnB Copywriting](https://airbnb.design/words-shape-design-2//)
+
+[Jobs to be Done](https://jtbd.info/)
+
 
 </article>
 
 
+
+## Case Studies
+
+[TripAdvisor](http://kelly-stevens.com/tripadvisor-redesign-navigation/)
