@@ -1,0 +1,182 @@
+
+// 
+//    Design — like Layout but prettier
+// 
+
+
+
+
+
+
+
+// 
+//    TEXT
+// 
+
+._pre         { white-space: pre; }
+._nowrap      { white-space: nowrap; }
+// https://css-tricks.com/almanac/properties/t/text-rendering/
+
+._speed       { text-rendering:   optimizeSpeed; } 
+._legibility  { 
+              // can enable ligatures < 20px;
+              // ONLY APPLY THIS for < 1000 words or severely hampers load time
+              text-rendering:   optimizeLegibility; 
+}
+._geometric  { text-rendering:  geometricPrecision; }
+
+._antialias { 
+  // light text on dark backgrounds makes it look lighter
+  // only works on Mac webkit
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._subpixel {
+  -webkit-font-smoothing: subpixel-antialiased;
+} 
+
+
+
+
+
+// 
+// Special ratio and Sizes
+// 
+
+.--base     {width: $size-base; height: $size-base;}
+.--base-2   {width: $size-2; height: $size-2;}
+.--smaller  {width: $size-smaller; height: $size-smaller;}
+.--larger   {width: $size-larger; height: $size-larger;}
+.--p1       {width: $size-p1; height: $size-p1;}
+.--p2       {width: $size-p2; height: $size-p2;}
+.--p3       {width: $size-p3; height: $size-p3;}
+.--p4       {width: $size-p4; height: $size-p4;}
+.--p5       {width: $size-p5; height: $size-p5;}
+.--p6       {width: $size-p6; height: $size-p6;}
+.--p7       {width: $size-p7; height: $size-p7;}
+.--p8       {width: $size-p8; height: $size-p8;}
+
+.--m1       {width: $size-m1; height: $size-m1;}
+.--m2       {width: $size-m2; height: $size-m2;}
+.--m3       {width: $size-m3; height: $size-m3;}
+.--m4       {width: $size-m4; height: $size-m4;}
+
+.--ratio-16_9     {@include responsive-ratio(16,9);}
+
+
+
+// Triangles
+
+._triangle-up {
+  @include css-triangle($color-main, up, $size-base, relative, true);
+}
+._triangle-up-left {
+  @include css-triangle($color-main, up-left, $size-base, relative, true);
+}
+._triangle-down {
+  @include css-triangle($color-main, down, $size-base, relative, true);
+}
+._triangle-left {
+  @include css-triangle($color-main, left, $size-base, relative, true);
+}
+._triangle-right {
+  @include css-triangle($color-main, right, $size-base, relative, true);
+}
+
+
+
+
+
+// 
+// Shadows
+// 
+
+%shadow-internal-light {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.07), 0 0 70px rgba(0, 0, 0, 0.08) inset;}
+%shadow-internal-dark {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.22), 0 0 80px rgba(0, 0, 0, 0.42) inset;}
+%shadow-gray {box-shadow:1px 1px 4px rgba(120,120,120,0.4),inset 1px 0 1px rgba(255,255,255,0.6);}
+
+
+%shadow-inset {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+%shadow-hover {
+  box-shadow: 1px 1px 1px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+%shadow-drop {
+  box-shadow: 0 5px 23px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,1);
+}
+
+%box-shade-light {
+  -moz-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+  -webkit-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+  box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+}
+
+// used for header-float bar
+%box-shadow-under {
+  -moz-box-shadow: 0 0 3px 3px rgba(#888,0.4);
+  -webkit-box-shadow: 0 0 3px 3px rgba(#888,0.4);
+  box-shadow: 0 0 5px 3px rgba(#888,0.4);
+}
+
+
+
+// 
+// Hover effect
+// 
+
+// %hover-effect {
+//   @include selection-color (rgba($light-blue, 0.8), white, none);
+
+//   @extend %ease-fast;
+//   @extend %shadow-hover;
+//   position:relative; bottom: 1px; right: 1px;
+// }
+// %slide-effect {
+//   @extend %ease-fast;
+//   padding: $size-base*0.65 $size-base*1.25; //slide effect
+// }
+// %active-effect {
+//   @extend %ease-fast;
+//   @extend %shadow-inset;
+//   text-decoration: none;
+// }
+
+
+
+
+
+
+
+
+
+
+// 
+// Container and Object Formatting
+// (formatting your kids)
+// 
+
+
+// last object in container has no padding
+._format-padding-last-bottom_none {
+  *:last-child {
+    padding-bottom: 0;
+  }
+}
+._format-margin-last-bottom_none {
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// last object in container has no
+// margin or padding (no extra whitespace)
+._format-last-bottom_none {
+  @extend ._format-padding-last-bottom_none;
+  @extend ._format-margin-last-bottom_none;
+}
+

@@ -16,18 +16,27 @@ These notes won't make sense to anyone but me, and that's ok.
 ---
 
 
-#### Next Up
+### Next Up
 
-- better writeup on the style helpers / core parts and make them more understandable?
-  - refer to [corpus](http://jamiewilson.io/corpus/) for structure
-
-Structure
+- Core definition writeup / make clearer
+  - Layout
   - Typography
   - Sizing / Spacing
   - Grids, Baseline
-  - 
+  - refer to [corpus](http://jamiewilson.io/corpus/) for structure and missing parts
+- Clean Up
+  - helpers margins/mixins
+    - establish a clear pattern
+    - use compound nesting / generator:
 
-
+~~~scss
+.what {
+  margin: { 
+      left: auto;
+      right: auto;
+  }
+}
+~~~
 
 
 - new project cheat sheet / quick way to launch new static site projects
@@ -39,29 +48,27 @@ Structure
   - setting up contact form
 
 
+- add code / syntax highlighting / pre to... somewhere
 
 
 
 
-#### Future
 
-- janzheng - rss feed inserter / generalize it w/ input, callback, etc.
+### Future
 
-Mixins:
-https://engageinteractive.co.uk/blog/top-10-scss-mixins
-@hover patterns!
-  .hover(@color, @duration-base, @easing-base) {
-     transition: background-color @duration-base @easing-base;
-     text-decoration: none;
-     background-color: lighten(@color, 10%);
-     box-shadow: @shadow-base;
-  }
-  Implementation of such a hover state is quite simple:
-  .sample-class {
-     &:hover {
-      .hover(@blue-base);
-     }
-  }
+
+- quickly explain !default in helpers:
+  - $color-main: blue !default
+    - w/o default- will override previous definition of $color-main
+    - w/ default- will only define $color-blue if previously has not been defined (good for setting base framework stuff, so you don't steamroll local variables)
+
+- janzheng 
+  - rss feed inserter / generalize it w/ input, callback, etc.
+  - list.js implementation
+
+- Middleman search
+- Algolia search
+
 
 
 On building Middleman prototypes:
@@ -200,14 +207,14 @@ Documentation system - should be done soon, take into account design process/dec
 ## Design Concepts 
 
 
-#### Product Workflow Loop
+### Product Workflow Loop
 
 - From concept
 - To Branding
 - To Business Goals and Requirements
 - To Information architecture / information hierarchy
-- To Content Strategy &amp; copywriting
-- To setting up views and flows
+- To Content Strategy &amp; copywriting &amp; voice and tone
+- To storyboards views and flows
 - To wireframing / basic to complex
 - to using components
 - to prototype
@@ -223,7 +230,7 @@ Concept of creating views (static prototypes) and tying them together to create 
 Storyboarding and Concepting using existing assets
 
 
-#### Content Strat &amp; Copywriting
+### Content Strat &amp; Copywriting
 
 https://airbnb.design/words-shape-design-2/
 
@@ -235,7 +242,7 @@ https://airbnb.design/content-strategy-at-airbnb/
 
 
 
-#### Client Onboarding Process:
+### Client Onboarding Process:
 
 - Client acquisition questions
   - $ / size / etc.
@@ -276,7 +283,7 @@ Design Process:
   - Business Product
   - Consumer Product
 
-#### Design System
+### Design System
 
 How do you "tell a story" around your design system? [typography example](http://pierrickcalvez.com/journal/a-five-minutes-guide-to-better-typography) - don't overwhelm with facts, start simple, and expand 
 
@@ -327,7 +334,7 @@ Reformat the Style guide and Design Systems pages with concepts from
 - The end-goal needs to be consistent with the system itself
 - Guide to __consistent experience__, __efficient workflow__
 
-#### Design System Article
+### Design System Article
 
 ##### [0](https://medium.com/@marcintreder/design-systems-sprint-0-the-silver-bullet-of-product-development-8c0ed83bf00d)
 
@@ -414,7 +421,7 @@ Component Structure (UX Pin)
 
 
 
-##### Design Proces
+#### Design Proces
 
 - Create analogies (other products maybe not), other brands, fields, feelings: Ferrari? Apple? etc.
 - Find design principlies in analogous products - why are these a right choice of analogy to yours? as a brand or as user experience
@@ -444,7 +451,7 @@ salesforce:
   4. Has a point of view and a sense of prioritization that a rational person could disagree with.
   5. Is generally paired with illustrative examples that show how the principle applies to specific decisions.”
 
-##### Typography
+#### Typography
 
 - clear typgraphic size rules list / table
   - refer to [carbon](http://carbondesignsystem.com/style/typography)
@@ -465,13 +472,13 @@ salesforce:
 - 
 
 
-#### Onboarding
+### Onboarding
 [user onboarding article](https://www.appcues.com/blog/user-onboarding-best-practices/)
 
-#### Research
+### Research
 
 
-#### Emerging Tech
+### Emerging Tech
 
 [IDEO human-centered design cards for AR and VR](https://medium.com/googleplaydev/applying-human-centered-design-to-emerging-technologies-6ad7f39d8d30)
 
@@ -500,7 +507,7 @@ salesforce:
 ---
 
 
-#### Inspiration
+### Inspiration
 
 1. http://www.csswinner.com/ css web design inspiration CSS Winner is a website design award gallery for web designers and developers to showcase their best web design works and win css winner website design awards.
 

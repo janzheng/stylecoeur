@@ -2,11 +2,13 @@
 
 
 // 
-// MIXINS & Functions
+//    General Mixins & Functions
 // 
 
 
- @function remCalc($values) {
+// some are from: https://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+@function remCalc($values) {
   $max: length($values);
   $remValues: '';
   @for $i from 1 through $max {
@@ -20,94 +22,71 @@
   @return $remValues;
 }
 
-
-@mixin selection-color($bg-color: white, $text-color: black, $text-shadow: none) {
-  ::-moz-selection{ background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
-  ::selection { background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
-}
-
-// *********************************************************
-// DESIGN CLASSES
-// *********************************************************
-
-%shadow-internal-light {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.07), 0 0 70px rgba(0, 0, 0, 0.08) inset;}
-%shadow-internal-dark {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.22), 0 0 80px rgba(0, 0, 0, 0.42) inset;}
-%shadow-gray {box-shadow:1px 1px 4px rgba(120,120,120,0.4),inset 1px 0 1px rgba(255,255,255,0.6);}
-
-
-// // placed at the top of the first element on pages, to give the floater some cleared space
-// .header-spacing {
-//    // padding: $size*3 0;
-//    padding-top: 100px;
-// }
-
-// %shadow-inset {
-//   box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
-//   text-shadow: 0 1px 3px rgba(0,0,0,.5);
-// }
-// %shadow-hover {
-//   box-shadow: 1px 1px 1px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
-//   text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-// }
-
-// %shadow-drop {
-//   box-shadow: 0 5px 23px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,1);
-// }
-
-// %box-shade-light {
-//   -moz-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
-//   -webkit-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
-//   box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
-// }
-
-// // used for header-float bar
-// %box-shadow-under {
-//   -moz-box-shadow: 0 0 3px 3px rgba(#888,0.4);
-//   -webkit-box-shadow: 0 0 3px 3px rgba(#888,0.4);
-//   box-shadow: 0 0 5px 3px rgba(#888,0.4);
-// }
-
-
-
-
-// // Button hover effect
-// %hover-effect {
-//   @include selection-color (rgba($light-blue, 0.8), white, none);
-
-//   @extend %ease-fast;
-//   @extend %shadow-hover;
-//   position:relative; bottom: 1px; right: 1px;
-// }
-// %slide-effect {
-//   @extend %ease-fast;
-//   padding: $size-base*0.65 $size-base*1.25; //slide effect
-// }
-// %active-effect {
-//   @extend %ease-fast;
-//   @extend %shadow-inset;
-//   text-decoration: none;
-// }
-
-// Clearfix - Usage: @include clearfix();
-@mixin clearfix() {
-    & {
-        *zoom: 1;
-    }
-
-    &:before, &:after {
-        content: "";
-        display: table;
-    }
-
-    &:after {
-        clear: both;
-    }
-}
-
 // PX to REM - Usage: font-size: rem(37px);
 @function rem($px, $size-base: $size-font-size) {
     @return ($px / $size-base) * 1rem;
 }
+
+
+// also try using translate3d w/ animations for hardware
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  perspective: $perspective;
+  -webkit-perspective: $perspective;
+}
+
+
+// helps with cutting off content past widths
+// just give it a max width value
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+// div::after {
+//   @include pseudo;
+//   top: -1rem; left: -1rem;
+//   width: 1rem; height: 1rem;
+// }
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+
+// div {
+//   @include responsive-ratio(16,9);
+// }
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+
+
+
+
+// 
+// 
+//    DESIGN MIXINS
+// 
+// 
+
 
 // Opacity - Usage: @include opacity(0.8);
 @mixin opacity($opacity) {
@@ -127,23 +106,30 @@
 
 // Retina Background Images - Usage: @include background-image-retina(logo, png);
 @mixin background-image-retina($file, $type) {
-    background-image: url($file + '.' + $type);
-    @media only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (-moz-min-device-pixel-ratio: 2),
-        only screen and (-o-min-device-pixel-ratio: 2/1),
-        only screen and (min-device-pixel-ratio: 2),
-        only screen and (min-resolution: 192dpi),
-        only screen and (min-resolution: 2dppx){
-        & {
-            background-image: url($file + '@2x.' + $type);
-        }
+  background-image: url($file + '.' + $type);
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx){
+    & {
+        background-image: url($file + '@2x.' + $type);
     }
+  }
+}
+
+
+
+@mixin selection-color($bg-color: white, $text-color: black, $text-shadow: none) {
+  ::-moz-selection{ background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
+  ::selection { background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
 }
 
 // Input Placeholder
 // Usage:
 // @include input-placeholder {
-//     font-size: 18px;
+//   font-size: 18px;
 // }
 @mixin input-placeholder {
     &.placeholder { @content; }
@@ -163,25 +149,25 @@
 
 // chrome has a weird color problem: http://stackoverflow.com/questions/39268675/css-div-background-color-bug-on-chrome
 %chrome-fix, .chrome-fix {
-    -webkit-transform: translateZ(0); // fixes chrome bug
-    // -webkit-transform: translate3d(0,0,0); 
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: scale(1);
+  -webkit-transform: translateZ(0); // fixes chrome bug
+  // -webkit-transform: translate3d(0,0,0); 
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(1);
 }
 
 // Background Color mixin is a temporary fix for Chrome fill bug
 @mixin background($color) {
-    background-color: $color;
-    @extend %chrome-fix;
+  background-color: $color;
+  @extend %chrome-fix;
 
-    // sometimes child element is the prob
-    div {
-        @extend %chrome-fix;
-    }
+  // sometimes child element is the prob
+  div {
+      @extend %chrome-fix;
+  }
 }
-// * {
-  // @extend %chrome-fix;
-// }
+
+
+
 
 // selection / highlight color
 // @include selection {
@@ -211,6 +197,44 @@
 @mixin transform-style ($style: flat) {
   @include prefixer(transform-style, $style);
 }
+
+
+
+
+
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round( $size / 2.5 );
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round( $size / 2.5 );
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if  $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+
+
 
 
 

@@ -1,55 +1,78 @@
 
 
 
-# stylecoeur
+# \_stylecoeur
+
+#### ...because we are only as good as our tools.
+
 
 Core extensible collection of useful SCSS modules. Not a framework, just a bunch of loose concepts, ideas, and useful SCSS tied together. Like duct tape.
 
-For quick design and prototyping iterations.
+For quick design and prototyping iterations. This shortcut is not a replacement for creativity.
 
-This shortcut is not a replacement for creativity.
-
-
+[Check it out in action](http://janzheng.com/stylecoeur)
 
 
 
 ## Overview
 
-### What is this?
+If you reuse design processes and UI patterns over and over, why reinvent the wheel? Save yourself time and create a toolbox of reusable components. Every designer should have their own collection. You may use this for your projects, or use this as a starting point for your own.
 
-If you have a ton of projects that use very similar styles, why reinvent the wheel? Create a reusable collection of SCSS modules (you can loosely call it a 'framework') to save yourself some time. This is NOT a framework. It's a collection of useful modules, and a starting point for you to build out your own framework.
 
-The idea is to centralize all your styles to reduce the amount of work. This will also help you standardize naming conventions. I prefer my own simplified version of BEM syntax: [http://getbem.com/introduction/](http://getbem.com/introduction/)
+#### Philosophy
 
-Each project will import stylecoeur using symlink, then implement its own local styles on top of the core.
-
+The idea is to centralize thought, processes and learning from previous projects for the betterment of future projects. Standardizations, conventions, and checklists will reduce the amount of work, deduplicate thought, and reduce for future projects. [Surgeons use checklists to save lives](http://www.npr.org/templates/story/story.php?storyId=122226184), so let's learn from them.
 
 
 
-### Using this resource
 
-Use it out of the box (I'm using it for all my projects) or add/remove whatever you want. Clone this project into a folder, and create a symlink to this folder in your SCSS folder. I prefer creating a symlinked / aliased external 'stylecoeur' folder where you can then cherry-pick whatever components you'd like to include. Don't forget that @importing a folder in SCSS automatically imports the index.scss file, if one exists. NOTE: right-click to create an alias doesn't always work. Use the CLI instead
 
-Using the command-line interface, go to your new project's SCSS folder, then:
 
-Creating a symlink file: ```ln -s ~/path/to/stylecoeur_folder/styles/index.scss _stylecoeur.scss```
+## Using stylecoeur
 
-Note how the name is changed to ```_stylecoeur.scss``` to conform to SCSS naming standards, but it doesn't really matter.
+The style guide is very modular, so only link the SCSS components you need to keep the file size down. Either include the entire thing or select what you want to import. Remember that they depend on each other to work.
 
-Creating a symlink folder in CLI. Navigate to the project's stylesheet folder: 
+-  `@import '_styles/'` to automatically import the `index.scss` file which contains all parts, or 
+- individually import each part like `@import 'neck';` or
+- import each module separately `@import 'neck-code';`
+
+
+#### Copying Files
+
+__Preferred Method:__ Copy the full `styles` folder over to a new project. If the core changes, just make sure to copy over the newest version. Eventually there might be a build task to ensure it stays up to date. This method is preferred, as changes to the core won't affect the build. Copy over whatever JS files you need and/or link to them.
+
+#### Symlinked Project
+
+Creating a symlink will give control of editing the core, but changes ripple across projects if they're all symlinked. [right-click to create an alias doesn't work with the compiler] Using the command-line interface, go to your new project's SCSS folder, then:
+
+1. Create a direct symlink file: 
+
+~~~
+ln -s ~/path/to/stylecoeur_folder/styles/index.scss _stylecoeur.
+~~~
+
+Note how the name is changed to `_stylecoeur.scss` to conform to SCSS naming standards, but it doesn't really matter.
+
+2. Or create a symlink to the folder in CLI. Navigate to the project's stylesheet folder: 
 
 ~~~ 
 ln -s ~/path/to/styles/stylecoeur_folder stylecoeur
-  ln -s /Users/janzheng/Desktop/projects/stylecoeur/styles stylecoeur
+ln -s /Users/janzheng/Desktop/projects/stylecoeur/styles stylecoeur
 ~~~
 
-
 I prefer the latter option, because you can now import the folder as a whole:
-```@import 'stylecoeur/stylecoeur.scss';```
 
-or pick specific compontents ```@import 'stylecoeur/components/form';```
+~~~
+@import 'stylecoeur/stylecoeur.scss';
+~~~
 
-(Symlinks are simpler than using an npm module, since not all projects might even use npm or such)
+or pick specific compontents 
+
+~~~
+@import 'stylecoeur/components/form';
+~~~
+
+(Symlinks are simpler than using an npm module, since projects like static sites might not use symlinks)
 
 
 
@@ -91,3 +114,5 @@ activate :deploy do |deploy|
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
 ~~~
+
+

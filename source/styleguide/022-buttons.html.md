@@ -21,46 +21,6 @@ The lighter in-page nav uses a `--simple` attribute that removes some of the hea
 
 Some JS is used to provide the 'sticky nav' functionality, namely ScrollMagic.  `#nav-tr` is the triggering element, and when triggered, the `#nav` gets pinned by ScrollMagic and receives the `--pinned` attribute class for additional styling. Super simple. Note that IDs are used to identify sticky elements, though they could easily be changed to classes instead.
 
-~~~ javascript
-// animation controller
-var stickyController = new ScrollMagic.Controller();
-
-// sticky nav
-var nav = new ScrollMagic.Scene({triggerElement: "#nav-tr", triggerHook: "onLeave"})
-        .setPin("#nav")
-        .setClassToggle("#nav", "--pinned") // add class toggle
-        .addTo(stickyController);
-~~~
-
-
-Standard Navigation:
-
-<div id="nav-tr" >
-  <nav id="nav" class="_nav _container _content">
-    <div class="_grid-one-three _grid-center-h">
-      <a class="nav-logo" href="/"><span class="_logo">Logo</span></a>
-      <div class="nav-links">
-        <a href="#intro">Nav Linke</a>
-        <a href="#privacy">Nav Linke</a>
-        <a href="#pricing">Nav Linke</a>
-        <a class="_nav--separator">login</a>
-      </div>
-    </div>
-  </nav>
-</div>
-
-Simple Navigation:
-
-<div id="nav-tr" >
-  <nav id="nav" class="_nav --simple _ease-none _container ">
-    <div class="">
-      <a href="#inspiration">Nav Option 1</a>
-      <a href="#inspiration">Nav Option 2 </a>
-    </div>
-  </nav>
-</div>
-
-
 
 ## Links
 

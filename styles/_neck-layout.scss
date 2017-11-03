@@ -3,7 +3,6 @@
 
 // 
 // Layouts / Lost and found / Parts Bin
-// random typography elements like code, etc.
 // 
 // 
 
@@ -72,10 +71,16 @@ section, ._section,
 }
 
 
+
+
+
+// Lists
+
 ul, ol {
   padding-bottom: $size-base;
 
   ul {
+    padding-top: $size-base/4;
     padding-bottom: 0;
   }
 }

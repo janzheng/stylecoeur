@@ -5,9 +5,9 @@ $sidebar-width: $sidebar-width-max;
 
 $sidebar-color-link: $color-main;
 $sidebar-color-hover: $color-active;
-$sidebar-border: $border-line solid $color-ui;
+$sidebar-border: $border-base solid $color-ui;
 
-$sidebar-submenu-border: $border-line solid $color-main;
+$sidebar-submenu-border: $border-base solid $color-main;
 
 ._sidebar {
   max-width: $sidebar-width-max;
@@ -51,10 +51,7 @@ $sidebar-submenu-border: $border-line solid $color-main;
       position: relative;
       right: -3px;
       display: inline-block;
-
-      // -webkit-transform: rotate(90deg);
-      // transform: rotate(90deg);
-
+      
       @include transform(rotate(90deg));
       @include transform-origin(center);
       & ~ ._sidebar-submenu {
@@ -82,6 +79,7 @@ $sidebar-submenu-border: $border-line solid $color-main;
     
     a {
       font-size: $font-small;
+      display: block;
     }
   }
   
@@ -94,7 +92,7 @@ $sidebar-submenu-border: $border-line solid $color-main;
     margin-top: $size-base;
     height: 25vh !important;
     overflow: scroll;
-    border: $border-thin solid $color-ui;
+    border: $sidebar-border;
     padding: $size-base;
   }
 

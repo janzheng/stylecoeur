@@ -57,6 +57,16 @@ https://www.smashingmagazine.com/2016/05/fluid-typography)__
 Typography that scales with the window.
 </div>
 
+<div class="_card " markdown="1">
+__[Animated Lines](
+https://tympanus.net/codrops/2016/10/12/animated-decorative-lines/)__
+
+Animated decorative grid lines
+</div>
+
+
+
+
 </div>
 
 
@@ -82,7 +92,17 @@ __[Color Hunt](http://colorhunt.co/)__
 Color Palette Discovery
 </div>
 
+<div class="_card" markdown="1">
+__[Surge Host](https://surge.sh/pricing)__
 
+Static site hosting w/ password protection
+</div>
+
+<div class="_card" markdown="1">
+__[Wordmark](https://wordmark.it/)__
+
+Fast font browser
+</div>
 
 
 
@@ -110,7 +130,6 @@ __[Barba JS](http://barbajs.org/)__
 Fluid static page transitions
 </div>
 
-
 <div class="_card" markdown="1">
 __[Transfonter](https://transfonter.org/)__
 
@@ -134,6 +153,37 @@ __[Rough JS](https://roughjs.com/)__
 
 Creates a sketchy-look for components
 </div>
+
+<div class="_card" markdown="1">
+__[Rellax JS](https://dixonandmoe.com/rellax/)__
+
+Parallax scroller
+</div>
+
+<div class="_card" markdown="1">
+__[Anime JS](https://anime.js/)__
+
+JS Animation Engine
+</div>
+
+<div class="_card" markdown="1">
+__[ScrollMonitor](https://github.com/stutrek/scrollMonitor)__
+
+Element scroll watcher
+</div>
+
+<div class="_card" markdown="1">
+__[Twilio](https://www.twilio.com)__
+
+SMS, Phone, Chat API
+</div>
+
+<div class="_card" markdown="1">
+__[FeathersJS](https://feathersjs.com/)__
+
+REST and realtime API layer
+</div>
+
 
 
 

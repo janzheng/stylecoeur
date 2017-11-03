@@ -8,8 +8,7 @@
 @import 'torso-footer'; 
 @import 'torso-nav'; 
 @import 'torso-sidebar'; 
-@import 'torso-forms'; 
-@import 'torso-styleguide'; 
+@import 'torso-forms';  
 @import 'torso-tabs'; 
 @import 'torso-buttonGroups'; 
 @import 'torso-toggle'; 
@@ -25,3 +24,5 @@
 @import 'torso-scrollReveal';
 @import 'torso-footnote';
 @import 'torso-box';
+
+// @import 'torso-styleguide'; // moved out of stylecoeur

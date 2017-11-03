@@ -4,7 +4,7 @@ type: styleguide
 layout: layout-styleguide
 name: bloglist
 section: simple
-status: --draft
+<!-- status: --draft -->
 source: ../
 ---
 
@@ -17,7 +17,7 @@ Very simple full-width content layout list items, useful for marketing or blog l
 
 <div class="_styleguide-example">
   <a href="#" class="_blog-item _content _container-large">
-    <div class="_grid-one _margin-center  ">
+    <div class="_grid-one _center-margin  ">
       <h4>Microservices and You</h4>
       <div class="_grid-one-four ">
         <div class="_blog-img">
@@ -34,7 +34,7 @@ Very simple full-width content layout list items, useful for marketing or blog l
   </a>
   
   <a href="#" class="_blog-item _content _container-large">
-    <div class="_grid-one _margin-center  ">
+    <div class="_grid-one _center-margin  ">
       <h4>Microservices and You</h4>
       <div class="_grid-one-four ">
         <div class="_blog-img">
@@ -52,7 +52,7 @@ Very simple full-width content layout list items, useful for marketing or blog l
 </div>
 ~~~html
 <a href="#" class="_blog-item _content _container-large">
-  <div class="_grid-one _margin-center  ">
+  <div class="_grid-one _center-margin  ">
     <h4>Microservices and You</h4>
     <div class="_grid-one-four ">
       <div class="_blog-img">
@@ -69,7 +69,7 @@ Very simple full-width content layout list items, useful for marketing or blog l
 </a>
 
 <a href="#" class="_blog-item _content _container-large">
-  <div class="_grid-one _margin-center  ">
+  <div class="_grid-one _center-margin  ">
     <h4>Microservices and You</h4>
     <div class="_grid-one-four ">
       <div class="_blog-img">

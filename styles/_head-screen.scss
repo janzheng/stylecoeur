@@ -3,16 +3,52 @@
 // 
 //    RESPONSIVE STUFF
 //    usage:
-//      @include screen-mobile {
+//      @include screen-xs-only {
 //        color: red;
 //      }
 // 
+
+// READABILITY FIRST
+// don't use variable replacement
+// as it gets confusing fast.
+
+/*
+    Keep in mind:
+
+    Media Queries will bubble and nest:
+        p {
+          @media query-1 {
+            first thing
+            @media query-2 {
+              second thing
+            }
+          }
+        }
+
+        will result in CSS:
+
+        @media query-1 {
+          p {
+            first thing
+          }
+        }
+        @media query-1 and query-2 {
+          p {
+            second thing
+          }
+        }
+
+
+*/
 
 @mixin screen-xs-only {
   @media (max-width: $width-xs-max) {
     @content;
   }
 }
+  // all the other rules e.g. screen-sm
+  // are sm AND UP, this is the one exception
+  // since it's used so much / so differently
   @mixin screen-xs {
     @include screen-xs-only {
       @content;
@@ -91,9 +127,84 @@
   }
 }
 
+
+
+// shorthand mixins
+
+// will generate a new element w/ -xs, -sm etc
+/*
+  // can take an array like ('xs', 'sm', 'md')
+
+  ._center {
+    text-align: center;
+
+    @include genGridAttr(('xs') { 
+      text-align: right;
+    }
+  }
+
+  result:
+
+  @media xs query {
+    ._center-xs {
+      text-align: right
+    }
+  }
+*/
+
+  @mixin gridMixinSelector($size) {
+    // required b/c of no dynamic mixins
+    @if ($size=='xs') {
+      @include screen-xs {@content}
+    } 
+
+    @else if($size=='magic-down') {
+      @include screen-magic-down {@content}
+    } @else if($size=='magic-up') {
+      @include screen-magic-up {@content}
+    } 
+
+    @else if($size=='sm') {
+      @include screen-sm {@content}
+    } @else if($size=='sm-down') {
+      @include screen-sm-down {@content}
+    } @else if($size=='sm-only') {
+      @include screen-sm-only {@content}
+    }
+
+    @else if($size=='md') {
+      @include screen-md {@content}
+    } @else if($size=='md-down') {
+      @include screen-md-down {@content}
+    } @else if($size=='md-only') {
+      @include screen-md-only {@content}
+    } 
+
+    @else if($size=='lg') {
+      @include screen-lg {@content}
+    } @else if($size=='lg-down') {
+      @include screen-lg-down {@content}
+    } @else if($size=='lg-only') {
+      @include screen-lg-only {@content}
+    }
+  }
+
+  @mixin genGridAttr($sizes: 'xs') {
+    @each $size in $sizes {
+      @if & {
+        &-#{$size} {
+          @include gridMixinSelector($size){@content}
+        }
+      }
+    }
+  }
+
+
+
+
+
+
 // show & hide;
-
-
 
 ._hidden-mobile {
   @media (max-width: $width-xs-max) {

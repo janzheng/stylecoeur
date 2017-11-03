@@ -15,7 +15,7 @@ $color-input-underline: $color-gray-light; // color-input-bg
 $color-input-underline-hover: $color-gray;
 
 
-$form-border-width: $border-thin;
+$form-border-width: $border-base;
 $form-border: $form-border-width solid $color-input-border;
 
 $height-input: $size-base*3 + 4px;
@@ -229,7 +229,7 @@ input, .input {
     @extend %ease-fast;
 
     border-width: 0;
-    border-bottom: $color-input-underline $border-thin solid;
+    border-bottom: $color-input-underline $border-base solid;
 
     &:hover {
       @extend %ease-fast;
@@ -264,7 +264,7 @@ input, .input {
     z-index: -1;
 
     & + label {
-      border: $border-thin solid transparent;
+      border: $border-base solid transparent;
     }
   }
     ._form-input-file:focus {
@@ -351,7 +351,7 @@ textarea, .textarea {
       box-shadow: none;
 
       & + span {
-        // border-bottom: $border-thin solid $color-blue-light;
+        // border-bottom: $border-base solid $color-blue-light;
       }
     }
     input:checked {
@@ -417,7 +417,7 @@ textarea, .textarea {
       box-shadow: none;
 
       & + span {
-        border-bottom: $border-thin solid $color-focus;
+        border-bottom: $border-base solid $color-focus;
       }
     }
     input:checked {

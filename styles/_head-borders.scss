@@ -1,19 +1,52 @@
 
+
+$border-color: $color-main;
+$border-color-bg: $color-ui-light;
+
+$border-style: solid;
+
 // border sizes
-$border-line: 1px;      ._border-line { border-width: $border-line }
-$border-thin: 2px;      ._border-thin { border-width: $border-thin }
-$border-medium: 3px;    ._border-medium { border-width: $border-medium }
-$border-thick: 6px;     ._border-thick { border-width: $border-thick }
-$border-massive: 12px;  ._border-massive { border-width: $border-massive }
+$border-line: 1px;
+$border-thin: 2px;
+$border-medium: 3px;    
+$border-thick: 6px;     
+$border-massive: 12px;  
 
 // general border width
-$border-width: $border-thin;
+$border-base: $border-thin;
+
+._border,
+%border-base {
+  border: $border-base solid $color-ui;
+  border-radius: $radius;
+}
 
 
-._border-divider-skinny {
+.--line { border-width: $border-line }
+.--thin, .--base { border-width: $border-thin }
+.--medium { border-width: $border-medium }
+.--thick { border-width: $border-thick }
+.--massive { border-width: $border-massive }
+
+
+
+// DIVIDERS
+
+hr {
+  border-top: $border-base $border-color $border-style;
+}
+
+hr.--thin, 
+%border-thin {
+  @extend %border-base;
+  border: $border-thin solid $color-main;
+}
+
+hr.--short,
+%border-short {
   display: block;
   border-top: 0;
-  border-bottom: $color-main solid $border-line;
+  border-top: $border-color solid $border-base;
   width: 14vw;
   padding-top: $size-base/2;
   margin-top: 0;
@@ -23,8 +56,185 @@ $border-width: $border-thin;
   margin-right: auto;
 }
 
-
-._border {
-  border: $border-thin solid $color-ui;
-  border-radius: $radius;
+hr.--thick,
+%border-thick {
+  @extend %border-base;
+  border: $border-thick solid $border-color;
 }
+
+hr.--thick-text,
+%border-thick-text {
+  text-align: center;
+  border: 0; 
+  padding: $size $size*3/2;
+  display: block;
+  background: $border-color;
+  // height: $size*3;
+  font-weight: 700;
+  position: relative;
+
+  &:before {
+    content: attr(data-text);
+    background: $border-color-bg;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: $size-2;
+    transform: translate(0%,-50%);
+    padding: $size-2;
+    padding-top: $size/4 + 2px;
+  }
+}
+
+hr.--massive,
+%border-massive {
+  @extend %border-base;
+  border: $border-massive solid $border-color;
+}
+
+hr.--dotted,
+%border-dotted {
+  @extend %border-base;
+  border: 0;
+  padding-top: $size;
+  border-top: $border-thick dotted $border-color;
+}
+  hr.--dotted-thin,
+  %border-dotted-thin {
+    @extend %border-base;
+    position: relative;
+    border: 0;
+    border-top: $border-line dotted $border-color;
+    // padding: 32px;
+    // &:after {
+    //   content: ' ';
+    //   display: block;
+    //   height: $size;
+    //   width: 100%;
+    //   position: relative;
+    //   left: 0;
+    // }
+  }
+
+hr.--double-thin,
+%border-double-thin {
+  @extend %border-base;
+  border: 0;
+  border-radius: 0;
+  border: $border-thin solid $border-color;
+  height: $border-thick;
+
+}
+
+div.--double-box-thin,
+%border-double-box-thin {
+  @extend %border-base;
+  border: 0;
+  border-radius: 0;
+  border: $border-thick double $border-color;
+  padding: $size;
+}
+
+
+hr.--dashed, 
+%border-dashed {
+  @extend %border-base;
+  border: 0;
+  height: $border-thick;
+  width:100%;
+  background-image: linear-gradient(to right, $border-color 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  // background-size: 18px 24px;
+  background-size: 21px 4px;
+  background-repeat: repeat-x;
+}
+hr.--dashed-thin,
+%border-dashed-thin {
+  @extend %border-dashed;
+  height: $border-thin;
+}
+
+hr.--triangle,
+%border-triangle {
+  height: $size;
+  width: 100%;
+  background-image: linear-gradient(34deg, $border-color 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 21px 12px;
+  background-repeat: repeat-x;
+  border: 0;
+}
+
+hr.--triangle-2,
+%border-triangle-2 {
+  height: 12px;
+  width: 100%;
+  background-image: linear-gradient(34deg, rgba(255, 255, 255, 0) 50%, $border-color 0%);
+  background-position: right;
+  background-size: 21px 12px;
+  background-repeat: repeat-x;
+  border: 0;
+}
+
+hr.--hatch,
+%border-hatch {
+  height: 6px;
+  width: 100%;
+  background-image: repeating-linear-gradient(
+    40deg, 
+    $border-color-bg 0, 
+    $border-color 1px, $border-color .25em, 
+    $border-color-bg calc(.25em + 1px), $border-color-bg .75em
+  );
+  background-position: left;
+  // background-size: 16px 12px;
+  background-repeat: repeat-x;
+  border: 0;
+}
+
+._border-banner {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60px;
+
+  ._border-banner-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  ._border-banner-content {
+    left: 0;
+    position: relative;
+    // width: 100%;
+    padding-bottom: 100px;
+  }
+
+  .slope-left {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 71px;
+    background: green;
+    position: absolute;
+    /* left: -95px; */
+    right: 105px;
+    top: 72px;
+    transform: rotate(-30deg);
+    transform-origin: bottom left;
+  }
+
+  h2 {
+    background: red;
+    z-index: 1;
+    position: relative;
+
+
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+

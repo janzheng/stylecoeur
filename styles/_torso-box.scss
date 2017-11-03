@@ -2,23 +2,6 @@
 ._box { 
   display: inline-block;
   background-color: $color-main;
-
-  &.--base {width: $size-base; height: $size-base;}
-  &.--base-2 {width: $size-2; height: $size-2;}
-  &.--smaller {width: $size-smaller; height: $size-smaller;}
-  &.--larger {width: $size-larger; height: $size-larger;}
-  &.--p1 {width: $size-p1; height: $size-p1;}
-  &.--p2 {width: $size-p2; height: $size-p2;}
-  &.--p3 {width: $size-p3; height: $size-p3;}
-  &.--p4 {width: $size-p4; height: $size-p4;}
-  &.--p5 {width: $size-p5; height: $size-p5;}
-  &.--p6 {width: $size-p6; height: $size-p6;}
-  &.--p7 {width: $size-p7; height: $size-p7;}
-  &.--p8 {width: $size-p8; height: $size-p8;}
-
-  &.--m1 {width: $size-m1; height: $size-m1;}
-  &.--m2 {width: $size-m2; height: $size-m2;}
-  &.--m3 {width: $size-m3; height: $size-m3;}
-  &.--m4 {width: $size-m4; height: $size-m4;}
 }
+// sizes moved to heart 
 

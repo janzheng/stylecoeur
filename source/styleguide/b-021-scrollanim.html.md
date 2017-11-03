@@ -14,6 +14,10 @@ source: ../
 
 Scrollmagic can be used to trigger all kinds of scroll-based effects. Sticky nav is one example, but more scroll-based animations and content-reveal are also possible.
 
+#### Intersection Observer
+
+At some point the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) will probably production-ready. Today isn't that day.
+
 
 #### Content Reveal
 
@@ -37,6 +41,7 @@ ScrollMagic Notes
 - `_ease-xxslow` and `_ease-xxxslow` slows down the animations
 - add `data-delay='200'` to add some delay time to mix it up
 
+Or if you think this is too hacky, just use [scrollReveal](https://scrollrevealjs.org/)
 
 <div class="_styleguide-example">
 
@@ -56,13 +61,13 @@ ScrollMagic Notes
   </div>
 
   <div class="_grid-one _color-bg-ui _margin-bottom  _padding">
-    <div class="_card _margin-center _scrollReveal --fade">
+    <div class="_card _center-margin _scrollReveal --fade">
       Some kind of information here
     </div>
-    <div class="_card _margin-center _scrollReveal --fade _ease-xxslow">
+    <div class="_card _center-margin _scrollReveal --fade _ease-xxslow">
       Some more info / xxslow
     </div>
-    <div class="_card _margin-center _scrollReveal _ease-xxxslow">
+    <div class="_card _center-margin _scrollReveal _ease-xxxslow">
       Even more info / xxxslow
     </div>
   </div>
@@ -107,13 +112,13 @@ ScrollMagic Notes
   </div>
 
   <div class="_grid-one _color-bg-ui _margin-bottom  _padding">
-    <div class="_card _margin-center _scrollReveal">
+    <div class="_card _center-margin _scrollReveal">
       Some kind of information here
     </div>
-    <div class="_card _margin-center _scrollReveal">
+    <div class="_card _center-margin _scrollReveal">
       Some more kind of information here
     </div>
-    <div class="_card _margin-center _scrollReveal">
+    <div class="_card _center-margin _scrollReveal">
       Even more of some kind of information here
     </div>
   </div>

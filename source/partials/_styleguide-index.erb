@@ -2,6 +2,10 @@
 <% $section_name = '' %>
 <% source = current_page.data.source || "" %>
 
+<!-- for open/close  -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 <span class="_sidebar-trigger"></span>
 <div class="_sidebar --divider" data-currentPage="<%= current_page.data.name %>">
   <!-- styleguide pages are one / deep and currently using relative links -->
@@ -16,7 +20,7 @@
       <a class="_font-bold  --submenu
                 <%= '--active --open' if current_page.data.title == 'styleguide' %>
                " href="<%= source %>styleguide.html"><h4 class=_padding-bottom-none>Style Guide.</h4></a>
-      <div class="_font-small _font-italic">A cheat sheet for prototypes </div>
+      <div class="_font-small _font-italic">Prototype cheat sheet </div>
 
       <% if current_page.data.title == 'styleguide' %>
         <div class="_sidebar-submenu _margin-top">
@@ -49,7 +53,7 @@
            class="
               <%= '--active' if current_page.data.name == resource.data.name %>
               <%= '--submenu' if defined?(resource.data.submenu) %>
-              <%= '--open' if defined?(current_page.data.submenu) && resource.data.submenu == current_page.data.submenu %>
+              
               <%= resource.data.status if defined?(resource.data.status) %>
               "
         >
@@ -78,7 +82,7 @@
 
   $(document).ready(function() {
     var target = $('._sidebar').attr('data-currentpage');
-    verticalScrollTo(-50, '#sidebar-'+target, '._sidebar');
+    verticalScrollTo(-60, '#sidebar-'+target, '._sidebar');
   })
 
 </script>

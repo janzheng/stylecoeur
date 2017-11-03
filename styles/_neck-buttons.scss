@@ -36,7 +36,7 @@
 
 */
 
-$button-border-width:           $border-thin;
+$button-border-width:           $border-base;
 $button-border-radius:          $radius;
 
 
@@ -55,7 +55,7 @@ $button-pill-radius:            $radius-lg;
 
 
 // outline
-$button-outline-border:             $border-thin;
+$button-outline-border:             $border-base;
 $button-outline-color-main:         $color-copy;
 $button-outline-color-border:       $color-copy;
 $button-outline-color-bg:           transparent; // $color-black;
@@ -144,7 +144,7 @@ $button-outline-color-bg-hover:     transparent;
     &.--thin-light {
       line-height: $size-base;
       // text-transform: lowercase;
-      border-width: $border-thin;
+      border-width: $border-base;
     }
     &-tiny,
     &.--tiny {

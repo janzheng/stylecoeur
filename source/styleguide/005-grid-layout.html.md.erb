@@ -12,10 +12,25 @@ reference: _head-griddick.scss
 <main markdown="1">
 
 ## Grid &amp; Layout
-{: .--padding}
 
 <%= partial '/partials/styleguide-ref', 
     :locals => { :refName => current_page.data.reference } %>
+
+
+Mention helpers and semantic layout classes — try to encourage the use of semantic layout classes instead of just throwing padding on things, which I've been really bad about doing / semantic layouts; avoid using too many helpers here (saved for next section)
+{: ._message .--warning}
+
+### Semantic Markup
+
+[What does semantic markup mean and why?]
+
+- add more semantic grid/flex helpers ( _align-left-bottom, _align-right-bottom, etc.)
+- combine these with possible semantic layout names
+{: ._message .--warning}
+
+
+
+### Layout System
 
 The layout system makes extensive use of CSS Grids and some use of flexbox.
 

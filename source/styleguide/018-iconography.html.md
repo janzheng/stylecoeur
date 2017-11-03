@@ -11,11 +11,14 @@ source: ../
   
 ## Iconography
 
-For icons, please refer to [Font Awesome](http://fontawesome.io). These provide some quick and easy pictograms and visuals. Font Awesome has been included as a CDN: `https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`
+For icons, please refer to [Font Awesome](http://fontawesome.io). This is a very useful and free font icon collection. To use it, include the CDN: `"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`
 
 To use the icons, simple create an element tag with the desired icon and attributes as classes:
 
 <div class="_styleguide-example">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
   <div class="_margin-bottom">
     <i class="fa fa-send-o"></i>
   </div>
@@ -36,6 +39,8 @@ To use the icons, simple create an element tag with the desired icon and attribu
   </div>
 </div>
 ~~~html
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 <div class="_margin-bottom">
   <i class="fa fa-send-o"></i>
 </div>

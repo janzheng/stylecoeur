@@ -1,60 +1,182 @@
 
 
 
+// 
+//    Helper Utility Classes
+// 
+
+
+//    
+//    ! use _neck-layout for semantic, contextual definitions 
+// 
+
 
 
 // 
-//    TAG POSITIONING
+//    IMAGE HELPERS
 // 
+
+._bg-img  {
+            // use a local style to override this value
+            // background-image: url('http://lorempixel.com/600/200/animals');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+._bg-no_repeat      { background-repeat: no-repeat; }
+._bg-cover          { background-size: cover; }
+._bg-contain        { background-size: contain; }
+._bg-center         { background-position: center; }
+._bg-top            { background-position: top; }
+._bg-right          { background-position: right; }
+._bg-bottom         { background-position: bottom; }
+._bg-left           { background-position: left; }
+
+._bg-border_box  { background-clip: border-box; }
+._bg-padding_box { background-clip: padding-box; }
+._bg-content_box { background-clip: content-box; }
+
+._bg-fixed          { background-attachment: fixed; }
+._bg-local          { background-attachment: local; }
+ 
+._img-fit-none       { object-fit: none; }
+._img-fit-cover      { object-fit: cover; }
+._img-fit-contain    { object-fit: contain; }
+._img-fit-fill       { object-fit: fill; }
+._img-fit-scale_down { object-fit: scale-down; }
+
+._img-full { width: 100%; & > * {width: 100%} }
+
+
+
+// 
+//    INTERACTIVE
+// 
+
+
+// cursor events bubble through
+// to objects underneath 
+// good for z-index things like popups
+._pointer-no_events {
+  pointer-events: none;
+}
+
+._pointer {
+  cursor: pointer;
+}
+
+._disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+// prevents double click highlighting
+// use on buttons and text CTAs
+._select-none,
+%user-select-none {
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
+._scrollbar-hide,
+%_scrollbar-hide,
+._hide-scrollbar,
+%hide-scrollbar {
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar { 
+    display: none; 
+    width: 0px;
+    height: 0px;
+    background: transparent;
+   }
+}
+
+._scroll-horizontal {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+._scroll-vertical {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+._overflow-hidden { overflow: hidden; }
+._overflow-scroll { overflow: scroll; }
+._overflow-auto   { overflow: auto; }
+
+
+
+
+
+
+
+
+// 
+//    DISPLAY 
+// 
+
+._hidden {
+  display: none;
+
+  &-i {
+    display: none !important;
+  }
+
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {
+    display: none;
+  }
+}
 
 ._block {
   display: block;
-}
-  ._block-xs {
-    @include screen-xs-only {
-      display: block;
-    }
-  }
 
+  @include genGridAttr(('xs','sm','md','lg')) {
+    display: block;
+  }
+}
 
 ._inline-block {
   display: inline-block;
 }
 
 ._inline {
-  display: inline !important;
+  display: inline;
+}
+
+._flex {
+  display: flex;
+}
+
+._inline_flex {
+  display: inline-flex;
 }
 
 
+._relative { position: relative; }
+._absolute { position: absolute; }
+._fixed    { position: fixed; }
 
-// 
-//    DISPLAY STYLES
-// 
 
-._hidden {
-  display: none !important;
-}
-  ._hidden-xs {
-    @include screen-xs-only {
-      display: none;
-    }
-  }
-  ._hidden-sm-down {
-    @include screen-sm-down {
-      display: none;
-    }
-  }
-._pointer {
-  cursor: pointer;
-}
 ._transparent {
   opacity: 0.001; // setting to 0 invokes browser bugs
 }
 
 
+
+
+
 // 
 //    HEIGHT
 // 
+
 ._width-full {
   width: 100%;
   max-width: 100%;
@@ -73,21 +195,48 @@
 
 
 
+/* generates things like:
+   _margin-top-half,
+   _margin-2
+*/
+
+// tbd; this will be quite a monster
+
+@mixin generator($property, $value:$size-base) {
+
+}
+
+
+/*
+      Pattern
+  
+      margin-vertical-half
+      margin-half
+      margin-none
+        margin-top-i
+      margin-top
+        margin-top-i
+        margin-top-half
+          margin-top-half-i
+        margin-top-2
+          margin-top-2-i
+      margin-bottom
+      margin-left
+      margin-right
+
+    modifiers:
+
+*/
+
+
 // 
 //    MARGIN
 // 
 
-._margin-center {
-  margin: 0 auto;
-}
 
 ._margin-half {
   margin-top: $size-base/2;
   margin-bottom: $size-base/2;
-}
-._margin-center {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 ._margin-2 {
@@ -109,6 +258,9 @@
   }
   ._margin-top {
     margin-top: $size-base;
+    &-i {
+      margin: $size-base !important;
+    }
   }
     ._margin-top-xs {
       @include screen-xs-only {
@@ -343,63 +495,50 @@
 // 
 // 
 
+
 ._center {
   text-align: center;
+
+  @include genGridAttr(('xs','sm','md','lg')) {
+    text-align: center;
+  }
 }
-  ._center-xs {
-    @media (max-width: $width-xs-max) {
-      text-align: center !important;
+  ._center-margin {
+    // leave margin top/bot alone to prevent reset
+    margin-left: auto;
+    margin-right: auto;
+
+    @include genGridAttr(('xs','sm','md','lg')) {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
+
 ._left {
   text-align: left;
+
+  @include genGridAttr(('xs','sm','md','lg')) {
+    text-align: left;
+  }
 }
 ._right {
   text-align: right;
-}
-  ._right-sm,
-  ._right-unless-xs {
+
+  @include genGridAttr(('xs','sm','md','lg')) {
     text-align: right;
-    @media (max-width: $width-xs-max) {
-      text-align: inherit;
-    }
   }
+}
 
 ._justify {
   text-align: justify;
+
+  @include genGridAttr(('xs','sm','md','lg')) {
+    text-align: justify;
+  }
 }
 
 
-._float-right {
-  float: right;
-}
-
-._clear-both {
-  clear: both;
-}
-
-
-
-
-// prevents double click highlighting
-// use on buttons and text CTAs
-%user-select-none {
-  -webkit-user-select: none; /* Chrome/Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
-
-  /* Rules below not implemented in browsers yet */
-  -o-user-select: none;
-  user-select: none;
-}
-
-
-%hide-scrollbar{
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar { 
-      display: none; 
-   }
-}
+//    Content Alignment
 
 ._v-top {
   vertical-align: top;
@@ -413,7 +552,39 @@
 
 
 
-// Sticky / Pinned
+
+
+
+
+// 
+//    FLOATS 
+// 
+
+._float-left {
+  float: left;
+}
+._float-right {
+  float: right;
+}
+._float-none {
+  float: none;
+}
+
+._clear-both {
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+// Sticky / Pinned Formatting
+// - works with ScrollMagic
 
 ._pinned, .--pinned {
   padding-bottom: $size-base * 2;
@@ -435,31 +606,19 @@
 
 
 
-// Container Formatting
-// formats enclosing content
-// useful for markdown
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
 
-
-// last object in container has no padding
-._format-padding-last-bottom_none {
-  *:last-child {
-    padding-bottom: 0;
+.what {
+  margin: { 
+      left: auto;
+      right: auto;
   }
 }
-._format-margin-last-bottom_none {
-  *:last-child {
-    margin-bottom: 0;
-  }
-}
-
-// last object in container has no
-// margin or padding (no extra whitespace)
-._format-last-bottom_none {
-  @extend ._format-padding-last-bottom_none;
-  @extend ._format-margin-last-bottom_none;
-}
-
-
 
 
 

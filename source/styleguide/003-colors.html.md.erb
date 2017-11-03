@@ -11,20 +11,55 @@ reference: _head-colors.scss
 <main markdown="1">
 
 ## Colors
-{: .--padding}
 
 <%= partial '/partials/styleguide-ref', 
     :locals => { :refName => current_page.data.reference } %>
 
 Colors are kept light and playful, but neutral. Colors are provided as contextual accessories and supporting colors, not as brand colors.
 
-Note that colors have supporting classes like `_color-red` and `_color-bg-red` to make them easily available to the front-end.
-
 Any site should override whatever colors they need to match their brand.
 
-<h4 class="_margin-top-2"> Primary Colors </h4>
 
-<div class="_grid-six _block">
+#### Color Usage
+
+All colors have supporting classes to easily add color to elements and components:
+
+ - `_color-red`
+ - `_color-bg-red`
+ - `_color-border-red` —requires border styling 
+
+
+<div class="_styleguide-example">
+  <div class="_grid-three">
+    <div class="_color-red _align-vertically --p7">
+      <span class="_center _box _color-bg-transparent ">_color-red</span>
+    </div>
+    <div class="_color-bg-red _align-vertically --p7">
+      <span class="_center _box _color-bg-transparent ">_color-bg-red</span>
+    </div>
+    <div class="_color-border-red _border --thick _align-vertically --p7">
+      <span class="_center _box _color-bg-transparent ">_color-border-red</span>
+    </div>
+  </div>
+</div>
+~~~html
+<div class="_grid-three">
+  <div class="_color-red _align-vertically --p7">
+    <span class="_center _box _color-bg-transparent ">_color-red</span>
+  </div>
+  <div class="_color-bg-red _align-vertically --p7">
+    <span class="_center _box _color-bg-transparent ">_color-bg-red</span>
+  </div>
+  <div class="_color-border-red _border --thick _align-vertically --p7">
+    <span class="_center _box _color-bg-transparent ">_color-border-red</span>
+  </div>
+</div>
+~~~
+
+#### Primary Colors 
+
+<div class="_styleguide-example">
+<div class="_grid-six ">
 <%= partial '/partials/swatch', 
     :locals => { :name => 'Blue', :varName => 'blue', :swatch => '#366EA6' } %>
 
@@ -43,16 +78,16 @@ Any site should override whatever colors they need to match their brand.
 <%= partial '/partials/swatch', 
     :locals => { :name => 'Mint', :varName => 'mint', :swatch => '#31E3C3' } %>
 </div>
+</div>
 
 
-
-<h4 class="_margin-top-2"> White, Grays, Blacks</h4>
-
+#### White, Grays, Blacks
 
 It seems silly to have all these gray/white gradients, but they all come in handy.
 Also note the color descriptor system with `-light` and `-dark`.
 
-<div class="styleguide-colors _grid-six _block _padding-2">
+<div class="_styleguide-example">
+<div class="styleguide-colors _grid-six ">
 
 <%= partial '/partials/swatch', 
     :locals => { :name => 'Purewhite', :varName => 'purewhite', :swatch => '#FFFFFF' } %>
@@ -91,31 +126,17 @@ Also note the color descriptor system with `-light` and `-dark`.
 :locals => { :name => 'Pure Black', :varName => 'pureblack', :swatch => '#000000' } %>
 
 
-
+</div>
 </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h4 class="_margin-top-2"> Social Media Colors</h4>
+####  Social Media Colors
     
-<div class="_grid-four _block">
+<div class="_styleguide-example">
+<div class="_grid-four">
 
 <%= partial '/partials/swatch', 
     :locals => { :name => 'Facebook', :varName => 'facebook', :swatch => '#3B5998' } %>
@@ -130,10 +151,13 @@ Also note the color descriptor system with `-light` and `-dark`.
     :locals => { :name => 'Twitter', :varName => 'twitter', :swatch => '#26C4F1' } %>
 
 </div>
+</div>
 
 
 
+#### Scale Colors &amp; Gradients
 
+[Using Scale Colors](https://iamsteve.me/blog/entry/using_scale_color_in_sass)
 
 </main>
 

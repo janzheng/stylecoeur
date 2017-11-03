@@ -94,7 +94,7 @@ html._modal-html {
   padding: $size-base $size-base*2;
   margin: 0 auto;
   background: $modal-color-bg;
-  border: solid $border-thin $color-ui;
+  border: solid $border-base $color-ui;
   border-radius: $modal-radius;
 
   p {

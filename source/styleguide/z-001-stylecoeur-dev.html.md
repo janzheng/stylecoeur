@@ -1,5 +1,5 @@
 ---
-title: Developing Stylecoeur
+title: Stylecoeur Dev
 type: styleguide
 layout: layout-styleguide
 name: developingStylecoeur

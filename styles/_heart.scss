@@ -40,9 +40,8 @@ $size-p8:       159px;
 
 
 
-
 // radius sizes
-$radius-none: 0px;  ._radius-none { border-radius: 0 }
+$radius-none: 0px;  ._radius-none { border-radius: 0; } ._radius-none-i { border-radius: 0 !important; }
 $radius: 4px;       ._radius { border-radius: $radius }
 $radius-md: $size-base;  ._radius-md { border-radius: $radius-md }
 $radius-lg: 24px;   ._radius-lg { border-radius: $radius-lg }
