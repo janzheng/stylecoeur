@@ -72,18 +72,18 @@ end
 
 
 # https://github.com/manastech/middleman-search
-activate :search do |search|
-  search.resources = ['styleguide/', 'index.html', 'landing.html']
-  # search.index_path = 'search/lunr-index.json' # defaults to `search.json`
-  # search.lunr_dirs = ['source/vendor/lunr-custom/'] # optional alternate paths where to look for lunr js files
-  # search.language = 'es' # defaults to 'en'
-  search.fields = {
-    title:   {boost: 100, store: true, required: true},
-    content: {boost: 50},
-    # url:     {index: false, store: true},
-    # author:  {boost: 30}
-  }
-end
+# activate :search do |search|
+#   search.resources = ['styleguide/', 'index.html', 'landing.html']
+#   # search.index_path = 'search/lunr-index.json' # defaults to `search.json`
+#   # search.lunr_dirs = ['source/vendor/lunr-custom/'] # optional alternate paths where to look for lunr js files
+#   # search.language = 'es' # defaults to 'en'
+#   search.fields = {
+#     title:   {boost: 100, store: true, required: true},
+#     content: {boost: 50},
+#     # url:     {index: false, store: true},
+#     # author:  {boost: 30}
+#   }
+# end
 
 
 activate :deploy do |deploy|
@@ -111,8 +111,12 @@ page "/feed.xml", layout: false
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+
+
+

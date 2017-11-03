@@ -1,5 +1,6 @@
 
 
+<% source = current_page.data.source || "./" %>  
 <% title = current_page.data.title || "_stylecoeur" %>
 
 <!doctype html>
@@ -34,11 +35,11 @@
 </html>
 
 
-<script src="../javascripts/site.js" type="text/javascript"></script>
+<script src= <%= source + "javascripts/site.js" %> type="text/javascript"></script>
 
-<script src="../javascripts/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
+<script src= <%= source + "javascripts/scriptcoeur/smoothScroll.js" %> type="text/javascript"></script>
 
-<script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+<script src= <%= source + "javascripts/scriptcoeur/sticky.js" %> type="text/javascript"></script>
 
 <script>
 $(document).ready(function() {
