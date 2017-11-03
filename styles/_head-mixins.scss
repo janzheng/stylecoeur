@@ -77,6 +77,23 @@
   }
 }
 
+// generates elements for repetition
+/*
+  // generate ._opacity-100 ._opacity-90 etc. 
+  @each $twoVal in '100' 1, '90' 0.9, '80' 0.8, '70' 0.7, '60' 0.6, '50' 0.5, '40' 0.4, '30' 0.3, '20' 0.2, '10' 0.1, {
+    @include elementGenerator(opacity, nth($twoVal, 1), nth($twoVal, 2));
+  }
+  ._opacity-100 {
+    opacity: 0.9, etc.
+  }
+*/
+@mixin elementGenerator($element, $valDesc, $val:$valDesc) {
+  ._#{$element}-#{$valDesc} {
+    #{$element}: #{$val}
+  }
+}
+
+
 
 
 

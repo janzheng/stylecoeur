@@ -84,6 +84,14 @@
   @include css-triangle($color-main, right, $size-base, relative, true);
 }
 
+// 
+// Opacity
+// 
+
+// generate ._opacity-100 ._opacity-90 etc. 
+@each $twoVal in '100' 1, '90' 0.9, '80' 0.8, '70' 0.7, '60' 0.6, '50' 0.5, '40' 0.4, '30' 0.3, '20' 0.2, '10' 0.1, {
+  @include elementGenerator(opacity, nth($twoVal, 1), nth($twoVal, 2));
+}
 
 
 
@@ -123,6 +131,10 @@
   box-shadow: 0 0 5px 3px rgba(#888,0.4);
 }
 
+
+/* abduzeedo shadow
+box-shadow: rgba(100, 84, 92, 0.2) 0px 2px 2px, rgba(100, 84, 92, 0.2) 0px 4px 4px, rgba(100, 84, 92, 0.2) 0px 8px 8px, rgba(100, 84, 92, 0.2) 0px 16px 16px, rgba(100, 84, 92, 0.2) 0px 32px 32px, rgba(100, 84, 92, 0.2) 0px 64px 64px;
+*/
 
 
 // 
