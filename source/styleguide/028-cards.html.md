@@ -17,8 +17,6 @@ source: ../
 
 Cards are floating information boxes, similar to what is used on Google's material design, though without the strict usage rules. These are made to stand out, and a box-shadow effect makes them feel like they "pop" out of the screen.
 
-Use these to draw attention to a box of special information, maybe even concluded with a call-to-action.
-
 Good source of info: [Cards Best Practices](https://medium.com/@CanvasFlip/best-practices-for-designing-cards-a19f53cab052)
 
 <div class="_styleguide-example">

@@ -5,6 +5,18 @@ layout: layout-styleguide
 name: forms
 section: components
 source: ../
+reference: _torso-forms.scss
+submenu:
+  - [Common Examples, common-examples]
+  - [Input, input]
+  - [Date Input, date-input]
+  - [Textarea, textarea]
+  - [Range Slider, range-slider]
+  - [Radio, radio]
+  - [Checkbox, checkbox]
+  - [Option & Multi, option--multiple-select]
+
+  
 ---
 
 
@@ -12,7 +24,8 @@ source: ../
 
 ## Forms
 
-`_forms.scss`
+<%= partial '/partials/styleguide-ref', 
+    :locals => { :refName => current_page.data.reference } %>
 
 Forms is a small collection of inputs and wrappers that make form inputs a little nicer to use and to look at.
 
@@ -52,10 +65,6 @@ Use `griddick` and other components to organize layout.
 - [`_form-container-bg`](#) container w/ gray background, used to divide forms
 - [`_form-container-outline`](#) container with outline, used to divide forms
 
-
-
-#### Basics
-
 Flags are used to augment input elements. Default border highlights are replaced with selectors; don't forget to style these to help with accessibility.
 
 - `--optional` marks controls as optional
@@ -69,9 +78,7 @@ Flags:
 
 
 
-#### Form Elements
-
-##### Common Examples
+### Common Examples
 
 <div class="_styleguide-example">
 <form class="" method="post">
@@ -222,7 +229,7 @@ Flags:
 
 
 
-##### Input 
+### Input 
 
 Basic input form
 
@@ -347,7 +354,7 @@ File inputs are supported as well.
 
 
 
-##### Date Input
+### Date Input
 
 Dates are kind of terrible (zing!). Support is shaky at best, and kind of only available on mobile devices. Use custom date solutions if possible, but make sure mobile browsers always use the mobile browser default. [More info here](http://html5doctor.com/the-woes-of-date-input/)
 
@@ -377,7 +384,7 @@ All the regular input skin options apply to date, whenever possible. Also make s
 
 
 
-##### Textarea 
+### Textarea 
 
 <div class="_styleguide-example">
 
@@ -398,7 +405,7 @@ All the regular input skin options apply to date, whenever possible. Also make s
 
 
 
-##### Range Slider
+### Range Slider
 
 Range sliders come with a lot of variations. [Check out the spec here.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)
 
@@ -437,7 +444,7 @@ Multi-handle sliders are not natively supported, but many plugins exist. Feel fr
 
 
 
-##### Radio 
+### Radio 
 
 - `--inline` puts the radio button next to the label.
 - Make sure an option is always marked as default checked for accessibility.
@@ -511,7 +518,7 @@ Multi-handle sliders are not natively supported, but many plugins exist. Feel fr
 
 
 
-##### Checkbox 
+### Checkbox 
 
 <div class="_styleguide-example">
 
@@ -566,7 +573,7 @@ Multi-handle sliders are not natively supported, but many plugins exist. Feel fr
 
 
 
-##### Option & Multiple Select
+### Option & Multiple Select
 
 Dropdown and multiple item selection both depend on the `<select>` tag, which doesn't offer a lot of customization support. These are also questionable in terms of user experience, as for example dropdowns are not accessibility-friendly as a full-on radio button list. However, these do offer simple development and saves space on the interface.
 

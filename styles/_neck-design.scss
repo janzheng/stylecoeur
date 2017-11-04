@@ -37,7 +37,7 @@
 } 
 
 
-
+// Transparency has been moved to _color
 
 
 // 
@@ -89,8 +89,8 @@
 // 
 
 // generate ._opacity-100 ._opacity-90 etc. 
-@each $twoVal in '100' 1, '90' 0.9, '80' 0.8, '70' 0.7, '60' 0.6, '50' 0.5, '40' 0.4, '30' 0.3, '20' 0.2, '10' 0.1, {
-  @include elementGenerator(opacity, nth($twoVal, 1), nth($twoVal, 2));
+@each $opacity in '100' 1, '90' 0.9, '80' 0.8, '70' 0.7, '60' 0.6, '50' 0.5, '40' 0.4, '30' 0.3, '20' 0.2, '10' 0.1, {
+  @include elementGenerator(opacity, nth($opacity, 1), nth($opacity, 2));
 }
 
 
@@ -157,6 +157,58 @@ box-shadow: rgba(100, 84, 92, 0.2) 0px 2px 2px, rgba(100, 84, 92, 0.2) 0px 4px 4
 //   @extend %shadow-inset;
 //   text-decoration: none;
 // }
+
+
+
+
+
+
+
+// 
+//    SHADOWS, GRADIENTS
+// 
+
+// used for card styles; fairly subtle
+$box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16); // looks like a raised shadow
+%box_shadow-raised { box-shadow: $box_shadow-raised; }
+
+
+// 
+//    On Focus Styles
+// 
+
+%focus-yellow {
+  border-color: darken($color-yellow, 5%);
+  // border-color: $color-yellow;
+
+  outline: none;
+  // box-shadow: 2px 2px 6px rgba($color-yellow, 0.6);
+  // above is too light
+  box-shadow: 0px 0px 12px rgba($color-yellow, 1);
+}
+%focus-blue {
+  border-color: rgba($color-blue, 0.64);
+  outline: none;
+  box-shadow: 0px 0px 2px 0px rgba($color-blue, 0.6);
+}
+
+%color-sepia {
+  -webkit-filter: sepia(0.2) saturate(0.5);
+  filter: sepia(0.2) saturate(0.5);
+}
+
+
+
+
+// 
+//    SHADOWS
+// 
+
+$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43);
+$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18);
+$shadow_edge: 0px 5px 14px rgba(0,0,0,1);
+$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8);
+
 
 
 

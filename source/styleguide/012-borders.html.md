@@ -18,9 +18,6 @@ All kinds of borders. Standard borders have a width of 2px with a color of `$col
 
 Borders are used to indicate content groups, edges of components, and to group written content into more manageable chunks.
 
-define a $border-base (w/ border-thin) and find+replace all other occurrences to reinforce using -base width
-{: ._message .--warning }
-
 <div class="_styleguide-example">
   <div class="_grid-five">
     <div class="_box --p4 _border --line _color-border-main _color-bg-white">

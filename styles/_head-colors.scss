@@ -61,8 +61,13 @@ $color-danger: $color-red !default;            ._color-danger { color: $color-da
 $color-success: $color-green !default;         ._color-success { color: $color-success; }          ._color-bg-success { background-color: $color-success; }               ._color-border-success { border-color: $color-success; }
 $color-disabled: $color-gray-light !default;   ._color-disabled { color: $color-disabled; }        ._color-bg-disabled { background-color: $color-disabled; }             ._color-border-disabled { border-color: $color-disabled; }
 
-$color-transparent: transparent !default; // sometimes this actually needs to be a solid color; using a var can re-define it
+$color-transparent: rgba(0,0,0, 0.001) !default; 
+  // can also be set to 'transparent' but can be buggy
   ._color-bg-transparent {background-color: $color-transparent};
+  .color-transparent { color: $color-transparent }
+  ._transparent { // transparent block
+    opacity: 0.001; // setting to 0 invokes browser bugs
+  }
 
 $color-body: $color-black !default;  // UI, copy, etc.
 $color-copy: $color-body !default;   // text-specific color; sometimes should be lighter
@@ -75,54 +80,6 @@ $color-ui-light: $color-silver-light !default;    ._color-ui-light { color: $col
 $color-ui: $color-silver !default;                ._color-ui { color: $color-ui; }                        ._color-bg-ui { background-color: $color-ui; }                    ._color-border-ui { border-color: $color-ui; }
 $color-ui-dark: $color-gray-lightest !default;    ._color-ui-dark { color: $color-ui-dark; }              ._color-bg-ui-dark { background-color: $color-ui-dark; }          ._color-border-ui-dark { border-color: $color-ui-dark; }
 $color-ui-hover: $color-silver-dark !default;     ._color-ui-hover { color: $color-ui-hover; }            ._color-bg-ui-hover { background-color: $color-ui-hover; }        ._color-border-ui-hover { border-color: $color-ui-hover; }
-
-
-// 
-//    SHADOWS, GRADIENTS
-// 
-
-// used for card styles; fairly subtle
-$box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16); // looks like a raised shadow
-%box_shadow-raised { box-shadow: $box_shadow-raised; }
-
-
-// 
-//    On Focus Styles
-// 
-
-%focus-yellow {
-  border-color: darken($color-yellow, 5%);
-  // border-color: $color-yellow;
-
-  outline: none;
-  // box-shadow: 2px 2px 6px rgba($color-yellow, 0.6);
-  // above is too light
-  box-shadow: 0px 0px 12px rgba($color-yellow, 1);
-}
-%focus-blue {
-  border-color: rgba($color-blue, 0.64);
-  outline: none;
-  box-shadow: 0px 0px 2px 0px rgba($color-blue, 0.6);
-}
-
-%color-sepia {
-  -webkit-filter: sepia(0.2) saturate(0.5);
-  filter: sepia(0.2) saturate(0.5);
-}
-
-
-
-
-// 
-//    SHADOWS
-// 
-
-$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43);
-$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18);
-$shadow_edge: 0px 5px 14px rgba(0,0,0,1);
-$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8);
-
-
 
 
 

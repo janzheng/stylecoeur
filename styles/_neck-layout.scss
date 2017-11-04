@@ -55,6 +55,23 @@ section, ._section,
   }
 }
 
+
+%padding-container-top {
+  padding-top: $size-base*3;
+}
+
+%padding-container-bottom {
+  padding-top: $size-base*3;
+}
+
+%padding-section {
+  // padding: $size-base*3;
+  padding-bottom: $size-base*3;
+}
+
+
+
+
 // ._block {
 //   padding-bottom: $size*2;
 // }

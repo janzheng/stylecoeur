@@ -262,7 +262,8 @@ button,
 ._button.--text,
 ._button.--transparent {
   background-color: transparent !important;
-  border: none !important;
+  // border: none !important; // border is part of a button's padding
+  border-color: transparent !important;
   padding-left: $size/2;
   padding-right: $size/2;
   &:hover {

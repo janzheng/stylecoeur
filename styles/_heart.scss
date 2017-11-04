@@ -27,7 +27,7 @@ $size-m3:       7px;
 $size-m2:       9px;
 $size-m1:       12px; // Minus Sizes [m]
 $size-smaller:  14px; // dumb but super useful
-$size-base:     $size; $size-2: $size*2;
+$size-base:     $size; 
 $size-larger:   19px; // dumb but super useful
 $size-p1:       21px; // Plus Sizes [p]
 $size-p2:       28px;
@@ -38,6 +38,8 @@ $size-p6:       89px;
 $size-p7:       119px;
 $size-p8:       159px;
 
+$size-half:     $size/2;
+$size-2:        $size*2;
 
 
 // radius sizes

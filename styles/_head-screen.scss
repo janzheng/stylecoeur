@@ -152,55 +152,52 @@
   }
 */
 
-  @mixin gridMixinSelector($size) {
-    // required b/c of no dynamic mixins
-    @if ($size=='xs') {
-      @include screen-xs {@content}
-    } 
+@mixin gridMixinSelector($size) {
+  // required b/c of no dynamic mixins
+  @if ($size=='xs') {
+    @include screen-xs {@content}
+  } 
 
-    @else if($size=='magic-down') {
-      @include screen-magic-down {@content}
-    } @else if($size=='magic-up') {
-      @include screen-magic-up {@content}
-    } 
+  @else if($size=='magic-down') {
+    @include screen-magic-down {@content}
+  } @else if($size=='magic-up') {
+    @include screen-magic-up {@content}
+  } 
 
-    @else if($size=='sm') {
-      @include screen-sm {@content}
-    } @else if($size=='sm-down') {
-      @include screen-sm-down {@content}
-    } @else if($size=='sm-only') {
-      @include screen-sm-only {@content}
-    }
-
-    @else if($size=='md') {
-      @include screen-md {@content}
-    } @else if($size=='md-down') {
-      @include screen-md-down {@content}
-    } @else if($size=='md-only') {
-      @include screen-md-only {@content}
-    } 
-
-    @else if($size=='lg') {
-      @include screen-lg {@content}
-    } @else if($size=='lg-down') {
-      @include screen-lg-down {@content}
-    } @else if($size=='lg-only') {
-      @include screen-lg-only {@content}
-    }
+  @else if($size=='sm') {
+    @include screen-sm {@content}
+  } @else if($size=='sm-down') {
+    @include screen-sm-down {@content}
+  } @else if($size=='sm-only') {
+    @include screen-sm-only {@content}
   }
 
-  @mixin genGridAttr($sizes: 'xs') {
-    @each $size in $sizes {
-      @if & {
-        &-#{$size} {
-          @include gridMixinSelector($size){@content}
-        }
+  @else if($size=='md') {
+    @include screen-md {@content}
+  } @else if($size=='md-down') {
+    @include screen-md-down {@content}
+  } @else if($size=='md-only') {
+    @include screen-md-only {@content}
+  } 
+
+  @else if($size=='lg') {
+    @include screen-lg {@content}
+  } @else if($size=='lg-down') {
+    @include screen-lg-down {@content}
+  } @else if($size=='lg-only') {
+    @include screen-lg-only {@content}
+  }
+};
+
+@mixin genGridAttr($sizes: 'xs') {
+  @each $size in $sizes {
+    @if & {
+      &-#{$size} {
+        @include gridMixinSelector($size){@content}
       }
     }
   }
-
-
-
+};
 
 
 
