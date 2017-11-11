@@ -189,6 +189,18 @@
   }
 };
 
+// creates new classes with -xs, -sm, etc.
+// and only applies to those sizes.
+/* usage:
+
+  ._hidden {
+    display: none;
+
+    @include genGridAttr(('xs','sm','sm-down','md','lg')) {
+      display: none;
+    }
+  }
+*/
 @mixin genGridAttr($sizes: 'xs') {
   @each $size in $sizes {
     @if & {

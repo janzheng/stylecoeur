@@ -1,15 +1,15 @@
 
 
-$dropdown-bg: $color-bg;
-$dropdown-color: $color-body;
-$dropdown-offset-v: 60px;
-$dropdown-offset-h: 0px;
-$dropdown-z: 1000; // z-manager in the future
-$dropdown-title-z: 1010; // z-manager in the future
+$dropdown-bg: $color-bg !default;
+$dropdown-color: $color-body !default;
+$dropdown-offset-v: 60px !default;
+$dropdown-offset-h: 0px !default;
+$dropdown-z: 1000 !default; // z-manager in the future
+$dropdown-title-z: 1010 !default; // z-manager in the future
 
 // basic example
-$dropdown-loading-bg: $color-hover;
-$dropdown-loading-color: $color-black;
+$dropdown-loading-bg: $color-hover !default;
+$dropdown-loading-color: $color-black !default;
 
 ._dropdown {
   position: relative;

@@ -1,13 +1,13 @@
 
-$sidebar-size: $font-size-base;
-$sidebar-width-max: 100%; // 200px;
-$sidebar-width: $sidebar-width-max;
+$sidebar-size: $font-size-base !default;
+$sidebar-width-max: 100% !default; // 200px;
+$sidebar-width: $sidebar-width-max !default;
 
-$sidebar-color-link: $color-main;
-$sidebar-color-hover: $color-active;
-$sidebar-border: $border-base solid $color-ui;
+$sidebar-color-link: $color-main !default;
+$sidebar-color-hover: $color-active !default;
+$sidebar-border: $border-base solid $color-ui !default;
 
-$sidebar-submenu-border: $border-base solid $color-main;
+$sidebar-submenu-border: $border-base solid $color-main !default;
 
 ._sidebar {
   max-width: $sidebar-width-max;

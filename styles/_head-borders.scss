@@ -1,19 +1,19 @@
 
 
-$border-color: $color-main;
-$border-color-bg: $color-ui-light;
+$border-color: $color-main          !default;
+$border-color-bg: $color-ui-light   !default;
 
-$border-style: solid;
+$border-style: solid                !default;
 
 // border sizes
-$border-line: 1px;
-$border-thin: 2px;
-$border-medium: 3px;    
-$border-thick: 6px;     
-$border-massive: 12px;  
+$border-line: 1px                   !default;
+$border-thin: 2px                   !default;
+$border-medium: 3px                 !default;    
+$border-thick: 6px                  !default;     
+$border-massive: 12px               !default;  
 
 // general border width
-$border-base: $border-thin;
+$border-base: $border-thin          !default;
 
 ._border,
 %border-base {

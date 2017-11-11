@@ -4,15 +4,15 @@
 //    Inspired by: https://www.w3schools.com/howto/howto_css_switch.asp
 // 
 
-$toggle-width: $size-base*3;
-$toggle-height: $size-p2;
-$toggle-slider-height: $toggle-height * 0.8;
-$toggle-slider-width: $size-base/2;
+$toggle-width: $size-base*3 !default;
+$toggle-height: $size-p2 !default;
+$toggle-slider-height: $toggle-height * 0.8 !default;
+$toggle-slider-width: $size-base/2 !default;
 
-$toggle-color-bg: $color-silver;
-$toggle-color-bg-active: $color-active;
+$toggle-color-bg: $color-silver !default;
+$toggle-color-bg-active: $color-active !default;
 
-$toggle-color-slider: $color-white;
+$toggle-color-slider: $color-white !default;
 
 
 

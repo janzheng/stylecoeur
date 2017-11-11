@@ -1,17 +1,17 @@
 
 
-$link-color-copy: $color-copy;
-$link-color-hover: $color-hover;
-$link-color-border: $color-copy;
+$link-color-copy: $color-copy !default;
+$link-color-hover: $color-hover !default;
+$link-color-border: $color-copy !default;
 
-$link-color-hover: $color-hover;
-$link-color-hover-border: $link-color-hover;
+$link-color-hover: $color-hover !default;
+$link-color-hover-border: $link-color-hover !default;
 
-$link-color-active: $color-active;
-$link-color-active-border: $color-active;
+$link-color-active: $color-active !default;
+$link-color-active-border: $color-active !default;
 
-$link-color-inactive: $color-inactive;
-$link-color-inactive-border: transparent; // $color-inactive;
+$link-color-inactive: $color-inactive !default;
+$link-color-inactive-border: transparent !default; // $color-inactive;
 
 
 

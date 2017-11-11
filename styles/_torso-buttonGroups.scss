@@ -5,7 +5,7 @@
 //    as it may rely on elements from buttons 
 // 
 
-$btnGrp-radius-pill: $radius-lg;
+$btnGrp-radius-pill: $radius-lg !default;
 
 ._buttonGroup {
   // margin-top: $size-base;

@@ -2,29 +2,30 @@
 
 // all forms should try to adhere to vertical rhythm
 
-$color-form-bg: $color-silver; // rgba($color-silver-dark, 0.25);
-$color-form-bg-hover: $color-silver-light; // rgba($color-silver-dark, 0.25);
+$color-form-bg: $color-silver !default; // rgba($color-silver-dark, 0.25);
+$color-form-bg-hover: $color-silver-light !default; // rgba($color-silver-dark, 0.25);
+
+$form-size-float: $size-smaller !default;
+
+$color-input-bg: $color-silver-lighter !default; //rgba($color-white, 0.84);
+$color-input-bg-hover: $color-silver-light !default;
+$color-input-border: $color-gray !default;
+$color-input-active: $color-blue !default;
+
+$color-input-underline: $color-gray-light !default; // color-input-bg
+$color-input-underline-hover: $color-gray !default;
 
 
-$color-input-bg: $color-silver-lighter; //rgba($color-white, 0.84);
-$color-input-bg-hover: $color-silver-light;
-$color-input-border: $color-gray-lightest;
-$color-input-active: $color-blue;
+$form-border-width: $border-base !default;
+$form-border: $form-border-width solid $color-input-border !default;
 
-$color-input-underline: $color-gray-light; // color-input-bg
-$color-input-underline-hover: $color-gray;
+$height-input: $size-p4 !default;
 
 
-$form-border-width: $border-base;
-$form-border: $form-border-width solid $color-input-border;
-
-$height-input: $size-base*3 + 4px;
-
-
-$color-input-checked: $color-blue;
-$color-focus: $color-yellow;
-$color-selected: $color-blue;
-$color-loading: $color-yellow;
+$color-input-checked: $color-blue !default;
+$color-focus: $color-yellow !default;
+$color-selected: $color-blue !default;
+$color-loading: $color-yellow !default;
 
 
 
@@ -105,8 +106,24 @@ $font-size-base-form: $font-size-base; // $size-base ;
 
   &[for=message] {
     // spacing for these is a bit off
-    padding-bottom: $size-base/2;
+    padding-bottom: $size-half;
   }
+
+  &.--float {
+    position: absolute;
+    top: -$size-m1;
+    padding-left: $size-base/4;
+    padding-right: $size-base/4;
+    margin-left: $size-base;
+    background: $color-input-bg;
+    font-size: $form-size-float;
+
+    & + input {
+      margin-top: $size-2;
+      height: $size-p6;
+    }
+  }
+
 }
 // this icon is placed inside inputs
 ._form-label-icon {
@@ -117,7 +134,7 @@ $font-size-base-form: $font-size-base; // $size-base ;
   // height: $height-input;
   position: absolute;
   left: $size-base;
-  top: calc(50% + 2px);
+  top: calc(50%);
   & + input {
     display: inline-block;
     // margin-left: -6px;
@@ -170,6 +187,17 @@ textarea + .error,
 //  Individual Element Styling
 // 
 
+fieldset {
+  background-color: $color-silver-light;
+  border: $form-border;
+  padding: $size-base;
+
+  legend {
+    padding-left: $size-base/2;
+    padding-right: $size-base/2;
+  }
+}
+
 label {
   display: block;
   // @extend %font-sans;
@@ -221,10 +249,20 @@ input, .input {
       border-bottom-left-radius: 0;
     }
   }
+  &.--border {
+    border: $form-border !important;
+    padding-top: $size-base;
+    padding-bottom: $size-base;
+  }
 
 }
 
-  input[type="email"], input[type="text"], input[type="number"], input[type="password"] {
+  input[type="email"],
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="date"],
+    input[type="url"] {
     // width: 100%;
     @extend %ease-fast;
 
@@ -299,8 +337,9 @@ textarea, .textarea {
   // @extend ._margin-bottom-2;
 
   // border: $form-border-width solid $color-input-border;
-  border-color: transparent !important;
+  // border-color: transparent !important;
   margin-right: $size-base/2;
+  border: $form-border;
 
   &:hover {
     @extend %ease-fast;

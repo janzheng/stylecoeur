@@ -36,34 +36,35 @@
 
 */
 
-$button-border-width:           $border-base;
-$button-border-radius:          $radius;
+$button-border-width:               $border-base        !default;
+$button-border-radius:              $radius             !default;
 
 
 
 // default variation
 
-$button-color-main:             $color-white;
-$button-color-bg:               $color-copy;
-$button-color-main-hover:       $button-color-main;
-$button-color-bg-hover:         $color-gray;
+$button-color-main:                 $color-white        !default;
+$button-color-bg:                   $color-copy         !default;
+$button-color-main-hover:           $button-color-main  !default;
+$button-color-bg-hover:             $color-gray         !default;
 
 
 // pill
 
-$button-pill-radius:            $radius-lg;
+$button-pill-radius:                $radius-lg          !default;
 
 
 // outline
-$button-outline-border:             $border-base;
-$button-outline-color-main:         $color-copy;
-$button-outline-color-border:       $color-copy;
-$button-outline-color-bg:           transparent; // $color-black;
-$button-outline-color-main-hover:   $color-hover; // $color-gray-lighter;
-$button-outline-color-border-hover: $color-hover; // $color-gray-lighter;
-$button-outline-color-bg-hover:     transparent;
+$button-outline-border:             $border-base        !default;
+$button-outline-color-main:         $color-copy         !default;
+$button-outline-color-border:       $color-copy         !default;
+$button-outline-color-bg:           transparent         !default; // $color-black;
+$button-outline-color-main-hover:   $color-hover        !default; // $color-gray-lighter;
+$button-outline-color-border-hover: $color-hover        !default; // $color-gray-lighter;
+$button-outline-color-bg-hover:     transparent         !default;
 
 
+$button-line-height: 13px                               !default; // makes the buttons 48px
 
 
 %button-shadow {
@@ -79,7 +80,7 @@ $button-outline-color-bg-hover:     transparent;
   @extend %ease;
   outline: none;
   display: inline-block; 
-  line-height: normal;
+  line-height: $button-line-height;
 
   margin-bottom: $size-base;
   margin-right: $size-base;
@@ -132,8 +133,8 @@ $button-outline-color-bg-hover:     transparent;
 
   &-short,
   &.--short {
-    padding-top: $size-m3;
-    padding-bottom: $size-m3;
+    padding-top: $size-m3 - 0.5;
+    padding-bottom: $size-m3 - 0.5;
   }
 
   &-thin, &.--thin {
@@ -235,11 +236,11 @@ button,
 
 
 // Pill button
-._button-pill, ._button.--pill {
+button.--pill, ._button-pill, ._button.--pill {
   border-radius: $button-pill-radius;
 }
 
-._button-outline, ._button.--outline {
+button.--outline, ._button-outline, ._button.--outline {
   border-width: $button-outline-border;
   border-style: solid;
 
@@ -257,6 +258,7 @@ button,
 // Button w/o borders
 // useful for links that align with other buttons
 // but need to be "less loud"
+button.--text,
 ._button-text,
 ._button-transparent,
 ._button.--text,

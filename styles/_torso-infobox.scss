@@ -1,8 +1,8 @@
 
 
-$infobox-border: $border-line solid $color-ui;
-$infobox-hover: $color-main;
-$infobox-hover-bg: $color-ui-light;
+$infobox-border: $border-line solid $color-ui !default;
+$infobox-hover: $color-main !default;
+$infobox-hover-bg: $color-ui-light !default;
 
 // side-by-side info box
 // good for landing pages, blogs, etc.

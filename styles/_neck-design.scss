@@ -56,6 +56,9 @@
 .--p6       {width: $size-p6; height: $size-p6;}
 .--p7       {width: $size-p7; height: $size-p7;}
 .--p8       {width: $size-p8; height: $size-p8;}
+.--p9       {width: $size-p9; height: $size-p9;}
+.--p10      {width: $size-p10; height: $size-p10;}
+.--p11      {width: $size-p11; height: $size-p11;}
 
 .--m1       {width: $size-m1; height: $size-m1;}
 .--m2       {width: $size-m2; height: $size-m2;}
@@ -169,7 +172,7 @@ box-shadow: rgba(100, 84, 92, 0.2) 0px 2px 2px, rgba(100, 84, 92, 0.2) 0px 4px 4
 // 
 
 // used for card styles; fairly subtle
-$box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16); // looks like a raised shadow
+$box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16) !default; // looks like a raised shadow
 %box_shadow-raised { box-shadow: $box_shadow-raised; }
 
 
@@ -204,10 +207,10 @@ $box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16); // looks like a raised
 //    SHADOWS
 // 
 
-$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43);
-$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18);
-$shadow_edge: 0px 5px 14px rgba(0,0,0,1);
-$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8);
+$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43) !default;
+$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18) !default;
+$shadow_edge: 0px 5px 14px rgba(0,0,0,1) !default;
+$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8) !default;
 
 
 

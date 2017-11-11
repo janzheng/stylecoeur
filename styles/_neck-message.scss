@@ -4,21 +4,21 @@
 // or an on-page one/two-liner alert
 // v1.0.0--8-28-17
 
-$message-border: $color-ui solid $border-line;
-$message-color-hover: $color-main;
-$message-color-hover-bg: $color-bg;
+$message-border: $color-ui solid $border-line !default;
+$message-color-hover: $color-main !default;
+$message-color-hover-bg: $color-bg !default;
 
-$message-color-copy: $color-copy;
-$message-color-bg: $color-ui-light;
+$message-color-copy: $color-copy !default;
+$message-color-bg: $color-ui-light !default;
 
-$color-danger-copy: $color-white;
-$color-danger-bg: $color-danger;
+$color-danger-copy: $color-white !default;
+$color-danger-bg: $color-danger !default;
 
-$color-warning-copy: $color-black;
-$color-warning-bg: $color-warning;
+$color-warning-copy: $color-black !default;
+$color-warning-bg: $color-warning !default;
 
-$color-success-copy: $color-white;
-$color-success-bg: $color-success;
+$color-success-copy: $color-white !default;
+$color-success-bg: $color-success !default;
 
 
 ._message {

@@ -22,5 +22,7 @@ Though they're sometimes the "lazy way out" in designing for visualizing data, t
 
 [ behavior in react ]
 
+[ guide to tables](https://alistapart.com/article/web-typography-tables)
+
 
 </main>

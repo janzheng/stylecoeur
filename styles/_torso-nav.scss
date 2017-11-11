@@ -4,10 +4,10 @@
 // 
 
 
-$nav-color-bg: $color-bg;
+$nav-color-bg: $color-bg !default;
 
-$nav-separator-color: $color-ui;
-$nav-separator-style: solid;
+$nav-separator-color: $color-ui !default;
+$nav-separator-style: solid !default;
 
 ._nav,
 nav {
@@ -31,12 +31,12 @@ nav {
 
 // Side Nav
 
-$sidenav-min-height: 500px;
-$sidenav-min-width: $width-xs-max;
-$sidenav-width: 150px;
-$sidenav-width-open: 300px;
-$sidenav-border: $border-line solid $color-ui;
-$sidenav-bg: rgba($color-white, 0.88);
+$sidenav-min-height: 500px !default;
+$sidenav-min-width: $width-xs-max !default;
+$sidenav-width: 50px !default;
+$sidenav-width-open: 300px !default;
+$sidenav-border: $border-line solid $color-ui !default;
+$sidenav-bg: rgba($color-white, 0.88) !default;
 
 // "mobile first" 
 // this is fall-back; shows across top
@@ -48,6 +48,8 @@ $sidenav-bg: rgba($color-white, 0.88);
     grid-template-columns: 1fr 4fr;
     margin-bottom: $size-base;
     @extend %ease;
+    white-space: nowrap;
+    overflow: hidden;
   }
   nav + div {
     @extend %ease;
@@ -152,6 +154,50 @@ $sidenav-bg: rgba($color-white, 0.88);
 
 
 
+
+
+
+
+
+// 
+//    MEGA MENU (aka pretty much tabs) 
+// 
+
+$mega-size: $font-size-base !default;
+$mega-size-color-bg: $color-ui !default;
+$mega-color-active: $color-active !default;
+
+._nav-mega {
+  margin-top: $size-base;
+  margin-bottom: $size-base;
+  position: relative; 
+  text-transform: capitalize;
+
+  &.--active {
+    color: $mega-color-active;
+    border-color: $mega-color-active;
+  }
+}
+
+
+._nav-mega-container {
+  position: relative;
+}
+._nav-mega-content {
+  opacity: 0;
+  position: absolute;
+  top: -$size-base;
+  @extend %ease-slow;
+  background-color: $mega-size-color-bg;
+  padding: $size-base;
+  width: 100%;
+
+  &.--selected {
+    opacity: 1;
+    @extend %ease;
+    top: 0;
+  }
+}
 
 
 

@@ -12,6 +12,7 @@ submenu:
   - [bottom, bottom-navigation]
   - [side nav, side-navigation]
   - [off-canvas, off-canvas-navigation]
+  - [mega menu, mega-menu]
 ---
 
 
@@ -306,7 +307,7 @@ $(document).ready(function() {
         <a href="#">Link Three</a>
       </div>
     </nav>
-    <div class="--slide _padding-left-sm_up">
+    <div class="--slide _padding-left-sm">
       Main Content Here
     </div>
   </div>
@@ -452,6 +453,47 @@ These are usually triggered by hamburger icons for mobile views, but there are a
 
 ~~~
 
+
+#### Mega Menu
+
+Mega menus work very similarly to tabs, except:
+
+- the content is initially hidden
+- the content is usually triggered to open on hover
+- can attach `--click` to trigger the menu with a click or tap rather than hover
+
+
+<div class="_styleguide-example">
+
+<div class="">
+  <button class="_nav-mega --outline --short" data-nav="navOne">Nav One</button>
+  <button class="_nav-mega --outline --short" data-nav="navTwo">Nav Two</button>
+</div>
+<div class="_nav-mega-container">
+<div class="navOne _nav-mega-content">Mega Nav One</div>
+<div class="navTwo _nav-mega-content">Mega Nav Two</div>
+</div>
+
+<script>
+  $('._nav-mega').on('click', function() {
+    let target = $(this).data("nav") || $(this).prop("hash").substr(1);
+
+    // if this wasn't on, turn it on, otherwise keep it turned off (toggle behavior)
+    if ($(this).hasClass('--active')) {
+      $('._nav-mega').removeClass('--active');
+      $('._nav-mega-content').removeClass('--selected');
+    } else {
+      $('._nav-mega').removeClass('--active');
+      $('._nav-mega-content').removeClass('--selected');
+
+      $('._nav-mega-content.' + target).addClass('--selected');
+      $(this).addClass('--active');
+    }
+
+  });
+</script>
+
+</div>
 
 
 </main>

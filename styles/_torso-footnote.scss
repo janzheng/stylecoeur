@@ -1,9 +1,9 @@
 
 
-$footnote-color: $color-main;
-$footnote-content-color: $color-body;
-$footnote-content-border: $border-base solid $color-ui-dark;
-$footnote-content-color-bg: $color-ui-light;
+$footnote-color: $color-main !default;
+$footnote-content-color: $color-body !default;
+$footnote-content-border: $border-base solid $color-ui-dark !default;
+$footnote-content-color-bg: $color-ui-light !default;
 
 ._footnote {
   vertical-align: super;

@@ -1,0 +1,214 @@
+---
+title: Grid &amp; Layout
+type: styleguide
+layout: layout-styleguide
+name: grid-layout
+section: fundamental
+source: ../
+reference: _head-griddick.scss
+submenu:
+  - [Sizes, sizes]
+  - [Typography, typography]
+  - [Baseline, baseline]
+  - [Grid Examples, grid-examples]
+  - [Grid Layouts, grid-layouts]
+---
+
+
+<main markdown="1">
+
+## Grid &amp; Layout
+
+<%= partial '/partials/styleguide-ref', 
+    :locals => { :refName => current_page.data.reference } %>
+
+Intro to Layout here
+
+Mention helpers and semantic layout classes — try to encourage the use of semantic layout classes instead of just throwing padding on things, which I've been really bad about doing / semantic layouts; avoid using too many helpers here (saved for next section)
+{: ._message .--warning}
+
+### Semantic Markup
+
+[What does semantic markup mean and why?]
+
+- add more semantic grid/flex helpers ( _align-left-bottom, _align-right-bottom, etc.)
+- combine these with possible semantic layout names
+{: ._message .--warning}
+
+
+
+
+### Responsive Sizes
+
+The responsive grid is setup with the screen sizes from Bootstrap. Instead of "mobile" and "desktop" breakpoints, the different widths are setup from extra-small to large:
+
+- `xs: 0px to 767px`
+- `sm: 768px - 991px`
+- `md: 992px - 1199px`
+- `lg: 1200px - 2100px` 
+- `magic: 640px` useful breakpoint for content
+
+
+
+### Grid Helpers
+
+Grid helpers like help simplify CSS Grids implementation and expose grid functionality to HTML. They can be kind of confusing, so here are a few illustrative examples. 
+
+Refer to the bottom of `_head-griddick.scss#helpers` for all the helpers
+
+. For example, `_align-center` exists to vertically align elements on a row. Again, please check the `_griddick.scss` file for the various helper options.
+
+
+<div class="_styleguide-example">
+
+
+  <!-- contain the overflow example -->
+  <div class="_styleguide-example-block _grid_item-overflow-scroll">
+  <div class="_font-small">._grid_item-overflow <br/>— grids can't be smaller than the size of its contents, and sometimes may break a grid if used for layout. This forces overflow to behave. <a href="https://gridbyexample.com/examples/example37/">auto-fit here</a></div>
+  <div class="_styleguide-example-sub _grid-repeater-fit">
+    <div>block one</div>
+    <div>blocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwo</div>
+    <div>block three</div>
+  </div>
+  <div class="_font-small">with _grid_item-overflow — by default overflow is hidden</div>
+  <div class="_styleguide-example-sub _grid-repeater-fit">
+    <div>block one</div>
+    <div class="_grid_item-overflow">blocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwo</div>
+    <div>block three</div>
+  </div>
+  <div class="_font-small">with _grid_item-overflow-scroll</div>
+  <div class="_styleguide-example-sub _grid-repeater-fit">
+    <div>block one</div>
+    <div class="_grid_item-overflow-scroll">blocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwo</div>
+    <div>block three</div>
+  </div>
+   </div>
+
+  <div class="_styleguide-example-block">
+  <h6>Repeaters</h6>
+  <div class="_font-small">._grid-repeater</div>
+  <div class="_styleguide-example-sub _grid-repeater">
+    <div>block one</div>
+    <div>block two</div>
+    <div>block three</div>
+  </div>
+
+  <div class="_font-small">._grid-repeater-small</div>
+  <div class="_styleguide-example-sub _grid-repeater-small">
+    <div>block one</div>
+    <div>block two</div>
+    <div>block three</div>
+    <div>block four</div>
+  </div>
+
+  <div class="_font-small">._grid-repeater-fit <br/>— uses auto-fit so the grid blocks will take up all the space as to not leave white-space, when only one row <a href="https://gridbyexample.com/examples/example37/">auto-fit here</a></div>
+  <div class="_styleguide-example-sub _grid-repeater-fit">
+    <div>block one</div>
+    <div>block two</div>
+    <div>block three</div>
+  </div>
+  </div>
+
+
+</div>
+
+### Layout System
+
+The layout system makes extensive use of CSS Grids and some use of flexbox.
+
+The Grid system uses the newer HTML5 specced 'CSS Grids'. Support exists for most modern browsers, which means some older browsers will not support CSS grids, which will result in a mobile-look. (No polyfill exists for these users, as it's a smaller demographic at this point. No worries for IE6 anymore!)
+
+The Grid (named 'Griddick') should be fairly straightforward if you're familiar with CSS grids. It mainly exists as a group of helpers to make CSS grids easier to implement. [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) has a good overview of how CSS Grids work. [Learn CSS Grid](http://learncssgrid.com/) is also an excellent resource, and [Grid by Example](https://gridbyexample.com/examples/) offers examples of popular grid layouts (and how to implement them).
+
+For mobile and smaller screens, Griddick works with the responsive settings setup in `_heart.scss` to collapse blocks into a single column.  
+
+
+### Grid Examples
+{: .--padding}
+
+
+
+<div class="_styleguide-example">
+  <div class="_grid-one">
+    <div class="_grid-block _color-bg-white">
+        <p>One block grid </p>
+    </div>
+  </div>
+</div>
+~~~html
+<div class="_grid-one _align-center">
+  <div class="_grid-block _color-bg-white">
+      <p>One block grid </p>
+  </div>
+</div>
+~~~
+
+
+
+<div class="_styleguide-example">
+  <div class="_grid-three">
+    <div class="_grid-block _color-bg-white">
+        <p>Three block grid </p>
+    </div>
+    <div class="_grid-block _color-bg-white">
+        <p>Three block grid </p>
+    </div>
+    <div class="_grid-block _color-bg-white">
+        <p>Three block grid </p>
+    </div>
+  </div>
+</div>
+~~~html
+<div class="_grid-three _align-center">
+  <div class="_grid-block _color-bg-white">
+      <p>Three block grid </p>
+  </div>
+  <div class="_grid-block _color-bg-white">
+      <p>Three block grid </p>
+  </div>
+  <div class="_grid-block _color-bg-white">
+      <p>Three block grid </p>
+  </div>
+</div>
+~~~
+
+
+
+
+<div class="_styleguide-example">
+<div class="_grid-one-three">
+  <div class="_grid-block _color-bg-white">
+      <p>One block grid </p>
+  </div>
+  <div class="_grid-block _color-bg-white">
+      <p>Three block grid </p>
+  </div>
+</div>
+</div>
+~~~html
+<div class="_grid-one-three _align-center">
+  <div class="_grid-block _color-bg-white">
+      <p>One block grid </p>
+  </div>
+  <div class="_grid-block _color-bg-white">
+      <p>Three block grid </p>
+  </div>
+</div>
+~~~
+
+
+
+### Grid Layouts
+
+Grid layouts are popular shortcut patterns. These could be misused and make your site super-generic, so use with caution.
+
+- `grid-row-start` is used to reflow content in mobile view so that images will always appear above the content.
+
+##### `_grid-content-image` &amp; `_grid-image-content`
+
+Side by side content and image, ideal for alternating on marketing pages.
+
+
+</main>
+
+

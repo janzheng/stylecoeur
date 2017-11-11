@@ -3,9 +3,9 @@
 //  Standard Footer
 // 
 
-$quote-size: $font-large;
-$quote-padding: $size-base*2;
-$quote-border: $border-medium $color-active solid;
+$quote-size: $font-large !default;
+$quote-padding: $size-base*2 !default;
+$quote-border: $border-medium $color-active solid !default;
 
 blockquote {
   // font-size: $quote-size;

@@ -18,10 +18,36 @@
 
 
 
-$size: 16px; // 16px;
-$sizeline: $size * 1.5; // baseline; base lineheight; line-heights follow 1.5 rule
+$size: 16px !default; // 16px; // based on 4*4
+$sizeline: $size * 1.5 !default; // baseline; base lineheight; line-heights follow 1.5 rule
 
 // attempt at using "standardized" sizes. success may vary. (fonts are different sized, etc.)
+
+// New: based on multiples of 4
+$size-m4:       6px     !default;
+$size-m3:       8px     !default;
+$size-m2:       10px    !default;
+$size-m1:       12px    !default; // Minus Sizes [m]
+$size-smaller:  14px    !default; // dumb but super useful
+$size-base:     $size   !default; 
+$size-larger:   18px    !default; // dumb but super useful
+$size-p1:       24px    !default; // Plus Sizes [p]
+$size-p2:       28px    !default;
+$size-p3:       40px    !default;
+$size-p4:       48px    !default;
+$size-p5:       56px    !default;
+$size-p6:       64px    !default;
+$size-p7:       80px    !default;
+$size-p8:       96px    !default;
+$size-p9:       112px   !default;
+$size-p10:      128px   !default;
+$size-p11:      144px   !default;
+
+$size-half:     $size/2 !default;
+$size-2:        $size*2 !default;
+
+
+/* Old: based on golden ratio
 $size-m4:       4px;
 $size-m3:       7px;
 $size-m2:       9px;
@@ -40,16 +66,16 @@ $size-p8:       159px;
 
 $size-half:     $size/2;
 $size-2:        $size*2;
-
+*/
 
 // radius sizes
-$radius-none: 0px;  ._radius-none { border-radius: 0; } ._radius-none-i { border-radius: 0 !important; }
-$radius: 4px;       ._radius { border-radius: $radius }
-$radius-md: $size-base;  ._radius-md { border-radius: $radius-md }
-$radius-lg: 24px;   ._radius-lg { border-radius: $radius-lg }
-$radius-xl: 36px;   ._radius-xl { border-radius: $radius-xl }
-$radius-sm: 2px;    ._radius-sm { border-radius: $radius-sm }// subtle borders; nothing should be a jagged 90 degrees
-$gutter: $size-base/2;
+$radius-none: 0px       !default;  ._radius-none { border-radius: 0; } ._radius-none-i { border-radius: 0 !important; }
+$radius: 4px            !default;       ._radius { border-radius: $radius }
+$radius-md: $size-base  !default;  ._radius-md { border-radius: $radius-md }
+$radius-lg: 24px        !default;   ._radius-lg { border-radius: $radius-lg }
+$radius-xl: 36px        !default;   ._radius-xl { border-radius: $radius-xl }
+$radius-sm: 2px         !default;    ._radius-sm { border-radius: $radius-sm }// subtle borders; nothing should be a jagged 90 degrees
+$gutter: $size-base/2   !default;
 
 
 // these are just the bootstrap defaults converted to my own vars
@@ -63,27 +89,27 @@ $gutter: $size-base/2;
 // shouldn't matter what devices people use
 
 // "mobile"
-$width-site-min: 360px; // absolute minimum site width
-$width-xs-min: 0px !default; 
-$width-xs-max: 767px !default;
+$width-site-min: 360px  !default; // absolute minimum site width
+$width-xs-min: 0px      !default; 
+$width-xs-max: 767px    !default;
 
 // "tablet"
-$width-sm-min: 768px !default;
-$width-sm-max: 991px !default;
+$width-sm-min: 768px    !default;
+$width-sm-max: 991px    !default;
 
 // "desktop"
-$width-md-min: 992px !default;
-$width-md-max: 1199px !default;
+$width-md-min: 992px    !default;
+$width-md-max: 1199px   !default;
 
 // "wide"
-$width-lg-min: 1200px !default;
-$width-lg-max: 2100px !default;
+$width-lg-min: 1200px   !default;
+$width-lg-max: 2100px   !default;
 
 // sometimes sites have a 'magical' breakpoint based on content structure
-$width-magic: 640px !default;
+$width-magic: 640px     !default;
 
 
-$width-content-max: $width-sm-max; // max content block width
+$width-content-max: $width-sm-max !default; // max content block width
 %width-content-max,
 ._width-content-max { 
   max-width: 100%;
@@ -92,7 +118,7 @@ $width-content-max: $width-sm-max; // max content block width
   }
 }
 
-$width-content-max-narrow: $width-magic; // max content block width
+$width-content-max-narrow: $width-magic !default; // max content block width
 %width-content-max-narrow,
 ._width-content-max-narrow { 
     max-width: 100%;

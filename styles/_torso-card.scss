@@ -3,7 +3,7 @@
 // google-style card
 // v1.0.0--8-28-17
 
-$card-width-max: $width-magic;
+$card-width-max: $width-magic !default;
 
 
 $card-color: $color-black !default;

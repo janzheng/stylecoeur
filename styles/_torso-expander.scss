@@ -12,9 +12,9 @@
 
 */
 
-$expander-border: $border-line solid $color-ui;
-$expander-color-hover: $color-main;
-$expander-color-hover-bg: $color-silver-light;
+$expander-border: $border-line solid $color-ui !default;
+$expander-color-hover: $color-main !default;
+$expander-color-hover-bg: $color-silver-light !default;
 
 ._expander {
   border:  $expander-border; 

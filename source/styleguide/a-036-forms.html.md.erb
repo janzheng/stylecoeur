@@ -7,7 +7,8 @@ section: components
 source: ../
 reference: _torso-forms.scss
 submenu:
-  - [Common Examples, common-examples]
+  - [Examples, common-examples]
+  - [Fieldset, fieldset]
   - [Input, input]
   - [Date Input, date-input]
   - [Textarea, textarea]
@@ -27,11 +28,17 @@ submenu:
 <%= partial '/partials/styleguide-ref', 
     :locals => { :refName => current_page.data.reference } %>
 
+
+- Missing form things 
+  - Dynamic Label (that moves to the top)
+{: ._message .--warning }
+
+
 Forms is a small collection of inputs and wrappers that make form inputs a little nicer to use and to look at.
 
 Many of these _containers_ and _components_ are merelycontextual and organizational, but they will help with organizing content on the form.
 
-
+For pattern validation, suggested values, and other tricks, look at [Mozilla's input docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/url)
 
 Use `griddick` and other components to organize layout.
 
@@ -229,6 +236,21 @@ Flags:
 
 
 
+### Fieldset
+
+<div class="_styleguide-example">
+
+<fieldset class="fieldset">
+<legend class="legend">Fieldset</legend>
+
+<div class="_form-control --optional">
+  <label for="textInput" class="_form-label">Text Input <span class="_font-small">- optional</span></label>
+  <input id="textInput" class="_form-input" type="text" name="textInput" placeholder='Some text' />
+</div>
+
+</fieldset>
+</div>
+
 ### Input 
 
 Basic input form
@@ -246,11 +268,15 @@ Basic input form
   <input id="textSearch" class="_form-input --width-medium" type="text" name="textSearch" placeholder='Search term here' />
 </div>
 
+<div class="_form-control">
+  <label for="url" class="_form-label">URL</label>
+  <input id="url" class="_form-input " type="url" name="url" placeholder='https://google.com' />
+</div>
 
 <div class="_form-control --optional">
   <label for="textInput" class="_form-label">Input with Button</label>
   <input id="textInput" class="_form-input --button" type="text" name="textInput" placeholder='Email Address' />
-  <button class="_button _button-input">Sign Up</button>
+  <button class="_button _button-input _margin-none">Sign Up</button>
 </div>
 
 <div class="_form-control">
@@ -273,6 +299,23 @@ Basic input form
   <label class="_form-label">Number <span class="_font-small">--width-short</span></label>
   <input id="year" class="_form-input" type="number" name="year" placeholder='123' class="--width-short" />
 </div>
+
+<div class="_form-control">
+  <label class="_form-label">File Upload Button</label>
+  <label for="fileInput" class="_button --outline">Upload File</label>
+  <input id="fileInput" class="_form-input" type="file" name="fileInput"/>
+</div>
+
+<div class="_form-control">
+  <label for="borderTextInput" class="_form-label">Text Input w/ border</label>
+  <input id="borderTextInput" class="_form-input --border" type="text" name="borderTextInput" placeholder='Some text' />
+</div>
+
+<div class="_form-control">
+  <label for="floatingInput" class="_form-label --float">Float Label</label>
+  <input id="floatingInput" class="_form-input --border" type="text" name="floatingInput" placeholder='Some text' />
+</div>
+
 
 </div>
 
@@ -301,6 +344,12 @@ Basic input form
 <div class="_form-control">
   <label class="_form-label">Number <span class="_font-small">--width-short</span></label>
   <input id="year" class="_form-input" type="number" name="year" placeholder='123' class="--width-short" />
+</div>
+
+<div class="_form-control">
+  <label class="_form-label">File Upload Button</label>
+  <label for="fileInput" class="_button --outline">Upload File</label>
+  <input id="fileInput" class="_form-input" type="file" name="fileInput"/>
 </div>
 ~~~
 
@@ -661,6 +710,7 @@ Dropdowns can be custom replaced with a radio list, and multiple select lists wi
   </select>
 </div>
 ~~~
+
 
 
 </main>

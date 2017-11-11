@@ -34,7 +34,9 @@
 
 /* 
 
-    This may need to be refactored out of _stylecoeur
+   _stylecoeur styleguide styles
+
+   - only applies to styleguide so these are outside the library!!!
 
  */
 
@@ -168,6 +170,16 @@ $styleguide-example-color: $color-gray-lighter;
 }
   ._styleguide-example-code {
     max-width: 70vw;
+  }
+
+  ._styleguide-example-block {
+    margin-bottom: $size-base;
+  }
+  ._styleguide-example-sub {
+    padding: $size-base;
+    background-color: $color-ui;
+    margin-bottom: $size-base;
+    margin-top: $size-base/4;
   }
 
 

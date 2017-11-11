@@ -13,13 +13,36 @@
 //  New CSS Grid-based Layout 
 //  http://learncssgrid.com/
 //  https://css-tricks.com/snippets/css/complete-guide-grid/
-// 
+//  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
 
 // notes
-// instead of align-items, use align-self and justify-self
+// FUTURE
+// - 11/17 - not supported instead of align-items, use align-self and justify-self
 
+
+
+
+// ._grid       — applies to the grid container
+// ._grid_item  — applies directly to the item in the div
+
+
+
+/*
+
+    Create a note about special placement (not griddick but still useful):
+
+    .item-a {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+    .item-e {
+      grid-column: 5;
+      grid-row: 1 / 3;
+    }
+
+*/
 
 
 
@@ -61,44 +84,13 @@
 
 
 
-
-
-
 // 
-// Helpers
+//    GRID GENERATOR
 // 
 
 
 
 
-
-
-
-
-// applies to grid children
-._grid-center {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  justify-items: center; // middle (left/right)
-  align-items: center; // middle (top/down)
-  // height: 100%; // sometimes required? maybe when set explicit height?
-}
-  ._grid-center-h { // only horizontally center, not left/right
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    // justify-items: center; // middle (left/right)
-    align-items: center; // middle (top/down)
-    // height: 100%; // sometimes required? maybe when set explicit height?
-  }
-
-%grid-center {
-  // create centered grids for immediate child content
-  & > * {
-    @extend ._grid-center;
-  }
-}
 
 
 
@@ -111,17 +103,17 @@
 // Row Organized Grids
 // grid-row-one means one row, multi columns
 // responsive will remain column-oriented
-%grid-row-one, ._grid-row-one {
-  display: grid;
-  grid-gap: $size-base; 
-  grid-template-rows:    1fr;
-  grid-template-columns: repeat(auto-fit, 350px);
-  @extend %grid-xs-full;
+// %grid-row-one, ._grid-row-one {
+//   display: grid;
+//   grid-gap: $size-base; 
+//   grid-template-rows:    1fr;
+//   grid-template-columns: repeat(auto-fit, 350px);
+//   @extend %grid-xs-full;
 
-  @include screen-xs {
-    grid-template-columns: repeat(auto-fit, 100%);
-  }
-}
+//   @include screen-xs {
+//     grid-template-columns: repeat(auto-fit, 100%);
+//   }
+// }
 
 // Column Organized Grids
 // grid-one means one column, multi rows
@@ -364,6 +356,29 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 
 //    CONTAINER PATTERNS & LAYOUTS
 //    - https://gridbyexample.com/patterns/
@@ -420,112 +435,60 @@
 }
 
 
-$width-block-max: 55%;
-
-._grid-content-image {
-  /* 
-      [ screen-sm
-          _grid-content     _grid-image
-
-        content is close to centerline, and narrower
-        image can extend all the way to edge of screen
-      ] 
-      [ screen-xs   
-          _grid-image
-          _grid-content 
-
-        neatly centered
-      ] 
-  */
-
-  @extend ._grid-two;
-  @extend ._align-center;
-
-  // left-side copy
-  // _grid-content-image--content 
-  &--content {
-    @extend ._align-right;
-    @extend ._grid-block;
-    @include screen-xs {
-      justify-items: center;
-      grid-row-start: 2;
-    }
-    * {
-      width: $width-block-max;
-    }
-  }
-  // _grid-content-image--image
-  &--image {
-    @extend ._align-middle;
-    @extend ._grid-block;
-    @include screen-xs {
-      justify-items: center;
-      grid-row-start: 1; // reflow so image is on top
-    }
-  }
-
-}
-
-._grid-image-content {
-  /* 
-      [ screen-sm
-          _grid-image     _grid-content
-
-        content is close to centerline, and narrower
-        image can extend all the way to edge of screen
-      ] 
-      [ screen-xs
-          _grid-image    
-          _grid-content
-
-        neatly centered; NOTE this reflows content
-      ] 
-  */
-
-  @extend ._grid-two;
-  @extend ._align-center;
-
-  // left-side copy
-  // _grid-image-content--content
-  &--content {
-    @extend ._align-left;
-    @extend ._grid-block;
-
-    @include screen-xs {
-      justify-items: center;
-    }
-    * {
-      width: $width-block-max;
-    }
-  }
-  // _grid-image-content--image
-  &--image {
-    @extend ._align-middle;
-    @extend ._grid-block;
-
-    @include screen-xs {
-      justify-items: center;
-    }
-  }
-}
 
 
 
-._grid-content-small {
+
+// 
+//    ALIGNMENT / JUSTIFY
+// 
+
+
+// applies to grid children
+._grid-center {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  grid-gap: $size-base;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center; // middle (left/right)
+  align-items: center; // middle (top/down)
+  // height: 100%; // sometimes required? maybe when set explicit height?
+}
+  ._grid-center-h { // only horizontally center, not left/right
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    // justify-items: center; // middle (left/right)
+    align-items: center; // middle (top/down)
+    // height: 100%; // sometimes required? maybe when set explicit height?
+  }
+
+%grid-center {
+  // create centered grids for immediate child content
+  & > * {
+    @extend ._grid-center;
+  }
 }
 
-._grid-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15ch, 1fr));
-  grid-gap: $size-base;
-}
 
-._dense {
-  grid-auto-flow: dense;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -534,16 +497,36 @@ $width-block-max: 55%;
 
 
 // 
-//    HELPFUL OVERRIDES 
 // 
+// 
+// 
+// 
+// 
+//    #HELPERS
+// 
+// 
+// 
+// 
+// 
+// 
+
+//    helpers for alignment, grid modifiers, etc.
+
+
+
 
 
 
 // 
-//  Alignment w/ grids can be confusing, so I use the same words, but:
-//  [ justify-items ]:  start/middle/end — left/"center"/right horizontal alignment 
-//  [ align-items ]:    start/middle/end — top/center/bottom vertical alignment 
+//    ALIGNMENT
 // 
+// 
+/*
+    Alignment w/ grids can be confusing,:
+      [ justify-items ]:  horizontal -  start/middle/end — left/center/right 
+      [ align-items ]:    vertical -    start/middle/end — top/center/bottom 
+*/
+
 ._align-left {
   display: grid;
   justify-items: start; // align to left
@@ -601,6 +584,26 @@ $width-block-max: 55%;
   ._grid-gap-row-larger {grid-row-gap: $size-base*2;}
   ._grid-gap-column-larger {grid-row-gap: $size-base*2;}
 
+
+
+
+
+
+// 
+//    GRID ITEM
+// 
+
+//    ._grid_item- only affects items inside the grid container
+
+
+
+._span-xs-reset { // forces xs to start at first column for responsive views
+  @include screen-xs {
+    grid-column-start: 1 !important;
+  }
+}
+
+
 // item spans
 // these are not generated b/c I like extending them :\ (I know I know)
 ._span-row-2 { grid-row: span 2; }
@@ -620,31 +623,241 @@ $width-block-max: 55%;
 ._span-col-8 { grid-column: span 8; } ._span-xs-col-8 { @include screen-xs-only {grid-column: span 8;} } ._span-sm-col-8 { @include screen-sm-only {grid-column: span 8;} }
 
 
+
+
+
+
 // this forces grids to obey min sizes
-// https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
-._grid-size-force {
-  overflow:hidden;
+// 
+// _grid-overflow-hidden — (default) hides overflow for a grid with too-wide content
+// _grid-overflow-scroll — scrolls overflow for a grid with too-wide content
+// apply directly to grid-item, not container
+._grid_item-overflow {
+  /*
+    https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items
+
+    By default, a grid item cannot be smaller than the size of its content.
+    Grid items have an initial size of min-width: auto and min-height: auto.
+    You can override this behavior with min-width: 0, min-height: 0 or overflow with any value other than visible.
+  */
+  &, &-hidden {
+    overflow:hidden;
+  }
+  &-scroll {
+    overflow:scroll;
+  }
+
   * {
     min-height: 0;   /* NEW; needed for Firefox */
     min-width: 0;   /* NEW; needed for Firefox */
   }
 }
 
+
+
+
+
+
+// 
+//    GRID AUTO PLACEMENT
+// 
+
+//    Most of Griddick uses auto-placement (where the content is automatically placed on the grid)
+
+// (note: row is default)
+._grid-column { // fill columns first
+  grid-auto-flow: column;
+}
+._grid-dense { // causes items to appear out of order, to fill in gaps
+  grid-auto-flow: dense;
+}
+
+
+
+
+
+// 
+//    GRID REPEATERS
+//    - generates a table-like grid that fills the space automatically with the min-max values
+//    - great for an indeterminate list items like generated cards, info bits, etc.
+// 
+
+@mixin grid-repeater($min, $max)  {
+  display: grid;
+  grid-gap: $size-base;
+  grid-template-columns: repeat(auto-fill, minmax($min, $max));
+}
+
+._grid-repeater-small {
+  @include grid-repeater(50px, 1fr);
+}
+._grid-repeater {
+  @include grid-repeater(15ch, 1fr);
+}
+
 // for xs screen,
 // overrides default 1 row behavior
 // to try to fit as much stuff as possible
 // into one row. useful for lists
-._grid-xs-autofit {
-  @include screen-xs {
+._grid-repeater-fit {
+  // @extend ._grid-repeater-small;
+  // @include screen-xs {
+    display: grid;
+    grid-gap: $size-base/2;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  // }
+
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {
+    display: grid;
+    grid-gap: $size-base/2;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 
 
-._span-xs-reset { // forces xs to start at first column for responsive views
-  @include screen-xs {
-    grid-column-start: 1 !important;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+//    GRID #LAYOUTS
+// 
+// 
+// 
+// 
+// 
+// 
+
+
+
+
+
+
+
+
+
+
+$grid-block-width-max: 55%;
+
+._grid-content-image {
+  /* 
+      [ screen-sm
+          _grid-content     _grid-image
+
+        content is close to centerline, and narrower
+        image can extend all the way to edge of screen
+      ] 
+      [ screen-xs   
+          _grid-image
+          _grid-content 
+
+        neatly centered
+      ] 
+  */
+
+  @extend ._grid-two;
+  @extend ._align-center;
+
+  // left-side copy
+  // _grid-content-image--content 
+  &--content {
+    @extend ._align-right;
+    @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 2;
+    }
+    * {
+      width: $grid-block-width-max;
+    }
+  }
+  // _grid-content-image--image
+  &--image {
+    @extend ._align-middle;
+    @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 1; // reflow so image is on top
+    }
+  }
+
+}
+
+._grid-image-content {
+  /* 
+      [ screen-sm
+          _grid-image     _grid-content
+
+        content is close to centerline, and narrower
+        image can extend all the way to edge of screen
+      ] 
+      [ screen-xs
+          _grid-image    
+          _grid-content
+
+        neatly centered; NOTE this reflows content
+      ] 
+  */
+
+  @extend ._grid-two;
+  @extend ._align-center;
+
+  // left-side copy
+  // _grid-image-content--content
+  &--content {
+    @extend ._align-left;
+    @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
+    * {
+      width: $grid-block-width-max;
+    }
+  }
+  // _grid-image-content--image
+  &--image {
+    @extend ._align-middle;
+    @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -6,13 +6,13 @@
 
 // Variables
 
-$speed-xxxslow: 1600ms;
-$speed-xxslow: 1200ms;
-$speed-xslow: 890ms;
-$speed-vslow: 450ms;
-$speed-slow: 320ms;
-$speed-medium: 230ms;
-$speed-fast: 180ms;
+$speed-xxxslow: 1600ms    !default;
+$speed-xxslow: 1200ms     !default;
+$speed-xslow: 890ms       !default;
+$speed-vslow: 450ms       !default;
+$speed-slow: 320ms        !default;
+$speed-medium: 230ms      !default;
+$speed-fast: 180ms        !default;
 
 
 // Mixins

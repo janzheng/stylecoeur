@@ -2,12 +2,12 @@
 // for code, use a syntax highlighter instead
 // styles found under highlighting.css.erb and are generated
 
-$code-size: $size-smaller;
-$code-color-bg: $color-ui;
-$code-radius: $radius;
+$code-size: $size-smaller !default;
+$code-color-bg: $color-ui !default;
+$code-radius: $radius !default;
 
 
-$code-color-bg-darker: $color-ui-dark;
+$code-color-bg-darker: $color-ui-dark !default;
 
 // inline
 code {

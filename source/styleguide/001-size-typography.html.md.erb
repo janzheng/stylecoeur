@@ -10,7 +10,7 @@ reference: _heart.scss
 submenu:
   - [Sizes, sizes]
   - [Typography, typography]
-  - [Baseline &amp; Lineheight, baseline-amp-line-height]
+  - [Baseline, baseline]
   - [Links, links]
   - [Code, code]
 ---
@@ -39,17 +39,17 @@ The following boxes illustrate the other standard available sizes. They're rough
 
 <div class="">
   <div class="_box --m4"></div>
-  $size-m4 / 4px
+  $size-m4 / 6px
 </div>
 
 <div class="">
   <div class="_box --m3"></div>
-  $size-m3 / 7px
+  $size-m3 / 8px
 </div>
 
 <div class="">
   <div class="_box --m2"></div>
-  $size-m2 / 9px
+  $size-m2 / 10px
 </div>
 
 <div class="">
@@ -69,12 +69,12 @@ The following boxes illustrate the other standard available sizes. They're rough
 
 <div class="">
   <div class="_box --larger"></div>
-  $size-larger / 19px
+  $size-larger / 18px
 </div>
 
 <div class="">
   <div class="_box --p1"></div>
-  $size-p1 / 21px
+  $size-p1 / 24px
 </div>
 
 <div class="">
@@ -89,32 +89,47 @@ The following boxes illustrate the other standard available sizes. They're rough
 
 <div class="">
   <div class="_box --p3 "></div>
-  $size-p3 / 37px
+  $size-p3 / 40px
 </div>
 
 <div class="">
   <div class="_box --p4"></div>
-  $size-p4 / 50px
+  $size-p4 / 48px
 </div>
 
 <div class="">
   <div class="_box --p5"></div>
-  $size-p5 / 67px
+  $size-p5 / 56px
 </div>
 
 <div class="">
   <div class="_box --p6"></div>
-  $size-p6 / 89px
+  $size-p6 / 64px
 </div>
 
 <div class="">
   <div class="_box --p7"></div>
-  $size-p7 / 119px
+  $size-p7 / 80px
 </div>
 
 <div class="">
   <div class="_box --p8"></div>
-  $size-p8 / 159px
+  $size-p8 / 96px
+</div>
+
+<div class="">
+  <div class="_box --p9"></div>
+  $size-p9 / 112px
+</div>
+
+<div class="">
+  <div class="_box --p10"></div>
+  $size-p10 / 128px
+</div>
+
+<div class="">
+  <div class="_box --p11"></div>
+  $size-p11 / 144px
 </div>
 
 
@@ -240,6 +255,8 @@ Baseline and vertical rhythm are very important for print design, and increasing
 
 With that said, establishing a vertical rhythm for a website, especially a dynamic site where copy and images can be of variable height, is still difficult.
 
+Based on 8px line-height ($size-base/2) for finer control; all heights should _try_ to adhere to a multiple of 8, like 16px, 24px, 32px, or 40px heights.
+
 Padding, and margins are always created using `$size-base` or `$size-base * 2`
 
 16px and 32px heights vs. line-height
@@ -266,6 +283,13 @@ Links are styled by default with no default browser underline, but with a border
 
 Code and syntax, pre, code
 {: ._message .--warning}
+
+
+### Rendering
+
+Helpers and design; rendering, text, speed, antialias, subpixel etc.
+{: ._message .--warning}
+
 
 
 

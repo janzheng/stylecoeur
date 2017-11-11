@@ -63,11 +63,11 @@ $font-large:    $font-size-base + 3px !default;
 $font-base:     $font-size-base !default; 
   $line_height-base: ($font-size-base - 1px) * 1.5 !default;
 
-$font-small:    $font-size-base - 2px !default; 
-  $line_height-small: ($font-size-base - 1px) * 1.5 !default;
+$font-small:    $size-m1 !default; 
+  $line_height-small: $size-m1 * 1.5 !default;
 
-$font-smaller:  $font-size-base - 6px !default; 
-  $line_height-smaller: $font-size-base - 3px !default;
+$font-smaller:  $size-m2 !default; 
+  $line_height-smaller: $size-m2 * 1.5 !default;
 
 %font-larger, ._font-larger {   font-size: $font-larger; line-height: $line_height-larger; }
 %font-large, ._font-large {     font-size: $font-large; line-height: $line_height-large; }
@@ -189,6 +189,20 @@ p {
   //   padding-top: $size*2;
   //   padding-bottom: $size;
   // }
+
+
+
+
+// font awesome helper
+// makes font awesome icons align properly in buttons
+.fa {
+  line-height: 0 !important;  
+}
+
+
+
+
+
 
 
 

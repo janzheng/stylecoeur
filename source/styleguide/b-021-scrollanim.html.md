@@ -14,12 +14,18 @@ source: ../
 
 Scrollmagic can be used to trigger all kinds of scroll-based effects. Sticky nav is one example, but more scroll-based animations and content-reveal are also possible.
 
-#### Intersection Observer
+
+### Scroll Up Reveal
+
+[todo: class triggers that reveal when scrolling up and reveal when scrolling down] 
+
+
+### Intersection Observer
 
 At some point the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) will probably production-ready. Today isn't that day.
 
 
-#### Content Reveal
+### Content Reveal
 
 One example of content reveal is the [Spotify Landing Page](https://www.spotify.com/us/home/) animations trigger on content as they enter the viewport.
 
@@ -133,7 +139,7 @@ Or if you think this is too hacky, just use [scrollReveal](https://scrollrevealj
 
 
 
-#### Content Animation
+### Content Animation
 
 Here's another wacky example of combining scrolling and animations. Performance isn't exactly optimized, but it's an example of what can be done.
 

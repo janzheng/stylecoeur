@@ -3,19 +3,18 @@
 //    TABS 
 // 
 
-$tab-size: font-size;
-$tab-border: $color-ui solid $border-line;
-$tab-color-active: $color-active;
+$tab-size: $font-size-base !default;
+$tab-border: $color-ui solid $border-line !default;
+$tab-color-active: $color-active !default;
 
 ._tabs {
   margin-top: $size-base;
   margin-bottom: $size-base;
   position: relative; 
-  text-transform: capitalize;
 
   a {
     font-size: $tab-size;
-    position: relative; 
+    // position: relative; 
     display: inline-block;
     border-bottom: none;
     @extend ._font-light;
