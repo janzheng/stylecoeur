@@ -255,24 +255,18 @@ Baseline and vertical rhythm are very important for print design, and increasing
 
 With that said, establishing a vertical rhythm for a website, especially a dynamic site where copy and images can be of variable height, is still difficult.
 
-Based on 8px line-height ($size-base/2) for finer control; all heights should _try_ to adhere to a multiple of 8, like 16px, 24px, 32px, or 40px heights.
-
-Padding, and margins are always created using `$size-base` or `$size-base * 2`
-
-16px and 32px heights vs. line-height
-
-keeping things in line using layout helpers
-
-Line heights are usually established at the `font size * 1.5` but may need to be tweaked.
-
-How about forms, buttons, and links?
-{: ._message .--warning}
-
+- Base font size is set to `16px` as default.
+- Base line height is set to `16px * 1.5` or `24px` as default.
+- Baseline is based on 8px line-height ($size-base/2) for finer control; all heights should _try_ to adhere to a multiple of 8, like 16px, 24px, 32px, or 40px heights.
+- Padding, and margins are always created using `$size-base` (usually 16) or half or double that value. Ideally all objects should have a baseline of 16 pixels, though this is almost never possible. 
+- Line heights are usually established at the `font size * 1.5` but may need to be tweaked depending on the typeface.
+- Links and other inline elements attempt to flow with the copy at `16px` or the appropriate line height (default to 24px)
+- Elements like form inputs, buttons and so on will need to contain copy at `16px` line-height, so these are naturally going to be larger. 
 
 
 ### Links
 
-Links are styled by default with no default browser underline, but with a border-bottom. The border can be animated with keyframes and is more flexible, but can run into wrapping and other issues.
+Links are styled by default with no default browser underline, but with a border-bottom. Borders can be animated with keyframes and are more flexible, but can run into wrapping and other issues (if a link is wrapped around text, the border won't render).
 
 
 <div class="_styleguide-example" markdown="1">

@@ -10,6 +10,23 @@
 //    ! use _neck-layout for semantic, contextual definitions 
 // 
 
+/*
+
+Tip: this outputs
+  .what
+    margin-left: auto;
+    margin-right: auto;
+
+.what {
+  margin: { 
+      left: auto;
+      right: auto;
+  }
+}
+
+*/
+
+
 
 
 // 
@@ -177,17 +194,6 @@
 
 
 
-/* generates things like:
-   _margin-top-half,
-   _margin-2
-*/
-
-// tbd; this will be quite a monster
-
-@mixin generator($property, $value:$size-base) {
-
-}
-
 
 /*
     Pattern
@@ -317,6 +323,7 @@
 
 
 //    Content Alignment
+//    - can also use grid-based alignment from griddick
 
 ._v-top {
   vertical-align: top;
@@ -380,24 +387,6 @@
       top: 0;
     }
   }
-
-
-
-
-@mixin push--auto {
-    margin: { 
-        left: auto;
-        right: auto;
-    }
-}
-
-.what {
-  margin: { 
-      left: auto;
-      right: auto;
-  }
-}
-
 
 
 

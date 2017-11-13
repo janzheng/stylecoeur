@@ -30,7 +30,7 @@ $size-m2:       10px    !default;
 $size-m1:       12px    !default; // Minus Sizes [m]
 $size-smaller:  14px    !default; // dumb but super useful
 $size-base:     $size   !default; 
-$size-larger:   18px    !default; // dumb but super useful
+$size-larger:   20px    !default; // hard choice; 20 div by 2,4,5 and halfway; 18 div by 3, 6, 9 
 $size-p1:       24px    !default; // Plus Sizes [p]
 $size-p2:       28px    !default;
 $size-p3:       40px    !default;
@@ -89,7 +89,6 @@ $gutter: $size-base/2   !default;
 // shouldn't matter what devices people use
 
 // "mobile"
-$width-site-min: 360px  !default; // absolute minimum site width
 $width-xs-min: 0px      !default; 
 $width-xs-max: 767px    !default;
 
@@ -105,24 +104,22 @@ $width-md-max: 1199px   !default;
 $width-lg-min: 1200px   !default;
 $width-lg-max: 2100px   !default;
 
+
+// Helper Widths
+$width-site-min: 360px  !default; // absolute minimum site width
+
 // sometimes sites have a 'magical' breakpoint based on content structure
 $width-magic: 640px     !default;
 
-
 $width-content-max: $width-sm-max !default; // max content block width
-%width-content-max,
-._width-content-max { 
-  max-width: 100%;
-  @media (min-width: $width-content-max) {
-    max-width: $width-content-max; 
-  }
-}
-
 $width-content-max-narrow: $width-magic !default; // max content block width
-%width-content-max-narrow,
-._width-content-max-narrow { 
-    max-width: 100%;
-    @media (min-width: $width-content-max-narrow) {
-      max-width: $width-content-max-narrow;
-    } 
-}
+
+$width-content-paragraph: 85ch !default;
+// adheres to the 75 ch per paragraph rule; ch uses the '0' symbol as char width
+
+
+
+// layout widths defined in _neck-layout
+
+
+

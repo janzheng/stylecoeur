@@ -699,7 +699,23 @@ Dropdowns can be custom replaced with a radio list, and multiple select lists wi
   </select>
 </div>
 
-<div class="form-select">
+<div class="_form-select">
+  <label for="budget">Budget Size 
+    <span class="_form-select-element">
+      <span class="_form-select-dropdown"><!-- <i class="fa fa-angle-down"></i> --></span>
+      <select id="budget" name="budget" class="_inline _padding-left --arrow-down">
+        <option>less than $20,000</option>
+        <option>$20,000 - $40,000</option>
+        <option>$40,000 - $60,000</option>
+        <option>$60,000 - $80,000</option>
+        <option>more than $80,000</option>
+      </select>
+      <i class="fa fa-angle-down"></i>
+    </span>
+  </label>
+</div>
+
+<div class="_form-select _margin-top">
   <label for="selectExample">Example multiple select</label>
   <select id="selectExample" multiple>
     <option>1</option>

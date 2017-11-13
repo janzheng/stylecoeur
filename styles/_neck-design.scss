@@ -5,6 +5,22 @@
 
 
 
+// 
+//    SIZE & HEIGHT
+// 
+
+// - works in conjunction with sizer.js if it's included
+// ._vh-20 {
+//   height: 20vh
+// }
+// ._vh-40 {
+//   height: 40vh
+// }
+@for $i from 0 through 20 {
+  @include namedElementGenerator('vh', height, #{$i * 5}, '#{$i * 5}vh');
+}
+
+
 
 
 

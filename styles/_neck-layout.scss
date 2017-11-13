@@ -8,7 +8,7 @@
 
 
 // 
-//  Basic Styles
+//  Basic Layout / Typographic Layout
 // 
 
 body {
@@ -30,14 +30,11 @@ section, ._section,
 
 // container for content for verticality
 ._container {
-  // padding: 0 $size*2;
-  // padding-top: 4vh;
-  // padding-bottom: 4vh;
-  padding: 0 $size-base;
+  padding-top: $size-base;
+  padding-bottom: $size-base;
 }
 
 ._container-large {
-  // padding: 0 $size*2;
   padding-top: 12vh;
   padding-bottom: 12vh;
 }
@@ -49,42 +46,31 @@ section, ._section,
   padding: 4vh $size-base*2;
 }
 // only perform content padding on mobile elements
-._content-responsive {
+._content-xs {
   @include screen-xs {
     padding: 4vh $size-base*2;
   }
 }
 
 
-%padding-container-top {
-  padding-top: $size-base*3;
+
+
+// ensure more aesthetic content appearance
+
+%width-content-max,
+._width-content-max { 
+  max-width: 100%;
+  @media (min-width: $width-content-max) {
+    max-width: $width-content-max; 
+  }
 }
 
-%padding-container-bottom {
-  padding-top: $size-base*3;
-}
-
-%padding-section {
-  // padding: $size-base*3;
-  padding-bottom: $size-base*3;
-}
-
-
-
-
-// ._block {
-//   padding-bottom: $size*2;
-// }
-
-._element {
-  margin: $size-base*2;
-}
-
-
-
-._narrow {
-  max-width: $width-content-max-narrow;
-  margin: 0 auto;
+%width-content-max-narrow,
+._width-content-max-narrow { 
+    max-width: 100%;
+    @media (min-width: $width-content-max-narrow) {
+      max-width: $width-content-max-narrow;
+    } 
 }
 
 
@@ -107,6 +93,105 @@ li {
   list-style-position: outside;
   margin-left: $size-base + 3px; // this shifts wrapped text 'inside' the list 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+//    GRID LAYOUT #PATTERNS
+// 
+// 
+// 
+// 
+// 
+// 
+
+
+
+
+
+
+
+
+
+
+$grid-block-width-max: 55%;
+
+  /*
+      Usage:
+        ._grid-content-image
+          <div> copy </div> 
+          <div> image </div> 
+
+        ._grid-image-content
+          <div> image </div> 
+          <div> copy </div> 
+  */
+
+._grid-content-image {
+
+  @extend %grid-cols-2;
+  @extend ._align-center;
+  // @extend %grid-xs-full-i;
+
+  div:first-child {
+    @extend ._align-right;
+    @extend ._grid-block;
+    // width: $grid-block-width-max;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 2;
+    }
+  }
+  div:last-child {
+    @extend ._align-middle;
+    @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 1; // reflow so image is on top
+    }
+  }
+
+}
+
+._grid-image-content {
+
+  @extend ._grid-two;
+  @extend ._align-center;
+
+  div:first-child {
+    @extend ._align-middle;
+    @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
+  }
+  div:last-child {
+    @extend ._align-left;
+    @extend ._grid-block;
+    // width: $grid-block-width-max;
+    @include screen-xs {
+      justify-items: center;
+    }
+  }
+}
+
+
+
 
 
 

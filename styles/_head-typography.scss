@@ -69,6 +69,14 @@ $font-small:    $size-m1 !default;
 $font-smaller:  $size-m2 !default; 
   $line_height-smaller: $size-m2 * 1.5 !default;
 
+$font-h1: $size-p4 !default;
+$font-h2: $size-p3 !default;
+$font-h3: $size-p2 !default;
+$font-h4: $size-p1 !default;
+$font-h5: $size-larger !default; // $font-size-base !default; //$font-size-base !default;
+$font-h6: $size-m1 !default;
+
+
 %font-larger, ._font-larger {   font-size: $font-larger; line-height: $line_height-larger; }
 %font-large, ._font-large {     font-size: $font-large; line-height: $line_height-large; }
 %font-small, ._font-small {     font-size: $font-small; line-height: $line_height-small;  }
@@ -94,7 +102,6 @@ $font-smaller:  $size-m2 !default;
 // side note: use padding instead of margin
 // to prevent margin-folding headers w/ paragraphs
 
-$font-h1: $size-p4 !default;
 ._headline,
 h1 {
   font-size: $font-h1; //$size-base * 3.5;
@@ -108,7 +115,6 @@ h1 {
   // }
 }
 
-$font-h2: $size-p3 !default;
 ._subhead,
 h2 {
   font-size: $font-h2;
@@ -120,7 +126,6 @@ h2 {
   // }
 }
 
-$font-h3: $size-p2 !default;
 ._sectionhead,
 h3 {
   font-size: $font-h3 ;
@@ -132,7 +137,6 @@ h3 {
   // }
 }
 
-$font-h4: $size-p1 !default;
 ._subsectionhead,
 h4 {
   font-size: $font-h4;
@@ -145,18 +149,17 @@ h4 {
   // }
 }
 
-$font-h5: $font-size-base !default;
 ._parahead,
 h5 {
   font-size: $font-h5;
   font-weight: 700;
   @extend %font-sans;
   // &.--padding {
+    padding-top: $size;
     padding-bottom: $size;
   // }
 }
 
-$font-h6: $size-m1 !default;
 ._microhead,
 h6 {
   font-weight: 700;

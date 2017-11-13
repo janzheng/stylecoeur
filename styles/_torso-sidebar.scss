@@ -14,6 +14,7 @@ $sidebar-submenu-border: $border-base solid $color-main !default;
   width: $sidebar-width;
   overflow-y: scroll;
   padding-bottom: $size-base*2;
+  padding-left: $size-base;
   height: 100vh;
 
   a {

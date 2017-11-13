@@ -7,27 +7,40 @@ section: fundamental
 source: ../
 reference: _head-griddick.scss
 submenu:
-  - [Sizes, sizes]
-  - [Typography, typography]
-  - [Baseline, baseline]
+  - [Semantic Layout, semantic-layout]
+  - [Responsive Grid, responsive-grid]
   - [Grid Examples, grid-examples]
-  - [Grid Layouts, grid-layouts]
+  - [Grid Patterns, grid-patterns]
+  - [Grid Helpers, grid-helpers]
 ---
 
 
 <main markdown="1">
 
-## Grid &amp; Layout
+## Grid &amp; Layout System
 
-<%= partial '/partials/styleguide-ref', 
-    :locals => { :refName => current_page.data.reference } %>
+Page layout is created and maintained by using CSS grids and lots of helper classes.
 
-Intro to Layout here
+- [`_head-helpers`](https://github.com/janzheng/stylecoeur/blob/master/styles/_head-helpers.scss) —  basic layout helpers like display, padding, margin, float, pinned, clear and other helpers
+- [`_head-screen`](https://github.com/janzheng/stylecoeur/blob/master/styles/_head-screen.scss) — responsive screen sizing, and show/hide classes
+- [`_head-griddick`](https://github.com/janzheng/stylecoeur/blob/master/styles/_head-griddick.scss) — CSS grids and flexbox classes
+- [`_neck-layout`](https://github.com/janzheng/stylecoeur/blob/master/styles/_neck-layout.scss) — semantic and contextual classes for general layout and styling
+
+The idea is to establish semantic, contextual layout names like `.main`, `.sidebar`, `.component`, `.profile` etc. and then use the helpers to define layout in the HTML (stylecoeur is for quick prototyping).
+
+
+
+##### Things to keep in mind
+
+- In mobile and smaller screens, grids collapse into a single column, unless forced with the `-xs` append.  
+- The layout system makes extensive use of CSS Grids and a bit of flexbox. Only modern browsers are supported, and no fallbacks or polyfills have been written.
+- For Grids guidance, use [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) or [Learn CSS Grid](http://learncssgrid.com/) or [Grid by Example](https://gridbyexample.com/examples/)
+
 
 Mention helpers and semantic layout classes — try to encourage the use of semantic layout classes instead of just throwing padding on things, which I've been really bad about doing / semantic layouts; avoid using too many helpers here (saved for next section)
 {: ._message .--warning}
 
-### Semantic Markup
+### Semantic Layout
 
 [What does semantic markup mean and why?]
 
@@ -36,17 +49,335 @@ Mention helpers and semantic layout classes — try to encourage the use of sema
 {: ._message .--warning}
 
 
+- Contextual layout containers and components use screen-relative vertical height (like `12vh`) as a convenient tool. Use together with sizer if needed, as iOS Chrome might change viewport height as the user scrolls (because the address bar gets hidden). 
+
+- `._container` — is meant to 
+- `._container-large` — is meant to 
+- `._content` — is meant to 
+- `._content-xs` — is meant to 
+
+### Responsive Grid
+
+The responsive grid is setup with the screen sizes from Bootstrap:
 
 
-### Responsive Sizes
+##### Breakpoints 
 
-The responsive grid is setup with the screen sizes from Bootstrap. Instead of "mobile" and "desktop" breakpoints, the different widths are setup from extra-small to large:
+- `$width-xs-min` to `-max`: 0px to 767px
+- `$width-sm-min` to `-max`: 768px to 991px
+- `$width-md-min` to `-max`: 992px to 1199px
+- `$width-lg-min` to `-max`: 1200px to 2100px
 
-- `xs: 0px to 767px`
-- `sm: 768px - 991px`
-- `md: 992px - 1199px`
-- `lg: 1200px - 2100px` 
-- `magic: 640px` useful breakpoint for content
+
+##### Helpers
+
+- `$width-site-min`: 360px — default absolute min. width
+- `$width-magic`: 640px — sometimes sites have a 'magical' breakpoint based on content structure
+- `$width-content-max`: 991px - useful for marketing pages
+- `$width-content-max-narrow: $width-magic` — useful for shorter paragraph blocks
+- `$width-content-paragraph: 85ch` — adheres to the 75 ch per paragraph rule; ch uses the '0' symbol as char width
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Grid Examples
+
+These are just some examples of grid layouts. Please refer to `_head-griddick` for the rest, and feel free to add any missing layouts.
+
+<div class="_styleguide-example">
+  <h5>Equal column grid system</h5>
+
+  <div class=" _grid-cols-1">
+    <div class="_grid-block _color-bg-white">_grid-cols-1</div>
+  </div>
+  <div class="_grid-cols-2 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-cols-2</div>
+    <div class="_grid-block _color-bg-white _margin-top-xs">_grid-cols-2</div>
+  </div>
+
+  <div class="_grid-cols-2-xs _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-cols-2-xs</div>
+    <div class="_grid-block _color-bg-white">_grid-cols-2-xs</div>
+  </div>
+
+  <div class="_grid-cols-3 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-cols-3</div>
+    <div class="_grid-block _color-bg-white">_grid-cols-3</div>
+    <div class="_grid-block _color-bg-white">_grid-cols-3</div>
+  </div>
+
+  <div class="_grid-cols-12-xs _margin-top">
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+    <div class=" _color-bg-white">12</div>
+  </div>
+
+  <h5 class="_margin-top">Flexible column templates</h5>
+
+  <div class="_grid-1-2 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-1-2</div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+  <div class="_grid-2-1 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-2-1</div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-1-3 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-1-3</div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-5-3-xs _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-5-3-xs</div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-1-2-2 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-1-2-2</div>
+    <div class="_grid-block _color-bg-white"></div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-1-2-1 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-1-2-1</div>
+    <div class="_grid-block _color-bg-white"></div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-2-2-1 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-2-2-1</div>
+    <div class="_grid-block _color-bg-white"></div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-2-1-1 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-2-1-1</div>
+    <div class="_grid-block _color-bg-white"></div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-1-6-1 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-1-6-1</div>
+    <div class="_grid-block _color-bg-white"></div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-3-3-1 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-3-3-1</div>
+    <div class="_grid-block _color-bg-white"></div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+
+  <div class="_grid-1-3-3 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-1-3-3</div>
+    <div class="_grid-block _color-bg-white"></div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+</div>
+
+
+
+~~~html
+<h5>Equal column grid system</h5>
+
+<div class=" _grid-cols-1">
+  <div class="_grid-block _color-bg-white">_grid-cols-1</div>
+</div>
+<div class="_grid-cols-2 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-cols-2</div>
+  <div class="_grid-block _color-bg-white _margin-top-xs">_grid-cols-2</div>
+</div>
+
+<div class="_grid-cols-2-xs _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-cols-2-xs</div>
+  <div class="_grid-block _color-bg-white">_grid-cols-2-xs</div>
+</div>
+
+<div class="_grid-cols-3 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-cols-3</div>
+  <div class="_grid-block _color-bg-white">_grid-cols-3</div>
+  <div class="_grid-block _color-bg-white">_grid-cols-3</div>
+</div>
+
+<div class="_grid-cols-12-xs _margin-top">
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+  <div class=" _color-bg-white">12</div>
+</div>
+
+<h5 class="_margin-top">Flexible column templates</h5>
+
+<div class="_grid-1-2 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-1-2</div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+<div class="_grid-2-1 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-2-1</div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-1-3 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-1-3</div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-5-3-xs _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-5-3-xs</div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-1-2-2 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-1-2-2</div>
+  <div class="_grid-block _color-bg-white"></div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-1-2-1 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-1-2-1</div>
+  <div class="_grid-block _color-bg-white"></div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-2-2-1 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-2-2-1</div>
+  <div class="_grid-block _color-bg-white"></div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-2-1-1 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-2-1-1</div>
+  <div class="_grid-block _color-bg-white"></div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-1-6-1 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-1-6-1</div>
+  <div class="_grid-block _color-bg-white"></div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-3-3-1 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-3-3-1</div>
+  <div class="_grid-block _color-bg-white"></div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+
+<div class="_grid-1-3-3 _margin-top">
+  <div class="_grid-block _color-bg-white">_grid-1-3-3</div>
+  <div class="_grid-block _color-bg-white"></div>
+  <div class="_grid-block _color-bg-white"></div>
+</div>
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Grid Patterns
+
+Grid patterns are popular shortcut layouts. These could be misused and make your site super-generic, so use with caution. Refer to `_head-griddick#patterns` for more information
+
+- `grid-row-start` is used to reflow content in mobile view so that images will always appear above the content.
+
+
+
+##### Image &amp; Content
+
+Side by side content and image, ideal for alternating on marketing pages. Image reflows to display above content on `xs` screens.
+
+<div class="_styleguide-example">
+
+  <div class="_grid-content-image ">
+    <div class="">
+      Some unbearable content here
+    </div>
+    <div class="_grid_item-overflow">
+      <img width="100%" src="http://placebear.com/300/200">
+    </div>
+  </div>
+
+  <div class="_grid-image-content">
+    <div class="_grid_item-overflow">
+      <img width="100%" src="http://placebear.com/300/200">
+    </div>
+    <div class="">
+      Some unbearable content here
+    </div>
+  </div>
+
+</div>
+~~~html
+<div class="_grid-content-image ">
+  <div class="">
+    Some unbearable content here
+  </div>
+  <div class="_grid_item-overflow">
+    <img width="100%" src="http://placebear.com/300/200">
+  </div>
+</div>
+
+<div class="_grid-image-content">
+  <div class="_grid_item-overflow">
+    <img width="100%" src="http://placebear.com/300/200">
+  </div>
+  <div class="">
+    Some unbearable content here
+  </div>
+</div>
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,8 +393,34 @@ Refer to the bottom of `_head-griddick.scss#helpers` for all the helpers
 <div class="_styleguide-example">
 
 
+  <div class="_styleguide-example-block">
+  <h6>Alignment</h6>
+
+  <p class="_font-small">Note that horizontal and vertical alignment are completely independent</p>
+
+  <div class="_styleguide-example-sub _grid-cols-3">
+    <div class="_align-left _grid-block _color-bg-white">._align-left</div>
+    <div class="_align-horizontally _grid-block _color-bg-white">._align-horizontally</div>
+    <div class="_align-right _grid-block _color-bg-white">._align-right</div>
+
+    <div class="_align-top _vh-20 _grid-block _color-bg-white">._align-top</div>
+    <div class="_align-vertically _vh-20 _grid-block _color-bg-white">._align-vertically</div>
+    <div class="_align-bottom _vh-20 _grid-block _color-bg-white">._align-bottom</div>
+
+    <div class="_align-top _align-right _vh-20 _grid-block _color-bg-white">._align-top <br/>._align-right</div>
+    <div class="_align-vertically _align-horizontally _align-right _vh-20 _grid-block _color-bg-white">._align-vertically <br/>._align-horizontally</div>
+    <div class="_align-bottom _align-left _vh-20 _grid-block _color-bg-white">._align-bottom <br/>._align-left</div>
+
+
+  </div>
+  </div>
+
   <!-- contain the overflow example -->
+  
   <div class="_styleguide-example-block _grid_item-overflow-scroll">
+
+  <h6>Overflow</h6>
+  
   <div class="_font-small">._grid_item-overflow <br/>— grids can't be smaller than the size of its contents, and sometimes may break a grid if used for layout. This forces overflow to behave. <a href="https://gridbyexample.com/examples/example37/">auto-fit here</a></div>
   <div class="_styleguide-example-sub _grid-repeater-fit">
     <div>block one</div>
@@ -82,7 +439,7 @@ Refer to the bottom of `_head-griddick.scss#helpers` for all the helpers
     <div class="_grid_item-overflow-scroll">blocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwoblocktwo</div>
     <div>block three</div>
   </div>
-   </div>
+  </div>
 
   <div class="_styleguide-example-block">
   <h6>Repeaters</h6>
@@ -111,103 +468,6 @@ Refer to the bottom of `_head-griddick.scss#helpers` for all the helpers
 
 
 </div>
-
-### Layout System
-
-The layout system makes extensive use of CSS Grids and some use of flexbox.
-
-The Grid system uses the newer HTML5 specced 'CSS Grids'. Support exists for most modern browsers, which means some older browsers will not support CSS grids, which will result in a mobile-look. (No polyfill exists for these users, as it's a smaller demographic at this point. No worries for IE6 anymore!)
-
-The Grid (named 'Griddick') should be fairly straightforward if you're familiar with CSS grids. It mainly exists as a group of helpers to make CSS grids easier to implement. [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) has a good overview of how CSS Grids work. [Learn CSS Grid](http://learncssgrid.com/) is also an excellent resource, and [Grid by Example](https://gridbyexample.com/examples/) offers examples of popular grid layouts (and how to implement them).
-
-For mobile and smaller screens, Griddick works with the responsive settings setup in `_heart.scss` to collapse blocks into a single column.  
-
-
-### Grid Examples
-{: .--padding}
-
-
-
-<div class="_styleguide-example">
-  <div class="_grid-one">
-    <div class="_grid-block _color-bg-white">
-        <p>One block grid </p>
-    </div>
-  </div>
-</div>
-~~~html
-<div class="_grid-one _align-center">
-  <div class="_grid-block _color-bg-white">
-      <p>One block grid </p>
-  </div>
-</div>
-~~~
-
-
-
-<div class="_styleguide-example">
-  <div class="_grid-three">
-    <div class="_grid-block _color-bg-white">
-        <p>Three block grid </p>
-    </div>
-    <div class="_grid-block _color-bg-white">
-        <p>Three block grid </p>
-    </div>
-    <div class="_grid-block _color-bg-white">
-        <p>Three block grid </p>
-    </div>
-  </div>
-</div>
-~~~html
-<div class="_grid-three _align-center">
-  <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
-  </div>
-  <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
-  </div>
-  <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
-  </div>
-</div>
-~~~
-
-
-
-
-<div class="_styleguide-example">
-<div class="_grid-one-three">
-  <div class="_grid-block _color-bg-white">
-      <p>One block grid </p>
-  </div>
-  <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
-  </div>
-</div>
-</div>
-~~~html
-<div class="_grid-one-three _align-center">
-  <div class="_grid-block _color-bg-white">
-      <p>One block grid </p>
-  </div>
-  <div class="_grid-block _color-bg-white">
-      <p>Three block grid </p>
-  </div>
-</div>
-~~~
-
-
-
-### Grid Layouts
-
-Grid layouts are popular shortcut patterns. These could be misused and make your site super-generic, so use with caution.
-
-- `grid-row-start` is used to reflow content in mobile view so that images will always appear above the content.
-
-##### `_grid-content-image` &amp; `_grid-image-content`
-
-Side by side content and image, ideal for alternating on marketing pages.
-
 
 </main>
 

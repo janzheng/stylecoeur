@@ -90,8 +90,13 @@
     opacity: 0.9, etc.
   }
 */
-@mixin elementGenerator($element, $valDesc, $val:$valDesc) {
-  ._#{$element}-#{$valDesc} {
+@mixin elementGenerator($element, $valName, $val:$valName) {
+  ._#{$element}-#{$valName} {
+    #{$element}: #{$val}
+  }
+}
+@mixin namedElementGenerator($name, $element, $valName, $val:$valName) {
+  ._#{$name}-#{$valName} {
     #{$element}: #{$val}
   }
 }
