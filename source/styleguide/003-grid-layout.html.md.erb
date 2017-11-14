@@ -7,7 +7,6 @@ section: fundamental
 source: ../
 reference: _head-griddick.scss
 submenu:
-  - [Semantic Layout, semantic-layout]
   - [Responsive Grid, responsive-grid]
   - [Grid Examples, grid-examples]
   - [Grid Patterns, grid-patterns]
@@ -19,49 +18,81 @@ submenu:
 
 ## Grid &amp; Layout System
 
-Page layout is created and maintained by using CSS grids and lots of helper classes.
+The grid and page layout "system" is a collection of CSS grid-driven helper classes that make layouts work. Here are the main files:
 
 - [`_head-helpers`](https://github.com/janzheng/stylecoeur/blob/master/styles/_head-helpers.scss) —  basic layout helpers like display, padding, margin, float, pinned, clear and other helpers
 - [`_head-screen`](https://github.com/janzheng/stylecoeur/blob/master/styles/_head-screen.scss) — responsive screen sizing, and show/hide classes
 - [`_head-griddick`](https://github.com/janzheng/stylecoeur/blob/master/styles/_head-griddick.scss) — CSS grids and flexbox classes
 - [`_neck-layout`](https://github.com/janzheng/stylecoeur/blob/master/styles/_neck-layout.scss) — semantic and contextual classes for general layout and styling
 
-The idea is to establish semantic, contextual layout names like `.main`, `.sidebar`, `.component`, `.profile` etc. and then use the helpers to define layout in the HTML (stylecoeur is for quick prototyping).
 
+#### Things to keep in mind
 
-
-##### Things to keep in mind
-
+- Don't forget that if a component has `margin-bottom` and the next component has `margin-top`, the two margins will collapse
 - In mobile and smaller screens, grids collapse into a single column, unless forced with the `-xs` append.  
-- The layout system makes extensive use of CSS Grids and a bit of flexbox. Only modern browsers are supported, and no fallbacks or polyfills have been written.
-- For Grids guidance, use [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) or [Learn CSS Grid](http://learncssgrid.com/) or [Grid by Example](https://gridbyexample.com/examples/)
+- The layout system makes extensive use of CSS Grids: only modern browsers are supported, and no fallbacks or polyfills have been written.
+- For Grids tips, use [CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) or [Learn CSS Grid](http://learncssgrid.com/) or [Grid by Example](https://gridbyexample.com/examples/).
 
 
-Mention helpers and semantic layout classes — try to encourage the use of semantic layout classes instead of just throwing padding on things, which I've been really bad about doing / semantic layouts; avoid using too many helpers here (saved for next section)
-{: ._message .--warning}
+#### Keeping Code Semantic
 
-### Semantic Layout
+When developing larger projects, try to use semantic contextual names. This means that `sidebar` is more readable than `_grid-col-2 _padding-top _padding-right` — semantic and contextual class and variable names make your code easier to keep up.
 
-[What does semantic markup mean and why?]
+Wrap up more complex layouts into layout classes like `_layout-main-sidebar`, and extend grid classes and helpers from a stylesheet file for this layout; use html styling helpers like `_padding` sparingly in production—use those to quickly test out variations, but quickly move onto using `@extends` in your semantic classes instead.
 
-- add more semantic grid/flex helpers ( _align-left-bottom, _align-right-bottom, etc.)
-- combine these with possible semantic layout names
-{: ._message .--warning}
+Some layout helpers can help you get started. These don't include horizontal padding in case of full-width images or such, but those are easily included.
+
+- `._container` — container to space out componetns vertically
+- `._container-large` — large vertical container
+- `._content` — vertical/horizontal content container
+- `._content-xs` — vertical/horizontal content container only for xs screens 
 
 
-- Contextual layout containers and components use screen-relative vertical height (like `12vh`) as a convenient tool. Use together with sizer if needed, as iOS Chrome might change viewport height as the user scrolls (because the address bar gets hidden). 
+<div class="_styleguide-example">
+  <div class="_container _color-bg-white">
+    <div class="_font-small">._container</div>
+  </div>
+  <div class="_container-large _color-bg-white _margin-top">
+    <div class="_font-small">._container-large</div>
 
-- `._container` — is meant to 
-- `._container-large` — is meant to 
-- `._content` — is meant to 
-- `._content-xs` — is meant to 
+    <div class="_content _color-bg-ui _margin-top">
+      <div class="_font-small">._content</div>
+    </div>
+    <div class="_content-xs _color-bg-ui _margin-top">
+      <div class="_font-small">._content-xs</div>
+    </div>
+
+    <div class="_width-content-max _color-bg-ui _margin-top _center-margin">
+      <div class="_font-small">._width-content-max</div>
+    </div>
+    <div class="_width-content-max-narrow _color-bg-ui _margin-top _center-margin">
+      <div class="_font-small">._width-content-max-narrow</div>
+    </div>
+
+    <div class="_width-content-paragraph _color-bg-ui _margin-top _center-margin">
+      <div class="">._width-content-paragraph — approximates the 75ch rule</div>
+      <div>0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-</div>
+    </div>
+
+    <div class="_width-content-paragraph-narrow _color-bg-ui _margin-top _center-margin">
+      <div class="">._width-content-paragraph-narrow — approximates the 75ch rule</div>
+      <div>0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-</div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
 
 ### Responsive Grid
 
-The responsive grid is setup with the screen sizes from Bootstrap:
+The responsive grid is setup with the screen sizes from Bootstrap. The responsive grid helpers are defined in `_head-screen`
 
 
-##### Breakpoints 
+#### Breakpoints 
 
 - `$width-xs-min` to `-max`: 0px to 767px
 - `$width-sm-min` to `-max`: 768px to 991px
@@ -69,20 +100,13 @@ The responsive grid is setup with the screen sizes from Bootstrap:
 - `$width-lg-min` to `-max`: 1200px to 2100px
 
 
-##### Helpers
+#### Helpers
 
 - `$width-site-min`: 360px — default absolute min. width
 - `$width-magic`: 640px — sometimes sites have a 'magical' breakpoint based on content structure
 - `$width-content-max`: 991px - useful for marketing pages
 - `$width-content-max-narrow: $width-magic` — useful for shorter paragraph blocks
 - `$width-content-paragraph: 85ch` — adheres to the 75 ch per paragraph rule; ch uses the '0' symbol as char width
-
-
-
-
-
-
-
 
 
 
@@ -143,6 +167,10 @@ These are just some examples of grid layouts. Please refer to `_head-griddick` f
 
   <div class="_grid-1-3 _margin-top">
     <div class="_grid-block _color-bg-white">_grid-1-3</div>
+    <div class="_grid-block _color-bg-white"></div>
+  </div>
+  <div class="_grid-3-1 _margin-top">
+    <div class="_grid-block _color-bg-white">_grid-3-1</div>
     <div class="_grid-block _color-bg-white"></div>
   </div>
 
@@ -325,7 +353,7 @@ Side by side content and image, ideal for alternating on marketing pages. Image 
 
 <div class="_styleguide-example">
 
-  <div class="_grid-content-image ">
+  <div class="_layout-content-image ">
     <div class="">
       Some unbearable content here
     </div>
@@ -334,7 +362,7 @@ Side by side content and image, ideal for alternating on marketing pages. Image 
     </div>
   </div>
 
-  <div class="_grid-image-content">
+  <div class="_layout-image-content">
     <div class="_grid_item-overflow">
       <img width="100%" src="http://placebear.com/300/200">
     </div>
@@ -345,7 +373,7 @@ Side by side content and image, ideal for alternating on marketing pages. Image 
 
 </div>
 ~~~html
-<div class="_grid-content-image ">
+<div class="_layout-content-image ">
   <div class="">
     Some unbearable content here
   </div>
@@ -354,7 +382,7 @@ Side by side content and image, ideal for alternating on marketing pages. Image 
   </div>
 </div>
 
-<div class="_grid-image-content">
+<div class="_layout-image-content">
   <div class="_grid_item-overflow">
     <img width="100%" src="http://placebear.com/300/200">
   </div>

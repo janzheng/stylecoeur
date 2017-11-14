@@ -287,6 +287,14 @@ $grid-gap: $size-base;
   @include griddick((7,1));
 }
 
+
+%grid-2-3, ._grid-2-3, ._grid-two-three {
+  @include griddick((2,3));
+}
+%grid-3-2, ._grid-3-2, ._grid-three-twp {
+  @include griddick((3,2));
+}
+
 %grid-2-5, ._grid-2-5, ._grid-two-five {
   @include griddick((2,5));
 
@@ -325,164 +333,6 @@ $grid-gap: $size-base;
 %grid-1-3-3, ._grid-1-3-3, ._grid-one-three-three {
   @include griddick((1,3,3));
 }
-
-
-
-
-
-
-
-/*
-%grid-one-three, ._grid-one-three {
-  @extend %gr;
-  @extend %grid-xs-full;
-
-  @include screen-sm {
-    grid-template-areas: "one three";
-    grid-template-rows:    1fr;
-    grid-template-columns: 1fr 3fr;
-  }
-}
-  %grid-one-three-always, ._grid-one-three-always {
-    @extend %gr;
-
-    grid-template-areas: "one three";
-    grid-template-rows:    1fr;
-    grid-template-columns: 1fr 3fr;
-  }
-
-%grid-one-four, ._grid-one-four {
-  @extend %gr;
-  @extend %grid-xs-full;
-
-  @include screen-sm {
-    grid-template-areas: "one four";
-    grid-template-rows:    1fr;
-    grid-template-columns: 1fr 4fr;
-  }
-}
-
-%grid-one-seven, ._grid-one-seven {
-  @extend %gr;
-  grid-template-areas: "one seven";
-  grid-template-rows:    1fr;
-  grid-template-columns: 1fr 7fr;
-}
-
-%grid-two-one, ._grid-two-one {
-  @extend %gr;
-  @extend %grid-xs-full;
-
-  @include screen-sm {
-    grid-template-areas: "two one";
-    grid-template-rows:    1fr;
-    grid-template-columns: 2fr 1fr;
-  }
-}
-
-%grid-three-one, ._grid-three-one {
-  @extend %gr;
-  @extend %grid-xs-full;
-
-  @include screen-sm {
-    grid-template-areas: "three one";
-    grid-template-rows:    1fr;
-    grid-template-columns: 3fr 1fr;
-  }
-
-  &.--always {
-    @include screen-xs {
-      grid-template-areas: "three one";
-      grid-template-rows:    1fr;
-      grid-template-columns: 3fr 1fr;
-    }
-  }
-}
-
-%grid-two-four, ._grid-two-four {
-  @extend %gr;
-  @extend %grid-xs-full;
-
-  @include screen-sm {
-    grid-template-areas: "two four";
-    grid-template-rows:    1fr;
-    grid-template-columns: 2fr 4fr;
-  }
-}
-
-%grid-four-one, ._grid-four-one {
-  @extend %gr;
-  @extend %grid-xs-full;
-
-  @include screen-sm {
-    grid-template-areas: "four one";
-    grid-template-rows:    1fr;
-    grid-template-columns: 4fr 1fr;
-  }
-}
-
-%grid-seven-one, ._grid-seven-one {
-  @extend %gr;
-  @extend %grid-xs-full;
-
-  @include screen-sm {
-    grid-template-areas: "seven one";
-    grid-template-rows:    1fr;
-    grid-template-columns: 7fr 1fr;
-  }
-}
-
-*/
-
-
-
-
-// 
-//    THREE CONTAINER SECTIONS
-// 
-
-
-%grid-one-six-one, ._grid-one-six-one {
-  @extend %gr;
-
-  @include screen-sm {
-    grid-template-areas: "one six one";
-    grid-template-rows:    1fr;
-    grid-template-columns: 1fr 6fr 1fr;
-  }
-
-  @extend %grid-xs-full;
-}
-
-%grid-two-one-one, ._grid-two-one-one {
-  @extend %gr;
-
-  @include screen-sm {
-    grid-template-areas: "two one one";
-    grid-template-rows:    1fr;
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-
-  @extend %grid-xs-full;
-}
-%grid-two-two-one, ._grid-two-two-one {
-  @extend %gr;
-
-  @include screen-sm {
-    grid-template-areas: "two two one";
-    grid-template-rows:    1fr;
-    grid-template-columns: 2fr 2fr 1fr;
-  }
-
-  @extend %grid-xs-full;
-}
-
-
-
-
-
-
-
 
 
 

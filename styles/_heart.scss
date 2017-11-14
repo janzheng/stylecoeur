@@ -114,7 +114,8 @@ $width-magic: 640px     !default;
 $width-content-max: $width-sm-max !default; // max content block width
 $width-content-max-narrow: $width-magic !default; // max content block width
 
-$width-content-paragraph: 85ch !default;
+$width-content-paragraph: 77ch !default;
+$width-content-paragraph-narrow: 55ch !default;
 // adheres to the 75 ch per paragraph rule; ch uses the '0' symbol as char width
 
 

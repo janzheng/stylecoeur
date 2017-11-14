@@ -155,7 +155,7 @@ Tip: this outputs
 ._block {
   display: block;
 
-  @include genGridAttr(('xs','sm','md','lg')) {
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {
     display: block;
   }
 }
@@ -287,6 +287,7 @@ Tip: this outputs
     text-align: center;
   }
 }
+  ._margin-center, 
   ._center-margin {
     // leave margin top/bot alone to prevent reset
     margin-left: auto;

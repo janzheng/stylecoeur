@@ -30,11 +30,13 @@ section, ._section,
 
 // container for content for verticality
 ._container {
+  margin-top: $size-base;
   padding-top: $size-base;
   padding-bottom: $size-base;
 }
 
 ._container-large {
+  margin-top: $size-base;
   padding-top: 12vh;
   padding-bottom: 12vh;
 }
@@ -43,6 +45,7 @@ section, ._section,
 ._content {
   // padding-left: $size*2;
   // padding-right: $size*2;
+  margin-top: $size-base;
   padding: 4vh $size-base*2;
 }
 // only perform content padding on mobile elements
@@ -60,6 +63,8 @@ section, ._section,
 %width-content-max,
 ._width-content-max { 
   max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
   @media (min-width: $width-content-max) {
     max-width: $width-content-max; 
   }
@@ -67,12 +72,35 @@ section, ._section,
 
 %width-content-max-narrow,
 ._width-content-max-narrow { 
-    max-width: 100%;
-    @media (min-width: $width-content-max-narrow) {
-      max-width: $width-content-max-narrow;
-    } 
+  max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
+  @media (min-width: $width-content-max-narrow) {
+    max-width: $width-content-max-narrow;
+  } 
 }
 
+%width-content-paragraph,
+._width-content-paragraph {
+  max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
+
+  @media (min-width: $width-content-paragraph) {
+    max-width: $width-content-paragraph;
+  } 
+}
+
+%width-content-paragraph-narrow,
+._width-content-paragraph-narrow {
+  max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
+
+  @media (min-width: $width-content-paragraph-narrow) {
+    max-width: $width-content-paragraph-narrow;
+  } 
+}
 
 
 
@@ -128,7 +156,7 @@ li {
 
 
 
-$grid-block-width-max: 55%;
+$layout-block-width-max: 55%;
 
   /*
       Usage:
@@ -141,7 +169,7 @@ $grid-block-width-max: 55%;
           <div> copy </div> 
   */
 
-._grid-content-image {
+._layout-content-image {
 
   @extend %grid-cols-2;
   @extend ._align-center;
@@ -150,7 +178,7 @@ $grid-block-width-max: 55%;
   div:first-child {
     @extend ._align-right;
     @extend ._grid-block;
-    // width: $grid-block-width-max;
+    // width: $layout-block-width-max;
     @include screen-xs {
       justify-items: center;
       grid-row-start: 2;
@@ -167,7 +195,7 @@ $grid-block-width-max: 55%;
 
 }
 
-._grid-image-content {
+._layout-image-content {
 
   @extend ._grid-two;
   @extend ._align-center;
@@ -183,7 +211,7 @@ $grid-block-width-max: 55%;
   div:last-child {
     @extend ._align-left;
     @extend ._grid-block;
-    // width: $grid-block-width-max;
+    // width: $layout-block-width-max;
     @include screen-xs {
       justify-items: center;
     }
