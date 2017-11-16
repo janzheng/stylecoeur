@@ -128,7 +128,6 @@ Flags:
 </form>
 ~~~
 
-
 <div class="_styleguide-example">
 <form class="" method="post">
 <p><strong>Sign Up or Sign In form</strong></p>
@@ -233,8 +232,69 @@ Flags:
 </div>
 </div>
 
+<div class="_styleguide-example">
 
+<p><strong>Inline Form</strong></p>
 
+<div class=" _grid-cols-2">
+  <div>
+    <div class="_right">
+      <span class="_padding-right-half">My name is</span> 
+      <input id="name" class="_form-input _inline _margin-right-none-i" type="text" name="name" placeholder="coolest name ever" required/> 
+    </div>
+    <div class="_right">
+      <span class="_padding-right-half">at</span> 
+      <input id="email" class="_form-input _inline _margin-right-none-i" type="text" name="email" placeholder="awesome@email.com" /> 
+    </div>
+
+    <div class="_right">
+      <span class="_padding-right-half">and</span> 
+      <input id="shortMessage" class=" _form-input _inline _margin-right-none-i" type="text" name="shortMessage" placeholder="I think..." required/>
+    </div>
+
+    <div class="_right _form-fake">
+      fake <input id="fake" class=" _form-input _inline _margin-right-none-i" type="text" name="fake" placeholder="umm..."/>
+    </div>
+  </div>
+
+  <div class="_align-vertically _align-bottom" >
+    <button class="_margin-top-xs _margin-bottom-none-i _padding-left-half _padding-right-half _margin-left-none _inline _button _button-short --outline">send away!</button>
+  </div>
+
+</div>
+
+</div>
+~~~html
+
+<p><strong>Inline Form</strong></p>
+
+<div class=" _grid-cols-2">
+  <div>
+    <div class="_right">
+      <span class="_padding-right-half">My name is</span> 
+      <input id="name" class="_form-input _inline _margin-right-none-i" type="text" name="name" placeholder="coolest name ever" required/> 
+    </div>
+    <div class="_right">
+      <span class="_padding-right-half">at</span> 
+      <input id="email" class="_form-input _inline _margin-right-none-i" type="text" name="email" placeholder="awesome@email.com" /> 
+    </div>
+
+    <div class="_right">
+      <span class="_padding-right-half">and</span> 
+      <input id="shortMessage" class=" _form-input _inline _margin-right-none-i" type="text" name="shortMessage" placeholder="I think..." required/>
+    </div>
+
+    <div class="_right _form-fake">
+      fake <input id="fake" class=" _form-input _inline _margin-right-none-i" type="text" name="fake" placeholder="umm..."/>
+    </div>
+  </div>
+
+  <div class="_align-vertically _align-bottom" >
+    <button class="_margin-top-xs _margin-bottom-none-i _padding-left-half _padding-right-half _margin-left-none _inline _button _button-short --outline">send away!</button>
+  </div>
+
+</div>
+~~~
 
 ### Fieldset
 

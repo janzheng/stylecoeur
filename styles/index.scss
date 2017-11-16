@@ -21,10 +21,10 @@
 //  [ depends on heart, head, neck — components] 
 @import 'torso';
 
-// re-import to let colors take precedence
+// re-import precedence overrides
+// useful for colors, margin classes, etc.
 @import 'head-colors';
-
-
+@import 'head-helpers';
 
 
 // 
