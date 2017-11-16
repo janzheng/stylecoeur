@@ -279,6 +279,13 @@ $grid-gap: $size-base;
   @include griddick((4,1));
 }
 
+%grid-1-5, ._grid-1-5, ._grid-one-four {
+  @include griddick((1,4));
+}
+%grid-5-1, ._grid-5-1, ._grid-four-one {
+  @include griddick((4,1));
+}
+
 %grid-1-7, ._grid-1-7, ._grid-one-seven {
   @include griddick((1,7));
 

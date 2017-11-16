@@ -21,13 +21,18 @@ $border-base: $border-thin          !default;
   border-radius: $radius;
 }
 
-
 .--line { border-width: $border-line }
 .--thin, .--base { border-width: $border-thin }
 .--medium { border-width: $border-medium }
 .--thick { border-width: $border-thick }
 .--massive { border-width: $border-massive }
 
+._border-none { 
+  border-width: 0;
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {
+    border-width: 0;
+  }
+}
 
 
 // DIVIDERS

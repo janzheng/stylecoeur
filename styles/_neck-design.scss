@@ -21,7 +21,7 @@
 // ._vh-100 
 // 
 @for $i from 0 through 20 {
-  @include namedElementGenerator('vh', height, #{$i * 5}, '#{$i * 5}vh');
+  @include namedElementGenerator('vh', min-height, #{$i * 5}, '#{$i * 5}vh');
 }
 
 
@@ -56,6 +56,9 @@
   -webkit-font-smoothing: subpixel-antialiased;
 } 
 
+._underline-none {
+  text-decoration: none;
+}
 
 // Transparency has been moved to _color
 
@@ -192,7 +195,7 @@ box-shadow: rgba(100, 84, 92, 0.2) 0px 2px 2px, rgba(100, 84, 92, 0.2) 0px 4px 4
 // 
 
 // used for card styles; fairly subtle
-$box_shadow-raised: 0px 4px 6px rgba($color-black, 0.16) !default; // looks like a raised shadow
+$box_shadow-raised: 0px 4px 12px rgba($color-black, 0.16) !default; // looks like a raised shadow
 %box_shadow-raised { box-shadow: $box_shadow-raised; }
 
 

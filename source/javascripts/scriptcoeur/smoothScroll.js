@@ -5,6 +5,7 @@
 // [0.0.2] - added verticalScrollTo - separate target-based scrolling fn
 // [0.0.3] - added verticalScrollIntercept - experimental
 // [0.0.4] - changed href starts with # to contains #; added currenturl v. futureurl check; for sidebar that always contains url#location, now will correctly scrollTo or go to  new location
+// [0.0.5] - fixed target forwarding bug not including the hash
 
 
 // this one only intercepts anchor link hashes as they're being pressed
@@ -36,8 +37,8 @@ function verticalScroll(offsetY = 0) {
 
     if (currentUrl != futureUrl) {
       // event.preventDefault();
-      // console.log('go to ', currentUrl, futureUrl);
-      window.location = futureUrl;
+      console.log('go to ', currentUrl, futureUrl, target);
+      window.location = futureUrl + target;
     }
 
     if( typeof $target.offset() !== "undefined") {
@@ -119,6 +120,10 @@ $(document).ready(function() {
   var hash = location.hash,
       navOffset = -60;
 
+  // console.log('location hash: ', hash)
+  // if(hash) {
+  //   console.log('location hash: ', hash)
+  // }
   verticalScroll(navOffset);
 });
 

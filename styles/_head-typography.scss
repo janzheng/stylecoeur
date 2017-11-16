@@ -37,12 +37,15 @@
 %font-800, ._font-800 { font-weight: 800; }
 %font-900, ._font-900 { font-weight: 900; }
 
+$font-light: 300 !default;
+$font-normal: 500 !default;
+$font-bold: 700 !default;
+$font-heavy: 900 !default;
 
-%font-light, ._font-light {@extend %font-300;}
-%font-normal, ._font-normal {@extend %font-500;}
-%font-bold, ._font-bold {@extend %font-700;}
-  strong {@extend %font-bold}
-%font-heavy, ._font-heavy {@extend %font-900;}
+%font-light, ._font-light { font-weight: $font-light; }
+%font-normal, ._font-normal {font-weight: $font-normal; }
+%font-bold, ._font-bold, strong { font-weight: $font-bold; }
+%font-heavy, ._font-heavy { font-weight: $font-heavy; }
 
 %font-lower, ._font-lower { text-transform: lowercase; }
 %font-upper, ._font-upper { text-transform: uppercase; }

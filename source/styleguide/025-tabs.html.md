@@ -55,7 +55,7 @@ Tabs are essentially buttons or menu items that shows some information and hides
     let target = $(this).data("tab") || $(this).prop("hash").substr(1);
     // set nav
     $('._tabs-item').removeClass('--active');
-    $('._tabs-item.' +target).addClass('--active');
+    $(this).addClass('--active');
 
     // set content
     $('._tabs-content').removeClass('--selected');
