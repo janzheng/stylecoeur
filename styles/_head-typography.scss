@@ -61,16 +61,16 @@ $font-larger:   $font-size-base + 6px !default;
   $line_height-larger: ($font-size-base + 6px) * 1.5 !default;
 
 $font-large:    $font-size-base + 3px !default; 
-  $line_height-large: ($font-size-base + 2px) * 1.5 !default;
+  $line_height-large: ($font-large + 2px) * 1.5 !default;
 
 $font-base:     $font-size-base !default; 
-  $line_height-base: ($font-size-base - 1px) * 1.5 !default;
+  $line_height-base: ($font-base - 1px) * 1.5 !default;
 
 $font-small:    $size-m1 !default; 
-  $line_height-small: $size-m1 * 1.5 !default;
+  $line_height-small: $font-small * 1.5 !default;
 
 $font-smaller:  $size-m2 !default; 
-  $line_height-smaller: $size-m2 * 1.5 !default;
+  $line_height-smaller: $font-smaller * 1.5 !default;
 
 $font-h1: $size-p4 !default;
 $font-h2: $size-p3 !default;

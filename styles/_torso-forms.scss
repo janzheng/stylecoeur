@@ -227,6 +227,10 @@ input, .input {
     // padding: $size-base*2 $size-base;
   }
 
+  &.--short {
+    height: $size-base/2;
+  }
+  
   &.--width-full {
     width: 100%;
   }

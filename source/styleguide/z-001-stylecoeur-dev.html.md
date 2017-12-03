@@ -260,9 +260,10 @@ Note that the partial file has to have a leading underscore: `_nav.erb`
 
 Partials can also take variables, as used in the Colors section. Usage:
 
-<% name = 'example' %>
-<% varName = 'example' %>
-<% swatch = 'example' %>
+- <% name = 'example' %>
+- <% varName = 'example' %>
+- <% swatch = 'example' %>
+
 ~~~ erb
 <%= partial '/partials/swatch', 
     :locals => { :name => 'Blue', :varName => 'blue', :swatch => '#366EA6' } %>

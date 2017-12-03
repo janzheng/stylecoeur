@@ -12,6 +12,10 @@ source: ../
 
 ## Scriptcoeur
 
+Find a way to include source or CDN include scripts here, ex lodash
+{: ._message .--warning }
+
+
 Some components require JS to work properly. Examples are provided to each component in separate js files, under the `_scriptcoeur` folder.
 
 - Focus on production speed
@@ -74,6 +78,14 @@ Animated decorative grid lines
 
 <div class="_grid-three _margin-bottom" >
 
+
+
+<div class="_card" markdown="1">
+__[Designbetter.co](https://www.designbetter.co/design-systems-handbook/introducing-design-systems)__
+
+Design Systems handbook
+</div>
+
 <div class="_card" markdown="1">
 __[SVG OMG](https://jakearchibald.github.io/svgomg/)__
 
@@ -104,6 +116,14 @@ __[Wordmark](https://wordmark.it/)__
 Fast font browser
 </div>
 
+<div class="_card" markdown="1">
+__[Better Placeholder](https://betterplaceholder.com/)__
+
+Custom image placeholder
+</div>
+
+
+
 
 
 </div>
@@ -112,10 +132,40 @@ Fast font browser
 
 <div class="_grid-three _margin-bottom" >
 
+
+
+
+
+<div class="_card " markdown="1">
+__[Frontend Checklist](https://frontendchecklist.io)__
+
+Basic but very useful checklist
+</div>
+
+
+
+<div class="_card " markdown="1">
+__[Flow](https://flow.org/)__
+
+Static Type Checker.
+<!-- <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script> -->
+</div>
+
+
+
+<div class="_card " markdown="1">
+__[Mo JS](http://mojs.io/)__
+
+Motion for the web.
+<!-- <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script> -->
+</div>
+
+
 <div class="_card " markdown="1">
 __[lodash](https://lodash.com/)__
 
 Like underscore, but better.
+<!-- <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script> -->
 </div>
 
 <div class="_card " markdown="1">

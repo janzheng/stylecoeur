@@ -135,6 +135,7 @@ $button-line-height: 13px                               !default; // makes the b
   &.--short {
     padding-top: $size-m3 - 0.5;
     padding-bottom: $size-m3 - 0.5;
+    height: inherit;
   }
 
   &-thin, &.--thin {

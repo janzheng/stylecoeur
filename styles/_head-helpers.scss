@@ -326,6 +326,9 @@ Tip: this outputs
 //    Content Alignment
 //    - can also use grid-based alignment from griddick
 
+._v-text_top {
+  vertical-align: text-top;
+}
 ._v-top {
   vertical-align: top;
 }
@@ -337,6 +340,16 @@ Tip: this outputs
 }
 
 
+// Eliminates line breaks <br /> 
+._break-none {
+  br { 
+    display: none;
+
+    @include genGridAttr(('xs','sm','md','lg')) {
+      display: none;
+    }
+  }
+}
 
 
 
