@@ -698,10 +698,14 @@ $grid-gap: $size-base;
   @include grid-repeater(15ch, 1fr);
 }
 
+
+// 
+// Auto Fit
 // for xs screen,
 // overrides default 1 row behavior
 // to try to fit as much stuff as possible
-// into one row. useful for lists
+// into one row. useful for lists or image thumbnails, without blowing things up
+// really big when in mobile view
 ._grid-repeater-fit {
   // @extend ._grid-repeater-small;
   // @include screen-xs {
@@ -715,11 +719,15 @@ $grid-gap: $size-base;
     grid-gap: $size-base/2;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+
+  // simple helper for image grids
+  &.--images {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 }
-
-
-
-
 
 
 

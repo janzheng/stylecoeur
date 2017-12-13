@@ -63,6 +63,34 @@
 // Transparency has been moved to _color
 
 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip
+._underline-skip {
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}._underline-edges {
+  text-decoration: underline;
+  text-decoration-skip: edges;
+}
+
+._underline-wavy {
+  text-decoration: $color-main underline wavy;
+  text-decoration-skip: ink;
+}
+
+
+
+
+._underline {
+  &.--skip {
+    @extend ._underline-skip;
+  }
+  &.--edges {
+    @extend ._underline-edges;
+  }
+}
+
+
+
 // 
 // Special ratio and Sizes
 // 

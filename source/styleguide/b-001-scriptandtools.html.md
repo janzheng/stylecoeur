@@ -12,7 +12,12 @@ source: ../
 
 ## Scriptcoeur
 
-Find a way to include source or CDN include scripts here, ex lodash
+Find a way to include source or CDN include scripts here, ex lodash. 
+{: ._message .--warning }
+
+Add content: chrome plugins: colorzilla, whatfont, onetab, restlet, grammarly, spectrum, full page screen capture, GA debug, React developer tools, UsePanda
+reading list / sources of inspiration: usepanda, sidebar, designernews, hacker news, Medium / Daily Digest (freecodecamp), Product Hunt, CodePen mailing list, 
+tutorials/inspiration/ux guides: alistapart.com, tympanus.net, Smashing Magazine
 {: ._message .--warning }
 
 
@@ -23,6 +28,8 @@ Some components require JS to work properly. Examples are provided to each compo
 - Don't reinvent the wheel
 
 Almost everything makes extensive usage of jQuery, so it's included in scriptcoeur `scriptcoeur/plugins/jquery.min.js`.
+
+
 
 ### Usage
 
@@ -128,18 +135,68 @@ Custom image placeholder
 
 </div>
 
-#### Code
+#### Code & Dev
 
 <div class="_grid-three _margin-bottom" >
 
 
+<div class="_card " markdown="1">
+__[ListJS](https://listjs.com/)__
+
+List sort &amp; filter plugin.
+</div>
+
+
+<div class="_card " markdown="1">
+__[Storybook UI](https://storybook.js.org/)__
+
+UI dev environment (for React)
+</div>
+
+
+<div class="_card " markdown="1">
+__[unCSS](https://github.com/giakki/uncss)__
+
+Removes unused CSS selectors
+</div>
+
+
+<div class="_card " markdown="1">
+__[Webpage Test](https://www.webpagetest.org/)__
+
+Test page load speed.
+</div>
+
+
+
+<div class="_card " markdown="1">
+__[tota11y](http://khan.github.io/tota11y/)__
+
+Accessibility audit bookmarklet.
+</div>
+
+
+
+<div class="_card " markdown="1">
+__[A11y](https://addyosmani.com/a11y/)__
+
+Accessibility audit + testing.
+</div>
+
+
+
+<div class="_card " markdown="1">
+__[Backstop JS](https://github.com/garris/BackstopJS)__
+
+Visual regression testing.
+</div>
 
 
 
 <div class="_card " markdown="1">
 __[Frontend Checklist](https://frontendchecklist.io)__
 
-Basic but very useful checklist
+Basic, useful front-end checklist.
 </div>
 
 
@@ -164,7 +221,7 @@ Motion for the web.
 <div class="_card " markdown="1">
 __[lodash](https://lodash.com/)__
 
-Like underscore, but better.
+Useful JS helpers.
 <!-- <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script> -->
 </div>
 
@@ -259,6 +316,15 @@ __[Realtime Board](http://realtimeboard.com)__
 
 Real-time collaborative white board.
 </div>
+
+<div class="_card" markdown="1">
+__[Appear.in](https://appear.in)__
+
+Free browser video/audio chat
+</div>
+
+
+
 
 </div>
 
