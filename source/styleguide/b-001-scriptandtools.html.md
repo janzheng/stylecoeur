@@ -141,6 +141,20 @@ Custom image placeholder
 
 
 <div class="_card " markdown="1">
+__[30Secs of Code](https://github.com/Chalarangelo/30-seconds-of-code)__
+
+Easily understood code examples
+</div>
+
+
+
+<div class="_card " markdown="1">
+__[PopMotion](https://popmotion.io/)__
+
+Animation &amp; motion engine.
+</div>
+
+<div class="_card " markdown="1">
 __[ListJS](https://listjs.com/)__
 
 List sort &amp; filter plugin.
@@ -150,14 +164,14 @@ List sort &amp; filter plugin.
 <div class="_card " markdown="1">
 __[Storybook UI](https://storybook.js.org/)__
 
-UI dev environment (for React)
+UI dev environment (for React).
 </div>
 
 
 <div class="_card " markdown="1">
 __[unCSS](https://github.com/giakki/uncss)__
 
-Removes unused CSS selectors
+Removes unused CSS selectors.
 </div>
 
 
@@ -169,12 +183,19 @@ Test page load speed.
 
 
 
+
+<div class="_card " markdown="1">
+__[CSS Tricks A11y](https://css-tricks.com/accessibility-testing-tools/)__
+
+Accessibility app list.
+</div>
+
+
 <div class="_card " markdown="1">
 __[tota11y](http://khan.github.io/tota11y/)__
 
 Accessibility audit bookmarklet.
 </div>
-
 
 
 <div class="_card " markdown="1">
@@ -252,45 +273,58 @@ Integrated Payments API. Helper: [Stripe Connect](https://stripe.com/connect)
 <div class="_card" markdown="1">
 __[Paypal](https://paypal.com/)__
 
-Less-integrated payment. Can connect [Venmo now](https://help.venmo.com/hc/en-us/articles/217042888-How-It-Works)
+Less-integrated payment. Can connect [Venmo now](https://help.venmo.com/hc/en-us/articles/217042888-How-It-Works).
 </div>
 
 <div class="_card" markdown="1">
 __[Rough JS](https://roughjs.com/)__
 
-Creates a sketchy-look for components
+Creates a sketchy-look for components.
 </div>
 
 <div class="_card" markdown="1">
 __[Rellax JS](https://dixonandmoe.com/rellax/)__
 
-Parallax scroller
+Parallax scroller.
 </div>
 
 <div class="_card" markdown="1">
 __[Anime JS](https://anime.js/)__
 
-JS Animation Engine
+JS Animation Engine.
 </div>
 
 <div class="_card" markdown="1">
 __[ScrollMonitor](https://github.com/stutrek/scrollMonitor)__
 
-Element scroll watcher
+Element scroll watcher.
 </div>
 
 <div class="_card" markdown="1">
 __[Twilio](https://www.twilio.com)__
 
-SMS, Phone, Chat API
+SMS, Phone, Chat API.
 </div>
 
 <div class="_card" markdown="1">
 __[FeathersJS](https://feathersjs.com/)__
 
-REST and realtime API layer
+REST and realtime API layer.
 </div>
 
+
+<div class="_card" markdown="1">
+__[ElectronJS](https://electronjs.org)__
+
+HTML/JS/CSS for Desktop apps 
+</div>
+
+
+<div class="_card" markdown="1">
+__[BoardgameIO](https://github.com/google/boardgame.io)__
+
+State management for turn-based games
+</div>
 
 
 

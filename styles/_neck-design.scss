@@ -56,6 +56,10 @@
   -webkit-font-smoothing: subpixel-antialiased;
 } 
 
+._kern {
+  -webkit-font-feature-settings: "kern","liga","pnum";
+  font-feature-settings: "kern","liga","pnum";
+}
 ._underline-none {
   text-decoration: none;
 }
