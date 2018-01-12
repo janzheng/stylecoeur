@@ -1,0 +1,3 @@
+targets:
+  react-apollo-tutorial: shared-us-west-2/cjaq2lk9p3obh0170gwl9ugsb
+  default: react-apollo-tutorial

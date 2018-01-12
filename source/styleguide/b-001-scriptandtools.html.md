@@ -94,6 +94,12 @@ Design Systems handbook
 </div>
 
 <div class="_card" markdown="1">
+__[Hemingway](http://www.hemingwayapp.com/)__
+
+Copywriting Helper
+</div>
+
+<div class="_card" markdown="1">
 __[SVG OMG](https://jakearchibald.github.io/svgomg/)__
 
 Minimizes SVG files.
@@ -103,6 +109,12 @@ Minimizes SVG files.
 __[tinyJPG](http://tinyjpg.com/)__
 
 Minimizes JPG and PNG files by a lot.
+</div>
+
+<div class="_card" markdown="1">
+__[Video Smaller](http://www.videosmaller.com/)__
+
+Video Compression
 </div>
 
 <div class="_card" markdown="1">
@@ -182,7 +194,11 @@ Test page load speed.
 </div>
 
 
+<div class="_card " markdown="1">
+__[a11yproject](https://a11yproject.com/)__
 
+Accessibility guideline
+</div>
 
 <div class="_card " markdown="1">
 __[CSS Tricks A11y](https://css-tricks.com/accessibility-testing-tools/)__
@@ -307,6 +323,12 @@ SMS, Phone, Chat API.
 </div>
 
 <div class="_card" markdown="1">
+__[Pusher](https://pusher.com/chatkit)__
+
+Push updates and Chat
+</div>
+
+<div class="_card" markdown="1">
 __[FeathersJS](https://feathersjs.com/)__
 
 REST and realtime API layer.
@@ -358,6 +380,28 @@ Free browser video/audio chat
 </div>
 
 
+
+
+#### Other
+
+
+<div class="_card" markdown="1">
+__[Appear.in](https://appear.in)__
+
+Free browser video/audio chat
+</div>
+
+<div class="_card" markdown="1">
+__[Plus Codes](https://plus.codes)__
+
+Non-address "addresses" for anyone
+</div>
+
+<div class="_card" markdown="1">
+__[TransferWise](https://transferwise.com/us/)__
+
+Cheap international money transfer system
+</div>
 
 
 </div>

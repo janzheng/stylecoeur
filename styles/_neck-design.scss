@@ -45,7 +45,7 @@
 }
 ._geometric  { text-rendering:  geometricPrecision; }
 
-._antialias { 
+._antialias, ._antialiased { 
   // light text on dark backgrounds makes it look lighter
   // only works on Mac webkit
   -webkit-font-smoothing: antialiased;
@@ -122,6 +122,12 @@
 
 .--ratio-16_9     {@include responsive-ratio(16,9);}
 
+
+
+
+._line_height-0 {
+  line-height: 0;
+}
 
 
 // Triangles

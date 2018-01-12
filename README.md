@@ -3,7 +3,7 @@
 
 # \_stylecoeur
 
-#### ...because we are only as good as our tools.
+#### The Heart of Design Systems
 
 
 Core extensible collection of useful SCSS modules. Not a framework, just a bunch of loose concepts, ideas, and useful SCSS tied together. Like duct tape.

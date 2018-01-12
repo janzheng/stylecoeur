@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head><meta charset='utf-8'><meta name='viewport' content="width=device-width,initial-scale=1"><title>hackernews-vue-apollo</title>
+
+
+<script type='text/javascript' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+
+<script>
+  $(document).ready(function() {
+
+  })
+
+  function outside() {
+    // console.log('Outside clicked');
+
+    $(document).trigger({
+      type: "onFoo",
+      name: "banana",
+      isBanana: true
+    });
+      
+    //   { value: "banana" }, 
+    //   // function( event ) {
+    //   //   console.log('jQ event: ', event.data.value)
+    //   // }
+    // ); // onFooOutside will be called for #myDiv2, but not #myDiv1
+
+    // jQ event
+    // var bananaEvent = jQuery.Event( "banana" );
+    // event.name = "banana";
+    // event.isBanana = true;
+    // $(document).trigger(bananaEvent)
+
+    // var event = document.createEvent('Event');
+    // event.initEvent('onFoo', true, true);
+    // document.dispatchEvent(event); // onFooOutside will be called for #myDiv1 and #myDiv2
+  }
+
+  // $('.outside').on('click',
+  //     "banana",
+  //     { value: "banana" }, 
+  //     function( event ) {
+  //       console.log('jQ event: ', event.data.value)
+  //     }
+  //   ); // onFooOutside will be called for #myDiv2, but not #myDiv1
+
+  //   var event = document.createEvent('Event');
+  //   event.initEvent('onFoo', true, true);
+  //   document.dispatchEvent(event); // onFooOutside will be called for #myDiv1 and #myDiv2
+  // }
+
+</script>
+
+<link href="static/css/app.d1d2f5927c1676db3b861715300bb842.css" rel="stylesheet"></head>
+
+
+
+
+
+<body>
+
+<div class="center w85">
+  <h1> Remote App Injection Tests </h1>
+
+  This file should be *outside* the build; it's used for testing injecting Vue apps into static pages.
+
+  <div>
+    <a href="#" class="outside" onClick="outside()">Outside Click</a>
+  </div>
+</div>
+  <div id=app></div>
+<!-- 
+  <link href=static/css/app.d1d2f5927c1676db3b861715300bb842.css rel=stylesheet></head><body><div id=app></div>
+
+<script type=text/javascript src=static/js/manifest.ec01b76d7598c8c57b14.js></script><script type=text/javascript src=static/js/vendor.bfeda48a8c849968fa0e.js></script><script type=text/javascript src=static/js/app.1f6e844b5edffe96fba1.js></script> -->
+  <!-- local code -->
+
+
+  <!-- testing remote code -->
+  <link href='https://janzheng.com/stylecoeur/vue/static/css/app.d1d2f5927c1676db3b861715300bb842.css' rel='stylesheet'>
+ <!--  <script type='text/javascript' src='https://janzheng.com/stylecoeur/vue/static/js/manifest.07be33289cd5b4135fd7.js'></script>
+  <script type='text/javascript' src='https://janzheng.com/stylecoeur/vue/static/js/vendor.1663ea4df6ed7f9d79ce.js'></script>
+  <script type='text/javascript' src='https://janzheng.com/stylecoeur/vue/static/js/app.2c42f2bc14d4f59f13d6.js'></script> -->
+
+
+<script type="text/javascript" src="static/js/manifest.7f227a60b9b03e6f4256.js"></script><script type="text/javascript" src="static/js/vendor.bfeda48a8c849968fa0e.js"></script><script type="text/javascript" src="static/js/app.9317fd2d9bf9c6a35cb4.js"></script></body></html>
+
+
+
+
+
