@@ -38,6 +38,12 @@ $card-radius: $radius !default;
   &.--padding-light {
     padding: $size-base;
   }
+
+  &.--simple {
+    box-shadow: none;
+    border: $color-ui $border-line solid;
+    padding: $size-base $size-base*2;
+  }
 }
 
 
