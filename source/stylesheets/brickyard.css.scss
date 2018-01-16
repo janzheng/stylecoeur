@@ -9,8 +9,182 @@
 // @import 'stylecoeur/index.scss'; // symlink include
 // @import '../../styles/index.scss'; // regular include
 
+@import '../../styles/heart'; // coeur
+
+/* 
+
+  Outline
+
+  #BodyTitle
+  #Introduction
+
+  #processingForm // loading message
+
+  form .form_register #form_RegisterForm
+    table#layoutTable { width: 905px }
+      .sectionWrapper
+        .sectionHeaderWrapper 
+          .sectionHeader // description of section
+      .captionWrapper
+
+      .fieldWrapper
+
+
+  #Addendum
+
+ */
+
+
+$bblue: #3D5A96;
+
+#bookingpage p {
+  text-align: inherit !important; // reset
+}
+
+%textblock {
+  font-style: normal !important;
+  font-size: $size !important;
+  line-height: $size-p1 !important;
+  /* font-size: small; */
+  font-weight: normal !important;
+}
+%small {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+#BodyTitle {
+  margin: $size*2 auto;
+  margin-top: 64px;
+  font-size: 38px !important;
+  font-style: normal !important;
+}
+#Introduction {
+  p {
+    text-align: center !important;
+  }
+}
+
+
+// form
+#layoutTable {
+  border-collapse: collapse !important;
+  text-align: left !important;
+  max-width: 640px;
+  margin: 0 auto;
+}
+  .sectionHeader {    
+    padding: $size 0 !important;
+    text-align: center !important;
+    font-size: $size-p2 !important;
+  }
+  .sectionWrapper {
+    // border-bottom: 16px solid white;
+  }
+  .fieldwrapper {
+    // max-width: 100%;
+    // display: block;
+    margin: 0 auto;
+    // text-align: center;
+    border-collapse: collapse;
+    // width: 100%;
+
+    &:nth-child(2n+1) {
+      background-color: #f4f4f4;
+    }
+  }
+  .itemdescriptioncell { // form label
+    padding: $size !important;
+    width: 40% !important;
+    // width: 180px !important;
+    // text-align: left;
+    // display: inline-block;
+    
+    img {
+      // display: block;
+      // width: 100%;
+      object-fit: contain;
+      object-position: left;
+      padding-right: $size;
+      margin: 0;
+    }
+  }
+
+    .row_i72435_wantsashirt {
+      .itemdescriptioncell {
+        min-width: 400px;
+        padding-top: 18px !important;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  .inputcell { // form label
+    padding: $size !important;
+    // display: inline-block;
+    // width: auto !important;
+  }
+  input {
+    border: 2px solid $bblue;
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+  .radioGroup {
+    li {
+      vertical-align: middle;
+      // height: $size-p2;
+    }
+    input {
+      vertical-align: text-bottom !important;
+    }
+    label {
+      vertical-align: middle;
+      font-weight: normal;
+      padding-left: $size-m3;
+      line-height: $size-2;
+    }
+  }
+  // shirts
+  .row_p72793_unisexnavylight,
+  .row_p72850_unisexcardinalblack,
+  .row_p72851_womensmaroondark,
+  .row_p72852_womensnavylight {
+    .itemdescriptioncell {
+      min-width: 350px !important;
+    }
+  }
+  // Register & Housing text blocks styling
+  .informationInput {
+    p span {
+      @extend %textblock;
+    }
+  }
+
+
+  // Housing quote
+  #row_HousingInfo.informationInput {
+    p:first-child {
+      text-align: center !important;
+      em {
+        font-size: $size-p1;
+        padding-top: $size-2;
+        display: inline-block;
+      }
+    }
+    p:nth-child(2) {
+      text-align: center !important;
+      padding-bottom: $size-p1;
+    }
+
+
+  }
 
 
 
 
-
+#Addendum {
+  p {
+    @extend %small;
+  }
+}
