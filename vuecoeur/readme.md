@@ -36,14 +36,34 @@ Examples:
 
 ### GraphCool GQL
 
-https://console.graph.cool/react-apollo-tutorial/playground)
+Setting up Graphcool and data on a clean build
+
+- https://www.howtographql.com/vue-apollo/1-getting-started
+- npm install -g graphcool
+- graphcool init --schema https://graphqlbin.com/hn-starter.graphql --name Hackernews
+- graphcool playground — runs the playground site
+- graphcool endpoints
+- graphcool console 
+- graphcool pull
+- graphcool push
+- graphcool status
+- graphcool email-password template
+  - CLI server directory: (their graphcool-framework is wrong, it's just graphcool)
+    graphcool add-template graphcool/templates/auth/email-password
+
+#### Setup
+
+
+- https://console.graph.cool/react-apollo-tutorial/playground
 - graph.cool example db: https://console.graph.cool/react-apollo-tutorial/schema/types
 - error on init: https://www.graph.cool/forum/t/migrate-schema-name-options-in-graphcool-init/1514
 - install graph cool: npm install -g graphcool | graphcool init server | graphcool playground
 - set up endpoint from Graphcool (> graphcool info)
 - npm install -g vue-cli
 
-### DEPLOYMENT
+
+
+### Deployment
 
 Options: 
 - surge.sh

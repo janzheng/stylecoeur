@@ -173,14 +173,16 @@ Tip: this outputs
 
 
 // 
-//    HEIGHT
+//    WIDTH
 // 
 
-._width-full {
+._width-full,
+._width-100 {
   width: 100%;
   max-width: 100%;
 }
 
+//    Detailed width calculator in _design
 
 
 
@@ -249,6 +251,8 @@ Tip: this outputs
   &-half { @include importantizer($element $size-half); }
   &-none { @include importantizer($element 0); }
   &-2    { @include importantizer($element $size-2); }
+  &-3    { @include importantizer($element $size-p3); }
+  &-4    { @include importantizer($element $size-p4); }
 };
 
 

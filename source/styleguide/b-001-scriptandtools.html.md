@@ -75,13 +75,41 @@ https://tympanus.net/codrops/2016/10/12/animated-decorative-lines/)__
 Animated decorative grid lines
 </div>
 
-
-
-
 </div>
 
 
 
+#### Creative
+
+<div class="_grid-three _margin-bottom" >
+
+
+
+<div class="_card" markdown="1">
+__[Web Gradients](https://webgradients.com/)__
+
+Make gradients easier
+</div>
+
+
+
+<div class="_card" markdown="1">
+__[Froala Design Blocks](https://www.froala.com/design-blocks/)__
+
+Page template ideas
+</div>
+
+<div class="_card" markdown="1">
+__[Canva](https://www.canva.com/)__
+
+Colors, colors, colors
+</div>
+
+<div class="_card" markdown="1">
+__[UnDraw](https://undraw.co/)__
+
+Illustrations &amp; Icons
+</div>
 
 
 <div class="_card" markdown="1">
@@ -89,9 +117,6 @@ __[Instagram CSS](https://picturepan2.github.io/instagram.css/)__
 
 CSS-based image filters
 </div>
-
-
-
 
 <div class="_card" markdown="1">
 __[Designbetter.co](https://www.designbetter.co/design-systems-handbook/introducing-design-systems)__
@@ -152,6 +177,12 @@ Custom image placeholder
 
 
 </div>
+
+
+
+
+
+
 
 #### Code & Dev
 
@@ -372,7 +403,7 @@ State management for turn-based games
 
 #### Teamwork
 
-<div class="_grid-three" >
+<div class="_grid-three _margin-bottom" >
 
 <div class="_card " markdown="1">
 __[Slack](https://slack.com/)__
@@ -392,11 +423,16 @@ __[Appear.in](https://appear.in)__
 Free browser video/audio chat
 </div>
 
+</div>
+
+
 
 
 
 #### Other
 
+
+<div class="_grid-three _margin-bottom" >
 
 <div class="_card" markdown="1">
 __[Appear.in](https://appear.in)__
@@ -416,8 +452,6 @@ __[TransferWise](https://transferwise.com/us/)__
 Cheap international money transfer system
 </div>
 
-
-<div class="_grid-three _margin-bottom" >
 
 <div class="_card" markdown="1">
 __[ButterCal](https://buttercal.com/)__

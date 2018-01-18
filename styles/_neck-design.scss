@@ -158,6 +158,16 @@
 }
 
 
+// 
+// Width
+// 
+
+// generate ._width-100 ._width-90 etc. 
+@each $width in '100' "100%", '90' "90%", '80' "80%", '70' "70%", '60' "60%", '50' "50%", '40' "40%", '30' "30%", '20' "20%", '10' "10%", {
+  @include elementGenerator(width, nth($width, 1), nth($width, 2));
+}
+
+
 
 
 // 

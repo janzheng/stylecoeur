@@ -213,76 +213,133 @@
 
 
 
-// show & hide;
+// show & hide
 
 ._hidden-mobile {
-  @media (max-width: $width-xs-max) {
+  @include screen-xs-only {
     display: none !important;
   }
 }
-._hidden-tablet-down {
-  @media (max-width: $width-sm-max) {
+
+._hidden-tablet {
+  @include screen-sm-only {
     display: none;
   }
 }
-  ._hidden-tablet-only {
-    @media (min-width: $width-sm-min) and (max-width: $width-sm-max) {
+  ._hidden-tablet-and-down {
+    @include screen-sm-down {
       display: none;
     }
   }
-  ._hidden-tablet-up {
-    @media (min-width: $width-sm-min) {
-      display: none;
-    }
-  }
-._hidden-desktop-down {
-  @media (max-width: $width-md-max) {
-    display: none;
-  }
-}
-  ._hidden-tablet-up {
-    @media (min-width: $width-md-min) {
+  ._hidden-tablet-and-up {
+    @include screen-sm {
       display: none;
     }
   }
 
+._hidden-desktop {
+  @include screen-md-only {
+    display: none;
+  }
+}
+  ._hidden-desktop-and-down {
+    @include screen-md-down {
+      display: none;
+    }
+  }
+  ._hidden-desktop-and-up {
+    @include screen-md {
+      display: none;
+    }
+  }
+
+._hidden-large {
+  @include screen-lg {
+    display: none;
+  }
+}
+
+._hidden-magic-down {
+  @include screen-magic-down {
+    display: none;
+  }
+}
 ._hidden-magic-up {
-  @media (min-width: $width-magic) {
+  @include screen-magic-up {
     display: none;
   }
 }
 
-  ._hidden-magic-to-tablet {
-    @media (min-width: $width-magic) and (max-width: $width-sm-min) {
-      display: none;
+
+
+._show-mobile {
+  @include screen-xs-only {
+    display: inherit !important;
+  }
+}
+
+._show-tablet {
+  @include screen-sm-only {
+    display: inherit;
+  }
+}
+  ._show-tablet-and-down {
+    @include screen-sm-down {
+      display: inherit;
+    }
+  }
+  ._show-tablet-and-up {
+    @include screen-sm {
+      display: inherit;
     }
   }
 
+._show-desktop {
+  @include screen-md-only {
+    display: inherit;
+  }
+}
+  ._show-desktop-and-down {
+    @include screen-md-down {
+      display: inherit;
+    }
+  }
+  ._show-desktop-and-up {
+    @include screen-md {
+      display: inherit;
+    }
+  }
+
+._show-large {
+  @include screen-lg {
+    display: inherit;
+  }
+}
+
+._show-magic-down {
+  @include screen-magic-down {
+    display: inherit;
+  }
+}
+._show-magic-up {
+  @include screen-magic-up {
+    display: inherit;
+  }
+}
 
 
-._show-xs-only {
-  display: none;
-  @media (max-width: $width-xs-max) {
-    display: inherit;
-  }
-}
-._show-sm-up {
-  display: none;
-  @media (min-width: $width-sm-min) {
-    display: inherit;
-  }
-}
-._show-magic-to-tablet {
-  display: none;
-  @media (min-width: $width-magic) and (max-width: $width-sm-min) {
-    display: inherit;
-  }
-}
+
+
+
+
+
+
 
 
 
 // 
 // Special User Agent detection classes
+// (currently not in use; tied to scriptcoeur)
 //
 
 // only for tablet, mobile, regardless of breakpoint

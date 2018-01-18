@@ -9,7 +9,8 @@
 // @import 'stylecoeur/index.scss'; // symlink include
 // @import '../../styles/index.scss'; // regular include
 
-@import '../../styles/heart'; // coeur
+@import '../../styles/heart'; // coeur 
+@import '../../styles/head-screen';
 
 /* 
 
@@ -37,8 +38,13 @@
 
 $bblue: #3D5A96;
 
-#bookingpage p {
-  text-align: inherit !important; // reset
+#bookingpage {
+  td:first-child {
+
+  }
+  p {
+    text-align: inherit !important; // reset
+  }
 }
 
 %textblock {
@@ -72,10 +78,18 @@ $bblue: #3D5A96;
   border-collapse: collapse !important;
   text-align: left !important;
   max-width: 640px;
+  width: 100% !important;
   margin: 0 auto;
+  table-layout: fixed;
 }
   .sectionHeader {    
-    padding: $size 0 !important;
+
+    padding-left: $size 0 !important;
+    padding-right: $size 0 !important;
+    @include screen-sm {
+      padding: $size !important;
+    }
+
     text-align: center !important;
     font-size: $size-p2 !important;
   }
@@ -95,7 +109,16 @@ $bblue: #3D5A96;
     }
   }
   .itemdescriptioncell { // form label
+
     padding: $size !important;
+
+    @include screen-xs {
+      padding-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+    }
     width: 40% !important;
     // width: 180px !important;
     // text-align: left;
@@ -111,17 +134,15 @@ $bblue: #3D5A96;
     }
   }
 
-    .row_i72435_wantsashirt {
-      .itemdescriptioncell {
-        min-width: 400px;
-        padding-top: 18px !important;
-      }
-      p {
-        text-align: center;
-      }
-    }
   .inputcell { // form label
+    // padding: $size !important;
+
     padding: $size !important;
+
+    @include screen-xs {
+      padding-top: 0 !important;
+    }
+
     // display: inline-block;
     // width: auto !important;
   }
@@ -146,12 +167,27 @@ $bblue: #3D5A96;
     }
   }
   // shirts
-  .row_p72793_unisexnavylight,
-  .row_p72850_unisexcardinalblack,
-  .row_p72851_womensmaroondark,
-  .row_p72852_womensnavylight {
+  #s15747 {
+
+    #row_i72435_wantsashirt {
+      .itemdescriptioncell {
+        padding-top: 18px !important;
+      }
+      p {
+        text-align: center;
+      }
+    }
     .itemdescriptioncell {
-      min-width: 350px !important;
+      // min-width: 350px !important;
+      white-space: nowrap;
+    }
+    .inputcell {
+      @include screen-sm {
+        padding-left: 70px !important;
+      }
+      @include screen-xs {
+        text-align: center;
+      }
     }
   }
   // Register & Housing text blocks styling
@@ -163,12 +199,14 @@ $bblue: #3D5A96;
 
 
   // Housing quote
-  #row_HousingInfo.informationInput {
+  #row_HousingInfo .informationInput {
     p:first-child {
       text-align: center !important;
       em {
         font-size: $size-p1;
-        padding-top: $size-2;
+        @include screen-sm {
+          padding-top: $size-2;
+        }
         display: inline-block;
       }
     }
@@ -180,11 +218,39 @@ $bblue: #3D5A96;
 
   }
 
-
-
+  #row_i67445_Submit {
+    .itemdescriptioncell {
+      @include screen-xs-only {
+        display: none;
+      }
+    }
+    .inputcell {
+      padding-top: $size !important;
+      padding-bottom: $size;
+    }
+  }
 
 #Addendum {
   p {
     @extend %small;
   }
 }
+
+
+// @include screen-xs-only {
+//   #bookingpage td {
+//     display: block;
+
+//     .itemdescriptioncell,
+//     .inputcell {
+//       padding-top: 0 !important;
+//       padding-bottom: 0 !important;
+//     }
+//   }
+
+// }
+
+
+
+
+

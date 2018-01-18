@@ -7,8 +7,9 @@ section: fundamental
 source: ../
 reference: _head-griddick.scss
 submenu:
+  - [Introduction, introduction]
+  - [Breakpoints, breakpoints]
   - [Responsive Grid, responsive-grid]
-  - [Grid Examples, grid-examples]
   - [Grid Patterns, grid-patterns]
   - [Grid Helpers, grid-helpers]
 ---
@@ -17,6 +18,8 @@ submenu:
 <main markdown="1">
 
 ## Grid &amp; Layout System
+
+### Introduction
 
 The grid and page layout "system" is a collection of CSS grid-driven helper classes that make layouts work. Here are the main files:
 
@@ -81,29 +84,55 @@ Some layout helpers can help you get started. These don't include horizontal pad
       <div class="">._width-content-paragraph-narrow — approximates the 75ch rule</div>
       <div>0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-</div>
     </div>
-
-
   </div>
 </div>
+~~~html
+<div class="_container _color-bg-white">
+  <div class="_font-small">._container</div>
+</div>
+<div class="_container-large _color-bg-white _margin-top">
+  <div class="_font-small">._container-large</div>
+
+  <div class="_content _color-bg-ui _margin-top">
+    <div class="_font-small">._content</div>
+  </div>
+  <div class="_content-xs _color-bg-ui _margin-top">
+    <div class="_font-small">._content-xs</div>
+  </div>
+
+  <div class="_width-content-max _color-bg-ui _margin-top _center-margin">
+    <div class="_font-small">._width-content-max</div>
+  </div>
+  <div class="_width-content-max-narrow _color-bg-ui _margin-top _center-margin">
+    <div class="_font-small">._width-content-max-narrow</div>
+  </div>
+
+  <div class="_width-content-paragraph _color-bg-ui _margin-top _center-margin">
+    <div class="">._width-content-paragraph — approximates the 75ch rule</div>
+    <div>0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-</div>
+  </div>
+
+  <div class="_width-content-paragraph-narrow _color-bg-ui _margin-top _center-margin">
+    <div class="">._width-content-paragraph-narrow — approximates the 75ch rule</div>
+    <div>0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-0123456789-</div>
+  </div>
+</div>
+~~~
 
 
 
 
 
-### Responsive Grid
+### Breakpoints
 
 The responsive grid is setup with the screen sizes from Bootstrap. The responsive grid helpers are defined in `_head-screen`
-
-
-#### Breakpoints 
 
 - `$width-xs-min` to `-max`: 0px to 767px
 - `$width-sm-min` to `-max`: 768px to 991px
 - `$width-md-min` to `-max`: 992px to 1199px
 - `$width-lg-min` to `-max`: 1200px to 2100px
 
-
-#### Helpers
+#### CSS Variable Helpers
 
 - `$width-site-min`: 360px — default absolute min. width
 - `$width-magic`: 640px — sometimes sites have a 'magical' breakpoint based on content structure
@@ -111,12 +140,108 @@ The responsive grid is setup with the screen sizes from Bootstrap. The responsiv
 - `$width-content-max-narrow: $width-magic` — useful for shorter paragraph blocks
 - `$width-content-paragraph: 85ch` — adheres to the 75 ch per paragraph rule; ch uses the '0' symbol as char width
 
+#### Responsive Visibility Helpers
+
+These helpers can easily show/hide content depending on screen size.
 
 
 
 
+**Hide content** at the breakpoint and at, above or below, with `display: none`:
 
-### Grid Examples
+<div class="_styleguide-example">
+
+  <div class="_hidden-mobile _card --simple">._hidden-mobile</div>
+  <div class="_hidden-tablet-and-down _card --simple">._hidden-tablet-and-down</div>
+  <div class="_hidden-desktop _card --simple">._hidden-desktop</div>
+  
+</div>
+~~~
+
+Hides content: 
+._hidden-mobile
+._hidden-tablet
+._hidden-tablet-and-down
+._hidden-tablet-and-up
+._hidden-desktop
+._hidden-desktop-and-down
+._hidden-desktop-and-up
+._hidden-large
+._hidden-magic-down
+._hidden-magic-up
+~~~
+
+
+**Show content** at the breakpoint and at, above or below, with `display: inherit` :
+
+<div class="_styleguide-example">
+
+  <div class="_show-mobile _card --simple">._show-mobile</div>
+  <div class="_show-tablet-and-down _card --simple">._show-tablet-and-down</div>
+  <div class="_show-desktop _card --simple">._show-desktop</div>
+
+</div>
+~~~
+
+Show content: 
+._show-mobile
+._show-tablet
+._show-tablet-and-down
+._show-tablet-and-up
+._show-desktop
+._show-desktop-and-down
+._show-desktop-and-up
+._show-large
+._show-magic-down
+._show-magic-up
+
+~~~
+
+
+
+#### Mixin Helpers
+
+The basic mixins that allow for responsive conditions.
+
+~~~
+  @include screen-xs-only {
+    // affect xs screens
+  }
+  // @include screen-xs does the same as above
+
+  @include screen-magic-down {
+    // affect screens under magic breakpoint
+  }
+  @include screen-magic-up {
+    // affect screens above magic breakpoint
+  }
+  @include screen-sm {
+    // affect screens at sm and bigger 
+  }
+    @include screen-sm-down {
+      // affect screens sm and smaller
+    }
+    @include screen-sm-only {
+      // only affect screens sm
+    }
+  @include screen-md {
+    // affect screens at md and bigger 
+  }
+    @include screen-md-down {
+      // affect screens md and smaller
+    }
+    @include screen-md-only {
+      // only affect screens md
+    }
+  @include screen-lg {
+    // affect screens at lg 
+  }
+
+
+~~~
+
+
+### Responsive Grid
 
 These are just some examples of grid layouts. Please refer to `_head-griddick` for the rest, and feel free to add any missing layouts.
 
