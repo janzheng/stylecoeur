@@ -91,8 +91,6 @@ __[Web Gradients](https://webgradients.com/)__
 Make gradients easier
 </div>
 
-
-
 <div class="_card" markdown="1">
 __[Froala Design Blocks](https://www.froala.com/design-blocks/)__
 
@@ -110,7 +108,6 @@ __[UnDraw](https://undraw.co/)__
 
 Illustrations &amp; Icons
 </div>
-
 
 <div class="_card" markdown="1">
 __[Instagram CSS](https://picturepan2.github.io/instagram.css/)__
@@ -189,6 +186,16 @@ Custom image placeholder
 <div class="_grid-three _margin-bottom" >
 
 
+
+
+<div class="_card" markdown="1">
+__[Micron JS](https://webkul.github.io/micron/)__
+
+Micro-interaction library
+</div>
+
+
+
 <div class="_card " markdown="1">
 __[30Secs of Code](https://github.com/Chalarangelo/30-seconds-of-code)__
 
@@ -200,8 +207,6 @@ __[Hey Meta](http://www.heymeta.com/)__
 
 Helps w/ Meta headers
 </div>
-
-
 
 
 <div class="_card " markdown="1">

@@ -18,7 +18,7 @@ page '/*.txt', layout: false
 
 
 
-
+set :build_dir, 'mm_build'
 set :partials_dir, 'partials'
 set :fonts_dir, 'fonts'
 

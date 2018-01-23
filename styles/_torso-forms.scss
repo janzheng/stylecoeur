@@ -20,6 +20,7 @@ $form-border-width: $border-base !default;
 $form-border: $form-border-width solid $color-input-border !default;
 
 $height-input: $size-p4 !default;
+$height-input--short: $size-2 !default;
 
 
 $color-input-checked: $color-blue !default;
@@ -228,7 +229,7 @@ input, .input {
   }
 
   &.--short {
-    height: $size-base/2;
+    height: $height-input--short;
   }
   
   &.--width-full {
