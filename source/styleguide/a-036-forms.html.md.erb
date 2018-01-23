@@ -382,18 +382,36 @@ Basic input form
 </div>
 
 ~~~html
+
 <div class="_form-control --optional">
-  <label class="_form-label">Text Input <span class="_font-small">- optional</span></label>
-  <input id="year" class="_form-input" type="text" name="year" placeholder='Some text' />
+  <label for="textInput" class="_form-label">Text Input <span class="_font-small">- optional</span></label>
+  <input id="textInput" class="_form-input" type="text" name="textInput" placeholder='Some text' />
 </div>
 
 <div class="_form-control">
-  <label class="_form-label">Text Input <span class="_font-small">- disabled</span></label>
-  <input id="year" class="_form-input" type="text" name="year" placeholder='Can’t touch this' disabled />
+  <label for="textSearch" class="_form-label">Icon Input</label>
+  <label for="textSearch" class="_form-label-icon"><i class="fa fa-search"></i></label>
+  <input id="textSearch" class="_form-input --width-medium" type="text" name="textSearch" placeholder='Search term here' />
 </div>
 
 <div class="_form-control">
-  <label class="_form-label">Email Address <span class="_font-small">--width-full</span></label>
+  <label for="url" class="_form-label">URL</label>
+  <input id="url" class="_form-input " type="url" name="url" placeholder='https://google.com' />
+</div>
+
+<div class="_form-control --optional">
+  <label for="textInput" class="_form-label">Input with Button</label>
+  <input id="textInput" class="_form-input --button" type="text" name="textInput" placeholder='Email Address' />
+  <button class="_button _button-input _margin-none">Sign Up</button>
+</div>
+
+<div class="_form-control">
+  <label for="textInputDisabled" class="_form-label">Text Input <span class="_font-small">- disabled</span></label>
+  <input id="textInputDisabled" class="_form-input " type="text" name="textInputDisabled" placeholder='Can’t touch this' disabled />
+</div>
+
+<div class="_form-control">
+  <label for="email" class="_form-label">Email Address <span class="_font-small">--width-full</span></label>
   <input id="email" class="_form-input --width-full" type="email" name="email" placeholder="Email Address" required/>
   <label class="_form-note">Extra note here </label>
 </div>
@@ -412,6 +430,16 @@ Basic input form
   <label class="_form-label">File Upload Button</label>
   <label for="fileInput" class="_button --outline">Upload File</label>
   <input id="fileInput" class="_form-input" type="file" name="fileInput"/>
+</div>
+
+<div class="_form-control">
+  <label for="borderTextInput" class="_form-label">Text Input w/ border</label>
+  <input id="borderTextInput" class="_form-input --border" type="text" name="borderTextInput" placeholder='Some text' />
+</div>
+
+<div class="_form-control">
+  <label for="floatingInput" class="_form-label --float">Float Label</label>
+  <input id="floatingInput" class="_form-input --border" type="text" name="floatingInput" placeholder='Some text' />
 </div>
 ~~~
 

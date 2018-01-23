@@ -17,31 +17,33 @@
 // heart settings
 
 
-
-$size: 16px !default; // 16px; // based on 4*4
-$sizeline: $size * 1.5 !default; // baseline; base lineheight; line-heights follow 1.5 rule
+$size-diff: 1px;                    // default: 0; in case we’re not using base16, used for some edge cases / alignment
+$size: 16px - $size-diff !default;  // 16px default; // based on 4*4
+$sizeline: $size * 1.5 !default;    // baseline; base lineheight; line-heights follow 1.5 rule
+$baseline: $sizeline;
 
 // attempt at using "standardized" sizes. success may vary. (fonts are different sized, etc.)
 
 // New: based on multiples of 4
-$size-m4:       6px     !default;
-$size-m3:       8px     !default;
-$size-m2:       10px    !default;
-$size-m1:       12px    !default; // Minus Sizes [m]
-$size-smaller:  14px    !default; // dumb but super useful
-$size-base:     $size   !default; 
-$size-larger:   20px    !default; // hard choice; 20 div by 2,4,5 and halfway; 18 div by 3, 6, 9 
-$size-p1:       24px    !default; // Plus Sizes [p]
-$size-p2:       28px    !default;
-$size-p3:       40px    !default;
-$size-p4:       48px    !default;
-$size-p5:       56px    !default;
-$size-p6:       64px    !default;
-$size-p7:       80px    !default;
-$size-p8:       96px    !default;
-$size-p9:       112px   !default;
-$size-p10:      128px   !default;
-$size-p11:      144px   !default;
+// all sizes must be set RELATIVE to $size, in case it's not 16pxs!
+$size-m4:       $size * 6/16     !default; // 6px
+$size-m3:       $size * 8/16     !default; // 8px
+$size-m2:       $size * 10/16    !default; // 10px
+$size-m1:       $size * 12/16    !default; // 12px;  Minus Sizes [m]
+$size-smaller:  $size * 14/16    !default; // 14px; dumb but super useful
+$size-base:     $size            !default; // default is 16px
+$size-larger:   $size * 20/16    !default; // 20px; hard choice; 20 div by 2,4,5 and halfway; 18 div by 3, 6, 9 
+$size-p1:       $size * 24/16    !default; // 24px Plus Sizes [p]
+$size-p2:       $size * 28/16    !default; // 28
+$size-p3:       $size * 40/16    !default; // 40
+$size-p4:       $size * 48/16    !default; // 48
+$size-p5:       $size * 56/16    !default; // 56
+$size-p6:       $size * 64/16    !default; // 64
+$size-p7:       $size * 80/16    !default; // 80
+$size-p8:       $size * 96/16    !default; // 96
+$size-p9:       $size * 112/16   !default; // 112
+$size-p10:      $size * 128/16   !default; // 128
+$size-p11:      $size * 144/16   !default; // 144
 
 $size-half:     $size/2 !default;
 $size-2:        $size*2 !default;
