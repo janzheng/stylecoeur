@@ -253,6 +253,26 @@ input, .input {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+
+    // short button inputs
+    &.--short {
+      & + button,
+      & + ._button {
+        height: $height-input--short;
+        padding-top: $size-m3 - $button-border-width/4;
+        padding-bottom: $size-m3 - $button-border-width/4;
+        // padding: 0;
+      }
+    }
+    // --width-full button inputs need to float at the end
+    &.--width-full {
+      & + button,
+      & + ._button {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
   }
   &.--border {
     border: $form-border !important;
