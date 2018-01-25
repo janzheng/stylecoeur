@@ -47,7 +47,8 @@ $button-color-main:                 $color-white        !default;
 $button-color-bg:                   $color-copy         !default;
 $button-color-main-hover:           $button-color-main  !default;
 $button-color-bg-hover:             $color-gray         !default;
-
+$button-color-disabled:             $color-gray-light   !default;
+$button-color-disabled-text:        $color-white        !default;
 
 // pill
 
@@ -115,10 +116,14 @@ $button-line-height: 13px                               !default; // makes the b
   }
 
   &-disabled,
-  &.--disabled {
+  &.--disabled,
+  &[disabled] {
     &, &:hover {
-      background-color: $color-gray-lightest;
-      color: $color-white;
+      // disabled states overrides everything
+      // no hover states
+      background-color: $button-color-disabled !important;
+      color: $button-color-disabled-text !important;
+      border-color: $button-color-disabled !important;
     }
   }
 
@@ -133,8 +138,8 @@ $button-line-height: 13px                               !default; // makes the b
 
   &-short,
   &.--short {
-    padding-top: $size-m3 - 0.5;
-    padding-bottom: $size-m3 - 0.5;
+    padding-top: $size-m3 - $button-border-width/4;
+    padding-bottom: $size-m3 - $button-border-width/4;
     height: inherit;
   }
 
@@ -265,6 +270,7 @@ button.--text,
 ._button.--text,
 ._button.--transparent {
   background-color: transparent !important;
+  color: $button-outline-color-main;
   // border: none !important; // border is part of a button's padding
   border-color: transparent !important;
   padding-left: $size/2;

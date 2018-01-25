@@ -27,7 +27,7 @@ $color-input-checked: $color-blue !default;
 $color-focus: $color-yellow !default;
 $color-selected: $color-blue !default;
 $color-loading: $color-yellow !default;
-
+$color-error: $color-red !default;
 
 
 
@@ -153,12 +153,17 @@ $font-size-base-form: $font-size-base; // $size-base ;
 
 
 
-// error handling; jquery validation
-._form-control .error,
-input .error,
-textarea + .error,
+// error handling; 
+._form-control.--error {
+  // the entire form control error
+  color: $color-error !important; // override
+}
+// error label
+._form-control ._error,
+input ._error,
+textarea + ._error,
 ._form-error {
-  color: $color-danger;
+  color: $color-error;
   @extend ._font-small;
 }
 
