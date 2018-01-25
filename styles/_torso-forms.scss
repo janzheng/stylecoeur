@@ -115,6 +115,7 @@ $font-size-base-form: $font-size-base; // $size-base ;
     top: -$size-m1;
     padding-left: $size-base/4;
     padding-right: $size-base/4;
+    padding-bottom: 0;
     margin-left: $size-base;
     background: $color-input-bg;
     font-size: $form-size-float;
@@ -451,6 +452,7 @@ textarea, .textarea {
   // @extend ._margin-bottom-2;
   // margin-top: $size-base/2;
 }
+  ._form-group-title,
   ._form-radiogroup-title {
     @extend %font-bold;
   }
