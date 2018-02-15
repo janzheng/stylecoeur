@@ -5,7 +5,7 @@ $border-color-bg: $color-ui-light   !default;
 
 $border-style: solid                !default;
 
-// border sizes
+// border sizes, relative to base
 $border-line: 1px                   !default;
 $border-thin: 2px                   !default;
 $border-medium: 3px                 !default;    
@@ -29,8 +29,10 @@ $border-base: $border-thin          !default;
 
 ._border-none { 
   border-width: 0;
+  &-i {border-width: 0 !important;}
   @include genGridAttr(('xs','sm','sm-down','md','lg')) {
     border-width: 0;
+    &-i {border-width: 0 !important;}
   }
 }
 
@@ -39,6 +41,7 @@ $border-base: $border-thin          !default;
 
 hr {
   border-top: $border-base $border-color $border-style;
+  height: 0;
 }
 
 hr.--thin, 

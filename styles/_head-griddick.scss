@@ -210,40 +210,40 @@ $grid-gap: $size-base;
 // - old syntax: _grid-two
 // - these names are not generated so they can be @extended
 
-%grid-cols-1, ._grid-cols-1, ._grid-one {
+%grid-cols-1, ._grid-cols-1, ._grid-1, ._grid-one {
   @include gridCols(1);
 }
-%grid-cols-2, ._grid-cols-2, ._grid-two {
+%grid-cols-2, ._grid-cols-2, ._grid-2, ._grid-two {
   @include gridCols(2);
 }
-%grid-cols-3, ._grid-cols-3, ._grid-three {
+%grid-cols-3, ._grid-cols-3, ._grid-3, ._grid-three {
   @include gridCols(3);
 }
-%grid-cols-4, ._grid-cols-4, ._grid-four {
+%grid-cols-4, ._grid-cols-4, ._grid-4, ._grid-four {
   @include gridCols(4);
 }
-%grid-cols-5, ._grid-cols-5, ._grid-five {
+%grid-cols-5, ._grid-cols-5, ._grid-5, ._grid-five {
   @include gridCols(5);
 }
-%grid-cols-6, ._grid-cols-6, ._grid-six {
+%grid-cols-6, ._grid-cols-6, ._grid-6, ._grid-six {
   @include gridCols(6);
 }
-%grid-cols-7, ._grid-cols-7, ._grid-seven {
+%grid-cols-7, ._grid-cols-7, ._grid-7, ._grid-seven {
   @include gridCols(7);
 }
-%grid-cols-8, ._grid-cols-8, ._grid-eight {
+%grid-cols-8, ._grid-cols-8, ._grid-8, ._grid-eight {
   @include gridCols(8);
 }
-%grid-cols-9, ._grid-cols-9, ._grid-nine {
+%grid-cols-9, ._grid-cols-9, ._grid-9, ._grid-nine {
   @include gridCols(9);
 }
-%grid-cols-10, ._grid-cols-10, ._grid-ten {
+%grid-cols-10, ._grid-cols-10, ._grid-10, ._grid-ten {
   @include gridCols(10);
 }
-%grid-cols-11, ._grid-cols-11, ._grid-eleven {
+%grid-cols-11, ._grid-cols-11, ._grid-11, ._grid-eleven {
   @include gridCols(11);
 }
-%grid-cols-12, ._grid-cols-12, ._grid-twelve {
+%grid-cols-12, ._grid-cols-12, ._grid-12, ._grid-twelve {
   @include gridCols(12);
 }
 

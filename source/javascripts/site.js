@@ -3,7 +3,7 @@
 
 
 function onLoadPage() {
-  $('body').addClass('--loaded');
+  $('._loader').addClass('--loaded');
 }
 
 $(document).ready(function() {

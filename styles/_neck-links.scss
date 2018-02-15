@@ -46,7 +46,12 @@ a {
   }
 
   &.--border-none {
-    border: 0;
+    border-color: transparent;
+    &:hover {
+      color: $link-color-hover;
+      border-color: $link-color-hover-border;
+      @extend %ease;
+    }
   }
 
 }

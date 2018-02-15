@@ -102,6 +102,19 @@ section, ._section,
   } 
 }
 
+%width-content-magic,
+._width-content-magic {
+  max-width: $width-magic;
+  padding-right: $size-base;
+  padding-left: $size-base;
+}
+
+%width-content-min,
+._width-content-min {
+  max-width: $width-site-min;
+  padding-right: $size-base;
+  padding-left: $size-base;
+}
 
 
 

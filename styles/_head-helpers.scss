@@ -83,15 +83,22 @@ Tip: this outputs
   cursor: pointer;
 }
 
+._default {
+  cursor: default;
+  &.--i, &-i {
+    cursor: default !important;
+  }
+}
+
 ._disabled {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-// prevents double click highlighting
+// prevents double click highlighting / selecting
 // use on buttons and text CTAs
-._select-none,
+._select-none, %select-none,
 %user-select-none {
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */

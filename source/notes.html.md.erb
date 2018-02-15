@@ -13,13 +13,105 @@ A random ramblin' wreck of a good time.
 
 These notes won't make sense to anyone but me, and that's ok.
 
+Iconography: add a note about including SVG
+- height, width, and preserve aspect ratio
+- using a templater / partial to add these
+
+
 ---
 
+https://medium.freecodecamp.org/design-language-system-why-your-team-needs-one-and-how-to-built-it-d996ba8c3889
+
+
+- http://bradfrost.com/blog/post/your-sketch-library-is-not-a-design-system/
+
+- IA bg: https://www.toptal.com/designers/ia/guide-to-information-architecture
+
+generalized cascading animations
+- can use sister selectors to generalize lag for animations
+- http://www.dropinks.com/notification-list-using-css3/
+
+
+Clarity is VERY good — use theirs as a base: https://vmware.github.io/clarity/documentation/v0.11
+- cool tracking list feature
+- patterns vs. components — use industry lingo!!
+- good demo, and menu system under each component
+- good way of navigating within components
+- like the sidebar design better than mine
+
+- save file to disk
+  - generate files to save
+  - Blob API
+  - https://msdn.microsoft.com/en-us/library/hh779016(v=vs.85).aspx?ranMID=24542&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-xrF7m4Sqx._z09YGiAcLWA&tduid=(f21a30053d78af6de7bef75d2d60807c)(256380)(2459594)(TnL5HPStwNw-xrF7m4Sqx._z09YGiAcLWA)()
+
+
+- start making dynamic generator components like colors
+  - https://dotcolors.co/?colors=%23abcde1%2C%23d9dd92%2C%23eabe7c%2C%23e06e43%2C%23311e10%2C%23140603
+
+- add Style Guide Guide
+  - Pros
+  - Cons
+    - Keeping logs, notes and changelog detailed and up to date is very hard, something I struggle with; documentation debt
+    - Like doing the dishes, it has to be treated like a chore
+
+- boilerform: https://boilerform.design/
+  - take all the examples and missing form things
+
+- add a braille-pattern loader (like in console)
+
+- https://blog.prototypr.io/we-need-to-talk-about-patterns-8dcc73aff318
+
+- connect to airtable style guide 
+  - define the style guide API in the style guide
+    - meta style guide!
+  - API (or teeny.io cms idea)
+
+check out: https://www.imgix.com/
+
+SEO and meta guide:
+- https://www.seooptimizationguide.com/technical-seo/
+  - prods: sitemap xml editor, meta tag editor
+  - http://www.heymeta.com/
+      - but also show facebook / twitter variations
+          - https://developers.facebook.com/tools/debug/sharing/?q=http%3A%2F%2Fwww.heymeta.com%2F
+      - can get a generated page up w/ custom meta tags
+          - dynamically check generated meta tags on the fly using fb’s tool
+      - https://developers.facebook.com/tools/debug/sharing/?q=http%3A%2F%2Fwww.heymeta.com%2F
+      - Twitter checker https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards
+      - iFrames as checkers
+      - 
+
+Notes on SSL
+  - SSL as trust
+  - cloudflare SSL
+  - open SSL
+  - subdomain * SSL
+  - deployment methods
+  - surge.sh SSL
+
+add pure css loader placeholder for a div block
+_loader would be useful
+
+make to look more like relay?
+https://facebook.github.io/relay/docs/en/thinking-in-graphql.html
+
+
+https://medium.com/@kamushken/developing-a-design-system-how-to-avoid-unexpected-routine-a7fbe2766391
+
+- relative names
+
+[project] / system / component -- state
+- coeur.style.input.active
+- or coeur-style-input--active
+- or shorthand: input --active
 
 ### Next Up
 
-- PUG.js-like module generator for wireframes
-  - https://arstechnica.com/gadgets/2018/01/with-ink-to-code-microsoft-is-turning-back-of-napkin-sketches-into-software/
+- Jade/PUG.js-like module generator for wireframes
+  - https://arstechnica.com/gadgets/2018/01/
+  - can use Vue to stitch them together interactively
+  = design system wireframe tool / design frame tool
+  - with-ink-to-code-microsoft-is-turning-back-of-napkin-sketches-into-software/
   - goal is to quickly convert specs to usable 'wireframe' html pages built by stylecoeur blocks
 
 

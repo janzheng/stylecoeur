@@ -20,7 +20,7 @@ Sometimes sites will flash an unstyled ugly mess while the css and js loading (f
 ~~~html
 <script>
   function onLoadPage() {
-    $('body').addClass('--loaded');
+    $('._loader').addClass('--loaded');
   }
 
   $(document).ready(function() {
@@ -33,10 +33,7 @@ Sometimes sites will flash an unstyled ugly mess while the css and js loading (f
 The CSS is straight-forward. It looks decent with easing attached.
 
 ~~~css
-body {
-  width: 100%;
-  position: relative;
-
+._loader {
   // hide ugly loader
   @extend %ease-slow;
   opacity: 0;
