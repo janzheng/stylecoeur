@@ -2,6 +2,9 @@
 <% $section_name = '' %>
 <% source = current_page.data.source || "" %>
 
+<% sidebarTitle = current_page.data.sidebarTitle || "Style Guide." %>
+<% sidebarCaption = current_page.data.sidebarCaption || "(cheat sheet)" %>
+
 <!-- for open/close  -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -19,8 +22,8 @@
     <div class="_padding-top">
       <a class="_font-bold  --submenu
                 <%= '--active --open' if current_page.data.title == 'styleguide' %>
-               " href="<%= source %>styleguide.html"><h4 class=_padding-bottom-none>Style Guide.</h4></a>
-      <div class="_font-small _font-italic">Prototype cheat sheet </div>
+               " href="<%= source %>styleguide.html"><h4 class=_padding-bottom-none><%= sidebarTitle %></h4></a>
+      <div class="_font-small _font-italic"><%= sidebarCaption %> </div>
 
       <% if current_page.data.title == 'styleguide' %>
         <div class="_sidebar-submenu _margin-top">

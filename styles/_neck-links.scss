@@ -47,6 +47,10 @@ a {
 
   &.--border-none {
     border-color: transparent;
+  }
+
+  &.--border-inverse {
+    border-color: transparent;
     &:hover {
       color: $link-color-hover;
       border-color: $link-color-hover-border;

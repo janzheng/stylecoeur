@@ -29,6 +29,25 @@ Tip: this outputs
 
 
 
+// Site loader
+// Fades page into view, hides FOUC
+// --loaded can be attached using js and timer
+// (used to be attached to body)
+._loader {
+  // hide ugly loader
+  @extend %ease-slow;
+  opacity: 0;
+  top: 10px;
+
+  &.--loaded {
+    @extend %ease-slow;
+    opacity: 1;
+    top: 0;
+  }
+}
+
+
+
 // 
 //    IMAGE HELPERS
 // 
@@ -85,7 +104,7 @@ Tip: this outputs
 
 ._default {
   cursor: default;
-  &.--i, &-i {
+  &.--i {
     cursor: default !important;
   }
 }
@@ -96,9 +115,9 @@ Tip: this outputs
   pointer-events: none;
 }
 
-// prevents double click highlighting / selecting
+// prevents double click highlighting
 // use on buttons and text CTAs
-._select-none, %select-none,
+._select-none,
 %user-select-none {
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */
