@@ -6,8 +6,7 @@
   "author": "Jan",
   "private": true,
   "scripts": {
-    "commit":          "git add . -A ; git commit ",
-    "push":            "git push origin master",
+    "commit":          "git add . -A ; git commit ; git push origin master ",
 
     "coeur":           "cd source ; npm run server",
     "coeur_build":     "cd source ; npm run build",
