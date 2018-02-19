@@ -1,7 +1,7 @@
 ---
 title: Z-Index
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: zindex
 section: fundamental
 status: --draft

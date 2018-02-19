@@ -1,7 +1,7 @@
 ---
 title: Chat & Chatbot
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: chat
 section: components
 status: --draft

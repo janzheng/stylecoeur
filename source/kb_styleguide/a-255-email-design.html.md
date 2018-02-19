@@ -1,7 +1,7 @@
 ---
 title: Email Design
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: emaildesign
 section: components
 status: --draft

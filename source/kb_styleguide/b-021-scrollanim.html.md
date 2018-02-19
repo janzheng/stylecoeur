@@ -1,7 +1,7 @@
 ---
 title: Scroll Animations
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: scroll-animations
 section: scriptcoeur
 <!-- status: --draft -->

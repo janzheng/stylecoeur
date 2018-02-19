@@ -1,7 +1,7 @@
 ---
 title: Transitions
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: transitions
 section: scriptcoeur
 status: --draft

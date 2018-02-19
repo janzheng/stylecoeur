@@ -2,7 +2,7 @@
 title: Smooth Scroll
 name: smoothScroll
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 section: scriptcoeur
 <!-- status: --draft -->
 source: ../

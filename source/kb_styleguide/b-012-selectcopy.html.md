@@ -1,7 +1,7 @@
 ---
 title: Select & Copy
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: selectandcopy
 section: scriptcoeur
 <!-- status: --draft -->

@@ -1,7 +1,7 @@
 ---
 title: Sticky
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: sticky
 section: scriptcoeur
 <!-- status: --draft -->

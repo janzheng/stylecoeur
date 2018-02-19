@@ -1,7 +1,7 @@
 ---
 title: Vue
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: vue
 section: vue
 <!-- status: --draft -->

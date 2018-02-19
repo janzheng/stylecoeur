@@ -1,7 +1,7 @@
 ---
 title: Randomizer
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: randomizer
 section: scriptcoeur
 <!-- status: --draft -->

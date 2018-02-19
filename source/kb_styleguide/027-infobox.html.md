@@ -1,7 +1,7 @@
 ---
 title: Infobox
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: infobox
 section: simple
 source: ../

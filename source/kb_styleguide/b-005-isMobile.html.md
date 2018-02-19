@@ -1,7 +1,7 @@
 ---
 title: IsMobile
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: ismobile
 section: scriptcoeur
 <!-- status: --draft -->

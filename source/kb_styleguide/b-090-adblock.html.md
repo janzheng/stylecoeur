@@ -1,7 +1,7 @@
 ---
 title: Adblock Detection
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: adblock
 section: scriptcoeur
 <!-- status: --draft -->

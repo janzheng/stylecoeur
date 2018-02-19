@@ -1,7 +1,7 @@
 ---
 title: Gallery
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: gallery
 section: scriptcoeur
 <!-- status: --draft -->

@@ -1,7 +1,7 @@
 ---
 title: Navigation
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: navigation
 section: components
 <!-- status: --draft -->

@@ -1,7 +1,7 @@
 ---
 title: APIs
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: apis
 section: scriptcoeur
 <!-- status: --draft -->

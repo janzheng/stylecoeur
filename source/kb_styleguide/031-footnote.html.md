@@ -1,7 +1,7 @@
 ---
 title: Footnote
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: footnote
 section: simple
 <!-- status: --draft -->

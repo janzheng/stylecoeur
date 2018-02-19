@@ -1,7 +1,7 @@
 ---
 title: Dropdowns
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: dropdowns
 section: components
 <!-- status: --draft -->

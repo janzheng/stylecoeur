@@ -1,7 +1,7 @@
 ---
 title: Loader
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: loader
 section: scriptcoeur
 <!-- status: --draft -->

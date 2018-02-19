@@ -1,7 +1,7 @@
 ---
 title: Clearfix
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: clearfix
 section: fundamental
 source: ../

@@ -1,7 +1,7 @@
 ---
 title: Stylecoeur Dev
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: developingStylecoeur
 section: stylecoeur
 <!-- status: --draft -->

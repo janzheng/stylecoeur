@@ -1,7 +1,7 @@
 ---
 title: Lightbox
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: lightbox
 section: scriptcoeur
 <!-- status: --draft -->

@@ -1,7 +1,7 @@
 ---
 title: Button Groups
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: buttongroups
 section: simple
 source: ../

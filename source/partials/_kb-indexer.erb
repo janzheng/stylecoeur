@@ -26,47 +26,33 @@
       <a class="_font-bold  --submenu
                 <%= '--active' if current_page.data.home == true %>
                " 
-               href="<%= source %>design.html"
+               href="<%= source %><%= current_page.data.type %>.html"
                >
         <h4 class=_padding-bottom-none><%= sidebarTitle %></h4>
       </a>
       <div class="_font-bold"><%= sidebarCaption %></div>
-
-      <!-- if the title (e.g. 'notes' homepage), open the sidebar; useful for first page of the kb
-        -->
-      <% if defined?(current_page.data.submenu) && current_page.data.type == current_page.data.title  %>
-        <div class="_sidebar-submenu _margin-top">
-          <% current_page.data.submenu.each do |item| %>
-            <div><a href=#<%= item[1] %>><%= item[0] %></a></div>
-          <% end %>
-        </div>
-      <% end %>
 
     </div>
 
     <!-- crawl through all documents of the same type (e.g. 'design' or 'notes') -->
     <!-- <%= current_page.data.type %> -->
 
+    <% if current_page.data.home %>
+      <div>
+        <% if current_page.data.submenu %>
+          <div class="_padding-top">
+            <% current_page.data.submenu.each do |item| %>
+              <div><a href=<%= source %><%= current_page.path %>#<%= item[1] %>><%= item[0] %></a></div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
     <% sitemap.resources.select { |r| r.data.type == current_page.data.type }
       .sort_by{|r| r.url }
       .each do |resource| 
     %>
-
-      <% if !defined?(resource.data.section) %>
-        <div>
-          <% if defined?(resource.data.submenu) %>
-            <span class='<%= '--open' if defined?(current_page.data.submenu) && resource.data.submenu == current_page.data.submenu %>
-            '></span>
-          <% end %>
-          <% if resource.data.submenu %>
-            <div class="_padding-top">
-              <% resource.data.submenu.each do |item| %>
-                <div><a href=<%= source %><%= resource.path %>#<%= item[1] %>><%= item[0] %></a></div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
 
       <% if defined?(resource.data.section) %>
         <% if $section_name != resource.data.section 

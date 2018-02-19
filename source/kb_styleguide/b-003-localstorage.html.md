@@ -1,7 +1,7 @@
 ---
 title: Local Storage
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: localStorage
 section: scriptcoeur
 status: --draft

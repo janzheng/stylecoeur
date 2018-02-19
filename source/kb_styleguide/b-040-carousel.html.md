@@ -1,7 +1,7 @@
 ---
 title: Carousel
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: carousel
 section: scriptcoeur
 <!-- status: --draft -->

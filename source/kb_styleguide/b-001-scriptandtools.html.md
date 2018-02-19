@@ -1,7 +1,7 @@
 ---
 title: Scripts, Tools, Resources
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: scriptsandtools
 section: scriptcoeur
 <!-- status: --draft -->

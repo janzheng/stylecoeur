@@ -1,7 +1,7 @@
 ---
 title: Social Sharing
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: social_sharing
 section: external
 source: ../

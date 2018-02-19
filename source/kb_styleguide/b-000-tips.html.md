@@ -2,7 +2,7 @@
 ---
 title: Scripts & Tips
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: scriptsandtips
 section: scriptcoeur
 <!-- status: --draft -->

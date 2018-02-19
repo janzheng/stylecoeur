@@ -1,7 +1,7 @@
 ---
 title: Tables
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: tables
 section: components
 status: --draft

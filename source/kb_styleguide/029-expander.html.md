@@ -1,7 +1,7 @@
 ---
 title: Expander
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: expander
 section: simple
 source: ../

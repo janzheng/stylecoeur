@@ -1,7 +1,7 @@
 ---
 title: Tabs
 type: styleguide
-layout: layout-styleguide
+layout: layout-knowbase
 name: tabs
 section: simple
 source: ../
