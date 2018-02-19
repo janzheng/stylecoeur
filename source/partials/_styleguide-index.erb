@@ -2,7 +2,7 @@
 <% $section_name = '' %>
 <% source = current_page.data.source || "" %>
 
-<% sidebarTitle = current_page.data.sidebarTitle || "Style Guide." %>
+<% sidebarTitle = current_page.data.sidebarTitle || "Style Guide" %>
 <% sidebarCaption = current_page.data.sidebarCaption || "(cheat sheet)" %>
 
 <!-- for open/close  -->
@@ -20,9 +20,14 @@
 
     <!-- header -->
     <div class="_padding-top">
+
+      <div class="_padding-bottom-half"><a href="/"><span class="">&larr; back</span></a></div>
+
       <a class="_font-bold  --submenu
                 <%= '--active --open' if current_page.data.title == 'styleguide' %>
-               " href="<%= source %>styleguide.html"><h4 class=_padding-bottom-none><%= sidebarTitle %></h4></a>
+               " href="<%= source %>styleguide.html">
+        <h4 class=_padding-bottom-none><%= sidebarTitle %></h4>
+      </a>
       <div class="_font-small _font-italic"><%= sidebarCaption %> </div>
 
       <% if current_page.data.title == 'styleguide' %>
