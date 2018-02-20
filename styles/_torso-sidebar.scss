@@ -17,6 +17,8 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
   padding-left: $size-base;
   height: 100vh;
 
+  white-space: nowrap;
+
   a {
     // font-weight: 500;
     font-size: $sidebar-size;
@@ -75,11 +77,11 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
     top: -10px; position: relative;
     margin-left: $size-base/3;
     padding-left: $size-base;
-    border-left: $sidebar-submenu-border;
+    // border-left: $sidebar-submenu-border;
     @extend %ease;
     
     a {
-      font-size: $font-small;
+      // font-size: $font-small;
       display: block;
     }
   }
@@ -90,11 +92,14 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
   }
 
   @include screen-xs { 
-    margin-top: $size-base;
+    // margin-top: $size-base;
+    // margin-left: 5%;
+    // width: 90%;
     height: 25vh !important;
     overflow: scroll;
     border: $sidebar-border;
     padding: $size-base;
+    background-color: $color-silver-light;
   }
 
   @include screen-sm { 

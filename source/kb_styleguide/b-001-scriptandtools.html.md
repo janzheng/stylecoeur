@@ -1,5 +1,5 @@
 ---
-title: Scripts, Tools, Resources
+title: Scripts & Resources
 type: styleguide
 layout: layout-knowbase
 name: scriptsandtools
