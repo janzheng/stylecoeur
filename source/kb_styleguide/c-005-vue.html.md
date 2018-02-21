@@ -3,7 +3,7 @@ title: Vue
 type: styleguide
 layout: layout-knowbase
 name: vue
-section: vue
+section: prototyping
 <!-- status: --draft -->
 source: ../
 ---

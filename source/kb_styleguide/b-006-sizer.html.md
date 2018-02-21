@@ -1,5 +1,5 @@
 ---
-title: Sizer
+title: vHeight Sizer
 type: styleguide
 layout: layout-knowbase
 name: sizer
