@@ -23,3 +23,7 @@ gem "builder", "~> 3.0"
 
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
+
+# adds password protection
+# https://github.com/ahoward/middleman-gibberish
+gem "middleman-gibberish"

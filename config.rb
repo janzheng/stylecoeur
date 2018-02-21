@@ -25,6 +25,25 @@ set :fonts_dir, 'fonts'
 
 
 
+# activate the extension for pw protect
+activate :gibberish do |gibberish|
+# set the default password
+  gibberish.password = 'gibberish'
+
+# encrypt a page with the default password
+  gibberish.encrypt 'foo.html'
+
+# encrypt a page with a different password
+  gibberish.encrypt 'bar.html', 'p@55w0rd'
+
+# encrypt at set of pages with the default password
+  gibberish.encrypt 'seKrit/**/**'
+
+# encrypt at set of pages with a different password
+  gibberish.encrypt 'kayne/**/**', 'i can hold my liquor'
+end
+
+
 # activate :asset_hash # github cache buster; sometimes messes up deployment
 
 
