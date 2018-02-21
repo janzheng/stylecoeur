@@ -23,8 +23,6 @@ set :partials_dir, 'partials'
 set :fonts_dir, 'fonts'
 
 
-
-
 # activate the extension for pw protect
 activate :gibberish do |gibberish|
 # set the default password

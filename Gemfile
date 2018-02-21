@@ -29,7 +29,6 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 # gem "middleman-gibberish"
 gem 'middleman-gibberish', :git => 'https://github.com/ahoward/middleman-gibberish.git'
 
-
 # https://github.com/janson/presentation-middleman
 
 # https://github.com/dsedivec/middleman-related-articles

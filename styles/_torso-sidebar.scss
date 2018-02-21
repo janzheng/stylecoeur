@@ -129,3 +129,23 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
 }
 
 
+// this is attached to the container wrapping the sidebar
+
+.--sidebar-closed {
+  // reset the css grid
+  & > div { 
+    grid-template-columns: 1fr !important;
+    grid-gap: 0;
+  }
+
+  ._sidebar-closed {
+    padding: $size-base;
+    display: block !important;
+    color: $color-main;
+  }
+  ._sidebar {
+    display: none !important;
+    height: 0 !important;
+  }
+}
+

@@ -2,12 +2,17 @@
 <% $section_name = '' %>
 <% source = current_page.data.source || "" %>
 
-<% sidebarTitle = current_page.data.sidebarTitle || "Stylecoeur" %>
+<% sidebarTitle = current_page.data.sidebarTitle || "Peer Tutor" %>
 <% sidebarCaption = current_page.data.sidebarCaption || "" %>
 
 <!-- for open/close  -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+
+<!-- closed sidebar menu -->
+<div class="_sidebar-closed _hidden">
+  <a href="#" class="_sidebar-open --border-none" onclick="openSidebar()">&#9776; sidebar</a>
+</div>
 
 <span class="_sidebar-trigger"></span>
 <div class="_sidebar --divider" data-currentPage="<%= current_page.data.name %>">
@@ -16,12 +21,14 @@
     <% source = current_page.data.rel %>
   <% end %>
 
-  <div>
-
+  <!-- main sidebar content -->
+  <div class="_sidebar-content">
     <!-- header -->
-    <div class="_sidebar--submenu">
-
-      <div class="_padding-top _padding-bottom-half"><a href="/"><span class="">&larr; back</span></a></div>
+    <div class="_sidebar-submenu-main">
+      <div class="_padding-top _padding-bottom-half _grid-2">
+        <a href="/"><span class="">&larr; back</span></a>
+        <a href="#" class="_right _margin-right-i" onclick="closeSidebar()">hide</a>
+      </div>
 
       <a class="_font-bold  --submenu
                 <%= '--active' if current_page.data.home == true %>
@@ -31,12 +38,11 @@
         <h4 class=_padding-bottom-none><%= sidebarTitle %></h4>
       </a>
       <div class="_font-bold"><%= sidebarCaption %></div>
-
     </div>
 
     <!-- crawl through all documents of the same type (e.g. 'design' or 'notes') -->
     <!-- <%= current_page.data.type %> -->
-
+    
     <% if current_page.data.home %>
       <div>
         <% if current_page.data.submenu %>

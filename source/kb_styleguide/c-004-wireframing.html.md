@@ -22,6 +22,17 @@ The 'wireframe' idea is inspired by [Balsamiq](https://balsamiq.com/).
 - Scribble and Blokk fonts help with approximating copy
 - Use real text: don’t use lorem ipsum
 
+### HAML Templates
+
+Middleman supports HAML, which is nice for simple layouts (but that's about it). Read this: [HAML sucks for content](http://chriseppstein.github.io/blog/2010/02/08/haml-sucks-for-content/) for tips on using HAML properly.
+
+~~~
+%wireframe._padding-left
+  %h2 Here is an example of HAML
+  %p Isn't it weird?
+~~~
+
+
 ### Wireframe Components
 
 Wireframe components should be simple, generalized, and very easily placeable onto a page, with either Jade/Pug or HTML.

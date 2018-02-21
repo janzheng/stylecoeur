@@ -14,24 +14,30 @@
     Redacted font: (scribbles)
 */
 
-// blokk
-%font-blokk, ._font-blokk {
-  font-family: 'BLOKK', system-ui, sans-serif;
-}
-%font-blokk, ._font-blokk {
-  font-family: 'BLOKK2', system-ui, sans-serif;
-}
-%font-blokk, ._font-blokk {
-  font-family: 'BLOKK3', system-ui, sans-serif;
+// redacted
+%font-redacted, ._font-redacted,
+%font-wf, ._font-wf, {
+  font-family: 'redacted script', system-ui, sans-serif;
 }
 
-// redacted
-%font-wf-black, ._font-wf-black {
+%font-redacted-block, ._font-redacted-block, 
+%font-wf2, ._font-wf2 {
   font-family: 'redacted', system-ui, sans-serif;
 
 }
-%font-redacted, ._font-redacted {
-  font-family: 'redacted script', system-ui, sans-serif;
+
+// blokk
+%font-blokk, ._font-blokk,
+%font-wf3, ._font-wf3 {
+  font-family: 'BLOKK', system-ui, sans-serif;
+}
+%font-blokk2, ._font-blokk2,
+%font-wf4, ._font-wf4 {
+  font-family: 'BLOKK2', system-ui, sans-serif;
+}
+%font-blokk3, ._font-blokk3,
+%font-wf5, ._font-wf5 {
+  font-family: 'BLOKK3', system-ui, sans-serif;
 }
 
 

@@ -31,15 +31,17 @@ $color-success-bg: $color-success !default;
   color: $message-color-copy;
   background-color: $message-color-bg;
 
-  &:hover, &.--hover {
-    background: $message-color-hover-bg;
-    color: $message-color-hover;
-    border-color: $message-color-hover;
-    @extend %ease-fast;
-    ._anim-right {
+  &:not(.--hover-none) {
+    &:hover, &.--hover {
+      background: $message-color-hover-bg;
       color: $message-color-hover;
-      left: $size-base/2;
+      border-color: $message-color-hover;
       @extend %ease-fast;
+      ._anim-right {
+        color: $message-color-hover;
+        left: $size-base/2;
+        @extend %ease-fast;
+      }
     }
   }
 
