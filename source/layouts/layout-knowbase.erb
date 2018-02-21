@@ -40,20 +40,28 @@
 
 <script src= <%= source + "javascripts/scriptcoeur/sticky.js" %> type="text/javascript"></script>
 
+
+
+<script src= <%= source + "javascripts/scriptcoeur/plugins/js.cookie.js" %> type="text/javascript"></script>
 <script>
 
 // open and close sidebar
 // ACCESSED BY INDEXER!
-var isSidebarOpen = true,
+
+var isSidebarOpen = Cookies.getJSON('isSidebarOpen') !== undefined ? Cookies.getJSON('isSidebarOpen') : true,
     closedClass = '--sidebar-closed'
+
+
 function closeSidebar() {
   console.log('close sidebar');
   isSidebarOpen = false;
+  Cookies.set('isSidebarOpen', isSidebarOpen);
   $('._styleguide-container').addClass(closedClass)
 }
 function openSidebar() {
-  console.log('close sidebar');
+  console.log('open sidebar');
   isSidebarOpen = true;
+  Cookies.set('isSidebarOpen', isSidebarOpen);
   $('._styleguide-container').removeClass(closedClass)
 }
 function toggleSidebar() {
@@ -66,6 +74,12 @@ function toggleSidebar() {
 $(document).keyup(function(e) {
   if (e.keyCode === 27) toggleSidebar();   // esc
 });
+if(!isSidebarOpen) { // close on page load
+  closeSidebar()
+  console.log('trololol')
+}
+
+
 
 
 $(document).ready(function() {
