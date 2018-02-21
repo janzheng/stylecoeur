@@ -15,6 +15,14 @@
     "coeur_publish":   "cd source ; npm run publish",
     "coeur_github":    "cd source ; npm run github",
 
+    "server":           "cd source ; npm run server",
+    "build":            "cd source ; npm run build",
+    "deploy":           "cd source ; npm run deploy",
+    "stage":            "cd source ; npm run stage",
+    "publish":          "cd source ; npm run publish",
+    "github":           "cd source ; npm run github",
+
+
     "vue":            "cd vue/dance ; npm run dev",
     "vue_build":      "cd vue/dance ; npm run build",
     "vue_local":      "rm atlx/atlx2018/source/static/js/* ; rm vue/dance/local/static/js/* ; cd vue/dance ; npm run local ; cd ../.. ; cp -a vue/dance/local/static/js/. atlx/atlx2018/source/static/js",
