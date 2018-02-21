@@ -10,9 +10,9 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem "middleman", "~> 4.1"
+gem "middleman"
 gem "middleman-blog"
-gem 'middleman-search' # https://github.com/manastech/middleman-search
+# gem 'middleman-search' # https://github.com/manastech/middleman-search
 
 gem "middleman-syntax"
 
@@ -26,4 +26,12 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 # adds password protection
 # https://github.com/ahoward/middleman-gibberish
-gem "middleman-gibberish"
+# gem "middleman-gibberish"
+gem 'middleman-gibberish', :git => 'https://github.com/ahoward/middleman-gibberish.git'
+
+
+# https://github.com/janson/presentation-middleman
+
+# https://github.com/dsedivec/middleman-related-articles
+
+# https://github.com/statonjr/middleman-sitemap

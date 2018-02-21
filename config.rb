@@ -18,7 +18,7 @@ page '/*.txt', layout: false
 
 
 
-set :build_dir, 'mm_build'
+set :build_dir, 'build'
 set :partials_dir, 'partials'
 set :fonts_dir, 'fonts'
 
@@ -34,13 +34,13 @@ activate :gibberish do |gibberish|
   gibberish.encrypt 'foo.html'
 
 # encrypt a page with a different password
-  gibberish.encrypt 'bar.html', 'p@55w0rd'
+  # gibberish.encrypt 'bar.html', 'p@55w0rd'
 
 # encrypt at set of pages with the default password
-  gibberish.encrypt 'seKrit/**/**'
+  # gibberish.encrypt 'seKrit/**/**'
 
 # encrypt at set of pages with a different password
-  gibberish.encrypt 'kayne/**/**', 'i can hold my liquor'
+  # gibberish.encrypt 'kayne/**/**', 'i can hold my liquor'
 end
 
 

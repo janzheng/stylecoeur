@@ -13,7 +13,7 @@
     "deploy":     "npm run pre_build; bundle exec middleman deploy ",
     "github":     "npm run pre_build; bundle exec middleman build ; bundle exec middleman deploy",
     
-    "stage":      "npm run pre_build; bundle exec middleman build ; cd mm_build ; surge . -d stylecoeur_stage.surge.sh",
-    "publish":    "npm run pre_build; bundle exec middleman build ; cd mm_build ; surge . -d stylecoeur.surge.sh"
+    "stage":      "npm run pre_build; bundle exec middleman build ; cd build ; surge . -d stylecoeur_stage.surge.sh",
+    "publish":    "npm run pre_build; bundle exec middleman build ; cd build ; surge . -d stylecoeur.surge.sh"
   }
 }
