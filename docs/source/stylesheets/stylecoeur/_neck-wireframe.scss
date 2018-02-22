@@ -1,0 +1,120 @@
+
+
+// 
+//    WIREFRAMES
+// 
+
+/*
+
+    Styles that make components look sketchy
+
+    BLOKK font: (black squares)
+      'BLOKK, BLOKK1, BLOKK2' <link href= <%= source + "./fonts/BLOKK/stylesheet.css" %> rel="stylesheet">
+
+    Redacted font: (scribbles)
+*/
+
+// redacted
+%font-redacted, ._font-redacted,
+%font-wf, ._font-wf, {
+  font-family: 'redacted script', system-ui, sans-serif;
+}
+
+%font-redacted-block, ._font-redacted-block, 
+%font-wf2, ._font-wf2 {
+  font-family: 'redacted', system-ui, sans-serif;
+
+}
+
+// blokk
+%font-blokk, ._font-blokk,
+%font-wf3, ._font-wf3 {
+  font-family: 'BLOKK', system-ui, sans-serif;
+}
+%font-blokk2, ._font-blokk2,
+%font-wf4, ._font-wf4 {
+  font-family: 'BLOKK2', system-ui, sans-serif;
+}
+%font-blokk3, ._font-blokk3,
+%font-wf5, ._font-wf5 {
+  font-family: 'BLOKK3', system-ui, sans-serif;
+}
+
+
+$wireframe-color:         $color-ui    !default;
+$wireframe-border-width:  $border-line !default;
+$wireframe-border-style:  solid        !default;
+
+
+
+// Image Placeholder
+
+._wireframe-image {
+  display: grid;
+  // these cause problems w/ img object
+  // box-model: forces scroll
+  // border-color: $wireframe-color;
+  // border-style: $wireframe-border-style;
+  // border-width: $wireframe-border-width;
+  @extend ._align-horizontally;
+  @extend ._align-vertically;
+
+  html { // inside the object
+    &,* { overflow: hidden; }
+  }
+
+  background-color: $color-ui;
+
+  &[data-alt]:after {
+    content: attr(data-alt);
+    display: block;
+  } 
+}
+
+
+// Geometries
+._wireframe-circle,
+._wireframe-round,
+._wireframe-oval {
+  border-color: $wireframe-color;
+  border-style: $wireframe-border-style;
+  border-width: $wireframe-border-width;
+
+  border-radius: 100px;
+  display: inline-block;
+}
+._wireframe-rectangle,
+._wireframe-rect,
+._wireframe-square {
+  border-color: $wireframe-color;
+  border-style: $wireframe-border-style;
+  border-width: $wireframe-border-width;
+
+  display: inline-block;
+}
+
+
+
+
+._wireframe-tri,
+._wireframe-triangle {
+
+  &.--up {
+    @include css-triangle($wireframe-color, up, $size-base, relative, true);
+  }
+  &.--up-left {
+    @include css-triangle($wireframe-color, up-left, $size-base, relative, true);
+  }
+  &.--down {
+    @include css-triangle($wireframe-color, down, $size-base, relative, true);
+  }
+  &.--left {
+    @include css-triangle($wireframe-color, left, $size-base, relative, true);
+  }
+  &.--right {
+    @include css-triangle($wireframe-color, right, $size-base, relative, true);
+  }
+
+}
+
+

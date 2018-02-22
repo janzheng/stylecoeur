@@ -1,0 +1,122 @@
+
+
+$dropdown-bg: $color-bg !default;
+$dropdown-color: $color-body !default;
+$dropdown-offset-v: 60px !default;
+$dropdown-offset-h: 0px !default;
+$dropdown-z: 1000 !default; // z-manager in the future
+$dropdown-title-z: 1010 !default; // z-manager in the future
+
+// basic example
+$dropdown-loading-bg: $color-hover !default;
+$dropdown-loading-color: $color-black !default;
+
+._dropdown {
+  position: relative;
+  cursor: pointer;
+  @extend %ease-slow;
+
+
+  // CLOSED neutral STATE
+  ._dropdown-container {
+    height: 0px; // content is hidden
+    overflow: hidden;
+
+    cursor: default; // preserver cursor behavior
+    position: absolute;
+    top: 40px;
+    left: $dropdown-offset-h;
+    @extend %ease-slow;
+
+    &.--button-width{
+      width: 100%;
+    }
+    &.--right {
+      left: inherit;
+      right: $dropdown-offset-h;
+    }
+  }
+
+  // title helps w/ delay positioning
+  ._dropdown-delay-title {
+    position: relative;
+    z-index: $dropdown-title-z;
+  }
+
+  // neutral state opening animation
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%; 
+    height: 0; // 100%;
+    top: 0; left: 0;
+    background-color: $dropdown-loading-bg;
+    color: $dropdown-loading-color;
+    
+    overflow: hidden;
+  }
+  // loading animation effects
+  &.--opening { // attached w/ js
+    ._dropdown-delay-title {
+      color: $dropdown-loading-color;
+    }
+    &:after { 
+      height: 100%;
+      @extend %ease-fast;
+    }
+  }
+
+  ._dropdown-content {
+    // display: none;
+    opacity: 0;
+    @extend %ease;
+    @extend ._format-last-bottom_none;
+  }
+
+  // OPEN STATE 
+  &:not(.--opening) {
+    &:hover,
+    &.--open,
+    {
+      @extend %ease-slow;
+
+      // hidden hit target for smooth hovering
+      &:before {
+        content: ' ';
+        display: block;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: -100%; // top and bottom for drop-ups
+        height: $dropdown-offset-v;
+        width: 100%;
+        height: 250%;
+      }
+      ._dropdown-container {
+        height: inherit;
+        z-index: $dropdown-z;
+        top: $dropdown-offset-v;
+        @extend %ease-slow;
+      }
+      ._dropdown-content {
+        // display: block;
+        opacity: 1;
+        height: 100%;
+        @extend %ease-slow;
+      }
+
+    }
+  }
+
+
+}
+
+
+// Default styling
+._dropdown-content {
+  background-color: $dropdown-bg;
+  color: $dropdown-color;
+}
+
+

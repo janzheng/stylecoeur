@@ -1,0 +1,266 @@
+
+
+
+// 
+//    General Mixins & Functions
+// 
+
+
+// some are from: https://engageinteractive.co.uk/blog/top-10-scss-mixins
+
+
+
+  
+@function remCalc($values) {
+  $max: length($values);
+  $remValues: '';
+  @for $i from 1 through $max {
+    $value: (nth($values, $i));
+    $value: $value / ($value * 0 + 1);
+    $remValues: #{$remValues + $value}rem;
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+  @return $remValues;
+}
+
+// PX to REM - Usage: font-size: rem(37px);
+@function rem($px, $size-base: $size-font-size) {
+    @return ($px / $size-base) * 1rem;
+}
+
+
+// also try using translate3d w/ animations for hardware
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  perspective: $perspective;
+  -webkit-perspective: $perspective;
+}
+
+
+// helps with cutting off content past widths
+// just give it a max width value
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+// div::after {
+//   @include pseudo;
+//   top: -1rem; left: -1rem;
+//   width: 1rem; height: 1rem;
+// }
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+
+// div {
+//   @include responsive-ratio(16,9);
+// }
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+// generates elements for repetition
+/*
+  // generate ._opacity-100 ._opacity-90 etc. 
+  @each $twoVal in '100' 1, '90' 0.9, '80' 0.8, '70' 0.7, '60' 0.6, '50' 0.5, '40' 0.4, '30' 0.3, '20' 0.2, '10' 0.1, {
+    @include elementGenerator(opacity, nth($twoVal, 1), nth($twoVal, 2));
+  }
+  ._opacity-100 {
+    opacity: 0.9, etc.
+  }
+*/
+@mixin elementGenerator($element, $valName, $val:$valName) {
+  ._#{$element}-#{$valName} {
+    #{$element}: #{$val}
+  }
+}
+@mixin namedElementGenerator($name, $element, $valName, $val:$valName) {
+  ._#{$name}-#{$valName} {
+    #{$element}: #{$val}
+  }
+}
+
+
+
+
+
+
+// 
+// 
+//    DESIGN MIXINS
+// 
+// 
+
+
+// Opacity - Usage: @include opacity(0.8);
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+}
+
+// Transitions - Usage: @include transition(all .2s ease);
+@mixin transition($args...) {
+    -webkit-transition: $args;
+       -moz-transition: $args;
+        -ms-transition: $args;
+         -o-transition: $args;
+            transition: $args;
+}
+
+// Retina Background Images - Usage: @include background-image-retina(logo, png);
+@mixin background-image-retina($file, $type) {
+  background-image: url($file + '.' + $type);
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx){
+    & {
+        background-image: url($file + '@2x.' + $type);
+    }
+  }
+}
+
+
+
+@mixin selection-color($bg-color: white, $text-color: black, $text-shadow: none) {
+  ::-moz-selection{ background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
+  ::selection { background: $bg-color; color: $text-color; text-shadow: $text-shadow; }
+}
+
+// Input Placeholder
+// Usage:
+// @include input-placeholder {
+//   font-size: 18px;
+// }
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+@mixin box-shadow($options...) {
+  -webkit-box-shadow: $options;
+  -moz-box-shadow: $options;
+  box-shadow: $options;
+}
+
+
+// chrome has a weird color problem: http://stackoverflow.com/questions/39268675/css-div-background-color-bug-on-chrome
+%chrome-fix, .chrome-fix {
+  -webkit-transform: translateZ(0); // fixes chrome bug
+  // -webkit-transform: translate3d(0,0,0); 
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(1);
+}
+
+// Background Color mixin is a temporary fix for Chrome fill bug
+@mixin background($color) {
+  background-color: $color;
+  @extend %chrome-fix;
+
+  // sometimes child element is the prob
+  div {
+      @extend %chrome-fix;
+  }
+}
+
+
+
+
+// selection / highlight color
+// @include selection {
+//     color: green;
+// }
+@mixin selection {
+    &::selection {
+      @content;
+    }
+    &::-moz-selection {
+      @content;
+    }
+}
+
+@mixin transform($property: none) {
+//  none | <transform-function>
+  @include prefixer(transform, $property);
+}
+
+@mixin transform-origin($axes: 50%) {
+// x-axis - left | center | right  | length | %
+// y-axis - top  | center | bottom | length | %
+// z-axis -                          length
+  @include prefixer(transform-origin, $axes);
+}
+
+@mixin transform-style ($style: flat) {
+  @include prefixer(transform-style, $style);
+}
+
+
+
+
+
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round( $size / 2.5 );
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round( $size / 2.5 );
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if  $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+
+
+
+
+
+

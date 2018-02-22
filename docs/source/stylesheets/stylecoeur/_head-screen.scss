@@ -1,0 +1,361 @@
+
+
+// 
+//    RESPONSIVE STUFF
+//    usage:
+//      @include screen-xs-only {
+//        color: red;
+//      }
+// 
+
+// READABILITY FIRST
+// don't use variable replacement
+// as it gets confusing fast.
+
+/*
+    Keep in mind:
+
+    Media Queries will bubble and nest:
+        p {
+          @media query-1 {
+            first thing
+            @media query-2 {
+              second thing
+            }
+          }
+        }
+
+        will result in CSS:
+
+        @media query-1 {
+          p {
+            first thing
+          }
+        }
+        @media query-1 and query-2 {
+          p {
+            second thing
+          }
+        }
+
+
+*/
+
+@mixin screen-xs-only {
+  @media (max-width: $width-xs-max) {
+    @content;
+  }
+}
+  // all the other rules e.g. screen-sm
+  // are sm AND UP, this is the one exception
+  // since it's used so much / so differently
+  @mixin screen-xs {
+    @include screen-xs-only {
+      @content;
+    }
+  }
+
+// below 'magic' point
+@mixin screen-magic-down {
+  @media (max-width: $width-magic) {
+    @content;
+  }
+}
+  // above 'magic' point
+  @mixin screen-magic-up {
+    @media (min-width: $width-magic) {
+      @content;
+    }
+  }
+
+// tablet and bigger
+@mixin screen-sm {
+  @media (min-width: $width-sm-min) {
+    @content;
+  }
+}
+  // tablet and smaller
+  @mixin screen-sm-down {
+    @media (min-width: $width-xs-min) and (max-width: $width-sm-max){
+      @content;
+    }
+  }
+  @mixin screen-sm-only {
+    @media (min-width: $width-sm-min) and (max-width: $width-sm-max){
+      @content;
+    }
+  }
+
+// desktop and bigger
+@mixin screen-md {
+  @media (min-width: $width-md-min) {
+    @content;
+  }
+}
+  // desktop and smaller
+  @mixin screen-md-down {
+    @media (min-width: $width-xs-min) and (max-width: $width-md-max){
+      @content;
+    }
+  }
+  @mixin screen-md-only {
+    @media (min-width: $width-md-min) and (max-width: $width-md-max){
+      @content;
+    }
+  }
+
+// wide (and up)
+// wide and smaller would just be everything
+@mixin screen-lg {
+  @media (min-width: $width-lg-min) {
+    @content;
+  }
+}
+
+
+// custom scenarios
+
+@mixin screen-above ($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin screen-below ($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+
+
+// shorthand mixins
+
+// will generate a new element w/ -xs, -sm etc
+/*
+  // can take an array like ('xs', 'sm', 'md')
+
+  ._center {
+    text-align: center;
+
+    @include genGridAttr(('xs') { 
+      text-align: right;
+    }
+  }
+
+  result:
+
+  @media xs query {
+    ._center-xs {
+      text-align: right
+    }
+  }
+*/
+
+@mixin gridMixinSelector($size) {
+  // required b/c of no dynamic mixins
+  @if ($size=='xs') {
+    @include screen-xs {@content}
+  } 
+
+  @else if($size=='magic-down') {
+    @include screen-magic-down {@content}
+  } @else if($size=='magic-up') {
+    @include screen-magic-up {@content}
+  } 
+
+  @else if($size=='sm') {
+    @include screen-sm {@content}
+  } @else if($size=='sm-down') {
+    @include screen-sm-down {@content}
+  } @else if($size=='sm-only') {
+    @include screen-sm-only {@content}
+  }
+
+  @else if($size=='md') {
+    @include screen-md {@content}
+  } @else if($size=='md-down') {
+    @include screen-md-down {@content}
+  } @else if($size=='md-only') {
+    @include screen-md-only {@content}
+  } 
+
+  @else if($size=='lg') {
+    @include screen-lg {@content}
+  } @else if($size=='lg-down') {
+    @include screen-lg-down {@content}
+  } @else if($size=='lg-only') {
+    @include screen-lg-only {@content}
+  }
+};
+
+// creates new classes with -xs, -sm, etc.
+// and only applies to those sizes.
+/* usage:
+
+  ._hidden {
+    display: none;
+
+    @include genGridAttr(('xs','sm','sm-down','md','lg')) {
+      display: none;
+    }
+  }
+*/
+@mixin genGridAttr($sizes: 'xs') {
+  @each $size in $sizes {
+    @if & {
+      &-#{$size} {
+        @include gridMixinSelector($size){@content}
+      }
+    }
+  }
+};
+
+
+
+// show & hide
+
+._hidden-mobile {
+  @include screen-xs-only {
+    display: none !important;
+  }
+}
+
+._hidden-tablet {
+  @include screen-sm-only {
+    display: none;
+  }
+}
+  ._hidden-tablet-and-down {
+    @include screen-sm-down {
+      display: none;
+    }
+  }
+  ._hidden-tablet-and-up {
+    @include screen-sm {
+      display: none;
+    }
+  }
+
+._hidden-desktop {
+  @include screen-md-only {
+    display: none;
+  }
+}
+  ._hidden-desktop-and-down {
+    @include screen-md-down {
+      display: none;
+    }
+  }
+  ._hidden-desktop-and-up {
+    @include screen-md {
+      display: none;
+    }
+  }
+
+._hidden-large {
+  @include screen-lg {
+    display: none;
+  }
+}
+
+._hidden-magic-down {
+  @include screen-magic-down {
+    display: none;
+  }
+}
+._hidden-magic-up {
+  @include screen-magic-up {
+    display: none;
+  }
+}
+
+
+
+._show-mobile {
+  @include screen-xs-only {
+    display: inherit !important;
+  }
+}
+
+._show-tablet {
+  @include screen-sm-only {
+    display: inherit;
+  }
+}
+  ._show-tablet-and-down {
+    @include screen-sm-down {
+      display: inherit;
+    }
+  }
+  ._show-tablet-and-up {
+    @include screen-sm {
+      display: inherit;
+    }
+  }
+
+._show-desktop {
+  @include screen-md-only {
+    display: inherit;
+  }
+}
+  ._show-desktop-and-down {
+    @include screen-md-down {
+      display: inherit;
+    }
+  }
+  ._show-desktop-and-up {
+    @include screen-md {
+      display: inherit;
+    }
+  }
+
+._show-large {
+  @include screen-lg {
+    display: inherit;
+  }
+}
+
+._show-magic-down {
+  @include screen-magic-down {
+    display: inherit;
+  }
+}
+._show-magic-up {
+  @include screen-magic-up {
+    display: inherit;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+// 
+// Special User Agent detection classes
+// (currently not in use; tied to scriptcoeur)
+//
+
+// only for tablet, mobile, regardless of breakpoint
+// ._hideHandheld, %_hideHandheld {
+.handheld {
+  ._hideHandheld {
+    display: none !important;
+  }
+  ._showHandheld {
+    display: block !important;
+  }
+}
+
+
+
+
+
+
+

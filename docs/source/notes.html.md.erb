@@ -1,0 +1,715 @@
+---
+layout: layout-nav
+title: Notes
+---
+
+<div class="_grid-two-one">
+
+<article class="_padding _width-content-max" markdown="1">
+
+## Notes
+
+A random ramblin' wreck of a good time.
+
+These notes won't make sense to anyone but me, and that's ok.
+
+Iconography: add a note about including SVG
+- height, width, and preserve aspect ratio
+- using a templater / partial to add these
+
+- Explore CSS variables
+  - Create a section for it, and how you can use it
+  - e.g. for theme switching
+  - tie colors in with a --colors var?
+  - https://blog.prototypr.io/stunning-hover-effects-with-css-variables-f855e7b95330
+  
+
+
+---
+
+css grid template builder
+- possible to use js to set css variable names now
+- simple interface to "draw" the template
+- set the names of the fields in js
+- then spit out a generated css code
+
+sidebar show/hide: 
+- add a way to track show or hidden state across pages, 
+
+forms:
+- borrow ideas from google forms:
+  - https://docs.google.com/forms/d/1rNTuD542eh3ZLQhhvlnn64h1oZV6X3NWvtvZdx4O86g/viewform?edit_requested=true
+
+  
+https://medium.freecodecamp.org/design-language-system-why-your-team-needs-one-and-how-to-built-it-d996ba8c3889
+https://cantina.co/design-systems-who-uses-them-and-what-value-they-deliver-to-organizations/
+
+- http://bradfrost.com/blog/post/your-sketch-library-is-not-a-design-system/
+
+- IA bg: https://www.toptal.com/designers/ia/guide-to-information-architecture
+
+generalized cascading animations
+- can use sister selectors to generalize lag for animations
+- http://www.dropinks.com/notification-list-using-css3/
+
+
+Clarity is VERY good — use theirs as a base: https://vmware.github.io/clarity/documentation/v0.11
+- cool tracking list feature
+- patterns vs. components — use industry lingo!!
+- good demo, and menu system under each component
+- good way of navigating within components
+- like the sidebar design better than mine
+
+- save file to disk
+  - generate files to save
+  - Blob API
+  - https://msdn.microsoft.com/en-us/library/hh779016(v=vs.85).aspx?ranMID=24542&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-xrF7m4Sqx._z09YGiAcLWA&tduid=(f21a30053d78af6de7bef75d2d60807c)(256380)(2459594)(TnL5HPStwNw-xrF7m4Sqx._z09YGiAcLWA)()
+
+
+- start making dynamic generator components like colors
+  - https://dotcolors.co/?colors=%23abcde1%2C%23d9dd92%2C%23eabe7c%2C%23e06e43%2C%23311e10%2C%23140603
+
+- add Style Guide Guide
+  - Pros
+  - Cons
+    - Keeping logs, notes and changelog detailed and up to date is very hard, something I struggle with; documentation debt
+    - Like doing the dishes, it has to be treated like a chore
+
+- boilerform: https://boilerform.design/
+  - take all the examples and missing form things
+
+- add a braille-pattern loader (like in console)
+
+- https://blog.prototypr.io/we-need-to-talk-about-patterns-8dcc73aff318
+
+- connect to airtable style guide 
+  - define the style guide API in the style guide
+    - meta style guide!
+  - API (or teeny.io cms idea)
+
+check out: https://www.imgix.com/
+
+SEO and meta guide:
+- https://www.seooptimizationguide.com/technical-seo/
+  - prods: sitemap xml editor, meta tag editor
+  - http://www.heymeta.com/
+      - but also show facebook / twitter variations
+          - https://developers.facebook.com/tools/debug/sharing/?q=http%3A%2F%2Fwww.heymeta.com%2F
+      - can get a generated page up w/ custom meta tags
+          - dynamically check generated meta tags on the fly using fb’s tool
+      - https://developers.facebook.com/tools/debug/sharing/?q=http%3A%2F%2Fwww.heymeta.com%2F
+      - Twitter checker https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards
+      - iFrames as checkers
+      - 
+
+Notes on SSL
+  - SSL as trust
+  - cloudflare SSL
+  - open SSL
+  - subdomain * SSL
+  - deployment methods
+  - surge.sh SSL
+
+add pure css loader placeholder for a div block
+_loader would be useful
+
+make to look more like relay?
+https://facebook.github.io/relay/docs/en/thinking-in-graphql.html
+
+
+https://medium.com/@kamushken/developing-a-design-system-how-to-avoid-unexpected-routine-a7fbe2766391
+
+- relative names
+
+[project] / system / component -- state
+- coeur.style.input.active
+- or coeur-style-input--active
+- or shorthand: input --active
+
+### Next Up
+
+- Jade/PUG.js-like module generator for wireframes
+  - https://arstechnica.com/gadgets/2018/01/
+  - can use Vue to stitch them together interactively
+  - design system wireframe tool / design frame tool
+  - with-ink-to-code-microsoft-is-turning-back-of-napkin-sketches-into-software/
+  - goal is to quickly convert specs to usable 'wireframe' html pages built by stylecoeur blocks
+
+
+- toggleable digital wireframes
+  - reduce detail
+  - copy
+  - colors
+  - squiggliness
+
+
+- form design examples
+  - https://medium.com/techtrument/bye-bye-material-design-acaebcc7c6b4
+
+- more page design exampels
+  - https://github.com/ibm/css-gridish
+
+- `--required` flag missing from form fields
+  - * or other design to show a field is required
+
+- design docs as notes/sketches; sketching and thinking with words
+  - sketch on PAPER to support your thoughts
+  - fast and dirty
+
+- walkthrough / steps to make your own design system
+  - how to use this as an example?
+  - http://setproduct.com/5-steps-of-design-system
+
+- "wireframe" styles — use the redacted and blokk fonts to creates ungly, blocked out wireframes with html; follows grid and patterns
+- style switching
+
+- refer to [corpus](http://jamiewilson.io/corpus/) for structure and missing parts
+- refer to [Firefox Photon](http://design.firefox.com/photon/welcome.html) for style guide content and structure
+- refer to [Shards](https://designrevision.com/demo/shards) for possibly better implementations 
+
+- Core definition writeup / make clearer
+  - sizer: don't use data-vheight, just use a _vheight-50 etc.
+  - griddick
+    - mixin generator
+    - update "-always" behavior / better name; one col is default behavior, force that to not happen; use a generator wrapped around a (:not(unless)) kind of thing
+  - Layout
+    - Sizing / Spacing
+      - explanation of mobile- everything becomes a single column unless explicitly not 
+    - Grids, Baseline
+    - Flexbox Content positioning / update Gridding
+    - Whitespace
+    - Alignment
+    - vh / vh helper / sizer
+    - EXAMPLE LAYOUTS / popular layouts
+- Footnote
+  - JS duplicator to put footnotes at the bottom of a page
+
+- new project cheat sheet / quick way to launch new static site projects
+  - how to copy
+  - setting up stylecoeur
+  - setting up github
+  - setting up domains / A records
+  - setting up mailchimp, mailgun
+  - setting up contact form
+
+
+
+
+
+### Future / Roadmap
+
+
+- quickly explain !default in helpers:
+  - $color-main: blue !default
+    - w/o default- will override previous definition of $color-main
+    - w/ default- will only define $color-blue if previously has not been defined (good for setting base framework stuff, so you don't steamroll local variables)
+
+- janzheng 
+  - rss feed inserter / generalize it w/ input, callback, etc.
+  - list.js implementation
+
+- Middleman search
+- Algolia search
+
+
+On building Middleman prototypes:
+- to keep things sketchy, use rough.js
+  - https://roughjs.com/
+
+
+
+Note on keeping your CSS neat: https://medium.com/samsung-internet-dev/success-with-css-33215f481422
+
+Cheat Sheet
+- set timeout
+- repeat timer
+- ajax / promise
+- throttle
+- lodash helpers (useful)
+
+
+typography: smoothing
+- when it's good, when it doesn't look good (Affects readability)
+- mixin; use selectively (light on dark vs. dark on light; serif fonts like Georgia)
+-     -webkit-font-smoothing: antialiased;
+
+
+
+handling mail / setup
+  - subscriptions: mailchimp
+  - mailing out: mailgun
+    - github spam warning!!!
+  - tinyletter
+
+github deployment
+  - cname file
+  - how github deployment works
+  - **.github.io trap / how to deploy vs. repo
+  - jekyll vs. middleman deploy
+  - set up A records hint
+  - 
+
+
+
+
+
+Mixins
+document all mixins, esp. for animation
+  - ease
+  - highlight color
+  - no select
+  - other random stuff
+  - 
+
+
+
+
+- Project Cheat Sheet
+  - Github
+  - Copy Stylecoeur
+  - Readme + Changelog
+  - Keeping Notes + Todo
+  - Optional: styleguide 
+
+
+
+
+Grids: 
+- look at popular sites and recreate the top 20 popular layouts in grids
+- create a new grids section for all those things, and share it online
+  - mobile and desktop
+- vertical grids w/lineheight, not perfect vgrids
+
+
+
+Other ideas to explore:
+- Progressive image loading / on page load
+- Masonry
+- scroll-fade-in-load effect (wordpress thing)
+- menu: open, hiden, transition: https://www.skinn.be/en/work/salt
+- menu slide down to hide; slide up to show: https://www.skinn.be/en/work/salt
+- microservices and express api hookup
+- page transition techniques
+
+
+
+#### Chatbots
+
+[Best practices](https://medium.com/@eunjinnyseo/11-more-best-ux-practices-for-building-chatbots-67362d1104d9)
+
+Chatbots are the new phone trees.
+
+
+
+
+
+- middleman ruby resources for prototyping
+
+  on design + typography:
+   - p 98 thinking with type: " style sheets compel designers to think globally and systematically instead of focusing on the fixed construction of a particular surface" - as opposed to 20th century artists and designers who integrated form and content; and "used typography to create texts whose content was inextricable from the concrete" layout of specific letterforms
+   - don't fall into the trap of the modular adaptive system + distancing away from old typography
+   - using js and/or css, getting deviceheight and devicewidth we can understand the limits of the screen
+   - headlines subheads, and such can be precisely set based on the dimensions of the particular screen
+   - responsive design with play with forms, alignment, space and meaning...
+
+
+- basic react pages, accounts pages, etc. use jststrt as a start
+  - basic user stories and pages!
+  - account, login, signup, password recovery, etc.
+
+
+- functional design page
+  - every project should have its own stylesheet page that includes all the design variations
+  - a much simpler distillation of the "real" styleguide
+
+
+
+
+
+
+
+---
+
+## Interactive Prototyping
+
+VUECOEUR / vUX
+
+- Vue / vuex / Apollo / UX Prototyping
+  - create a micro app / micro service development framework, much like stylecoeur 
+  - interchangeable, independent &amp; isolated components / can be styled w/ stylecouer
+  - can be dropped ANYWHERE into a static site and provide interactivity
+  - similar to the chat tools out there
+  - future tools:
+    - Feedback &amp; Conversion tool (refer to MassiveSci feedback tree)
+    - UX walkthrough tool — ask questions; guide users; highlight stuff on the page
+    - Payment tool
+    - Donation tool
+
+- stylecoeur for ux prototyping
+  - site and relation map
+  - page layout map / show all the pages, like invision or powerpoint edit mode
+  - https://medium.com/proof-of-concept/growing-free-ux-design-tool-prototype-with-ui-wireframing-and-user-scenarios-f2b0015516ef
+
+
+
+
+
+
+---
+
+## Project Documentation System
+
+Documentation system - should be done soon, take into account design process/decisions, will help future decision-making and review
+
+- How to document decisions? How to take notes, and where is it appropriate?
+- Change log
+- Build tool to take screenshots of old designs; easier to review changes 
+  - https://github.com/danielhusar/gulp-local-screenshots
+
+
+
+
+
+
+---
+
+
+## Design Concepts 
+
+
+### Product Workflow Loop
+
+- From concept
+- To Branding
+- To Business Goals and Requirements
+- To Information architecture / information hierarchy
+- To Content Strategy &amp; copywriting &amp; voice and tone
+- To storyboards views and flows
+- To wireframing / basic to complex
+- to using components
+- to prototype
+- to production
+- to feedback / analytics / research
+> to restarting the product workflow loop
+
+
+Concept of creating views (static prototypes) and tying them together to create user flows
+  - all in code
+  - simplified version of [air/shots](https://airbnb.design/the-way-we-build/)
+
+Storyboarding and Concepting using existing assets
+
+
+### Content Strat &amp; Copywriting
+
+https://airbnb.design/words-shape-design-2/
+
+https://airbnb.design/content-strategy-at-airbnb/
+
+[Why Content Reigns supreme in UX](http://www.fastcodesign.com/3054090/why-content-reigns-supreme-in-ux-design)
+[Good Interface Writing](http://www.fastcodesign.com/3026463/from-google-ventures-5-rules-for-writing-great-interface-copy)
+
+
+
+
+### Client Onboarding Process:
+
+- Client acquisition questions
+  - $ / size / etc.
+- contract
+- work orders
+- invoices
+- client notes + tracking
+
+
+Design Process:
+- Content, IA, Branding
+- design goals, business goals, constraints
+- accessibility + usability + human factors
+  - where / how / who are using it
+- track work + thoughts in progress, thoughts, screenshots, and how you got here
+  - esp. w/ test-driven design
+  - inputs + outputs
+- BA-type work
+  - wireframes
+  - business requirements
+  - component inputs + outputs (I/Os)
+
+- design:
+  - process
+  - requirements
+
+- functional 
+  - implementation
+  - test-driven components
+    - design & development
+    - inputs and outputs
+  - react components
+  - data model
+  - api
+
+
+- Product
+  - Business Product
+  - Consumer Product
+
+### Design System
+
+How do you "tell a story" around your design system? [typography example](http://pierrickcalvez.com/journal/a-five-minutes-guide-to-better-typography) - don't overwhelm with facts, start simple, and expand 
+
+- need to illustrate better stylecoeur's atomic approach (w/ funny names)
+- start with layouts focused on words: 
+  - typography (h tags)
+  - paragraphs
+  - font-sizes, line-heights
+  - content-widths
+  - single paragraph,
+  - two-column grid
+  - pull quotes
+  - indents
+  - word-based formatting
+  - baseline
+- interactive elements
+  - links
+  - buttons
+  - cards   
+
+- should the design system follow the construction of stylecoeur? probably not...
+- baseline (should be part of typography? layout?)
+- complex layouts
+
+
+
+DESIGN SYSTEM
+
+Reformat the Style guide and Design Systems pages with concepts from
+
+- [design systems](https://medium.com/@marcintreder/design-systems-sprint-0-the-silver-bullet-of-product-development-8c0ed83bf00d)
+- [MVDS](https://medium.com/@marcintreder/the-minimum-viable-design-system-75ca1806848a)
+- [Design System language](https://medium.com/@marcintreder/design-systems-are-a-language-and-thats-changing-software-development-forever-ae914a197de)
+
+
+#### MVDS
+
+- [minimum viable design](https://medium.com/@marcintreder/the-minimum-viable-design-system-75ca1806848a)
+- Styleguides are outdated easily
+- Design systems are reflections of a moving target; they're __definitions_ of "the process of maintaining consistency of experience and code"
+- Design operations need to be constant editors to prevent gradual descent into chaos
+- Design system needs to keep every feature, member, and addition in check
+- System is never done, it's the constant "status" of the product
+- __Design System Process__ needs to have buy-in; agreed upon by every member before work can happen
+- __Workflows__ - set ways for people to work, for features to be added
+- __System of agreement__ - don't explicitly tell people how to implement things (time-consuming, chaotic, micro-managing), but set the base rules like colors, baseline, etc.
+- Can use examples but don't explicitly tell people how to work
+- The end-goal needs to be consistent with the system itself
+- Guide to __consistent experience__, __efficient workflow__
+
+### Design System Article
+
+##### [0](https://medium.com/@marcintreder/design-systems-sprint-0-the-silver-bullet-of-product-development-8c0ed83bf00d)
+
+- Design consistency
+- User confusion. Different patterns responsible for the same action confuse users,
+- Slow design process. Lack of reusable design assets slows down designers (‘everything is created from scratch’)
+- Slow development. Low number of fully reusable components bogs down development.
+- Difficult onboarding (team members). Introducing new designers and developers to an undocumented ‘system’ is impossibly difficult.
+- Always reflects the "Truth" of the product, evolves with it (and keeps it in check)
+- Like UXPin's naming system instead of using folders but might make a folder real messy: Core-Reset, Element-Buttons, Component-Blahblah
+- Nathan Curtis: A design system is a product serving products
+- Impportance of explaining decisions, refer to discussions; annotating designs and notes
+
+
+Design systems:
+[Mailchimp](ux.mailchimp.com)
+[Saleforce](https://www.lightningdesignsystem.com/)
+[IBM](http://www.carbondesignsystem.com/)
+[Airbnb](http://airbnb.design/building-a-visual-language/)
+[Atlassian](https://design.atlassian.com/product/)
+
+- Consistency: reusable design + code 
+
+- Design System Outline
+  - Design principles
+  - Library of interface patterns
+  - code references
+  - high level styling or structural elements (grid, colors, typography) 
+
+- Design System Structure
+  - Building Blocks
+    - Color palettes
+    - Typographic Scales
+    - Grid Definitions / Layout
+    - Icons &amp; Assets
+  - UI Patterns
+    - Templates
+    - Modules
+    - Components
+    - Elements
+  - Rules
+    - Design Principles
+    - Implementation Guidelines
+    - Editorial Guidelines
+
+Content Inventory: a collection of all the stuff in an interface
+Component Structure (UX Pin)
+
+- Elements — the smallest individual pieces of the interface which act as building blocks for components (e.g. buttons, form fields…)
+- Components — independent and repeatedly used pieces of the interface built out of elements (e.g. toolbar item, page loader)
+- Modules — full functionalities built out of components (e.g. toolbar, search)
+- Layout definitions — All of the above use core files (such as variables, icon font definitions etc.) to unify styling.
+
+##### Colors
+
+- Sufficiently precise — defines a small number of approved primary colors and a sufficient number of accent colors.
+- Clearly named — developers and designers should can easily refer to particular colors defined in the system. Color names are easily understood, memorable, and spark meaningful conversations between designers and developers (shades changes, contrast corrections etc.).
+- Accessible — both in terms of external accessibility (how easily all users perceive color combos) and internal accessibility (how easily designers and developers find and use the palette).
+
+- notes on UX accessiblity. [check everything](https://heiswayi.nrird.com/color-contrast-checker/#fg=FFF5F3,bg=BB0B2E)
+- Contextual color names (easy to remember)! LOTS OF GRAYS!
+
+
+##### UI Definition
+
+- look and feel pieces: borders, radiuses, animations, space definitions (paddings, margins)
+- basis in numbers, e.g. border-thin, border-line, etc.
+  - but USE should always be CONTEXTUAL (I'm doing this poorly in stylecouer)
+  - border-main (instead of border-thin)
+  - easy to remember!!
+- __design tokens__ (_I call these 'helpers'_)
+  - "Design Tokens are a cross-platform, human-readable, abstraction of visual styles, that sync with all the style files in the system. Tokens are a fantastic tool. However, they’re somewhat complex, and in my experience, more suitable for companies with a mature Design Operations teams who maintain design and code consistency."
+  - border-radius-sm, border-radius-lg, border-radius-pill, -circle
+- additional transition/animation helpers!!! (as mixins)
+- tokens in the example are built as YML files and parsed as w/ gulp and webpack; not nice for me since I do a lot of static sites; my use of classese more appropriate
+- mobile & desktop definitions & b2b v. b2c
+  - try to keep everything united; as few rules as you can
+  - visually consistent and a lot less work
+- __need to always have an established name__ - like border-base; already using $base, but this should probably be called $size-base, and NEEDS TO ALWAYS BE CONTEXTUALIZED
+- _need to use mixin shorthands_ instead of %extends, which might be less performant...
+- Readable Documentation for the Team: readable examples w/ definitions listed and links to the files
+- iconography policy: text, iconography, and when to use what
+
+
+
+
+#### Design Proces
+
+- Create analogies (other products maybe not), other brands, fields, feelings: Ferrari? Apple? etc.
+- Find design principlies in analogous products - why are these a right choice of analogy to yours? as a brand or as user experience
+- create ux research metrics for the analogous products; how do you measure the qualities you want your product to achieve?
+  - We want our product to be like [ complete with your product analogy], because it [complete with the reason] and it’s important to [our users/me/us]. For example: “We want our product to be like a white Porsche 911 from the 80s, because it brings the feeling of timeless quality and it’s important to us”, or “We want our product to be like Harman Kardon Soundstick Speakers, because they’re modern and minimalistic and our customers mentioned frequently that our product is looks dated and interface is bloated with unnecessary functions”.
+- abstract the principles to make them yours
+
+salesforce: 
+- Clarity: Eliminate ambiguity. Enable people to see, understand, and act with confidence
+- Efficiency: Streamline and optimize workflows. Intelligently anticipate needs to help people work better, smarter, and faster.
+- Consistency: Create familiarity and strengthen intuition by applying the same solution to the same problem.
+- Beauty: Demonstrate respect for people’s time and attention through thoughtful and elegant craftsmanship.
+
+
+
+- use design principles as a benchmark for design decisions and something to measure yourself againts
+- Luke W.: “Design principles are the guiding light for any software application. They define and communicate the key characteristics of the product to a wide variety of stakeholders including clients, colleagues, and team members. Design principles articulate the fundamental goals that all decisions can be measured against and thereby keep the pieces of a project moving toward an integrated whole.”
+- needs to be prominent in the design system. Establishes "reasons for design" and fights against:
+  - Endless subjective discussion
+  - Unclear design requirements
+  - Inconsistency at the most fundamental level
+- can be more brand-focused, or can be very specific to interaction
+- Julie Zhou: “A good set of design principles, on the other hand, does the following:
+  1. Helps resolve practical and real-world questions around specific design decisions.
+  2. Applies to an entire class of design decisions, both things we can think of today, as well as questions that will pop up in the future.
+  3. Imparts a human-oriented sense of “why?” that is easy for everybody — including non-designers — to understand.
+  4. Has a point of view and a sense of prioritization that a rational person could disagree with.
+  5. Is generally paired with illustrative examples that show how the principle applies to specific decisions.”
+
+#### Typography
+
+- clear typgraphic size rules list / table
+  - refer to [carbon](http://carbondesignsystem.com/style/typography)
+- or use a mix of sizes (font-big) and then contextual sizing (font-important, font-ui, etc.)?
+- establish a base font and size (for you it's system @ 1em / 16px)
+- fewer options create a stricter framework
+  - no coming up with custom sizes
+  - [salesforce](https://www.lightningdesignsystem.com/guidelines/typography/)
+- typographic scales
+- Font-family
+- Sizes of all the headlines and body text
+- Line-height / established baseline for other stuff as well
+- Font weights
+- Basic text color  
+
+- then show what these look like in example environments (UI panels, menus, buttons/cards, and large swaths of text)
+- [harmonious scales?](http://type-scale.com/)
+- 
+
+
+### Onboarding
+[user onboarding article](https://www.appcues.com/blog/user-onboarding-best-practices/)
+
+### Research
+
+
+### Emerging Tech
+
+[IDEO human-centered design cards for AR and VR](https://medium.com/googleplaydev/applying-human-centered-design-to-emerging-technologies-6ad7f39d8d30)
+
+
+
+
+---
+
+
+
+
+## Future / Other Thoughts
+
+- change name/branding to sassyPants??? Maybe v2
+- stylecoeur style cards https://www.greatsimple.io/
+- HTML / CSS grid versions for all their templates—sell them eventually
+- manyways.design
+  - many ways to skin a website
+  - here’s css grids and react components (backed by stylecoeur)
+  - lots of stuff for free, but also full access download / one time fee
+- coding style and linting; enforcing syntax
+
+
+
+
+---
+
+
+### Inspiration
+
+1. http://www.csswinner.com/ css web design inspiration CSS Winner is a website design award gallery for web designers and developers to showcase their best web design works and win css winner website design awards.
+
+2. http://welovewp.com/ WordPress website designs Browse the best WordPress website designs and websites in our famous gallery. Submit your original design or modification of a free or premium WP theme.
+
+3. https://www.seekskills.net/web-design-inspirations web design inspiration site Seekskills is a great resource for those looking for exceptional web design and other inspirations. Browse and Submit your amazing designs and get visibility online.
+
+4. https://www.awwwards.com/ Best Web Design Trend sites Awwwards are the Website Awards that recognize and promote the talent and effort of the best developers, designers and web agencies in the world.
+
+5. https://www.awwwards.com/ onepage Web Design inspiration One Page Love is a One Page website design gallery showcasing the best Single Page websites, templates and resources.
+
+
+---
+
+### Future Blog Posts
+
+- Toolbox and Checklist - make your life easy
+  - basis for stylecoeur / designcoeur / scriptcoeur
+  - for freelancers
+  - Create your own tools and checklists for future projects
+  - Style guide and design systems
+  - Brands, design thinking
+  - Your own box of tools; spring board to get you working on the important / fun aspects of client work
+
+
+
+
+</article>
+
+<aside class="">
+  <%= partial '/partials/changelog' %>
+</aside>
+
+</div>
+

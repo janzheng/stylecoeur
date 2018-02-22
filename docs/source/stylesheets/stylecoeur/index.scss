@@ -1,0 +1,50 @@
+
+
+// version 0.1.0 - 'officially' 'live'
+
+// 
+//  The Heart.
+//  [ core dependencies ]
+// 
+
+//  Heart [base values]
+//    Head
+//      Neck
+//        Torso [components]
+
+@import 'heart'; // coeur
+
+//  [ depends on the heart ]
+@import 'head';
+
+//  [ depends on heart and head ]
+@import 'neck'; 
+
+//  [ depends on heart, head, neck — components] 
+@import 'torso';
+
+// re-import precedence overrides
+// useful for colors, margin classes, etc.
+@import 'head-colors';
+@import 'head-helpers';
+
+
+// 
+// base layout styles
+// 
+body {
+  @extend %font-body;
+  background-color: $color-bg;
+  color: $color-copy;
+  margin: 0;
+}
+
+
+// re-import to set default behavior for cascade
+@import 'head-borders';
+@import 'heart'; // coeur
+
+
+
+
+

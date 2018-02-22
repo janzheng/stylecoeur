@@ -1,0 +1,216 @@
+
+// Typography
+
+// size, baseline, line-heights defined in main index file
+// don't add any color-dependent copy here. use layout
+// or create another component-contextual sheet
+
+
+%font-sans,
+%font-basic,
+%font-body {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif;
+}
+
+%font-serif,
+._font-serif {
+  font-family: "Georgia", serif;
+}
+
+%font-mono,
+._font-mono {
+  font-family: Courier, Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', monospace;
+} ._font-mono, ._font-code { @extend %font-mono; }
+
+%font-display,
+._font-display {
+  // nothing here for stylecoeur
+  @extend %font-sans;
+}
+
+
+%font-300, ._font-300 { font-weight: 300; }
+%font-400, ._font-400 { font-weight: 400; }
+%font-500, ._font-500 { font-weight: 500; }
+%font-600, ._font-600 { font-weight: 600; }
+%font-700, ._font-700 { font-weight: 700; }
+%font-800, ._font-800 { font-weight: 800; }
+%font-900, ._font-900 { font-weight: 900; }
+
+$font-light: 300 !default;
+$font-normal: 500 !default;
+$font-bold: 700 !default;
+$font-heavy: 900 !default;
+
+%font-light, ._font-light { font-weight: $font-light; }
+%font-normal, ._font-normal {font-weight: $font-normal; }
+%font-bold, ._font-bold, strong { font-weight: $font-bold; }
+%font-heavy, ._font-heavy { font-weight: $font-heavy; }
+
+%font-lower, ._font-lower { text-transform: lowercase; }
+%font-upper, ._font-upper { text-transform: uppercase; }
+%font-capitalize, ._font-capitalize { text-transform: capitalize; }
+
+$font-size-base: $size-base !default; // - 1px;
+$font-lineheight: $font-size-base * 1.5 !default;
+
+$font-ui: $size-base; // $size + 2px;
+$font-ui-lineheight: $font-ui * 1.5 !default;
+
+$font-larger:   $font-size-base + 6px !default; 
+  $line_height-larger: ($font-size-base + 6px) * 1.5 !default;
+
+$font-large:    $font-size-base + 3px !default; 
+  $line_height-large: ($font-large + 2px) * 1.5 !default;
+
+$font-base:     $font-size-base !default; 
+  $line_height-base: ($font-base - 1px) * 1.5 !default;
+
+$font-small:    $size-m1 !default; 
+  $line_height-small: $font-small * 1.5 !default;
+
+$font-smaller:  $size-m2 !default; 
+  $line_height-smaller: $font-smaller * 1.5 !default;
+
+$font-h1: $size-p4 !default;
+$font-h2: $size-p3 !default;
+$font-h3: $size-p2 !default;
+$font-h4: $size-p1 !default;
+$font-h5: $size-larger !default; // $font-size-base !default; //$font-size-base !default;
+$font-h6: $size-m1 !default;
+
+
+%font-larger, ._font-larger {   font-size: $font-larger; line-height: $line_height-larger; }
+%font-large, ._font-large {     font-size: $font-large; line-height: $line_height-large; }
+%font-small, ._font-small {     font-size: $font-small; line-height: $line_height-small;  }
+%font-smaller, ._font-smaller { font-size: $font-smaller; line-height: $line_height-smaller; /*line-height: ($size - 5px) * 1.5 !important;*/ }
+// %font-smallest, ._font-smallest { font-size: $size-m3 !important; }
+
+// 
+// Contextual typography styles
+// 
+
+%font-italic, ._font-italic {
+  font-style: italic;
+}
+  em {@extend %font-italic}
+
+%font-body, ._font-body {
+  @extend %font-sans;
+  font-size: $font-size-base;
+  line-height: $font-lineheight;
+  // color: $color-copy;
+}
+
+// side note: use padding instead of margin
+// to prevent margin-folding headers w/ paragraphs
+
+._headline,
+h1 {
+  font-size: $font-h1; //$size-base * 3.5;
+  line-height: $font-h1 * 1.7;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  @extend %font-display;
+  // &.--padding {
+    padding: $size-base 0;
+    padding-bottom: $size-base*2;
+  // }
+}
+
+._subhead,
+h2 {
+  font-size: $font-h2;
+  line-height: $font-h2 * 1.5;
+  font-weight: 700;
+  @extend %font-display;
+  // &.--padding {
+    padding: $size-base 0;
+  // }
+}
+
+._sectionhead,
+h3 {
+  font-size: $font-h3 ;
+  line-height: $font-h3 * 1.5;
+  @extend %font-display;
+  font-weight: 700;
+  // &.--padding {
+    padding: $size-base 0;
+  // }
+}
+
+._subsectionhead,
+h4 {
+  font-size: $font-h4;
+  line-height: $font-h4 * 1.5;
+  font-weight: 700;
+  @extend %font-display;
+  // &.--padding {
+    padding-top: $size-base/2;
+    padding-bottom: $size-base;
+  // }
+}
+
+._parahead,
+h5 {
+  font-size: $font-h5;
+  font-weight: 700;
+  @extend %font-sans;
+  // &.--padding {
+    padding-top: $size;
+    padding-bottom: $size;
+  // }
+}
+
+._microhead,
+h6 {
+  font-weight: 700;
+  font-size: $font-h6;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  @extend %font-sans;
+  // &.--padding {
+    padding-bottom: $size-base;
+  // }
+}
+
+p, ._p {
+  @extend %font-body;
+  // padding-bottom: $size;
+
+  // using margins here allows for margin folding
+  // margin-top: $size;
+  margin-bottom: $size-base;
+}
+
+  // p+p,
+  // p+ul,
+  // p+ol, { 
+  //   padding-top: $size;
+  // }
+
+  // p+h1, p+h2, p+h3, p+h4, p+h5, p+h6,
+  // pre+h1, pre+h2, pre+h3, pre+h4,  {
+  //   padding-top: $size*2;
+  //   padding-bottom: $size;
+  // }
+
+
+
+
+// font awesome helper
+// makes font awesome icons align properly in buttons
+.fa {
+  line-height: 0 !important;  
+}
+
+
+
+
+
+
+
+
+
+

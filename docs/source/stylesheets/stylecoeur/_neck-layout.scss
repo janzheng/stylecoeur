@@ -1,0 +1,239 @@
+
+
+
+// 
+// Layouts / Lost and found / Parts Bin
+// 
+// 
+
+
+// 
+//  Basic Layout / Typographic Layout
+// 
+
+body {
+  @extend %font-body;
+}
+
+summary,
+article,
+section, ._section,
+// footer {
+{
+  padding: $size-base 0;
+  border-radius: 0;
+
+  margin: 0 auto;
+  @extend %width-content-max;
+}
+
+
+// container for content for verticality
+._container {
+  margin-top: $size-base;
+  padding-top: $size-base;
+  padding-bottom: $size-base;
+}
+
+._container-large {
+  margin-top: $size-base;
+  padding-top: 12vh;
+  padding-bottom: 12vh;
+}
+
+// 
+._content {
+  // padding-left: $size*2;
+  // padding-right: $size*2;
+  margin-top: $size-base;
+  padding: 4vh $size-base*2;
+}
+// only perform content padding on mobile elements
+._content-xs {
+  @include screen-xs {
+    padding: 4vh $size-base*2;
+  }
+}
+
+
+
+
+// ensure more aesthetic content appearance
+
+%width-content-max,
+._width-content-max { 
+  max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
+  @media (min-width: $width-content-max) {
+    max-width: $width-content-max; 
+  }
+}
+
+%width-content-max-narrow,
+._width-content-max-narrow { 
+  max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
+  @media (min-width: $width-content-max-narrow) {
+    max-width: $width-content-max-narrow;
+  } 
+}
+
+%width-content-paragraph,
+._width-content-paragraph {
+  max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
+
+  @media (min-width: $width-content-paragraph) {
+    max-width: $width-content-paragraph;
+  } 
+}
+
+%width-content-paragraph-narrow,
+._width-content-paragraph-narrow {
+  max-width: 100%;
+  padding-right: $size-base;
+  padding-left: $size-base;
+
+  @media (min-width: $width-content-paragraph-narrow) {
+    max-width: $width-content-paragraph-narrow;
+  } 
+}
+
+%width-content-magic,
+._width-content-magic {
+  max-width: $width-magic;
+  padding-right: $size-base;
+  padding-left: $size-base;
+}
+
+%width-content-min,
+._width-content-min {
+  max-width: $width-site-min;
+  padding-right: $size-base;
+  padding-left: $size-base;
+}
+
+
+
+// Lists
+
+ul, ol {
+  padding-bottom: $size-base;
+
+  ul {
+    padding-top: $size-base/4;
+    padding-bottom: 0;
+  }
+}
+
+li {
+  margin-bottom: $size-base/2;
+  list-style-position: outside;
+  margin-left: $size-base + 3px; // this shifts wrapped text 'inside' the list 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+//    GRID LAYOUT #PATTERNS
+// 
+// 
+// 
+// 
+// 
+// 
+
+
+
+
+
+
+
+
+
+
+$layout-block-width-max: 55%;
+
+  /*
+      Usage:
+        ._grid-content-image
+          <div> copy </div> 
+          <div> image </div> 
+
+        ._grid-image-content
+          <div> image </div> 
+          <div> copy </div> 
+  */
+
+._layout-content-image {
+
+  @extend %grid-cols-2;
+  @extend ._align-center;
+  // @extend %grid-xs-full-i;
+
+  div:first-child {
+    @extend ._align-right;
+    @extend ._grid-block;
+    // width: $layout-block-width-max;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 2;
+    }
+  }
+  div:last-child {
+    @extend ._align-middle;
+    @extend ._grid-block;
+    @include screen-xs {
+      justify-items: center;
+      grid-row-start: 1; // reflow so image is on top
+    }
+  }
+
+}
+
+._layout-image-content {
+
+  @extend ._grid-two;
+  @extend ._align-center;
+
+  div:first-child {
+    @extend ._align-middle;
+    @extend ._grid-block;
+
+    @include screen-xs {
+      justify-items: center;
+    }
+  }
+  div:last-child {
+    @extend ._align-left;
+    @extend ._grid-block;
+    // width: $layout-block-width-max;
+    @include screen-xs {
+      justify-items: center;
+    }
+  }
+}
+
+
+
+
+
+
+

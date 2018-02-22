@@ -1,0 +1,320 @@
+
+// 
+//    Design — like Layout but prettier
+// 
+
+
+
+// 
+//    SIZE & HEIGHT
+// 
+
+// - works in conjunction with sizer.js if it's included
+// ._vh-5
+// ._vh-20 {
+//   height: 20vh
+// }
+// ._vh-40 {
+//   height: 40vh
+// }
+// ...
+// ._vh-100 
+// 
+@for $i from 0 through 20 {
+  @include namedElementGenerator('vh', min-height, #{$i * 5}, '#{$i * 5}vh');
+}
+
+
+
+
+
+
+// 
+//    TEXT
+// 
+
+._pre         { white-space: pre; }
+._nowrap      { white-space: nowrap; }
+// https://css-tricks.com/almanac/properties/t/text-rendering/
+
+._speed       { text-rendering:   optimizeSpeed; } 
+._legibility  { 
+              // can enable ligatures < 20px;
+              // ONLY APPLY THIS for < 1000 words or severely hampers load time
+              text-rendering:   optimizeLegibility; 
+}
+._geometric  { text-rendering:  geometricPrecision; }
+
+._antialias, ._antialiased { 
+  // light text on dark backgrounds makes it look lighter
+  // only works on Mac webkit
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._subpixel {
+  -webkit-font-smoothing: subpixel-antialiased;
+} 
+
+._kern {
+  -webkit-font-feature-settings: "kern","liga","pnum";
+  font-feature-settings: "kern","liga","pnum";
+}
+._underline-none {
+  text-decoration: none;
+}
+
+// Transparency has been moved to _color
+
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip
+._underline-skip {
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}._underline-edges {
+  text-decoration: underline;
+  text-decoration-skip: edges;
+}
+
+._underline-wavy {
+  text-decoration: $color-main underline wavy;
+  text-decoration-skip: ink;
+}
+
+
+
+
+._underline {
+  &.--skip {
+    @extend ._underline-skip;
+  }
+  &.--edges {
+    @extend ._underline-edges;
+  }
+}
+
+
+
+// 
+// Special ratio and Sizes
+// 
+
+.--base     {width: $size-base; height: $size-base;}
+.--base-2   {width: $size-2; height: $size-2;}
+.--smaller  {width: $size-smaller; height: $size-smaller;}
+.--larger   {width: $size-larger; height: $size-larger;}
+.--p1       {width: $size-p1; height: $size-p1;}
+.--p2       {width: $size-p2; height: $size-p2;}
+.--p3       {width: $size-p3; height: $size-p3;}
+.--p4       {width: $size-p4; height: $size-p4;}
+.--p5       {width: $size-p5; height: $size-p5;}
+.--p6       {width: $size-p6; height: $size-p6;}
+.--p7       {width: $size-p7; height: $size-p7;}
+.--p8       {width: $size-p8; height: $size-p8;}
+.--p9       {width: $size-p9; height: $size-p9;}
+.--p10      {width: $size-p10; height: $size-p10;}
+.--p11      {width: $size-p11; height: $size-p11;}
+
+.--m1       {width: $size-m1; height: $size-m1;}
+.--m2       {width: $size-m2; height: $size-m2;}
+.--m3       {width: $size-m3; height: $size-m3;}
+.--m4       {width: $size-m4; height: $size-m4;}
+
+.--ratio-16_9     {@include responsive-ratio(16,9);}
+
+
+
+
+._line_height-0 {
+  line-height: 0;
+}
+
+
+// Triangles
+
+._triangle-up {
+  @include css-triangle($color-main, up, $size-base, relative, true);
+}
+._triangle-up-left {
+  @include css-triangle($color-main, up-left, $size-base, relative, true);
+}
+._triangle-down {
+  @include css-triangle($color-main, down, $size-base, relative, true);
+}
+._triangle-left {
+  @include css-triangle($color-main, left, $size-base, relative, true);
+}
+._triangle-right {
+  @include css-triangle($color-main, right, $size-base, relative, true);
+}
+
+// 
+// Opacity
+// 
+
+// generate ._opacity-100 ._opacity-90 etc. 
+@each $opacity in '100' 1, '90' 0.9, '80' 0.8, '70' 0.7, '60' 0.6, '50' 0.5, '40' 0.4, '30' 0.3, '20' 0.2, '10' 0.1, {
+  @include elementGenerator(opacity, nth($opacity, 1), nth($opacity, 2));
+}
+
+
+// 
+// Width
+// 
+
+// generate ._width-100 ._width-90 etc. 
+@each $width in '100' "100%", '90' "90%", '80' "80%", '70' "70%", '60' "60%", '50' "50%", '40' "40%", '30' "30%", '20' "20%", '10' "10%", {
+  @include elementGenerator(width, nth($width, 1), nth($width, 2));
+}
+
+
+
+
+// 
+// Shadows
+// 
+
+%shadow-internal-light {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.07), 0 0 70px rgba(0, 0, 0, 0.08) inset;}
+%shadow-internal-dark {box-shadow: 0 0px 50px rgba(20, 20, 20, 0.22), 0 0 80px rgba(0, 0, 0, 0.42) inset;}
+%shadow-gray {box-shadow:1px 1px 4px rgba(120,120,120,0.4),inset 1px 0 1px rgba(255,255,255,0.6);}
+
+
+%shadow-inset {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+%shadow-hover {
+  box-shadow: 1px 1px 1px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+%shadow-drop {
+  box-shadow: 0 5px 23px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,1);
+}
+
+%box-shade-light {
+  -moz-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+  -webkit-box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+  box-shadow: rgba(0,0,0,0.05) 0 1px 3px inset;
+}
+
+// used for header-float bar
+%box-shadow-under {
+  -moz-box-shadow: 0 0 3px 3px rgba(#888,0.4);
+  -webkit-box-shadow: 0 0 3px 3px rgba(#888,0.4);
+  box-shadow: 0 0 5px 3px rgba(#888,0.4);
+}
+
+
+/* abduzeedo shadow
+box-shadow: rgba(100, 84, 92, 0.2) 0px 2px 2px, rgba(100, 84, 92, 0.2) 0px 4px 4px, rgba(100, 84, 92, 0.2) 0px 8px 8px, rgba(100, 84, 92, 0.2) 0px 16px 16px, rgba(100, 84, 92, 0.2) 0px 32px 32px, rgba(100, 84, 92, 0.2) 0px 64px 64px;
+*/
+
+
+// 
+// Hover effect
+// 
+
+// %hover-effect {
+//   @include selection-color (rgba($light-blue, 0.8), white, none);
+
+//   @extend %ease-fast;
+//   @extend %shadow-hover;
+//   position:relative; bottom: 1px; right: 1px;
+// }
+// %slide-effect {
+//   @extend %ease-fast;
+//   padding: $size-base*0.65 $size-base*1.25; //slide effect
+// }
+// %active-effect {
+//   @extend %ease-fast;
+//   @extend %shadow-inset;
+//   text-decoration: none;
+// }
+
+
+
+
+
+
+
+// 
+//    SHADOWS, GRADIENTS
+// 
+
+// used for card styles; fairly subtle
+$box_shadow-raised: 0px 4px 12px rgba($color-black, 0.16) !default; // looks like a raised shadow
+%box_shadow-raised { box-shadow: $box_shadow-raised; }
+
+
+// 
+//    On Focus Styles
+// 
+
+%focus-yellow {
+  border-color: darken($color-yellow, 5%);
+  // border-color: $color-yellow;
+
+  outline: none;
+  // box-shadow: 2px 2px 6px rgba($color-yellow, 0.6);
+  // above is too light
+  box-shadow: 0px 0px 12px rgba($color-yellow, 1);
+}
+%focus-blue {
+  border-color: rgba($color-blue, 0.64);
+  outline: none;
+  box-shadow: 0px 0px 2px 0px rgba($color-blue, 0.6);
+}
+
+%color-sepia {
+  -webkit-filter: sepia(0.2) saturate(0.5);
+  filter: sepia(0.2) saturate(0.5);
+}
+
+
+
+
+// 
+//    SHADOWS
+// 
+
+$shadow_gridbox: 0 3px 15px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.43) !default;
+$shadow_gridbox_hover: 0 4px 16px rgba(0,0,0,0.89), 0 10px 10px rgba(0,0,0,0.18) !default;
+$shadow_edge: 0px 5px 14px rgba(0,0,0,1) !default;
+$shadow_edgetop: 0px -6px 12px rgba(0,0,0,0.8) !default;
+
+
+
+
+
+
+
+
+
+
+
+// 
+// Container and Object Formatting
+// (formatting your kids)
+// 
+
+
+// last object in container has no padding
+._format-padding-last-bottom_none {
+  *:last-child {
+    padding-bottom: 0;
+  }
+}
+._format-margin-last-bottom_none {
+  *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// last object in container has no
+// margin or padding (no extra whitespace)
+._format-last-bottom_none {
+  @extend ._format-padding-last-bottom_none;
+  @extend ._format-margin-last-bottom_none;
+}
+

@@ -1,0 +1,37 @@
+
+// 
+//  Standard Footer
+// 
+
+$footer-size: $size-base - 1px !default;
+$footer-lineheight: ($size-base - 1px) * 2 !default;
+
+._footer {
+  background: $color-black;
+  color: $color-white;
+  font-size: $footer-size;
+  line-height: $footer-lineheight;
+  // padding: $size-base*2 $size-base;
+
+  i {
+    // color: $color-white;
+  }
+
+  a {
+    display: inline-block;
+    color: $color-white;
+    // margin-bottom: $size-base;
+    font-size: $footer-size;
+    line-height: $footer-lineheight;
+    border: 0;
+    @extend %font-light;
+
+    &:hover {
+      color: $color-gray-lighter;
+    }
+  }
+}
+  ._footer--sub {
+    background: $color-gray-light;
+    color: $color-pureblack;
+  }

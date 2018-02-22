@@ -1,0 +1,101 @@
+
+
+// message: like a Bert-style popup message on page
+// or an on-page one/two-liner alert
+// v1.0.0--8-28-17
+
+$message-border: $color-ui solid $border-line !default;
+$message-color-hover: $color-main !default;
+$message-color-hover-bg: $color-bg !default;
+
+$message-color-copy: $color-copy !default;
+$message-color-bg: $color-ui-light !default;
+
+$color-danger-copy: $color-white !default;
+$color-danger-bg: $color-danger !default;
+
+$color-warning-copy: $color-black !default;
+$color-warning-bg: $color-warning !default;
+
+$color-success-copy: $color-white !default;
+$color-success-bg: $color-success !default;
+
+
+._message {
+  border-radius: $radius;
+  padding: $size-base/2 $size-base;
+  margin-bottom: $size-base;
+  @extend %ease-fast;
+  border: $message-border;
+
+  color: $message-color-copy;
+  background-color: $message-color-bg;
+
+  &:not(.--hover-none) {
+    &:hover, &.--hover {
+      background: $message-color-hover-bg;
+      color: $message-color-hover;
+      border-color: $message-color-hover;
+      @extend %ease-fast;
+      ._anim-right {
+        color: $message-color-hover;
+        left: $size-base/2;
+        @extend %ease-fast;
+      }
+    }
+  }
+
+  &.--danger {
+    border: 0;
+    color: $color-danger-copy;
+    background-color: $color-danger-bg;
+  }
+
+  &.--warning {
+    border: 0;
+    color: $color-warning-copy;
+    background-color: $color-warning-bg;
+  }
+
+  &.--success {
+    border: 0;
+    color: $color-success-copy;
+    background-color: $color-success-bg;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  // contained arrow animation
+  ._anim-right { 
+    color: $message-color-hover;
+    position: relative;
+    left: 0;
+    @extend %ease-fast;
+  }
+}
+
+
+
+
+// ._message {
+
+//   ._anim-right { 
+//     color: $color-hover;
+//     position: relative;
+//     left: 0;
+//     @extend %ease-fast;
+//   }
+//   &:hover {
+//     background: $color-bg;
+//     @extend %ease-fast;
+//     ._anim-right {
+//       color: $color-hover;
+//       left: $size/2;
+//       @extend %ease-fast;
+//     }
+//   }
+// }
+
+

@@ -1,0 +1,31 @@
+
+// Carousel Grid / owl-carousel
+._carousel {
+  position: relative;
+  display: block;
+
+  @extend %user-select-none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  * {
+    outline: transparent;
+  }
+
+  &.--grid {
+    // only show this on screens small+
+    // js will activate owl on xs screens
+    @include screen-sm {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr 1fr;
+      img {
+        width: 200px;
+        height: auto;
+      }
+      & > * {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+      }
+    }
+  }
+}

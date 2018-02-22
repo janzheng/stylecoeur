@@ -1,26 +1,22 @@
 
 {
-  "name": "coeur-driver",
-  "version": "1.0.0",
-  "description": "Coeur Scripts",
-  "author": "Jan",
-  "private": true,
+  "name": "coeur",
+  "version": "0.1.2",
+  "description": "the heart of design systems",
+  "email": "hello@janzheng.com",
+  "github": "https://janzheng.com/coeur/",
+  "website": "janzheng.com",
+  "author": "Jan Zheng",
   "scripts": {
     "commit":          "git add . -A ; git commit ; git push origin master ",
 
-    "coeur":           "cd source ; npm run server",
-    "coeur_build":     "cd source ; npm run build",
-    "coeur_deploy":    "cd source ; npm run deploy",
-    "coeur_stage":     "cd source ; npm run stage",
-    "coeur_publish":   "cd source ; npm run publish",
-    "coeur_github":    "cd source ; npm run github",
-
-    "server":           "cd source ; npm run server",
-    "build":            "cd source ; npm run build",
-    "deploy":           "cd source ; npm run deploy",
-    "stage":            "cd source ; npm run stage",
-    "publish":          "cd source ; npm run publish",
-    "github":           "cd source ; npm run github",
+    "server":           "cd docs ; npm run server",
+    "docs":             "cd docs ; npm run server",
+    "build":            "cd docs ; npm run build",
+    "deploy":           "cd docs ; npm run deploy",
+    "stage":            "cd docs ; npm run stage",
+    "publish":          "cd docs ; npm run publish",
+    "github":           "cd docs ; npm run github",
 
 
     "vue":            "cd vue/dance ; npm run dev",

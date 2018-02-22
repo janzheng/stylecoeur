@@ -1,0 +1,37 @@
+
+// Z-Index
+
+
+/*
+   -0         - 
+    0         — base index
+    1-99      - local element depth
+
+
+    900-999   - modals
+    1000      - top nav
+    1000+     - notifications, toasts, floaters
+*/
+
+
+/*
+  this isn't the best implementation but an idea
+  .site-header {
+    z-index: z('site-header');
+  }
+*/
+@function z($name) {
+  @if index($z-indexes, $name) {
+    @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+  } @else {
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+    @return null;
+  }
+}
+$z-indexes: (
+    "outdated-browser",
+    "modal",
+    "site-header",
+    "page-wrapper",
+    "site-footer"
+);

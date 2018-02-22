@@ -1,0 +1,289 @@
+
+
+// 
+//    BUTTONS
+// 
+
+/*
+
+    Attempt to give all buttons the same height.
+    - but don't really worry about baseline for now
+    - define solid-color buttons w/ same-color borders
+
+    Regular / Solid Button
+    - solid color background
+    - 
+
+    Pill Button
+    - similar to regular button but narrower with larger radius
+
+    Outline Button
+    - thick colored outline
+    - text color usually same as outline
+    - 'transparent' center (same color as bg)
+
+    Text / Transparent Button
+    - looks a lot like a link rather than button
+    - transparent bg and border
+    - on hover effects can give it more button-y looks
+      - border or underline on hover
+    - sometimes good to inherit button dimensins for baseline
+
+
+
+    Colors & Styles
+    - the standard buttons are black/white
+
+*/
+
+$button-border-width:               $border-base        !default;
+$button-border-radius:              $radius             !default;
+
+
+
+// default variation
+
+$button-color-main:                 $color-white        !default;
+$button-color-bg:                   $color-copy         !default;
+$button-color-main-hover:           $button-color-main  !default;
+$button-color-bg-hover:             $color-gray         !default;
+$button-color-disabled:             $color-gray-light   !default;
+$button-color-disabled-text:        $color-white        !default;
+
+// pill
+
+$button-pill-radius:                $radius-lg          !default;
+
+
+// outline
+$button-outline-border:             $border-base        !default;
+$button-outline-color-main:         $color-copy         !default;
+$button-outline-color-border:       $color-copy         !default;
+$button-outline-color-bg:           transparent         !default; // $color-black;
+$button-outline-color-main-hover:   $color-hover        !default; // $color-gray-lighter;
+$button-outline-color-border-hover: $color-hover        !default; // $color-gray-lighter;
+$button-outline-color-bg-hover:     transparent         !default;
+
+
+$button-line-height: 13px                               !default; // makes the buttons 48px
+
+
+%button-shadow {
+  box-shadow: 3px 3px 6px rgba($color-black, 0.3);
+}
+%button-shadow-hover {
+  box-shadow: 3px 3px 6px rgba($color-black, 0.44);
+}
+
+
+%button {
+  cursor: pointer;
+  @extend %ease;
+  outline: none;
+  display: inline-block; 
+  line-height: $button-line-height;
+
+  margin-bottom: $size-base;
+  margin-right: $size-base;
+
+  &:last-child { 
+    margin-right: 0; // margin in a row of buttons
+  }
+
+  background-color: transparent;
+  border-width: $button-border-width;
+  border-style: solid; 
+  border-radius: $button-border-radius;
+  // border: 0; // transparent border for regular buttons
+  border-color: transparent;
+  padding: ($size-base - 0.5) $size-base*3/2;
+
+  // @extend %font-sans;
+
+
+
+  // 
+  //    Button Attributes
+  // 
+
+  // usually I don't like using & because attributes
+  // become hard to find. It's useful here
+  // b/c & attaches to both ._button and <button>
+
+  &-active,
+  ._button.--active {
+    border-width: $border-massive;
+  }
+
+  &-disabled,
+  &.--disabled,
+  &[disabled] {
+    &, &:hover {
+      // disabled states overrides everything
+      // no hover states
+      background-color: $button-color-disabled !important;
+      color: $button-color-disabled-text !important;
+      border-color: $button-color-disabled !important;
+    }
+  }
+
+  &-opacity-half,
+  &.--opacity-half {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  &-short,
+  &.--short {
+    padding-top: $size-m3 - $button-border-width/4;
+    padding-bottom: $size-m3 - $button-border-width/4;
+    height: inherit;
+  }
+
+  &-thin, &.--thin {
+    line-height: $size-base;
+    // text-transform: lowercase;
+  }
+    &-thin-light,
+    &.--thin-light {
+      line-height: $size-base;
+      // text-transform: lowercase;
+      border-width: $border-base;
+    }
+    &-tiny,
+    &.--tiny {
+      line-height: $size-m1;
+      // text-transform: lowercase;
+      font-size: $size-m1;
+      border-width: $border-line;
+    }
+
+  &-tall,
+  &.--tall, {
+    padding-top: $size-base*2;
+    padding-bottom: $size-base*2;
+  }
+
+  &-width-inherit
+  &.--width-inherit, {
+    width: inherit;
+  }
+
+  &-wide,
+  &.--wide, {
+    padding-left: $size-base*4;
+    padding-right: $size-base*4;
+  }
+
+  &.--width-full {
+    width: 100%;
+  }
+
+  &-shadow,
+  &.--shadow {
+    @extend %button-shadow;
+
+    &:hover {
+      @extend %button-shadow-hover;
+    }
+  }
+
+  &.--shadow {
+    @extend %button-shadow;
+
+    &:hover {
+      @extend %button-shadow-hover;
+    }
+  }
+
+  &.--font-body-xs {
+    font-size: $font-size-base;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button,
+._button {
+
+  @extend %button;
+  @extend %ease;
+  display: inline-block;
+
+  color: $button-color-main;
+  background-color: $button-color-bg;
+  font-size: $font-ui;
+  
+  // default
+  &:hover {
+    // @extend %ease; 
+    color: $button-color-main-hover;
+    background-color: $button-color-bg-hover;
+    border-color: $button-color-bg-hover;
+  }
+}
+
+
+
+// Pill button
+button.--pill, ._button-pill, ._button.--pill {
+  border-radius: $button-pill-radius;
+}
+
+button.--outline, ._button-outline, ._button.--outline {
+  border-width: $button-outline-border;
+  border-style: solid;
+
+  color: $button-outline-color-main;
+  border-color: $button-outline-color-border;
+  background-color: $button-outline-color-bg;
+
+  &:hover {
+    color: $button-outline-color-main-hover;
+    border-color: $button-outline-color-border-hover;
+    background-color: $button-outline-color-bg-hover;
+  }
+}
+
+// Button w/o borders
+// useful for links that align with other buttons
+// but need to be "less loud"
+button.--text,
+._button-text,
+._button-transparent,
+._button.--text,
+._button.--transparent {
+  background-color: transparent !important;
+  color: $button-outline-color-main;
+  // border: none !important; // border is part of a button's padding
+  border-color: transparent !important;
+  padding-left: $size/2;
+  padding-right: $size/2;
+  &:hover {
+    color: $button-outline-color-main-hover;
+  }
+}
+
+
+
+
+
+
+
+

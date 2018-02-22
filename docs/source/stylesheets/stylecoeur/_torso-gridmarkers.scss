@@ -1,0 +1,32 @@
+
+
+$gridmarker-color: $color-ui-light !default;
+
+._grid-markers {
+  display: grid;
+  // grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  div {
+    background-color: $gridmarker-color;
+  }
+
+  &.--front {
+    z-index: 1200; // on top of everything
+    pointer-events: none;
+  }
+  &.--lines {
+    // border-color: inherit; // need to be established
+    div {
+      background-color: transparent;
+      border-left: $border-line solid  $color-main;
+      border-right: $border-line solid  $color-main;
+      border-color: inherit;
+    }
+  }
+}

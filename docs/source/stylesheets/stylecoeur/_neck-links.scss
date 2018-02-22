@@ -1,0 +1,63 @@
+
+
+$link-color-copy: $color-copy !default;
+$link-color-hover: $color-hover !default;
+$link-color-border: $color-copy !default;
+
+$link-color-hover: $color-hover !default;
+$link-color-hover-border: $link-color-hover !default;
+
+$link-color-active: $color-active !default;
+$link-color-active-border: $color-active !default;
+
+$link-color-inactive: $color-inactive !default;
+$link-color-inactive-border: transparent !default; // $color-inactive;
+
+
+
+a {
+  // color: rgba(#000, 0.7);
+  text-decoration: none;
+  @extend %ease;
+  // padding-bottom: $size-base/8;
+  border-bottom: solid 1px $link-color-border;
+
+  &, &:focus, &:active, &:visited {
+    color: $link-color-copy;
+    @extend %ease;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+    border-color: $link-color-hover-border;
+    @extend %ease;
+  }
+
+  &.--active {
+    color: $link-color-active !important;
+    border-color: $link-color-active-border !important;
+    @extend %ease;
+  }
+
+  &.--inactive, &.--draft {
+    color: $link-color-inactive !important;
+    border-color: $link-color-inactive-border !important;
+    @extend %ease;
+  }
+
+  &.--border-none {
+    border-color: transparent;
+  }
+
+  &.--border-inverse {
+    border-color: transparent;
+    &:hover {
+      color: $link-color-hover;
+      border-color: $link-color-hover-border;
+      @extend %ease;
+    }
+  }
+
+}
+
+

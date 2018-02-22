@@ -1,0 +1,33 @@
+
+
+$blog-border: $color-ui $border-line solid !default;
+$blog-color-hover: $color-main !default;
+$blog-color-hover-bg: $color-silver-lighter !default;
+
+._blog-item {
+  display: block;
+  border-top: $blog-border;
+  border-bottom: 0;
+
+  ._blog-img {
+    width: 100%;
+  }
+  &:last-of-type {
+    border-bottom: $blog-border;
+    &:hover { border-bottom-color: $blog-color-hover; }
+  }
+  // border-left: 0;
+  // border-right: 0;
+  @extend %ease;
+
+  &:hover {
+    @extend %ease;
+    color: $blog-color-hover !important;
+    border-color: $blog-color-hover;
+
+    & + * {
+      border-top-color: $blog-color-hover;
+    }
+    background: $blog-color-hover-bg;
+  }
+}
