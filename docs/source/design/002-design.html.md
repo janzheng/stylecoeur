@@ -1,7 +1,7 @@
 ---
 title: Design
 type: design
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: design
 section: about
 status: --draft

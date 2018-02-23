@@ -1,7 +1,7 @@
 ---
 title: Stylecoeur Dev
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: developingStylecoeur
 section: stylecoeur
 <!-- status: --draft -->
@@ -252,7 +252,7 @@ Partials are useful short reusable components. Very useful with `navigation` and
 Usage:
 
 ~~~ erb 
-<%= partial '/partials/nav' %>
+<%= partial '/partials/_coeur-nav' %>
 ~~~ 
 
 Note that the partial file has to have a leading underscore: `_nav.erb`
@@ -265,7 +265,7 @@ Partials can also take variables, as used in the Colors section. Usage:
 - <% swatch = 'example' %>
 
 ~~~ erb
-<%= partial '/partials/swatch', 
+<%= partial '/partials/coeur-swatch', 
     :locals => { :name => 'Blue', :varName => 'blue', :swatch => '#366EA6' } %>
 ~~~
 

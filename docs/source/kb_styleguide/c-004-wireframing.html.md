@@ -1,7 +1,7 @@
 ---
 title: Wireframes
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: wireframes
 section: prototyping
 <!-- status: --draft -->
@@ -58,14 +58,14 @@ Wireframe components should be simple, generalized, and very easily placeable on
 <div class="_font-redacted">This is Redacted 1</div>
 <div class="_font-redacted _font-light">This is Redacted 2</div>
 <div class="_font-redacted _font-bold">This is Redacted 1</div>
-<div class="_font-wf-black">This is Redacted Black</div>
+<div class="_font-redacted-block">This is Redacted Black</div>
 </div>
 ~~~
 <div class="_styleguide-example">
 <div class="_font-redacted">This is Redacted 1</div>
 <div class="_font-redacted _font-light">This is Redacted 2</div>
 <div class="_font-redacted _font-bold">This is Redacted 1</div>
-<div class="_font-wf-black">This is Redacted Black</div>
+<div class="_font-redacted-block">This is Redacted Black</div>
 </div>
 ~~~
 

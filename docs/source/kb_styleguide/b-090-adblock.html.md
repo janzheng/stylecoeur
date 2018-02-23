@@ -1,7 +1,7 @@
 ---
 title: Adblock Detection
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: adblock
 section: scriptcoeur
 <!-- status: --draft -->
@@ -35,7 +35,7 @@ The above basically creates an empty div. Lots of adblockers look for the "ads.j
 <div class="_styleguide-example">
   <div class="_message">
   </div>
-  <script src="../javascripts/scriptcoeur/ads.js?" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/ads.js?" type="text/javascript"></script>
   <script type="text/javascript">
 
   if(document.getElementById('rIMfJLoGNRzs')){
@@ -51,7 +51,7 @@ The above basically creates an empty div. Lots of adblockers look for the "ads.j
 <div class="_message">
 </div>
 
-<script src="../javascripts/scriptcoeur/ads.js?" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/ads.js?" type="text/javascript"></script>
 <script type="text/javascript">
 
 if(document.getElementById('rIMfJLoGNRzs')){

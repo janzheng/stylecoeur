@@ -1,7 +1,7 @@
 ---
 title: Carousel
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: carousel
 section: scriptcoeur
 <!-- status: --draft -->
@@ -21,9 +21,9 @@ Carousels are generally a bad idea for important information and calls to action
 
 
 <div class="_styleguide-example">
-  <link rel="stylesheet" type="text/css" href="../javascripts/scriptcoeur/plugins/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="../javascripts/scriptcoeur/plugins/slick/slick-theme.css"/>
-  <script type="text/javascript" src="../javascripts/scriptcoeur/plugins/slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../coeur/scriptcoeur/plugins/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="../coeur/scriptcoeur/plugins/slick/slick-theme.css"/>
+  <script type="text/javascript" src="../coeur/scriptcoeur/plugins/slick/slick.min.js"></script>
 
   <section class="_content _color-bg-active _margin-top _padding-bottom  _margin-bottom" >
     <div class="_carousel basic">

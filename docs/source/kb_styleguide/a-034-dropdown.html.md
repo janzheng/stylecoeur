@@ -1,7 +1,7 @@
 ---
 title: Dropdowns
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: dropdowns
 section: components
 <!-- status: --draft -->
@@ -68,7 +68,7 @@ source: ../
       </div>
     </span>
 
-    <script src="../javascripts/scriptcoeur/dropdown.js" type="text/javascript"></script>
+    <script src="../coeur/scriptcoeur/dropdown.js" type="text/javascript"></script>
 
   </div>
 
@@ -76,7 +76,7 @@ source: ../
 </div>
 ~~~html
 
-<script src="../javascripts/scriptcoeur/dropdown.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/dropdown.js" type="text/javascript"></script>
 
 <button class="_button _dropdown" >Dropdown <i class="fa fa-arrow-down"></i>
   <div class="_dropdown-container --button-width">

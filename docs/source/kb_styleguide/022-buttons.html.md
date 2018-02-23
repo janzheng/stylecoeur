@@ -1,7 +1,7 @@
 ---
 title: Buttons
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: buttons
 section: simple
 source: ../

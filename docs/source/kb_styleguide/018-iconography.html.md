@@ -1,7 +1,7 @@
 ---
 title: Iconography
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: icons
 section: fundamental
 source: ../

@@ -1,7 +1,7 @@
 ---
 title: Gallery
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: gallery
 section: scriptcoeur
 <!-- status: --draft -->
@@ -56,14 +56,14 @@ Check out Lightbox for something simpler.
   </div>
 
   <!-- initialization script -->
-  <script src="../javascripts/scriptcoeur/gallery.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/gallery.js" type="text/javascript"></script>
 
-  <link href="../javascripts/scriptcoeur/plugins/photoswipe/photoswipe.css" rel="stylesheet">
+  <link href="../coeur/scriptcoeur/plugins/photoswipe/photoswipe.css" rel="stylesheet">
 
-  <script type="text/javascript" src="../javascripts/scriptcoeur/plugins/photoswipe/photoswipe.min.js"></script>
-  <script type="text/javascript" src="../javascripts/scriptcoeur/plugins/photoswipe/photoswipe-ui-default.min.js"></script>
+  <script type="text/javascript" src="../coeur/scriptcoeur/plugins/photoswipe/photoswipe.min.js"></script>
+  <script type="text/javascript" src="../coeur/scriptcoeur/plugins/photoswipe/photoswipe-ui-default.min.js"></script>
 
-  <link href="../javascripts/scriptcoeur/plugins/photoswipe/default-skin/default-skin.css" rel="stylesheet">
+  <link href="../coeur/scriptcoeur/plugins/photoswipe/default-skin/default-skin.css" rel="stylesheet">
 
 
   <!-- launching script -->
@@ -165,14 +165,14 @@ Check out Lightbox for something simpler.
 </div>
 
 <!-- plugin includes -->
-<link href="../javascripts/scriptcoeur/plugins/photoswipe/photoswipe.css" rel="stylesheet">
-<script type="text/javascript" src="../javascripts/scriptcoeur/plugins/photoswipe/photoswipe.min.js"></script>
-<script type="text/javascript" src="../javascripts/scriptcoeur/plugins/photoswipe/photoswipe-ui-default.min.js"></script>
-<link href="../javascripts/scriptcoeur/plugins/photoswipe/default-skin/default-skin.css" rel="stylesheet">
+<link href="../coeur/scriptcoeur/plugins/photoswipe/photoswipe.css" rel="stylesheet">
+<script type="text/javascript" src="../coeur/scriptcoeur/plugins/photoswipe/photoswipe.min.js"></script>
+<script type="text/javascript" src="../coeur/scriptcoeur/plugins/photoswipe/photoswipe-ui-default.min.js"></script>
+<link href="../coeur/scriptcoeur/plugins/photoswipe/default-skin/default-skin.css" rel="stylesheet">
 
 
 <!-- init + launch -->
-<script src="../javascripts/scriptcoeur/gallery.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/gallery.js" type="text/javascript"></script>
 <script>
   $(document).ready(function() {
     initPhotoSwipeFromDOM('._gallery', {noAnimation: false});

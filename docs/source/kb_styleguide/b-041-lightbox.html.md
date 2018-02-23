@@ -1,7 +1,7 @@
 ---
 title: Lightbox
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: lightbox
 section: scriptcoeur
 <!-- status: --draft -->
@@ -30,8 +30,8 @@ Include both the CSS and the JS for it to work.
   <a href="//vimeo.com/1084537" data-lity>iFrame Vimeo</a>
   <a href="//maps.google.com/maps?q=San+Francisco" data-lity>Google Maps</a>
 
-  <link href="../javascripts/scriptcoeur/plugins/lity/lity.min.css?" rel="stylesheet">
-  <script src="../javascripts/scriptcoeur/plugins/lity/lity.min.js" type="text/javascript"></script>
+  <link href="../coeur/scriptcoeur/plugins/lity/lity.min.css?" rel="stylesheet">
+  <script src="../coeur/scriptcoeur/plugins/lity/lity.min.js" type="text/javascript"></script>
 </div>
 ~~~html
 <a href="https://farm9.staticflickr.com/8642/16455005578_0fdfc6c3da_b.jpg" data-lity data-lity-desc="Photo of a flower">Image</a>
@@ -39,8 +39,8 @@ Include both the CSS and the JS for it to work.
 <a href="//www.youtube.com/watch?v=XSGBVzeBUbk" data-lity>iFrame Youtube</a>
 <a href="//vimeo.com/1084537" data-lity>iFrame Vimeo</a>
 <a href="//maps.google.com/maps?q=San+Francisco" data-lity>Google Maps</a>
-<link href="../javascripts/scriptcoeur/plugins/lity/lity.min.css?" rel="stylesheet">
-<script src="../javascripts/scriptcoeur/plugins/lity/lity.min.js" type="text/javascript"></script>
+<link href="../coeur/scriptcoeur/plugins/lity/lity.min.css?" rel="stylesheet">
+<script src="../coeur/scriptcoeur/plugins/lity/lity.min.js" type="text/javascript"></script>
 ~~~
 
 </main>

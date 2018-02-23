@@ -1,7 +1,7 @@
 ---
 title: Vue
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: vue
 section: prototyping
 <!-- status: --draft -->

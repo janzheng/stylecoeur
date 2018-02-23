@@ -1,7 +1,7 @@
 ---
 title: Toggles
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: toggleswitch
 section: simple
 source: ../

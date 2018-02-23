@@ -1,7 +1,7 @@
 ---
 title: onResize
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: onresize
 section: scriptcoeur
 <!-- status: --draft -->

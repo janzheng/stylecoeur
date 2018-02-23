@@ -1,7 +1,7 @@
 ---
 title: User Stories
 type: design
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: userStories
 section: about
 status: --draft

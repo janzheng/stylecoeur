@@ -1,7 +1,7 @@
 ---
 title: Select & Copy
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: selectandcopy
 section: scriptcoeur
 <!-- status: --draft -->
@@ -23,7 +23,7 @@ Here are some helpers for selecting and directly copying content to the user's c
 - attach `_target-select` and a target `data-target=""` to select the target element
 
 <div class="_styleguide-example" markdown="1">
-  <script src="../javascripts/scriptcoeur/selectcopy.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/selectcopy.js" type="text/javascript"></script>
   <div id="text" class="_margin-bottom _padding _color-bg-ui">
     Here's some text you could copy.
   </div>
@@ -46,7 +46,7 @@ Here are some helpers for selecting and directly copying content to the user's c
   </div>
 </div>
 ~~~html
-<script src="../javascripts/scriptcoeur/selectcopy.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/selectcopy.js" type="text/javascript"></script>
 <div id="text" class="_margin-bottom _padding _color-bg-ui">
   Here's some text you could copy.
 </div>

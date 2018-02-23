@@ -6,15 +6,13 @@
   "author": "Jan",
   "private": true,
   "scripts": {
-    "assets":     "rm -rf source/javascripts/scriptcoeur/; rm -rf source/stylesheets/stylecoeur/; cp -a ../scriptcoeur/. source/javascripts/scriptcoeur/ ; cp  -a ../stylecoeur/. source/stylesheets/stylecoeur; ",
-    "pre_build":  "npm run assets; cp ../readme.md source/_imported_readme.md.erb",
 
-    "server":     "npm run pre_build; bundle exec middleman server --port 4567",
-    "build":      "npm run pre_build; bundle exec middleman build ",
-    "deploy":     "npm run pre_build; bundle exec middleman deploy ",
-    "github":     "npm run pre_build; bundle exec middleman build ; bundle exec middleman deploy",
+    "server":     "bundle exec middleman server --port 4567",
+    "build":      "bundle exec middleman build ",
+    "deploy":     "bundle exec middleman deploy ",
+    "github":     "bundle exec middleman build ; bundle exec middleman deploy",
     
     "stage":      "npm run pre_build; bundle exec middleman build ; cd build ; surge . -d stylecoeur_stage.surge.sh",
-    "publish":    "npm run pre_build; bundle exec middleman build ; cd build ; surge . -d stylecoeur.surge.sh"
+    "surge":      "npm run pre_build; bundle exec middleman build ; cd build ; surge . -d stylecoeur.surge.sh"
   }
 }

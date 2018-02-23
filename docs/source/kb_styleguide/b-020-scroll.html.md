@@ -2,7 +2,7 @@
 title: Smooth Scroll
 name: smoothScroll
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 section: scriptcoeur
 <!-- status: --draft -->
 source: ../
@@ -27,13 +27,13 @@ Smooth scroll intercepts anchor links and tags, and URL anchors (e.g. `http://my
 <div class="_styleguide-example">
   <div>
     <a class="" href="#smooth">Basic but Smooth</a>
-    <script src="../javascripts/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
+    <script src="../coeur/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
   </div>
   The basic scroller doesn't require any JQuery initialization, but lacks complexity. It also doesn't intercept anchor links
 </div>
 ~~~html
 <a class="" href="#smooth">Scroll soooo smooth</a>
-<script src="../javascripts/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
 ~~~
 
 Scrolling to a specific target in a specific container:

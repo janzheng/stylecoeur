@@ -1,7 +1,7 @@
 ---
 title: Email Form
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: emailForm
 section: scriptcoeur
 <!-- status: --draft -->

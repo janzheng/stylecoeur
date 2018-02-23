@@ -1,7 +1,7 @@
 ---
 title: Scripts & Resources
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: scriptsandtools
 section: scriptcoeur
 <!-- status: --draft -->
@@ -36,7 +36,7 @@ Almost everything makes extensive usage of jQuery, so it's included in scriptcoe
 Easiest way is to just include the js file in html and call the corresponding function (This is quick for development), but you can also integrate it into your own code (copypasta).
 
 ~~~html
-<script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 <script>
 $(document).ready(function() {
   var triggerElement = "._sidebar-trigger", target = "._sidebar", targetClass = "--pinned";

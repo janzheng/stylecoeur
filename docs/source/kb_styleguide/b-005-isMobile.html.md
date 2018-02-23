@@ -1,7 +1,7 @@
 ---
 title: IsMobile
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: ismobile
 section: scriptcoeur
 <!-- status: --draft -->
@@ -18,7 +18,7 @@ Mobile Sniffer and/or mobile checker. Not always accurate but paired with checki
 
 <div class="_styleguide-example">
 
-  <script src="../javascripts/scriptcoeur/ismobile.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/ismobile.js" type="text/javascript"></script>
   <div class=" _padding _color-bg-white">
     <div>Sniffer: <span class="isMobileMessage1"></span></div>
     <div>Non-Sniffer: <span class="isMobileMessage2"></span></div>
@@ -46,7 +46,7 @@ Mobile Sniffer and/or mobile checker. Not always accurate but paired with checki
 
 </div>
 ~~~html 
-<script src="../javascripts/scriptcoeur/ismobile.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/ismobile.js" type="text/javascript"></script>
 <div class=" _padding _color-bg-white">
   <div>Sniffer: <span class="isMobileMessage1"></span></div>
     <div>Non-Sniffer: <span class="isMobileMessage2"></span></div>

@@ -1,7 +1,7 @@
 ---
 title: Sidebar
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: sidebar
 section: components
 <!-- status: --draft -->
@@ -14,7 +14,7 @@ reference: _sidebar.scss
 
 ## Sidebar
 
-<%= partial '/partials/styleguide-ref', 
+<%= partial '/partials/coeur-ref', 
     :locals => { :refName => current_page.data.reference } %>
 
 The sidebar is to display long lists of links like the one used for this style guide. It's slightly similar in functionality to the sidenav, but the sidebar should be sticky and scrollable.
@@ -76,7 +76,7 @@ The sidebar is to display long lists of links like the one used for this style g
 
 </div>
 
-<script src="../javascripts/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
 
 <script>
   $('._sidebar-submenu_trigger').on('click', function() {
@@ -136,7 +136,7 @@ The sidebar is to display long lists of links like the one used for this style g
 
 
 
-<script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 
 <script>
 $(document).ready(function() {
@@ -149,7 +149,7 @@ $(document).ready(function() {
 </script>
 
 
-<script src="../javascripts/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
 
 <script>
   $('._sidebar-submenu_trigger').on('click', function() {

@@ -1,10 +1,17 @@
 
 {
   "name": "coeur",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "the heart of design systems",
   "email": "hello@janzheng.com",
-  "github": "https://janzheng.com/coeur/",
+  "url": "https://janzheng.com/stylecoeur/",
+  "repository": {
+    "type": "git",
+    "url": "https://janzheng.com/stylecoeur/"
+  },
+  "keywords": [
+    "test"
+  ],
   "website": "janzheng.com",
   "author": "Jan Zheng",
   "scripts": {
@@ -15,7 +22,7 @@
     "build":            "cd docs ; npm run build",
     "deploy":           "cd docs ; npm run deploy",
     "stage":            "cd docs ; npm run stage",
-    "publish":          "cd docs ; npm run publish",
+    "surge":            "cd docs ; npm run surge",
     "github":           "cd docs ; npm run github",
 
 

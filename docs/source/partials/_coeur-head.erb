@@ -1,0 +1,62 @@
+
+  <% source = current_page.data.source || "./" %>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!-- facebook tags -->
+  <!-- <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+  <meta property="og:description"        content="How much does culture influence creative thinking?" />
+  <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+  -->
+  
+  <!-- prevents Google for indexing this page -->
+  <!-- <meta name="robots" content="noindex"> -->
+
+
+  <!-- external -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+  <!-- local fonts -->
+  <link href= <%= source + "/fonts/coeur/blokk/stylesheet.css" %> rel="stylesheet">
+
+  <link href= <%= source + "/fonts/coeur/redacted/stylesheet.css" %> rel="stylesheet">
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109123119-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109123119-1');
+  </script>
+
+
+  <!-- local -->
+  <link rel="icon" type="image/png" href=<%= source + "images/stylecoeur_ico4.png" %> >
+  <!-- <link href=<%= source + "stylesheets/highlighting.css" %> rel="stylesheet" > -->
+  <link href=<%= source + "stylesheets/site.css" %> rel="stylesheet" >
+  <script src=<%= source + "coeur/scriptcoeur/plugins/jquery.min.js" %> ></script>
+  <script src=<%= source + "javascripts/site.js" %> ></script>
+
+  

@@ -1,7 +1,7 @@
 ---
 title: Navigation
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: navigation
 section: components
 <!-- status: --draft -->
@@ -122,7 +122,7 @@ Sticky Nav is provided as a shortcut here, but it's basically just combining nav
 
 
   <!-- script -->
-  <script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 
   <script>
   $(document).ready(function() {
@@ -168,7 +168,7 @@ Sticky Nav is provided as a shortcut here, but it's basically just combining nav
 
 
 <!-- script -->
-<script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 
 <script>
 $(document).ready(function() {
@@ -225,7 +225,7 @@ These replicate mobile app menus, but they're pretty much the same as sticky nav
 
 
   <!-- script -->
-  <script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 
   <script>
   $(document).ready(function() {
@@ -271,7 +271,7 @@ These replicate mobile app menus, but they're pretty much the same as sticky nav
 
 
 <!-- script -->
-<script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 
 <script>
 $(document).ready(function() {
@@ -390,7 +390,7 @@ These are usually triggered by hamburger icons for mobile views, but there are a
   </div>
 
 
-  <script src="../javascripts/scriptcoeur/nav.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/nav.js" type="text/javascript"></script>
 
   <script>
     function openModal() {
@@ -437,7 +437,7 @@ These are usually triggered by hamburger icons for mobile views, but there are a
 </div>
 
 
-<script src="../javascripts/scriptcoeur/nav.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/nav.js" type="text/javascript"></script>
 
 <script>
 

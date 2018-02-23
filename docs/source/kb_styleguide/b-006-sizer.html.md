@@ -1,7 +1,7 @@
 ---
 title: vHeight Sizer
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: sizer
 section: scriptcoeur
 <!-- status: --draft -->
@@ -22,14 +22,14 @@ Sizer resizes a piece of content dynamically, based on window size.
 
 <div class="_styleguide-example">
 
-  <script src="../javascripts/scriptcoeur/sizer.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/sizer.js" type="text/javascript"></script>
   <h3 class="_sizer-vheight _align-vertically " data-vheight="50">
     50% Screen Height!
   </h3>
 
 </div>
 ~~~html
-<script src="../javascripts/scriptcoeur/sizer.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/sizer.js" type="text/javascript"></script>
 <h3 class="_sizer-vheight _align-vertically " data-vheight="50">
   50% Screen Height!
 </h3>

@@ -1,7 +1,7 @@
 ---
 title: Randomizer
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: randomizer
 section: scriptcoeur
 <!-- status: --draft -->
@@ -20,7 +20,7 @@ This section exists because I'm always terrible at random num gen. In the future
 
   <div class="random"></div>
 
-  <script src="../javascripts/scriptcoeur/random.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/random.js" type="text/javascript"></script>
   <script>
 
     $('.random-btn').on('click', function() {
@@ -40,7 +40,7 @@ This section exists because I'm always terrible at random num gen. In the future
 <button class="random-btn _button --outline" >Generate Random Nums [0,10] (inclusive)</button>
   <div class="random"></div>
 
-<script src="../javascripts/scriptcoeur/random.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/random.js" type="text/javascript"></script>
 <script>
 
   $('.random-btn').on('click', function() {
@@ -63,7 +63,7 @@ This section exists because I'm always terrible at random num gen. In the future
   
   <button class="joker _button --outline" >Psssst!</button>
 
-  <script src="../javascripts/scriptcoeur/random.js" type="text/javascript"></script>
+  <script src="../coeur/scriptcoeur/random.js" type="text/javascript"></script>
 
   <script>
 
@@ -130,7 +130,7 @@ This section exists because I'm always terrible at random num gen. In the future
 ~~~ html
 <button class="joker _button --outline" >Psssst!</button>
 
-<script src="../javascripts/scriptcoeur/random.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/random.js" type="text/javascript"></script>
 
 <script>
 

@@ -4,15 +4,24 @@
 # \coeur
 
 
-### Notes
+### Notes & Changelog
 
 __WORK IN PROGRESS__
 
 - things will break. A LOT. Not production-ready.
-- figure out how to un-redundantify css and js through build scripts for docs?
-- test npm packaging
-- rename "stylecoeur" to just "coeur"
-  - scriptcoeur to "scripts" etc.
+- 2/21: 0.1.3 — finally stable
+
+- docscoeur
+  - documentation assembler — lots of partials and layouts should be generalized into coeur
+  - but others should not...
+  - move the npm run scripts for copying stuff into the package
+  - creating a /docs folder that combines assets:
+    - docs_src — middleman, source, and all main scripts
+    - docscoeur — js, fonts, layouts, partials
+      - rename these \_coeur-layout etc. 
+    - increases DRYness, reduces incompatibility across projecs
+    - build script should take a value, e.g. `docs` that:
+      - reads from `docs_src` => spits out into `docs`
 
 
 

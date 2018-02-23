@@ -1,7 +1,7 @@
 ---
 title: Blog List
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: bloglist
 section: simple
 <!-- status: --draft -->

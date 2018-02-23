@@ -1,7 +1,7 @@
 ---
 title: Google Maps
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: google_maps
 section: external
 source: ../

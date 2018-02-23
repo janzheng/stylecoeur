@@ -1,7 +1,7 @@
 ---
 title: Local Storage
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: localStorage
 section: scriptcoeur
 <!-- status: --draft -->
@@ -21,7 +21,7 @@ Local Storage refers to storing information locally in a browser, either using l
 
 
 <div class="_styleguide-example">
-<script src="../javascripts/scriptcoeur/plugins/js.cookie.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/plugins/js.cookie.js" type="text/javascript"></script>
 
 <div>localStorageExample: <span id="output">asdads</span></div>
 
@@ -36,7 +36,7 @@ Local Storage refers to storing information locally in a browser, either using l
 
 </div>
 ~~~
-<script src="../javascripts/scriptcoeur/plugins/js.cookie.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/plugins/js.cookie.js" type="text/javascript"></script>
 
 <script>
   Cookies.set('localStorageExample', { foo: 'bar' });

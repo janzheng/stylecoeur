@@ -1,7 +1,7 @@
 ---
 title: Sticky
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: sticky
 section: scriptcoeur
 <!-- status: --draft -->
@@ -43,7 +43,7 @@ Used for Sticky nav, sticky sidebar, etc. Uses ScrollMagic to attach classes.
 
 
 <!-- script -->
-<script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 
 <script>
 $(document).ready(function() {
@@ -71,7 +71,7 @@ $(document).ready(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
 <!-- script -->
-<script src="../javascripts/scriptcoeur/sticky.js" type="text/javascript"></script>
+<script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
 
 <script>
 $(document).ready(function() {

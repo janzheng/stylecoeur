@@ -1,7 +1,7 @@
 ---
 title: Modals
 type: styleguide
-layout: layout-knowbase
+layout: layout-coeur-knowbase
 name: modals
 section: components
 source: ../
