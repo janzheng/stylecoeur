@@ -34,7 +34,3 @@ gem 'middleman-gibberish', :git => 'https://github.com/ahoward/middleman-gibberi
 # https://github.com/dsedivec/middleman-related-articles
 
 # https://github.com/statonjr/middleman-sitemap
-
-# fix tilt issues
-gem 'opal', '~> 0.10.5' 
-

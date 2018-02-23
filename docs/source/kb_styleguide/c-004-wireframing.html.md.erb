@@ -1,7 +1,7 @@
 ---
 title: Wireframes
 type: styleguide
-layout: layout-coeur-knowbase
+layout: layout-coeur-knowbase-wf
 name: wireframes
 section: prototyping
 <!-- status: --draft -->
@@ -10,6 +10,8 @@ source: ../
 
 <main markdown="1">
 
+<div class="_wireframe-desc" markdown="1">
+
 ## Wireframes
 
 Stylecoeur can be used to stitch together wireframes. The power of wireframes is the sketchy "throwaway" look, so people don't take them seriously when reviewing them (this is the vast difference between a wireframe and a comp — wireframes need to look kind of crappy, so stakeholders focus on the functionality).
@@ -17,12 +19,34 @@ Stylecoeur can be used to stitch together wireframes. The power of wireframes is
 The 'wireframe' idea is inspired by [Balsamiq](https://balsamiq.com/).
 
 - Components: Everything is a component. Keep component class names easy to understand. Document these components well
-- Black & White: Don't use colors unless absolutely neverssay. 
+- Black &amp; White: Don't use colors unless absolutely neverssay. 
 - Annotations: Wireframes are useless without context
 - Scribble and Blokk fonts help with approximating copy
 - Use real text: don’t use lorem ipsum
 
-### HAML Templates
+### Middleman Template
+
+There's a special knowledge base template: `layout-coeur-knowbase-wf` that's compatible with the wireframe styles. Wireframes are Middleman partial objects, which allow them to be nested and imported anywhere. Store the wireframes in the `/wireframes` folder.
+
+</div>
+
+<div class="_wireframe-section">
+<%= partial '/partials/_coeur-wireframe', 
+    :locals => { :path => 'wireframes/coeur-wf-template' } %>
+</div>
+
+<div markdown="1">
+
+~~~
+<div class="_wireframe-section">
+<%= "\<\%\= partial '/partials/_coeur-wireframe', 
+    :locals => { :path => 'wireframes/coeur-wf-template' } \%\>" %>
+</div>
+~~~
+
+<div class="_wireframe-desc" markdown="1">
+
+### HAML Wireframe Templates
 
 Middleman supports HAML, which is nice for simple layouts (but that's about it). Read this: [HAML sucks for content](http://chriseppstein.github.io/blog/2010/02/08/haml-sucks-for-content/) for tips on using HAML properly.
 
@@ -79,9 +103,9 @@ Wireframe components should be simple, generalized, and very easily placeable on
 
 
 <div class="_styleguide-example">
-  <object class="_wireframe-image" data="https://via.placeholder.com/300x100" width="302" height="102" alt="This is a caption">
-    <div class="_padding">This is a caption (when no data is specified, or no internet is around)</div>
-  </object>
+<object class="_wireframe-image" data="https://via.placeholder.com/300x100" width="302" height="102" alt="This is a caption">
+<div class="_padding">This is a caption (when no data is specified, or no internet is around)</div>
+</object>
 </div>
 ~~~
 <object class="_wireframe-image" data="https://via.placeholder.com/300x100" width="300" height="100">
@@ -143,7 +167,7 @@ Simple family of tags and classes that can be placed anywhere on a page. Use siz
 </div>
 
 </div>
-
+</div>
 
 </main>
 

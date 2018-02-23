@@ -28,11 +28,16 @@ if scripts
   FileUtils.copy_entry "#{coeur}/scriptcoeur", "#{target}/scriptcoeur"
 end
 if source
-  # FileUtils.mkdir_p "#{target}/sourcecoeur"
   FileUtils.copy_entry "#{coeur}/sourcecoeur/layouts", "#{target}/../layouts"
   FileUtils.copy_entry "#{coeur}/sourcecoeur/partials", "#{target}/../partials"
+
+  FileUtils.mkdir_p "#{target}/../fonts"
+  FileUtils.mkdir_p "#{target}/../fonts/coeur"
   FileUtils.copy_entry "#{coeur}/sourcecoeur/fonts", "#{target}/../fonts/coeur/"
-  # FileUtils.copy_entry "#{coeur}/sourcecoeur", "#{target}/sourcecoeur"
+
+  FileUtils.mkdir_p "#{target}/../wireframes"
+  FileUtils.copy_entry "#{coeur}/sourcecoeur/wireframes", "#{target}/../wireframes"
+  FileUtils.copy_entry "#{coeur}/sourcecoeur", "#{target}/sourcecoeur"
 end
 
 # copy over the readme to be used in docs

@@ -46,30 +46,43 @@ $wireframe-border-width:  $border-line !default;
 $wireframe-border-style:  solid        !default;
 
 
+// setting up text on wireframe MM template
+
+._wireframe-desc {
+  @extend ._width-content-max; 
+  @extend ._grid_item-overflow;
+  @extend ._padding-2;
+  @extend ._margin-center;
+  padding-left: 0;
+}
+
 // gray box for contextualizing wfs
-._wireframe-section {
+._wireframe-container {
   padding: $size-base;
-  margin-bottom: $size-base;
+  // margin-bottom: $size-base;
   background-color: $color-ui;
 }
 
 // requirements section
-._wireframe-reqs {
+._wireframe-comments {
   @extend ._width-content-max;
   @extend ._grid_item-overflow;
   @extend ._padding-2;
   margin: 0 auto;
+  background-color: $color-ui-light;
 }
 
 // Container for framing the wireframe 
 // - gray outline
 ._wireframe-frame {
   background-color: $color-bg;
+  background-color: $color-ui;
   padding: $size-base;
   border-color: $wireframe-color;
   border-style: $wireframe-border-style;
   border-width: $wireframe-border-width;
 }
+
 
 // Image Placeholder
 
