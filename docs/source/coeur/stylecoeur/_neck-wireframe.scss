@@ -67,8 +67,9 @@ $wireframe-border-style:  solid        !default;
 ._wireframe-comments {
   @extend ._width-content-max;
   @extend ._grid_item-overflow;
-  @extend ._padding-2;
   margin: 0 auto;
+  margin-top: $size-base;
+  padding: $size-2;
   background-color: $color-ui-light;
 }
 
@@ -76,11 +77,11 @@ $wireframe-border-style:  solid        !default;
 // - gray outline
 ._wireframe-frame {
   background-color: $color-bg;
-  background-color: $color-ui;
+  // background-color: $color-ui;
   padding: $size-base;
-  border-color: $wireframe-color;
-  border-style: $wireframe-border-style;
-  border-width: $wireframe-border-width;
+  // border-color: $wireframe-color;
+  // border-style: $wireframe-border-style;
+  // border-width: $wireframe-border-width;
 }
 
 
