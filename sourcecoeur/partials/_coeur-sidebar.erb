@@ -13,8 +13,8 @@
 <% end %>
 
 
-<% sidebarTitle = defined?(current_page.data) ? current_page.data.sidebarTitle : home.data.sidebarTitle %>
-<% sidebarCaption = defined?(current_page.data) ? current_page.data.sidebarCaption : home.data.sidebarCaption %>
+<% sidebarTitle = defined?(current_page.data) && current_page.data.sidebarTitle ? current_page.data.sidebarTitle : home.data.sidebarTitle %>
+<% sidebarCaption = defined?(current_page.data) && current_page.data.sidebarCaption ? current_page.data.sidebarCaption : home.data.sidebarCaption %>
 
 <!-- for open/close  -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">

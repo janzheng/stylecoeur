@@ -5,8 +5,17 @@ set :site_title, "coeur"
 # COEUR ASSETS
 # copy assets over
 
-coeur = "../"
-# coeur = "../node_modules/coeur/" # << use this one to pull from node_modules
+coeur = "../node_modules/coeur/" # << use this one to pull from node_modules 
+
+# if _src "flag" was set when running npm script, we don't pull from node_modules
+# http://rubyforadmins.com/passing-arguments-to-script
+unless ARGV.empty?
+  for arg in ARGV
+    if arg == "_src"
+      coeur = "../"
+    end
+  end
+end
 
 target = "source/coeur"
 
@@ -15,19 +24,23 @@ styles = true
 scripts = true
 source = true    # fonts, layouts, partials, etc.
 
+
 # copy_file "initializer.rb", "config/initializers/#{file_name}.rb"
 # if styles || scripts || source
   # FileUtils.mkdir "#{target}"
 # end
 if styles
+  # puts "copying stylecoeur..."
   FileUtils.mkdir_p "#{target}/stylecoeur"
   FileUtils.copy_entry "#{coeur}/stylecoeur", "#{target}/stylecoeur"
 end
 if scripts
+  # puts "copying scriptcoeur..."
   FileUtils.mkdir_p "#{target}/scriptcoeur"
   FileUtils.copy_entry "#{coeur}/scriptcoeur", "#{target}/scriptcoeur"
 end
 if source
+  # puts "copying sourcecoeur..."
   FileUtils.copy_entry "#{coeur}/sourcecoeur/layouts", "#{target}/../layouts"
   FileUtils.copy_entry "#{coeur}/sourcecoeur/partials", "#{target}/../partials"
 

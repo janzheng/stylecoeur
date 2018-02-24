@@ -1,19 +1,19 @@
 
 {
-  "name": "coeur",
-  "version": "0.1.43",
-  "description": "the heart of design systems",
-  "email": "hello@janzheng.com",
-  "url": "https://janzheng.com/stylecoeur/",
+  "name": "ProjectName",
+  "version": "0.1.0",
+  "description": "project description",
+  "email": "your@email.com",
+  "url": "https://productionurl.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/janzheng/"
   },
   "keywords": [
-    "css","js","style guide","starter","coeur"
+    "test"
   ],
-  "website": "https://janzheng.com/stylecoeur",
-  "author": "Jan Zheng",
+  "website": "productionurl.com",
+  "author": "Your Name",
   "scripts": {
     "commit":          "git add . -A ; git commit ; git push origin master ",
 
@@ -25,17 +25,11 @@
     "surge":            "cd docs ; npm run surge",
     "github":           "cd docs ; npm run github",
 
-    "install_docs":   "mkdir docs; cp -a node_modules/coeur/docs/. docs/.",
-    "src":            "cd docs ; npm run server -- _src",
-
-
-
 
     "vue":            "cd vue/dance ; npm run dev",
     "vue_build":      "cd vue/dance ; npm run build",
     "vue_local":      "rm atlx/atlx2018/source/static/js/* ; rm vue/dance/local/static/js/* ; cd vue/dance ; npm run local ; cd ../.. ; cp -a vue/dance/local/static/js/. atlx/atlx2018/source/static/js",
 
     "gc_deploy":      "cd vuecoeur/server ; graphcool deploy"
-
   }
 }
