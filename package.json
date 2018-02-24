@@ -15,27 +15,27 @@
   "website": "https://janzheng.com/stylecoeur",
   "author": "Jan Zheng",
   "scripts": {
-    "commit":          "git add . -A ; git commit ; git push origin master ",
+    "commit":           "git add . -A ; git commit ; git push origin master ",
 
     "server":           "cd docs ; npm run server",
     "docs":             "cd docs ; npm run server",
-    "build":            "cd docs ; npm run build",
-    "deploy":           "cd docs ; npm run deploy",
-    "stage":            "cd docs ; npm run stage",
-    "surge":            "cd docs ; npm run surge",
-    "github":           "cd docs ; npm run github",
+    "build":            "cd docs ; npm run build -- _src",
+    "deploy":           "cd docs ; npm run deploy -- _src",
+    "stage":            "cd docs ; npm run stage -- _src",
+    "surge":            "cd docs ; npm run surge -- _src",
+    "github":           "cd docs ; npm run github -- _src",
 
-    "install_docs":   "mkdir docs; cp -a node_modules/coeur/docs/. docs/.",
-    "src":            "cd docs ; npm run server -- _src",
-
-
+    "install_docs":     "mkdir docs; cp -a node_modules/coeur/docs/. docs/.",
+    "src":              "cd docs ; npm run server -- _src",
 
 
-    "vue":            "cd vue/dance ; npm run dev",
-    "vue_build":      "cd vue/dance ; npm run build",
-    "vue_local":      "rm atlx/atlx2018/source/static/js/* ; rm vue/dance/local/static/js/* ; cd vue/dance ; npm run local ; cd ../.. ; cp -a vue/dance/local/static/js/. atlx/atlx2018/source/static/js",
 
-    "gc_deploy":      "cd vuecoeur/server ; graphcool deploy"
+
+    "vue":              "cd vue/dance ; npm run dev",
+    "vue_build":        "cd vue/dance ; npm run build",
+    "vue_local":        "rm atlx/atlx2018/source/static/js/* ; rm vue/dance/local/static/js/* ; cd vue/dance ; npm run local ; cd ../.. ; cp -a vue/dance/local/static/js/. atlx/atlx2018/source/static/js",
+
+    "gc_deploy":        "cd vuecoeur/server ; graphcool deploy"
 
   }
 }
