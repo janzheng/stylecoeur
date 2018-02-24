@@ -1,6 +1,8 @@
 
-# SITE DETAILS
-set :site_title, "coeur"
+# SITE CONFIG DETAILS
+set :site_title, "Peer Tutor"
+set :use_default_head, false
+set :use_default_nav, false
 
 # COEUR ASSETS
 # copy assets over
@@ -50,7 +52,7 @@ if source
 
   FileUtils.mkdir_p "#{target}/../wireframes"
   FileUtils.copy_entry "#{coeur}/sourcecoeur/wireframes", "#{target}/../wireframes"
-  FileUtils.copy_entry "#{coeur}/sourcecoeur", "#{target}/sourcecoeur"
+  # FileUtils.copy_entry "#{coeur}/sourcecoeur", "#{target}/sourcecoeur"
 end
 
 # copy over the readme to be used in docs

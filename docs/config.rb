@@ -1,6 +1,8 @@
 
-# SITE DETAILS
-set :site_title, "coeur"
+# SITE CONFIG DETAILS
+set :site_title, "Peer Tutor"
+set :use_default_head, false
+set :use_default_nav, false
 
 # COEUR ASSETS
 # copy assets over

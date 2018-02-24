@@ -7,11 +7,19 @@
 <html>
   <head>
     <title><%= title %></title>
-    <%= partial '/partials/coeur-head' %>
+    <% if config.use_default_head %>
+      <%= partial '/partials/coeur-head' %>
+    <% else %>
+      <%= partial '/partials/_head' %>
+    <% end %>
   </head>
   <body class="_styleguide _loader">
     
-    <%= partial '/partials/_coeur-nav' %>
+    <% if config.use_default_nav %>
+      <%= partial '/partials/coeur-nav' %>
+    <% else %>
+      <%= partial '/partials/_nav' %>
+    <% end %>
 
     <div class="_styleguide-container">
 
