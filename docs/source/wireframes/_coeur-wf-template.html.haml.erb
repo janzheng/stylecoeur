@@ -3,7 +3,26 @@
 ._wireframe-frame
   %h2 Wireframe Template
   %p This is the wireframe sample template, in HAML
-  %p._font-wf this is some scribbly
+  %p 
+    The wireframe fonts `redacted` and blokk make paragraphs look "sketchy"
+    %p._font-wf this is some scribbly
+    %p._font-wf3 this is a block
+  %p 
+    This is a link:
+    = link_to "Linky Link", "/my-relative-url-here", class: "active"
+    Here's some more text to continue the line
+  ._wf-block
+    The following content is dynamically generated with HAML/ERB.
+    -# This is a comment. The Next line is a ruby statement which will not get printed
+    - @array = [1,2,3]
+    - @myclass = "myclass"
+    %ul
+      - @array.each do |e|
+        -# Below all syntax are equivalent
+        -# %li{:class => @myclass, :id => e }
+        -#  = e 
+        %li{:class => @myclass, :id => e} #{e}
+        -# %li= e sss 
 <div class="_wireframe-comments" markdown="1">
 :markdown
   ### Wireframes support Markdown

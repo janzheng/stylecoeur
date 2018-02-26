@@ -258,6 +258,7 @@ input, .input {
       margin-left: -6px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      line-height: $button-line-height - 1px;
     }
 
     // short button inputs
@@ -348,6 +349,37 @@ input, .input {
         background-color: $color-loading;
       }
     }
+
+
+  ._form-input-container {
+    // note: inputs can't have before/after attached
+    // search-select example: https://github.com/moreta/vue-search-select
+    // only works for text
+    &.--searchselect {
+      position: relative;
+      display: inline-block;
+
+      input {
+        padding-right: $size-p3;
+        position: relative;
+      }
+      &:after {
+        content: '\25BE';
+        display: inline-block;
+        position: absolute;
+        right: $size-2;
+        top: 0;
+        // height: $height-input;
+        line-height: $height-input;
+      }
+    }
+    &.--short {
+      &:after {
+        height: $height-input--short;
+        line-height: $height-input
+      }
+    }
+  }
 
 
 

@@ -44,11 +44,16 @@
 $wireframe-color:         $color-ui    !default;
 $wireframe-border-width:  $border-line !default;
 $wireframe-border-style:  solid        !default;
+$wireframe-border: $wireframe-border-style $wireframe-border-width $wireframe-color;
 
+$size-wf: $size-base;
+$color-wf-main: $color-main;
+$color-wf-bg: $wireframe-color;
+$radius-wf: $radius;
 
 // setting up text on wireframe MM template
 
-._wireframe-desc {
+._wireframe-desc, ._wf-desc {
   @extend ._width-content-max; 
   @extend ._grid_item-overflow;
   @extend ._padding-2;
@@ -57,33 +62,89 @@ $wireframe-border-style:  solid        !default;
 }
 
 // gray box for contextualizing wfs
-._wireframe-container {
+._wireframe-container, ._wf-container {
   padding: $size-base;
   // margin-bottom: $size-base;
   background-color: $color-ui;
 }
 
-// requirements section
-._wireframe-comments {
+// requirements / comments
+._wireframe-comments, ._wf-comments {
   @extend ._width-content-max;
   @extend ._grid_item-overflow;
   margin: 0 auto;
   margin-top: $size-base;
   padding: $size-2;
   background-color: $color-ui-light;
+
+  h1 { 
+    @extend %font-largest;
+  }
+  h2 { 
+    @extend %font-larger;
+  }
+  h3 {
+    @extend %font-large;
+  }
+  h4 {
+    @extend %font-body;
+  }
 }
 
 // Container for framing the wireframe 
 // - gray outline
-._wireframe-frame {
+._wireframe-frame, ._wf-frame {
   background-color: $color-bg;
   // background-color: $color-ui;
-  padding: $size-base;
+  padding: $size-wf;
   // border-color: $wireframe-color;
   // border-style: $wireframe-border-style;
   // border-width: $wireframe-border-width;
 }
 
+
+
+
+
+
+
+
+// Wireframe Objects
+
+._wireframe-block, ._wf-block {
+  // margin: $size-wf;
+  padding: $size-wf;
+  border: $wireframe-border;
+}
+._wireframe-section, ._wf-section {
+  margin-bottom: $size-wf;
+}
+._wireframe-cta, ._wf-cta {
+  // these are generic CTAs, and look like links
+  // font-weight: bold;
+  // margin-right: $size-wf/2;
+  display: inline-block;
+  color: $color-wf-main;
+  // &:not(:last-child) {
+    margin-left: $size-wf/2;
+  // }
+}
+._wireframe-btn, ._wf-btn {
+  // these are more button-looking CTAs
+  @extend ._wf-cta;
+  padding: $size-wf/2 $size-wf;
+  background-color: $color-wf-bg;
+  border: $wireframe-border;
+  border-radius: $radius-wf;
+
+  margin: 0; // necessary for bg to extend to edges
+  &:not(:last-child) {
+    margin-left: $size-wf/2;
+  }
+}
+._wireframe-tbd, ._wf-tbd {
+  opacity: 0.5;
+}
 
 // Image Placeholder
 

@@ -57,6 +57,9 @@ $font-lineheight: $font-size-base * 1.5 !default;
 $font-ui: $size-base; // $size + 2px;
 $font-ui-lineheight: $font-ui * 1.5 !default;
 
+$font-largest:   $size-p2 !default; 
+  $line_height-largest: ($size-p2) * 1.5 !default;
+
 $font-larger:   $font-size-base + 6px !default; 
   $line_height-larger: ($font-size-base + 6px) * 1.5 !default;
 
@@ -80,6 +83,7 @@ $font-h5: $size-larger !default; // $font-size-base !default; //$font-size-base 
 $font-h6: $size-m1 !default;
 
 
+%font-largest, ._font-largest {   font-size: $font-largest; line-height: $line_height-largest; }
 %font-larger, ._font-larger {   font-size: $font-larger; line-height: $line_height-larger; }
 %font-large, ._font-large {     font-size: $font-large; line-height: $line_height-large; }
 %font-small, ._font-small {     font-size: $font-small; line-height: $line_height-small;  }

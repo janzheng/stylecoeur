@@ -16,8 +16,6 @@ submenu:
   - [Radio, radio]
   - [Checkbox, checkbox]
   - [Option & Multi, option--multiple-select]
-
-  
 ---
 
 
@@ -306,8 +304,8 @@ Flags:
 <legend class="legend">Fieldset</legend>
 
 <div class="_form-control --optional">
-  <label for="textInput" class="_form-label">Text Input <span class="_font-small">- optional</span></label>
-  <input id="textInput" class="_form-input" type="text" name="textInput" placeholder='Some text' />
+  <label for="textInputFieldset" class="_form-label">Text Input <span class="_font-small">- optional</span></label>
+  <input id="textInputFieldset" class="_form-input" type="text" name="textInputFieldset" placeholder='Some text' />
 </div>
 
 </fieldset>
@@ -336,8 +334,8 @@ Basic input form
 </div>
 
 <div class="_form-control --optional">
-  <label for="textInput" class="_form-label">Input with Button</label>
-  <input id="textInput" class="_form-input --button" type="text" name="textInput" placeholder='Email Address' />
+  <label for="textInputWButton" class="_form-label">Input with Button</label>
+  <input id="textInputWButton" class="_form-input --button" type="text" name="textInputWButton" placeholder='Email Address' />
   <button class="_button _margin-none">Sign Up</button>
 </div>
 
@@ -347,13 +345,13 @@ Basic input form
 </div>
 
 <div class="_form-control">
-  <label for="email" class="_form-label">Email Address <span class="_font-small">--width-full</span></label>
-  <input id="email" class="_form-input --width-full" type="email" name="email" placeholder="Email Address" required/>
+  <label for="emailFullwidth" class="_form-label">Email Address <span class="_font-small">--width-full</span></label>
+  <input id="emailFullwidth" class="_form-input --width-full" type="email" name="emailFullwidth" placeholder="Email Address" required/>
   <label class="_form-note">Extra note here </label>
 </div>
 
 <div class="_form-control">
-  <label class="_form-label">Password <span class="_font-small">--width-medium</span></label>
+  <label for="password" class="_form-label">Password <span class="_font-small">--width-medium</span></label>
   <input id="password" class="_form-input --width-medium" type="password" name="password" placeholder="Password" required/>
 </div>
 
@@ -378,12 +376,18 @@ Basic input form
   <input id="floatingInput" class="_form-input --border" type="text" name="floatingInput" placeholder='Some text' />
 </div>
 
+<div class="_form-control">
+  <label for="searchSelect" class="_form-label">Search Select <span class="_font-small">Dynamic Vue component. Check out: <a href="https://github.com/moreta/vue-search-select">vue-search-select</a></span></label>
+  <div class="_form-input-container --searchselect">
+    <input id="searchSelect" class="_form-input " type="text" name="searchSelect" placeholder='Some text' />
+  </div>
+</div>
 
 </div>
 
 ~~~html
 
-<div class="_form-control --optional">
+<div class="_form-control">
   <label for="textInput" class="_form-label">Text Input <span class="_font-small">- optional</span></label>
   <input id="textInput" class="_form-input" type="text" name="textInput" placeholder='Some text' />
 </div>
