@@ -1,0 +1,116 @@
+
+
+$table-color-main: $color-main;
+$table-color: $color-body;
+$table-color-border: $color-ui;
+$table-color-bg: $color-white;
+$table-color-highlight: $color-ui;
+$table-border: solid $border-line $table-color-border;
+
+$table-padding-v: $size-m2;
+$table-padding-h: $size-base;
+
+// wrapper for tables on small screens to force scroll
+._table-figure { 
+  max-width: 100%; overflow-x: scroll; 
+}
+
+._table {
+
+  background: transparent; // $table-color-bg;
+  color: $table-color;
+  text-align: left;
+
+  margin: $size-base 0;
+  // border: solid $border-line $table-color-border;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  // width: 100%;
+  // max-width: 100%;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  th, td {
+    padding: $table-padding-v $table-padding-h;
+  }
+
+  tbody tr:nth-child(odd) td {
+    background-color: $table-color-highlight;
+  }
+
+  caption {
+    // border-bottom: $table-border;
+    padding-bottom: $size-half;
+    margin-bottom: $size-half;
+
+    caption-side: top; // bottom
+    text-align: left;
+    font-weight: bold;
+    .--subcaption {
+      font-size: $font-small;
+      font-weight: normal;
+    }
+  }
+
+  .--group {
+    th, td {
+      border-top: $table-border;
+    }
+  }
+  .--num {
+    text-align: right;
+  }
+  .--nobreak {
+    white-space: nowrap;
+  }
+
+  // invert/pivot the x/y axis
+  // good for mobile
+  @mixin stack {
+    .--group {
+      th:first-of-type {
+        border-width: $border-thick;
+        border-color: $table-color-main;
+        margin-top: $size-2;
+      }
+    }
+    thead, th:empty, td:empty {
+      display: none;
+      visibility: hidden;
+    }
+    table, caption, tbody, tr, th, td {
+      display: block;
+      text-align: left;
+    }
+    th[data-title]:before, td[data-title]:before {
+      content: attr(data-title) ":\a0";
+      display: inline-block;
+      width: $size-p8;
+    }
+    tbody tr td:first-of-type {
+      font-weight: bold;
+      &:before {
+        font-weight: bold;
+      }
+    }
+    th, td {
+      padding: $table-padding-v/2 $table-padding-h;
+    }
+  }
+  &.--stack {
+    @include stack;
+  }
+
+  &.--stack-xs {
+    @include screen-xs {
+      @include stack;
+    }
+  }
+}
+
+
+
+
+

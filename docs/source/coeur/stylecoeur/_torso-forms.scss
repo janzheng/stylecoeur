@@ -364,10 +364,10 @@ input, .input {
         position: relative;
       }
       &:after {
-        content: '\25BE';
+        content: '\25BF';
         display: inline-block;
         position: absolute;
-        right: $size-2;
+        right: $size-p1;
         top: 0;
         // height: $height-input;
         line-height: $height-input;
