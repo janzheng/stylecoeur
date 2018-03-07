@@ -231,11 +231,13 @@ button,
   font-size: $font-ui;
   
   // default
-  &:hover {
-    // @extend %ease; 
-    color: $button-color-main-hover;
-    background-color: $button-color-bg-hover;
-    border-color: $button-color-bg-hover;
+  &:not(.--hover_none) {
+    &:hover {
+      // @extend %ease; 
+      color: $button-color-main-hover;
+      background-color: $button-color-bg-hover;
+      border-color: $button-color-bg-hover;
+    }
   }
 }
 
@@ -254,10 +256,12 @@ button.--outline, ._button-outline, ._button.--outline {
   border-color: $button-outline-color-border;
   background-color: $button-outline-color-bg;
 
-  &:hover {
-    color: $button-outline-color-main-hover;
-    border-color: $button-outline-color-border-hover;
-    background-color: $button-outline-color-bg-hover;
+  &:not(.--hover_none) {
+    &:hover {
+      color: $button-outline-color-main-hover;
+      border-color: $button-outline-color-border-hover;
+      background-color: $button-outline-color-bg-hover;
+    }
   }
 }
 
@@ -275,8 +279,11 @@ button.--text,
   border-color: transparent !important;
   padding-left: $size/2;
   padding-right: $size/2;
-  &:hover {
-    color: $button-outline-color-main-hover;
+
+  &:not(.--hover_none) {
+    &:hover {
+      color: $button-outline-color-main-hover;
+    }
   }
 }
 

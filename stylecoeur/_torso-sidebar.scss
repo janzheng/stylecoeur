@@ -13,6 +13,7 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
   max-width: $sidebar-width-max;
   width: $sidebar-width;
   overflow-y: scroll;
+  overflow-x: hidden;
   padding-bottom: $size-base*2;
   padding-left: $size-base;
   height: 100vh;
