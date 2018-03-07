@@ -4,7 +4,8 @@ $table-color-main: $color-main;
 $table-color: $color-body;
 $table-color-border: $color-ui;
 $table-color-bg: $color-white;
-$table-color-highlight: $color-ui;
+$table-color-highlight: $color-ui-light;
+$table-color-highlight-dark: $color-ui;
 $table-border: solid $border-line $table-color-border;
 
 $table-padding-v: $size-m2;
@@ -12,7 +13,38 @@ $table-padding-h: $size-base;
 
 // wrapper for tables on small screens to force scroll
 ._table-figure { 
-  max-width: 100%; overflow-x: scroll; 
+  max-width: 100%; overflow-x: scroll;
+  position: relative; 
+
+  // this mimics airtable 
+  &.--scrollable {
+    // give space for scrollbar
+    padding-right: $size-2;
+  }
+  ._blocker {
+    position: sticky;
+    top: 0;
+    // left: 0;
+    // height: 100px;
+    height: 0;
+    /* background: green; */
+    z-index: 12;
+
+    &:after {
+      // figure out a way to not declare h/w?
+      content: ' > ';
+      position: sticky;
+      display: block;
+      background: $table-color-bg;
+      color: $table-color-bg;
+      top: 0;
+      left: 0;
+      height: 40px;
+      width: 81px;
+      // z-index: 90;
+      padding: $table-padding-v $table-padding-h;
+    }
+  }
 }
 
 ._table {
@@ -21,7 +53,7 @@ $table-padding-h: $size-base;
   color: $table-color;
   text-align: left;
 
-  margin: $size-base 0;
+  margin-bottom: $size-base;
   // border: solid $border-line $table-color-border;
 
   -webkit-box-shadow: none;
@@ -39,6 +71,11 @@ $table-padding-h: $size-base;
   tbody tr:nth-child(odd) td {
     background-color: $table-color-highlight;
   }
+  &.--dark {
+    tbody tr:nth-child(odd) td {
+      background-color: $table-color-highlight-dark;
+    }
+  }
 
   caption {
     // border-bottom: $table-border;
@@ -54,6 +91,26 @@ $table-padding-h: $size-base;
     }
   }
 
+  // attributes
+  &.--sticky {
+    position: relative;
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: rgba($table-color-bg, 1);
+      // background-color: rgba($table-color-bg, 0.8);
+      z-index: 10;
+    }
+    tbody th {
+      position: sticky;
+      left: 0;
+      // background-color: rgba($table-color-bg, 0.6);
+      background-color: rgba($table-color-bg, 1);
+      z-index: 9;
+    }
+  }
+
+  // children
   .--group {
     th, td {
       border-top: $table-border;
@@ -65,6 +122,7 @@ $table-padding-h: $size-base;
   .--nobreak {
     white-space: nowrap;
   }
+
 
   // invert/pivot the x/y axis
   // good for mobile

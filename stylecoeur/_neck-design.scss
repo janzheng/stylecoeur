@@ -23,6 +23,10 @@
 @for $i from 0 through 20 {
   @include namedElementGenerator('vh', min-height, #{$i * 5}, '#{$i * 5}vh');
 }
+@for $i from 0 through 20 {
+  @include namedElementGenerator('vh-max', max-height, #{$i * 5}, '#{$i * 5}vh');
+}
+
 
 
 

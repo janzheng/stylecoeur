@@ -1,7 +1,7 @@
 
 {
   "name": "coeur",
-  "version": "0.1.43",
+  "version": "0.1.44",
   "description": "the heart of design systems",
   "email": "hello@janzheng.com",
   "url": "https://janzheng.com/stylecoeur/",
@@ -27,6 +27,7 @@
 
     "install_docs":     "mkdir docs; cp -a node_modules/coeur/docs/. docs/.",
     "src":              "cd docs ; npm run server -- _src",
+    "coeur":            "cd docs ; npm run server -- _src",
 
 
 

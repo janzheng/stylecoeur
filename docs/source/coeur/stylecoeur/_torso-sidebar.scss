@@ -30,11 +30,20 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
     color: $sidebar-color-link;
     border: 0;
     border-color: $sidebar-color-link;
+    width: 100%;
+
+    // hide really long stuff??
+    // white-space: nowrap;
+    // overflow: hidden;
 
     &:hover {
       color: $sidebar-color-hover;
       border-color: $sidebar-color-hover
     }
+  }
+
+  ._sidebar-item {
+    position: relative;
   }
 
   %sidebar-submenu-visible {
@@ -50,15 +59,36 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
   ._sidebar-submenu_trigger {
     margin-right: $size-base/4;
     cursor: pointer;
+
+    position: absolute;
+    width: $size-base;
+    right: 0;
+    text-align: center;
+    padding-left: $size-base;
+    padding-right: $size-p3;
+    background: $color-bg;
+    // z-index: -1;
+
+    &:hover {
+      i {
+        font-weight: bold;
+        left: $size-half;
+        color: $color-active;
+      }
+    }
+
     &.--open {
-      position: relative;
-      right: -3px;
-      display: inline-block;
-      
-      @include transform(rotate(90deg));
-      @include transform-origin(center);
-      & ~ ._sidebar-submenu {
-        @extend %sidebar-submenu-visible;
+      // left aligned arrows
+      // position: relative;
+      // right: -3px;
+
+      // newer right-aligned arrows (like Spotify)
+      i {
+        @include transform(rotate(90deg));
+        @include transform-origin(center);
+        & ~ ._sidebar-submenu {
+          @extend %sidebar-submenu-visible;
+        }
       }
     }
   }

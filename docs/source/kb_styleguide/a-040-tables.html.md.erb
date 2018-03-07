@@ -63,6 +63,7 @@ Markdown supports tables (the kramdown version included in coeur, at least. The 
 |===============|==========|======================|=========|
 | Footer row    |          |                      |         |
 |---------------|----------|----------------------|---------|
+{: ._table}
 
 </div>
 ~~~
@@ -86,8 +87,8 @@ The Semantic UI and alistapart examples have been distilled to a basic set of ru
 - Add `.--stack` or `.--stack-xs` (for only stacked on small screens) to invert the x/y axis to compact the table. Might not always work. Requires `data-titles` on all the `td`s
 
 <div class="_styleguide-example" markdown="1">
-<figure class="_table-figure">
-<table class="_table --stack-xs">
+<figure class="_table-figure ">
+<table class="_table --stack-xs --dark">
 <caption>
   Table Caption
   <div class="--subcaption">Values are given to three significant figures unless exact.</div>
@@ -177,6 +178,11 @@ The Semantic UI and alistapart examples have been distilled to a basic set of ru
 </div>
 
 
+
+<div class="_styleguide-example" haml="1">
+  <%= partial '/partials/_coeur-wireframe', 
+    :locals => { :path => 'wireframes/coeur-wf-table' } %>
+</div>
 
 
 </main>

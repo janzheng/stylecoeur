@@ -74,10 +74,10 @@
           <div class="_sidebar-section_title"> <%= $section_name %></div>
         <% end %>
 
-        <div>
+        <div class="_sidebar-item">
           <% if defined?(resource.data.submenu) %>
             <span class='_sidebar-submenu_trigger
-                         <%= '--open' if defined?(current_page.data.submenu) && resource.data.submenu == current_page.data.submenu %>
+                         <%= '--open' if defined?(current_page.data.submenu) && resource.data.submenu == current_page.data.submenu && resource.data.name == current_page.data.name %>
             '><i class="fa fa-angle-right"></i></span>
           <% end %>
           <a href="<%= source %><%= resource.path %>" 

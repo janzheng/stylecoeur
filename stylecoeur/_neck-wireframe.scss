@@ -116,7 +116,12 @@ $radius-wf: $radius;
   padding: $size-wf;
   border: $wireframe-border;
 }
+._wireframe-inline-block, ._wf-inline-block {
+  @extend ._wf-block;
+  display: inline-block;
+}
 ._wireframe-section, ._wf-section {
+  margin-top: $size-wf;
   margin-bottom: $size-wf;
 }
 ._wireframe-cta, ._wf-cta {
@@ -125,9 +130,11 @@ $radius-wf: $radius;
   // margin-right: $size-wf/2;
   display: inline-block;
   color: $color-wf-main;
-  // &:not(:last-child) {
+  cursor: pointer;
+  &:not(:first-child):not(._margin-none) {
     margin-left: $size-wf/2;
-  // }
+  }
+  @include screen-xs
 }
 ._wireframe-btn, ._wf-btn {
   // these are more button-looking CTAs
@@ -138,7 +145,7 @@ $radius-wf: $radius;
   border-radius: $radius-wf;
 
   margin: 0; // necessary for bg to extend to edges
-  &:not(:last-child) {
+  &:not(:first-child) {
     margin-left: $size-wf/2;
   }
 }
