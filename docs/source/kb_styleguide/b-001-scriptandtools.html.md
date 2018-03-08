@@ -86,6 +86,13 @@ Animated decorative grid lines
 
 
 <div class="_card" markdown="1">
+__[Full Page Screen Capture](
+https://github.com/mrcoles/full-page-screen-capture-chrome-extension/)__
+
+Full Page Screen Capture chrome ext
+</div>
+
+<div class="_card" markdown="1">
 __[Web Gradients](https://webgradients.com/)__
 
 Make gradients easier

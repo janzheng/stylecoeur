@@ -140,7 +140,8 @@ $button-line-height: 13px                               !default; // makes the b
   &.--short {
     padding-top: $size-m3 - $button-border-width/4;
     padding-bottom: $size-m3 - $button-border-width/4;
-    height: inherit;
+    // height: inherit;
+    height: $height-input--short;
   }
 
   &-thin, &.--thin {
@@ -231,7 +232,7 @@ button,
   font-size: $font-ui;
   
   // default
-  &:not(.--hover_none) {
+  &:not(.--hover-none) {
     &:hover {
       // @extend %ease; 
       color: $button-color-main-hover;
@@ -256,7 +257,7 @@ button.--outline, ._button-outline, ._button.--outline {
   border-color: $button-outline-color-border;
   background-color: $button-outline-color-bg;
 
-  &:not(.--hover_none) {
+  &:not(.--hover-none) {
     &:hover {
       color: $button-outline-color-main-hover;
       border-color: $button-outline-color-border-hover;
@@ -280,7 +281,7 @@ button.--text,
   padding-left: $size/2;
   padding-right: $size/2;
 
-  &:not(.--hover_none) {
+  &:not(.--hover-none) {
     &:hover {
       color: $button-outline-color-main-hover;
     }

@@ -68,8 +68,10 @@ $table-padding-h: $size-base;
     padding: $table-padding-v $table-padding-h;
   }
 
-  tbody tr:nth-child(odd) td {
-    background-color: $table-color-highlight;
+  &:not(.--highlight-body-none) {
+    tbody tr:nth-child(odd) td {
+      background-color: $table-color-highlight;
+    }
   }
   &.--dark {
     tbody tr:nth-child(odd) td {
@@ -88,6 +90,12 @@ $table-padding-h: $size-base;
     .--subcaption {
       font-size: $font-small;
       font-weight: normal;
+    }
+  }
+
+  &.--highlight-titles {
+    th {
+      background-color: $table-color-highlight;
     }
   }
 

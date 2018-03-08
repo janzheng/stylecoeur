@@ -134,6 +134,30 @@
 }
 
 
+
+
+// Radius / Appearances
+
+._radius-none-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  &-i {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}
+._radius-none-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  &-i {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+}
+
+
+
+
 // Triangles
 
 ._triangle-up {

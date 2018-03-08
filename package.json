@@ -1,7 +1,7 @@
 
 {
   "name": "coeur",
-  "version": "0.1.45",
+  "version": "0.1.46",
   "description": "the heart of design systems",
   "email": "hello@janzheng.com",
   "url": "https://janzheng.com/stylecoeur/",
@@ -17,7 +17,7 @@
   "scripts": {
     "commit":           "git add . -A ; git commit ; git push origin master ",
 
-    "server":           "cd docs ; npm run server",
+    "start":           "cd docs ; npm run server",
     "docs":             "cd docs ; npm run server",
     "build":            "cd docs ; npm run build -- _src",
     "deploy":           "cd docs ; npm run deploy -- _src",

@@ -61,6 +61,11 @@ $radius-wf: $radius;
   padding-left: 0;
 }
 
+._wireframe-title, ._wf-title {
+  @extend ._wireframe-desc;
+  padding-bottom: 0 !important;
+}
+
 // gray box for contextualizing wfs
 ._wireframe-container, ._wf-container {
   padding: $size-base;
@@ -70,7 +75,7 @@ $radius-wf: $radius;
 
 // requirements / comments
 ._wireframe-comments, ._wf-comments {
-  @extend ._width-content-max;
+  @extend ._width-content-max-narrow;
   @extend ._grid_item-overflow;
   margin: 0 auto;
   margin-top: $size-base;
@@ -96,6 +101,9 @@ $radius-wf: $radius;
 ._wireframe-frame, ._wf-frame {
   background-color: $color-bg;
   // background-color: $color-ui;
+  @extend ._width-content-max;
+  margin-left: auto;
+  margin-right: auto;
   padding: $size-wf;
   // border-color: $wireframe-color;
   // border-style: $wireframe-border-style;
@@ -115,6 +123,7 @@ $radius-wf: $radius;
   // margin: $size-wf;
   padding: $size-wf;
   border: $wireframe-border;
+  border-radius: $radius;
 }
 ._wireframe-inline-block, ._wf-inline-block {
   @extend ._wf-block;
@@ -123,6 +132,10 @@ $radius-wf: $radius;
 ._wireframe-section, ._wf-section {
   margin-top: $size-wf;
   margin-bottom: $size-wf;
+}
+._wireframe-content, ._wf-content {
+  margin-top: $size-wf*2;
+  margin-bottom: $size-wf*2;
 }
 ._wireframe-cta, ._wf-cta {
   // these are generic CTAs, and look like links
@@ -155,7 +168,7 @@ $radius-wf: $radius;
 
 // Image Placeholder
 
-._wireframe-image {
+._wireframe-image, ._wf-image {
   display: grid;
   // these cause problems w/ img object
   // box-model: forces scroll
@@ -177,6 +190,19 @@ $radius-wf: $radius;
   } 
 }
 
+
+// meant to mimic narrower paragraph content blocks popular on sites
+// this one just calculates a width % of parent container
+._wireframe-paragraphs, ._wf-para {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+._wireframe-paragraphs-narrow, ._wf-para-narrow {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 // Geometries
 ._wireframe-circle,

@@ -1,31 +1,39 @@
 
+#wireframe
 
 ._wireframe-frame
-  %h2 Wireframe Template
-  %p This is the wireframe sample template, in HAML
-  %p 
-    The wireframe fonts `redacted` and blokk make paragraphs look "sketchy"
-    %p._font-wf this is some scribbly
-    %p._font-wf3 this is a block
-  %p 
-    This is a link:
-    = link_to "Linky Link", "/my-relative-url-here", class: "active"
-    Here's some more text to continue the line
   ._wf-block
-    The following content is dynamically generated with HAML/ERB.
-    -# This is a comment. The Next line is a ruby statement which will not get printed
-    - @array = [1,2,3]
-    - @myclass = "myclass"
-    %ul
-      - @array.each do |e|
-        -# Below all syntax are equivalent
-        -# %li{:class => @myclass, :id => e }
-        -#  = e 
-        %li{:class => @myclass, :id => e} #{e}
-        -# %li= e sss 
+    ._grid-1-4._align-vertically
+      %div Nav
+      ._right-sm 
+        %span._wf-cta._margin-none-i Login
+        %span._wf-cta Sign Up as Student
+        %span._wf-btn._margin-left Apply as Tutor
+  %h2 Marketing Header
+  %p._wf-tbd TBD: Marketing material
+  ._wf-section._grid-2
+    ._wf-block._wf-cta Sign Up as Student
+    ._wf-block._wf-cta._margin-none Apply as Tutor
+  %p._wf-tbd TBD: More marketing material
+
 <div class="_wireframe-comments" markdown="1">
 :markdown
-  ### Wireframes support Markdown
 
-  Keep notes, requirements, and such in the (markdown-supported) `_wireframe-comments` section!
+  # Comments
+
+  Main index page for the prototype. In the future, this might be replaced by the marketing site. For now, this provides entry for signups and logins.
+
+  - Provide prominent buttons and hooks for sign up and login flow
+  - Display **prototype** restrictions
+    - Not a commercial app, for testing only
+  - Marketing and design requirements will be provided by the graphic designer
+
+  ## Actions
+  - **Login**
+  - **[Apply as Tutor]** > Tutor Application Page
+  - **[Sign Up as Student]** > Student Signup Page
+
+  ## Components
+  - none
+
 </div>

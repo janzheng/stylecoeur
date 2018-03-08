@@ -11,7 +11,10 @@ source: ../
   
 ## Iconography
 
-For icons, please refer to [Font Awesome](http://fontawesome.io). This is a very useful and free font icon collection. To use it, include the CDN: `"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css`
+For icons, please refer to [Font Awesome](http://fontawesome.io). This is a very useful and free font icon collection. 
+- Font Awesome v5: `<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>`
+- Font Awesome v4: `<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">`
+
 
 To use the icons, simple create an element tag with the desired icon and attributes as classes:
 

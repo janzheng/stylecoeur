@@ -7,7 +7,7 @@
 
 $btnGrp-radius-pill: $radius-lg !default;
 
-._buttonGroup {
+._buttonGroup, ._button-group {
   // margin-top: $size-base;
   position: relative;
   display: inline-block;
