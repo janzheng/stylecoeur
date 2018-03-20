@@ -17,26 +17,13 @@
   "scripts": {
     "commit":           "git add . -A ; git commit ; git push origin master ",
 
-    "start":           "cd docs ; npm run server",
-    "docs":             "cd docs ; npm run server",
-    "build":            "cd docs ; npm run build -- _src",
-    "deploy":           "cd docs ; npm run deploy -- _src",
-    "stage":            "cd docs ; npm run stage -- _src",
-    "surge":            "cd docs ; npm run surge -- _src",
-    "github":           "cd docs ; npm run github -- _src",
+    "build":            "cd sites/docs ; npm run build -- _src",
+    "deploy":           "cd sites/docs ; npm run deploy -- _src",
+    "stage":            "cd sites/docs ; npm run stage -- _src",
+    "prod":             "cd sites/docs ; npm run deploy -- _src",
+    "github":           "cd sites/docs ; npm run github -- _src",
 
-    "install_docs":     "mkdir docs; cp -a node_modules/coeur/docs/. docs/.",
-    "src":              "cd docs ; npm run server -- _src",
-    "coeur":            "cd docs ; npm run server -- _src",
-
-
-
-
-    "vue":              "cd vue/dance ; npm run dev",
-    "vue_build":        "cd vue/dance ; npm run build",
-    "vue_local":        "rm atlx/atlx2018/source/static/js/* ; rm vue/dance/local/static/js/* ; cd vue/dance ; npm run local ; cd ../.. ; cp -a vue/dance/local/static/js/. atlx/atlx2018/source/static/js",
-
-    "gc_deploy":        "cd vuecoeur/server ; graphcool deploy"
-
+    "install_docs":     "mkdir sites/docs; cp -a node_modules/coeur/docs/. sites/docs/.",
+    "start":            "cd sites/docs ; npm run server -- _src"
   }
 }

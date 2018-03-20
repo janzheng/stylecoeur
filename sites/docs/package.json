@@ -1,0 +1,18 @@
+
+{
+  "name": "coeur-source-driver",
+  "version": "1.0.0",
+  "description": "Coeur Scripts",
+  "author": "Jan",
+  "private": true,
+  "scripts": {
+
+    "server":     "bundle exec middleman server --port 4567",
+    "start":      "npm run server -- _src;",
+
+    "build":      "bundle exec middleman build ",
+    "github":     "npm run build -- _src; bundle exec middleman deploy",
+    "stage":      "npm run build; cd build ; surge . -d stylecoeur_stage.surge.sh",
+    "prod":       "npm run build; cd build ; surge . -d stylecoeur.surge.sh"
+  }
+}
