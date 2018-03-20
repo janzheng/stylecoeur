@@ -1,0 +1,1267 @@
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Clearfix</title>
+      
+  
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="google" content="notranslate">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!-- facebook tags -->
+  <!-- <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+  <meta property="og:description"        content="How much does culture influence creative thinking?" />
+  <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+  -->
+  
+  <!-- prevents Google for indexing this page -->
+  <!-- <meta name="robots" content="noindex"> -->
+
+
+  <!-- external -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+  <!-- local fonts -->
+  <link href= .././assets/fonts/blokk/stylesheet.css rel="stylesheet">
+  <link href= .././assets/fonts/redacted/stylesheet.css rel="stylesheet">
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109123119-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109123119-1');
+  </script>
+
+
+  <!-- local -->
+  <link rel="icon" type="image/png" href=.././assets/images/stylecoeur_ico4.png >
+  <!-- <link href=.././assets/stylesheets/highlighting.css rel="stylesheet" > -->
+  <link href=.././assets/stylesheets/site.css rel="stylesheet" >
+  <script src=.././assets/coeur/scriptcoeur/plugins/jquery.min.js ></script>
+  <script src=.././assets/javascripts/site.js ></script>
+
+  
+  </head>
+  <body class="_styleguide _loader">
+    
+      
+
+<div class="_styleguide-nav _grid-three-one --always">
+  <div>
+    <a class="_margin-right" href= ../index.html ><svg width="40" height="30" viewBox="0 0 100 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="49.8186384%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#F63636" offset="0%"></stop>
+            <stop stop-color="#F63636" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="stylecoeur_ico4" transform="translate(0.000000, -11.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" transform="translate(0.000000, 11.000000)">
+                <g id="Group-3">
+                    <polygon id="Path-Copy-12" points="40.8602151 6.19327748e-16 21.5053763 6.19327748e-16 17.0451253 5.75679777 0 27.7567568 46.8988317 74.5265871 77.2936407 0 67.7419355 6.19327748e-16 53.7634409 11.7432432"></polygon>
+                    <polygon id="Path-Copy-13" fill-opacity="0.9" points="51.3254096 78.9631593 52.6062043 80.2981462 99.9777631 27.7753387 84.5766718 4.27027027"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+<!-- <svg width="40" height="30" viewBox="0 0 100 79" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="50%" y1="49.82%" x2="50%" y2="0%" id="a"><stop stop-color="#F63636" offset="0%"/><stop stop-color="#F63636" offset="100%"/></linearGradient></defs><g transform="translate(0 -13)" fill="url(#a)" fill-rule="evenodd"><path d="M40.86 13H21.51l-4.46 5.76L0 40.76l40.48 43.86L77.29 13h-9.55L53.76 24.74z"/><path fill-opacity=".9" d="M45.4 89.9l1.27 1.33 53.3-50.45-15.4-23.51z"/></g></svg> -->
+
+<!-- <svg class="_logo-heart" width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg"><title>Group 3</title><defs><linearGradient x1="50%" y1="49.82%" x2="50%" y2="0%" id="a"><stop stop-color="#F63636" offset="0%"/><stop stop-color="#FBAF66" offset="100%"/></linearGradient></defs><g transform="translate(0 -11)" fill="url(#a)" fill-rule="evenodd"><path d="M38 11H20l-4.15 5.4L0 37l37.87 40.9 34-66.9H63L50 22"/><path fill-opacity=".7" d="M45 87l5 4 17.66-19.07 4.3-4.64L100 37 82 15"/></g></svg> --></a>
+    <a class="_margin-right" href= ../design.html >Design Concepts</a>
+    <a class="_margin-right" href= ../styleguide.html >Style Guide</a>
+    <a class="_margin-right" href= ../notes.html >Notes</a>
+    <a class="" target="_blank" href="http://github.com/janzheng/stylecoeur" >Github</a>
+  </div>
+</div>
+
+
+    <div class="_styleguide-container">
+
+      <div class="_grid-one-four _grid-xs-block">
+
+        <aside>
+          
+
+
+
+<!-- finds the source file for ex: styleguide, and uses the titles and captions from the source page -->
+
+
+
+<!-- for open/close  -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!-- closed sidebar menu -->
+<div class="_sidebar-closed _hidden">
+  <a href="#" class="_sidebar-open --border-none" onclick="openSidebar()">&#9776; sidebar</a>
+</div>
+
+<span class="_sidebar-trigger"></span>
+<div class="_sidebar --divider" data-currentPage="clearfix">
+  <!-- notes pages are one / deep and currently using relative links -->
+
+  <!-- main sidebar content -->
+  <div class="_sidebar-content">
+    <!-- header -->
+    <div class="_sidebar-submenu-main">
+      <div class="_padding-top _padding-bottom-half _grid-2-xs">
+        <a href=../index.html class="_margin-right-none-i"><span class="">&larr; back</span></a>
+        <a href="#" class="_right _margin-right-i" onclick="closeSidebar()">hide</a>
+      </div>
+
+      <a class="_font-bold --submenu  " 
+          href="../styleguide.html" >
+        <h4 class=_padding-bottom-none>Style Guide</h4>
+      </a>
+      <div class="_font-bold">cheat sheet ;)</div>
+    </div>
+
+    <!-- crawl through all documents of the same type (e.g. 'design' or 'notes') -->
+    <!-- styleguide -->
+    
+    <div>
+        <div class="_padding-top">
+            <div><a href=../styleguide.html#philosophy>Philosophy</a></div>
+            <div><a href=../styleguide.html#stylecoeur>Stylecoeur</a></div>
+            <div><a href=../styleguide.html#component-names>→ Component Names</a></div>
+            <div><a href=../styleguide.html#using-stylecoeur>Using Stylecoeur</a></div>
+            <div><a href=../styleguide.html#developing-stylecoeur>Developing Stylecoeur</a></div>
+            <div><a href=../styleguide.html#other-resources>Other Resources</a></div>
+        </div>
+    </div>
+
+
+
+
+          <div class="_sidebar-section_title"> fundamental</div>
+
+        <div class="_sidebar-item">
+            <span class='_sidebar-submenu_trigger
+                         
+            '><i class="fa fa-angle-right"></i></span>
+          <a href="../styleguide/001-size-typography.html" 
+             id="sidebar-size-typography"
+             class="
+                
+                --submenu
+                
+                
+                "
+          >
+            Typography 
+          </a>
+            <div class="_sidebar-submenu">
+                <div><a href=../styleguide/001-size-typography.html#sizes>Sizes</a></div>
+                <div><a href=../styleguide/001-size-typography.html#typography>Typography</a></div>
+                <div><a href=../styleguide/001-size-typography.html#baseline>Baseline</a></div>
+                <div><a href=../styleguide/001-size-typography.html#links>Links</a></div>
+                <div><a href=../styleguide/001-size-typography.html#code>Code</a></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+            <span class='_sidebar-submenu_trigger
+                         
+            '><i class="fa fa-angle-right"></i></span>
+          <a href="../styleguide/003-grid-layout.html" 
+             id="sidebar-grid-layout"
+             class="
+                
+                --submenu
+                
+                
+                "
+          >
+            Grid &amp; Layout 
+          </a>
+            <div class="_sidebar-submenu">
+                <div><a href=../styleguide/003-grid-layout.html#introduction>Introduction</a></div>
+                <div><a href=../styleguide/003-grid-layout.html#breakpoints>Breakpoints</a></div>
+                <div><a href=../styleguide/003-grid-layout.html#responsive-grid>Responsive Grid</a></div>
+                <div><a href=../styleguide/003-grid-layout.html#grid-patterns>Grid Patterns</a></div>
+                <div><a href=../styleguide/003-grid-layout.html#grid-helpers>Grid Helpers</a></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+            <span class='_sidebar-submenu_trigger
+                         
+            '><i class="fa fa-angle-right"></i></span>
+          <a href="../styleguide/004-colors.html" 
+             id="sidebar-colors"
+             class="
+                
+                --submenu
+                
+                
+                "
+          >
+            Colors 
+          </a>
+            <div class="_sidebar-submenu">
+                <div><a href=../styleguide/004-colors.html#color-usage>Usage</a></div>
+                <div><a href=../styleguide/004-colors.html#contextual-colors>Contextual Colors</a></div>
+                <div><a href=../styleguide/004-colors.html#primary-colors>Primary Colors</a></div>
+                <div><a href=../styleguide/004-colors.html#white-grays-blacks>Grayscale</a></div>
+                <div><a href=../styleguide/004-colors.html#social-media-colors>Social Media</a></div>
+                <div><a href=../styleguide/004-colors.html#scale-colors-amp-gradients>Scale Colors</a></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/006-design.html" 
+             id="sidebar-helpers"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Design 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/007-mixins.html" 
+             id="sidebar-mixins"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Mixins 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/008-animations.html" 
+             id="sidebar-animations"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Animations 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/012-borders.html" 
+             id="sidebar-border"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Borders 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/013-images.html" 
+             id="sidebar-images"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Images 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/018-iconography.html" 
+             id="sidebar-icons"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Iconography 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/019-clearfix.html" 
+             id="sidebar-clearfix"
+             class="
+                --active
+                
+                
+                
+                "
+          >
+            Clearfix 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/020-zindex.html" 
+             id="sidebar-zindex"
+             class="
+                
+                
+                
+                --draft
+                "
+          >
+            Z-Index 
+          </a>
+        </div>
+
+
+
+          <div class="_sidebar-section_title"> simple</div>
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/022-buttons.html" 
+             id="sidebar-buttons"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Buttons 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/023-buttonGroup.html" 
+             id="sidebar-buttongroups"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Button Groups 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/024-buttonToggle.html" 
+             id="sidebar-toggleswitch"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Toggles 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/025-tabs.html" 
+             id="sidebar-tabs"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Tabs 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/026-messages.html" 
+             id="sidebar-messages"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Messages 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/027-infobox.html" 
+             id="sidebar-infobox"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Infobox 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/028-cards.html" 
+             id="sidebar-cards"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Cards 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/029-expander.html" 
+             id="sidebar-expander"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Expander 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/030-bloglist.html" 
+             id="sidebar-bloglist"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Blog List 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/031-footnote.html" 
+             id="sidebar-footnote"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Footnote 
+          </a>
+        </div>
+
+
+
+          <div class="_sidebar-section_title"> components</div>
+
+        <div class="_sidebar-item">
+            <span class='_sidebar-submenu_trigger
+                         
+            '><i class="fa fa-angle-right"></i></span>
+          <a href="../styleguide/a-031-nav.html" 
+             id="sidebar-navigation"
+             class="
+                
+                --submenu
+                
+                
+                "
+          >
+            Navigation 
+          </a>
+            <div class="_sidebar-submenu">
+                <div><a href=../styleguide/a-031-nav.html#standard-navigation>standard</a></div>
+                <div><a href=../styleguide/a-031-nav.html#sticky-navigation>sticky</a></div>
+                <div><a href=../styleguide/a-031-nav.html#bottom-navigation>bottom</a></div>
+                <div><a href=../styleguide/a-031-nav.html#side-navigation>side nav</a></div>
+                <div><a href=../styleguide/a-031-nav.html#off-canvas-navigation>off-canvas</a></div>
+                <div><a href=../styleguide/a-031-nav.html#mega-menu>mega menu</a></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/a-032-sidebar.html" 
+             id="sidebar-sidebar"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Sidebar 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/a-033-modal.html" 
+             id="sidebar-modals"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Modals 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/a-034-dropdown.html" 
+             id="sidebar-dropdowns"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Dropdowns 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+            <span class='_sidebar-submenu_trigger
+                         
+            '><i class="fa fa-angle-right"></i></span>
+          <a href="../styleguide/a-036-forms.html" 
+             id="sidebar-forms"
+             class="
+                
+                --submenu
+                
+                
+                "
+          >
+            Forms 
+          </a>
+            <div class="_sidebar-submenu">
+                <div><a href=../styleguide/a-036-forms.html#common-examples>Examples</a></div>
+                <div><a href=../styleguide/a-036-forms.html#fieldset>Fieldset</a></div>
+                <div><a href=../styleguide/a-036-forms.html#input>Input</a></div>
+                <div><a href=../styleguide/a-036-forms.html#date-input>Date Input</a></div>
+                <div><a href=../styleguide/a-036-forms.html#textarea>Textarea</a></div>
+                <div><a href=../styleguide/a-036-forms.html#range-slider>Range Slider</a></div>
+                <div><a href=../styleguide/a-036-forms.html#radio>Radio</a></div>
+                <div><a href=../styleguide/a-036-forms.html#checkbox>Checkbox</a></div>
+                <div><a href=../styleguide/a-036-forms.html#option--multiple-select>Option & Multi</a></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/a-040-tables.html" 
+             id="sidebar-tables"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Tables 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/a-075-chat-interface.html" 
+             id="sidebar-chat"
+             class="
+                
+                
+                
+                --draft
+                "
+          >
+            Chat & Chatbot 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/a-255-email-design.html" 
+             id="sidebar-emaildesign"
+             class="
+                
+                
+                
+                --draft
+                "
+          >
+            Email Design 
+          </a>
+        </div>
+
+
+
+          <div class="_sidebar-section_title"> scriptcoeur</div>
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-001-scriptandtools.html" 
+             id="sidebar-scriptsandtools"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Scripts & Resources 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-002-loader.html" 
+             id="sidebar-loader"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Loader 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-003-localstorage.html" 
+             id="sidebar-localStorage"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Local Storage 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-004-random.html" 
+             id="sidebar-randomizer"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Randomizer 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-005-isMobile.html" 
+             id="sidebar-ismobile"
+             class="
+                
+                
+                
+                
+                "
+          >
+            IsMobile 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-006-sizer.html" 
+             id="sidebar-sizer"
+             class="
+                
+                
+                
+                
+                "
+          >
+            vHeight Sizer 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-007-onresize.html" 
+             id="sidebar-onresize"
+             class="
+                
+                
+                
+                
+                "
+          >
+            onResize 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-009-api_ajax.html" 
+             id="sidebar-apis"
+             class="
+                
+                
+                
+                
+                "
+          >
+            APIs 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-010-sticky.html" 
+             id="sidebar-sticky"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Sticky 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-012-selectcopy.html" 
+             id="sidebar-selectandcopy"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Select & Copy 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-015-transitions.html" 
+             id="sidebar-transitions"
+             class="
+                
+                
+                
+                --draft
+                "
+          >
+            Transitions 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-020-scroll.html" 
+             id="sidebar-smoothScroll"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Smooth Scroll 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-021-scrollanim.html" 
+             id="sidebar-scroll-animations"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Scroll Animations 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-024-gridmarkers.html" 
+             id="sidebar-gridmarkers"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Grid Markers 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-040-carousel.html" 
+             id="sidebar-carousel"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Carousel 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-041-lightbox.html" 
+             id="sidebar-lightbox"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Lightbox 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-042-gallery.html" 
+             id="sidebar-gallery"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Gallery 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-061-emailForm.html" 
+             id="sidebar-emailForm"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Email Form 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/b-090-adblock.html" 
+             id="sidebar-adblock"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Adblock Detection 
+          </a>
+        </div>
+
+
+
+          <div class="_sidebar-section_title"> prototyping</div>
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/c-004-wireframing.html" 
+             id="sidebar-wireframes"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Wireframes 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/c-005-vue.html" 
+             id="sidebar-vue"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Vue 
+          </a>
+        </div>
+
+
+
+          <div class="_sidebar-section_title"> external</div>
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/d-020-social_sharing.html" 
+             id="sidebar-social_sharing"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Social Sharing 
+          </a>
+        </div>
+
+
+
+
+        <div class="_sidebar-item">
+          <a href="../styleguide/d-021-google_maps.html" 
+             id="sidebar-google_maps"
+             class="
+                
+                
+                
+                
+                "
+          >
+            Google Maps 
+          </a>
+        </div>
+
+
+
+          <div class="_sidebar-section_title"> stylecoeur</div>
+
+        <div class="_sidebar-item">
+            <span class='_sidebar-submenu_trigger
+                         
+            '><i class="fa fa-angle-right"></i></span>
+          <a href="../styleguide/z-001-stylecoeur-dev.html" 
+             id="sidebar-developingStylecoeur"
+             class="
+                
+                --submenu
+                
+                
+                "
+          >
+            Stylecoeur Dev 
+          </a>
+            <div class="_sidebar-submenu">
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#developing-stylecoeur>Developing Stylecoeur</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#styleguide-structure>Styleguide Structure</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#kramdown>Kramdown</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#syntax-highlighting>Syntax Highlighting</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#middleman>Middleman</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#deploying-middleman>Deploying Middleman</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#installing-plugins>Installing Plugins</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#erb>ERB</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#middleman-variables>Middleman Variables</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#yaml-amp-front-matter>YAML &amp; Front Matter</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#file-naming>File Naming</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#partials>Partials</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#layouts>Layouts</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#github>Github</a></div>
+                <div><a href=../styleguide/z-001-stylecoeur-dev.html#build-tasks>Build Tasks</a></div>
+            </div>
+        </div>
+
+
+  </div>
+</div>
+
+
+<script src= ../coeur/scriptcoeur/smoothScroll.js type="text/javascript"></script>
+
+<script>
+  $('._sidebar-submenu_trigger').on('click', function() {
+    $(this).toggleClass('--open');
+  });
+
+  $(document).ready(function() {
+    var target = $('._sidebar').attr('data-currentpage');
+    verticalScrollTo(-60, '#sidebar-'+target, '._sidebar');
+  })
+
+</script>
+
+
+        </aside>
+
+        <div class="_styleguide-content _width-content-max _grid_item-overflow _padding-2 _margin-center">
+          <main>
+
+  <h2 id="clearfix">Clearfix</h2>
+
+  <p>Clearfix can sometimes be useful 'fixing' layouts that are positioned.</p>
+
+  <p>Just add <code>.clearfix</code> to an element for clearfix. Easy Peazy.</p>
+
+  <p>Here's what clearfix does: if you have some elements that are float positioned (e.g. <code>float: left</code>), the floated elements might extend beyond its container.</p>
+
+  <div class="_styleguide-example">
+
+    <p>With clearfix:</p>
+
+    <div class="_color-bg-ui clearfix _padding">
+  <img class="_float-left _padding-right" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/image.png" /> 
+  Stylecoeur is a personal cheat sheet and boilerplate to make prototyping or development both quick and look professional. It's my own alternative to Bootstrap. It prioritizes development speed over reliability and load times.
+</div>
+
+    <p class="_padding-top">No clearfix—the content goes outside the container and will screw with all the elements under it:</p>
+
+    <div class="_color-bg-ui _padding">
+  <img class="_float-left _padding-right" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/image.png" /> 
+  Stylecoeur is a personal cheat sheet and boilerplate to make prototyping or development both quick and look professional. It's my own alternative to Bootstrap. It prioritizes development speed over reliability and load times.
+</div>
+
+    <p>Here is more content that a lack of clearfix will mess with.</p>
+
+  </div>
+
+</main>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="_styleguide-footer">
+    </div>
+  </body>
+</html>
+
+
+<script src= ../javascripts/site.js type="text/javascript"></script>
+
+<script src= ../coeur/scriptcoeur/smoothScroll.js type="text/javascript"></script>
+
+<script src= ../coeur/scriptcoeur/sticky.js type="text/javascript"></script>
+
+
+
+<script src= ../coeur/scriptcoeur/plugins/js.cookie.js type="text/javascript"></script>
+<script>
+
+// open and close sidebar
+// ACCESSED BY INDEXER!
+
+var isSidebarOpen = Cookies.getJSON('isSidebarOpen') !== undefined ? Cookies.getJSON('isSidebarOpen') : true,
+    closedClass = '--sidebar-closed'
+
+function closeSidebar() {
+  console.log('close sidebar');
+  isSidebarOpen = false;
+  Cookies.set('isSidebarOpen', isSidebarOpen);
+  $('._styleguide-container').addClass(closedClass)
+}
+function openSidebar() {
+  console.log('open sidebar');
+  isSidebarOpen = true;
+  Cookies.set('isSidebarOpen', isSidebarOpen);
+  $('._styleguide-container').removeClass(closedClass)
+}
+function toggleSidebar() {
+  if(!isSidebarOpen) {
+    openSidebar();
+  } else {
+    closeSidebar();
+  }
+}
+$(document).keyup(function(e) {
+  if (e.keyCode === 27) toggleSidebar();   // esc
+});
+if(!isSidebarOpen) { // close on page load
+  closeSidebar()
+}
+
+
+
+
+$(document).ready(function() {
+  if($("._sidebar-trigger").length > 0) {
+    var triggerElement = "._sidebar-trigger", target = "._sidebar", targetClass = "--pinned";
+    _sticky(triggerElement, target, targetClass, 0 );
+  }
+});
+
+</script>
+
+
