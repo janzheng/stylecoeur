@@ -11,6 +11,7 @@ $sidebar-submenu-border: $border-line solid $color-main !default;
 
 ._sidebar {
   max-width: $sidebar-width-max;
+  min-width: 170px; // arbitrarily hard coded
   width: $sidebar-width;
   overflow-y: scroll;
   overflow-x: hidden;

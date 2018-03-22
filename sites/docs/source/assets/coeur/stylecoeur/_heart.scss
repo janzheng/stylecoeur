@@ -92,38 +92,42 @@ $gutter: $size-base/2   !default;
 // shouldn't matter what devices people use
 
 // "mobile"
-$width-xs-min: 0px      !default; 
-$width-xs-max: 767px    !default;
+$width-xs-min: 0px      !default; ._width-xs-min { width: $width-xs-min; }
+$width-xs-max: 767px    !default; ._width-xs-max { width: $width-xs-max; }
 
 // "tablet"
-$width-sm-min: 768px    !default;
-$width-sm-max: 991px    !default;
+$width-sm-min: 768px    !default; ._width-sm-min { width: $width-sm-min; }
+$width-sm-max: 991px    !default; ._width-sm-max { width: $width-sm-max; }
 
 // "desktop"
-$width-md-min: 992px    !default;
-$width-md-max: 1199px   !default;
+$width-md-min: 992px    !default; ._width-md-min { width: $width-md-min; }
+$width-md-max: 1199px   !default; ._width-md-max { width: $width-md-max; }
 
 // "wide"
-$width-lg-min: 1200px   !default;
-$width-lg-max: 2100px   !default;
+$width-lg-min: 1200px   !default; ._width-lg-min { width: $width-lg-min; }
+$width-lg-max: 2100px   !default; ._width-lg-max { width: $width-lg-max; }
 
 
 // Helper Widths
-$width-site-min: 320px  !default; // absolute minimum site width; iphone 4 is 320px, but try to go to 0
+// absolute minimum site width; iphone 4 is 320px, but try to go to 0
+$width-site-min: 320px  !default;   ._width-site-min { width: $width-site-min; }
 
 // sometimes sites have a 'magical' breakpoint based on content structure
-$width-magic: 640px     !default;
+$width-magic: 640px     !default;   ._width-magic { width: $width-magic; }
 
-$width-content-max: $width-sm-max !default; // max content block width
-$width-content-max-narrow: $width-magic !default; // max content block width
+// max content block width
+$width-content-max: $width-sm-max !default;         // check out neck-layout
 
-$width-content-paragraph: 77ch !default;
-$width-content-paragraph-narrow: 55ch !default;
+// max content block width
+$width-content-max-narrow: $width-magic !default;   // check out neck-layout
+
+$width-content-paragraph: 77ch !default;            // check out neck-layout
+$width-content-paragraph-narrow: 55ch !default;     // check out neck-layout
+
 // adheres to the 75 ch per paragraph rule; ch uses the '0' symbol as char width
 
 
 // used by buttons and forms
-
 $height-input: $size-p4 !default;
 $height-input--short: $size-2 !default;
 
@@ -166,6 +170,8 @@ $color-google:        #E93F2E !default;    ._color-google { color: $color-google
 $color-reddit:        #8BBBE3 !default;    ._color-reddit { color: $color-reddit; }                    ._color-bg-reddit { background: $color-reddit; }                   ._color-border-reddit { border-color: $color-reddit; }
 $color-twitter:       #26C4F1 !default;    ._color-twitter { color: $color-twitter; }                  ._color-bg-twitter { background: $color-twitter; }                 ._color-border-twitter { border-color: $color-twitter; }
 $color-paypal:        #FEC348 !default;    ._color-paypal { color: $color-paypal; }                    ._color-bg-paypal { background: $color-paypal; }                   ._color-border-paypal { border-color: $color-paypal; }
+$color-linkedin:      #0077B5 !default;    ._color-linkedin { color: $color-linkedin; }                ._color-bg-linkedin { background: $color-linkedin; }               ._color-border-linkedin { border-color: $color-linkedin; }
+
 
 // white, grays, blacks
 $color-purewhite:     #FFFFFF !default;    ._color-purewhite { color: $color-purewhite; }              ._color-bg-purewhite { background: $color-purewhite; }             ._color-border-purewhite { border-color: $color-purewhite; }
