@@ -696,11 +696,12 @@ $grid-gap: $size-base;
 //    ._grid_item- only affects items inside the grid container
 
 
-// useful for images that need to appear above content
-// in xs, but are otherwise to the right or bottom of copy
-._grid_item-row-first-xs {
-  @include screen-xs-only {
-    grid-row-start: 1; // reflow so image is on top
+// right side grid content (e.g. sidebar or image) appear ABOVE
+// the left content (regular flow places it below)
+._grid_item-first, ._grid_item-row-first-xs {
+  grid-row-start: 1;
+  &-xs {
+    @include screen-xs-only { grid-row-start: 1; }
   }
 }
 

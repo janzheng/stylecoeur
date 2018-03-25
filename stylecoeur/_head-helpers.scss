@@ -260,11 +260,10 @@ Tip: this outputs
   results in _margin-i, _margin-half, _margin-half-i, etc.
 
 */
+
+// combines grid w/ importantize; the name is legacy
 @mixin importantizer($elements) {
-  #{nth($elements, 1)}: #{nth($elements, 2)};
-  &-i {
-    #{nth($elements, 1)}: #{nth($elements, 2)} !important;
-  }
+  @include importantize($elements);
   // these don't really need !important
   // &-xs   { @include screen-xs-only { #{nth($elements, 1)}: #{nth($elements, 2)} } }
   // &-sm   { @include screen-sm { #{nth($elements, 1)}: #{nth($elements, 2)} } }

@@ -47,7 +47,7 @@ $table-padding-h: $size-base;
   }
 }
 
-._table, ._table_container table {
+._table, ._table_container, ._table_container table {
 
   background: transparent; // $table-color-bg;
   color: $table-color;
@@ -109,6 +109,23 @@ $table-padding-h: $size-base;
       z-index: 9;
     }
   }
+  &.--middle {
+    td {
+      vertical-align: middle;
+    }
+  }
+  &.--bottom {
+    td {
+      vertical-align: bottom;
+    }
+  }
+  &.--width-full {
+    &, table {
+      width: 100%;
+    }
+  }
+
+
 
   // children
   .--group {
@@ -122,18 +139,6 @@ $table-padding-h: $size-base;
   .--nobreak {
     white-space: nowrap;
   }
-
-  .--middle {
-    td {
-      vertical-align: middle;
-    }
-  }
-  .--bottom {
-    td {
-      vertical-align: bottom;
-    }
-  }
-
 
   // invert/pivot the x/y axis
   // good for mobile
