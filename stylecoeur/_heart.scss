@@ -108,6 +108,10 @@ $width-content-paragraph-narrow: 55ch !default;
 // adheres to the 75 ch per paragraph rule; ch uses the '0' symbol as char width
 
 
+// used by buttons and forms
+$height-input: $size-p4 !default;
+$height-input--short: $size-2 !default;
+
 
 // layout widths defined in _neck-layout
 
