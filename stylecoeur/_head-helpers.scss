@@ -194,11 +194,8 @@ Tip: this outputs
 ._absolute { position: absolute; }
 ._fixed    { position: fixed; }
 
-// useful positioners
-._top-0 { top: 0 }
-._right-0 { right: 0 }
-._bottom-0 { bottom: 0 }
-._left-0 { left: 0 }
+
+
 
 
 // 
@@ -209,13 +206,6 @@ Tip: this outputs
 ._width-100 {
   width: 100%;
   max-width: 100%;
-
-  &-xs {
-    @include screen-xs {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
 }
 
 //    Detailed width calculator in _design
@@ -282,9 +272,6 @@ Tip: this outputs
     #{nth($elements, 1)}: #{nth($elements, 2)};
   }
 };
-
-
-// adds -i, -half, -none, -2,-3,-4 to anything you throw at it... e.g. padding
 @mixin expanderer($element) {
   @include importantizer($element $size-base);
   &-half { @include importantizer($element $size-half); }
@@ -428,14 +415,16 @@ Tip: this outputs
 // Sticky / Pinned Formatting
 // - works with ScrollMagic
 
-._pinned, .--pinned {
+._pinned, .--pinned,
+._sticky, .--sticky {
   padding-bottom: $size-base * 2;
   position: sticky;
   top: 0;
 }
   // can't extend outside of media so...
   // this pins it only sm screens and up
-  ._pinned-sm, .--pinned-sm {
+  ._pinned-sm, .--pinned-sm,
+  ._sticky-sm, .--sticky-sm {
     @include screen-sm { 
       // height: 100vh;
       padding-bottom: $size-base * 2;

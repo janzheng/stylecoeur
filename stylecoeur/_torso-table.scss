@@ -24,7 +24,7 @@ $table-padding-h: $size-base;
   ._blocker {
     position: sticky;
     top: 0;
-    left: 0;
+    // left: 0;
     // height: 100px;
     height: 0;
     /* background: green; */
@@ -47,7 +47,7 @@ $table-padding-h: $size-base;
   }
 }
 
-._table {
+._table, ._table_container table {
 
   background: transparent; // $table-color-bg;
   color: $table-color;
@@ -60,7 +60,7 @@ $table-padding-h: $size-base;
   box-shadow: none;
   // width: 100%;
   // max-width: 100%;
-  
+
   border-collapse: separate;
   border-spacing: 0;
 
@@ -68,17 +68,14 @@ $table-padding-h: $size-base;
     padding: $table-padding-v $table-padding-h;
   }
 
-  &:not(.--highlight-body-none) {
-    tbody tr:nth-child(odd) td {
-      background-color: $table-color-highlight;
-    }
+  tbody tr:nth-child(odd) td {
+    background-color: $table-color-highlight;
   }
   &.--dark {
     tbody tr:nth-child(odd) td {
       background-color: $table-color-highlight-dark;
     }
   }
-
 
   caption {
     // border-bottom: $table-border;
@@ -91,12 +88,6 @@ $table-padding-h: $size-base;
     .--subcaption {
       font-size: $font-small;
       font-weight: normal;
-    }
-  }
-
-  &.--highlight-titles {
-    th {
-      background-color: $table-color-highlight;
     }
   }
 
@@ -130,6 +121,17 @@ $table-padding-h: $size-base;
   }
   .--nobreak {
     white-space: nowrap;
+  }
+
+  .--middle {
+    td {
+      vertical-align: middle;
+    }
+  }
+  .--bottom {
+    td {
+      vertical-align: bottom;
+    }
   }
 
 
@@ -174,27 +176,6 @@ $table-padding-h: $size-base;
     @include screen-xs {
       @include stack;
     }
-  }
-
-  &.--spacing-line {
-    border-collapse: separate;
-    border-spacing: $border-line;
-  }
-  &.--spacing-thin {
-    border-collapse: separate;
-    border-spacing: $border-thin;
-  }
-  &.--spacing-medium {
-    border-collapse: separate;
-    border-spacing: $border-medium;
-  }
-  &.--spacing-thick {
-    border-collapse: separate;
-    border-spacing: $border-thick;
-  }
-  &.--spacing-massive {
-    border-collapse: separate;
-    border-spacing: $border-massive;
   }
 }
 

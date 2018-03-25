@@ -36,10 +36,6 @@ submenu:
 
 These notes won't make sense to anyone but me, and that's ok.
 
-#### Index
-
-
-
 ---
 
 ### Todo
@@ -301,6 +297,11 @@ SEO and meta guide:
     - Payment tool
     - Donation tool
 
+- reusable GQL based off of danceydance
+  - simplify the way GQL requests are written (lots of redundancy)
+- Axios / REST examples
+  - https://alligator.io/vuejs/rest-api-axios/
+
 - basic react pages, accounts pages, etc. use jststrt as a start
   - basic user stories and pages!
   - account, login, signup, password recovery, etc.
@@ -396,7 +397,8 @@ on design + typography:
 - figure out how to adapt ResizeObserver
 - Investigate useful window.js functions
   - window.crypto.getRandomValues(typedArray)
-- JS primer
+- compare to undefined: if(result === undefined)
+- JS primer / ES5 vs. ES6 
   - data objects, arrays
   - iterators; object.key etc.
   - common patterns
@@ -405,6 +407,11 @@ on design + typography:
     - always pass in objects!
     - destructuring
     - for in looping
+  - map/filter/reduce
+    - https://medium.com/@joomiguelcunha/learn-map-filter-and-reduce-in-javascript-ea59009593c4
+  - for of vs. foreach vs. Object.keys mapping (old JS; foreach does this,)
+  - Object.assign vs. {... rest} operator to glom on stuff to an object
+  - check if key exists in object: if ('key' in myObj)
 - add to local storage section:
   - session storage
   - [indexDB helpers](https://medium.freecodecamp.org/a-quick-but-complete-guide-to-indexeddb-25f030425501)
