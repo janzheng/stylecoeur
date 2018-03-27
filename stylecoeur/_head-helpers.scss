@@ -208,7 +208,11 @@ Tip: this outputs
   max-width: 100%;
 }
 
-//    Detailed width calculator in _design
+._height-full,
+._height-100 {
+  height: 100%;
+}
+//    Detailed width and height calculator in _design
 
 
 

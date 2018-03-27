@@ -554,6 +554,32 @@ make to look more like [relay docs](https://facebook.github.io/relay/docs/en/thi
   - setting up contact form
 
 
+---
+
+### Loose Notes
+
+- Skew background buttons (check out tags [at the bottom](https://www.dallasnews.com/life/life/2018/03/26/bacteria-hunters-dallas-area-patientseeks-cure-past-debilitating-infection))
+  - .secondary-tag:before {
+    content: "";
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #f3f3f3;
+    z-index: 0;
+    /* -webkit-transform: skewX(-15deg); */
+    -ms-transform: skewX(-15deg);
+    transform: skewX(-55deg);
+
+- Figure out using position-sticky and CSS variables if you can "sticky to bottom" using position: sticky and a height value?
+
+- Frames for testing, wireframes, etc.
+
+- accessibility + power users, shortcuts etc. [UX Planet](https://uxplanet.org/designing-accessible-navigations-3b1a151d3bd7)
 
 
 
