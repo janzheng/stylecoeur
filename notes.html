@@ -209,6 +209,30 @@
       <div class="_font-small">
 
         <ul>
+          <li>[0.1.52]
+            <ul>
+              <li>added multiple sizes for griddick, e.g. _grid-2-3-md applies -2-3 to md and up</li>
+              <li>improved torso-expander fluidity</li>
+              <li>added a <code>--live</code> component to sizer.js; used w/ lodash</li>
+              <li>added <code>height: initial</code></li>
+            </ul>
+          </li>
+          <li>[0.1.51]
+            <ul>
+              <li>added a <code>--circular</code> loader</li>
+            </ul>
+          </li>
+          <li>[0.1.50]
+            <ul>
+              <li>added _height-100, and moved some stuff from helpers to design</li>
+            </ul>
+          </li>
+          <li>[0.1.48]
+            <ul>
+              <li>added table alignment stuff, notes updates</li>
+              <li>added colorate mixin for colors, changed the way colors are established</li>
+            </ul>
+          </li>
           <li>[0.1.47]
             <ul>
               <li>improved the build system; now makes 1000% more sense</li>
@@ -355,13 +379,32 @@
 
   <p>These notes won't make sense to anyone but me, and that's ok.</p>
 
-  <h4 id="index">Index</h4>
-
   <hr />
 
   <h3 id="todo">Todo</h3>
 
   <ul>
+    <li>
+      <p>links section: cede link color by 
+  $link-color-copy: none; // cedes link color to classes</p>
+    </li>
+    <li>
+      <p>explain the new colorizer and the colors somewhere</p>
+    </li>
+    <li>
+      <p>what's inline-size?? super interesting for typographical setting
+.exampleText {
+  writing-mode: vertical-rl;
+  background-color: yellow;
+  inline-size: 110px;
+}</p>
+    </li>
+    <li>griddick documentation update
+      <ul>
+        <li>auto rows examples and description</li>
+        <li>reflow examples (e.g. right sidebar flow above left main column is a useful pattern)</li>
+      </ul>
+    </li>
     <li>form design examples
       <ul>
         <li>https://medium.com/techtrument/bye-bye-material-design-acaebcc7c6b4</li>
@@ -734,6 +777,16 @@ Add a project deployment section, esp. with the new build system
         </li>
       </ul>
     </li>
+    <li>reusable GQL based off of danceydance
+      <ul>
+        <li>simplify the way GQL requests are written (lots of redundancy)</li>
+      </ul>
+    </li>
+    <li>Axios / REST examples
+      <ul>
+        <li>https://alligator.io/vuejs/rest-api-axios/</li>
+      </ul>
+    </li>
     <li>basic react pages, accounts pages, etc. use jststrt as a start
       <ul>
         <li>basic user stories and pages!</li>
@@ -853,7 +906,8 @@ Add a project deployment section, esp. with the new build system
         <li>window.crypto.getRandomValues(typedArray)</li>
       </ul>
     </li>
-    <li>JS primer
+    <li>compare to undefined: if(result === undefined)</li>
+    <li>JS primer / ES5 vs. ES6
       <ul>
         <li>data objects, arrays</li>
         <li>iterators; object.key etc.</li>
@@ -866,6 +920,14 @@ Add a project deployment section, esp. with the new build system
             <li>for in looping</li>
           </ul>
         </li>
+        <li>map/filter/reduce
+          <ul>
+            <li>https://medium.com/@joomiguelcunha/learn-map-filter-and-reduce-in-javascript-ea59009593c4</li>
+          </ul>
+        </li>
+        <li>for of vs. foreach vs. Object.keys mapping (old JS; foreach does this,)</li>
+        <li>Object.assign vs. {… rest} operator to glom on stuff to an object</li>
+        <li>check if key exists in object: if ('key' in myObj)</li>
       </ul>
     </li>
     <li>add to local storage section:
@@ -884,6 +946,9 @@ Add a project deployment section, esp. with the new build system
         <li>deployment methods</li>
         <li>surge.sh SSL</li>
       </ul>
+    </li>
+    <li>
+      <p>debounce scroll example</p>
     </li>
     <li>Cheat Sheet
       <ul>
@@ -1034,6 +1099,54 @@ _loader would be useful</p>
         <li>setting up contact form</li>
       </ul>
     </li>
+  </ul>
+
+  <hr />
+
+  <h3 id="loose-notes">Loose Notes</h3>
+
+  <ul>
+    <li>
+      <p>investigate and support <a href="https://codesandbox.io/">Code Sandbox</a></p>
+    </li>
+    <li>investigate https://serverless.com/framework/
+      <ul>
+        <li><a href="https://webtask.io/docs/101">Webtask</a> looks real good</li>
+        <li>https://medium.freecodecamp.org/create-a-simple-rest-api-endpoint-using-webtask-io-d9607fc00c17</li>
+        <li>https://webtask.io/make#&amp;theme=dark</li>
+      </ul>
+    </li>
+    <li>zeit.co allows microservices, api calls, etc. inside their static deployment:
+      <ul>
+        <li>https://zeit.co/docs/examples/json-api</li>
+      </ul>
+    </li>
+    <li>Skew background buttons (check out tags <a href="https://www.dallasnews.com/life/life/2018/03/26/bacteria-hunters-dallas-area-patientseeks-cure-past-debilitating-infection">at the bottom</a>)
+      <ul>
+        <li>.secondary-tag:before {
+content: "";
+margin: 0;
+padding: 0;
+display: block;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: #f3f3f3;
+z-index: 0;
+/* -webkit-transform: skewX(-15deg); */
+-ms-transform: skewX(-15deg);
+transform: skewX(-55deg);</li>
+      </ul>
+    </li>
+    <li>
+      <p>Figure out using position-sticky and CSS variables if you can "sticky to bottom" using position: sticky and a height value?</p>
+    </li>
+    <li>
+      <p>Frames for testing, wireframes, etc.</p>
+    </li>
+    <li>accessibility + power users, shortcuts etc. <a href="https://uxplanet.org/designing-accessible-navigations-3b1a151d3bd7">UX Planet</a></li>
   </ul>
 
 </div>
