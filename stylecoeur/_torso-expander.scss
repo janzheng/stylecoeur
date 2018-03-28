@@ -17,6 +17,7 @@ $expander-color-hover: $color-main !default;
 $expander-color-hover-bg: $color-silver-light !default;
 
 ._expander {
+  position: relative;
   border:  $expander-border; 
   padding: $size-base;
   // border-radius: $radius;
@@ -25,6 +26,15 @@ $expander-color-hover-bg: $color-silver-light !default;
 
   display: grid;
   grid-template-columns: 1fr 9fr;
+
+  overflow: hidden;
+
+  &.--icon-none { 
+    display: block;
+    ._expander-icon {
+      display: none;
+    }
+  }
 
   ._expander-icon {
     text-align: center;
@@ -55,22 +65,21 @@ $expander-color-hover-bg: $color-silver-light !default;
   }
 
   
-  &:not(.--open) {
-    @extend %ease;
-    // ._expander-content {
+  // &:not(.--open) {
+  //   @extend %ease;
+  //   // ._expander-content {
     ._expander-title {
         & ~ * {
-          // display: none;
-          // visibility: hidden;
           height: 0;
           opacity: 0;
           margin: 0;
-          padding: 0;
+          // padding: 0;
           @extend %ease-fast;
+          // transform: scaleY(0);
         }
       }
     // }
-  }
+  // }
 
   &.--open {
     @extend %ease-fast;
@@ -83,9 +92,10 @@ $expander-color-hover-bg: $color-silver-light !default;
       & ~ * {
         // overflow: inherit;
         // visibility: visible;
-        height: 100%;
+        height: auto;
         opacity: 1;
         @extend %ease-fast;
+        // transform: scaleY(1);
       }
     }
 

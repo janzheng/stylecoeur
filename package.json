@@ -1,7 +1,6 @@
-
 {
   "name": "coeur",
-  "version": "0.1.51",
+  "version": "0.1.52",
   "description": "the heart of design systems",
   "email": "hello@janzheng.com",
   "url": "https://janzheng.com/stylecoeur/",
@@ -10,20 +9,23 @@
     "url": "https://github.com/janzheng/"
   },
   "keywords": [
-    "css","js","style guide","starter","coeur"
+    "css",
+    "js",
+    "style guide",
+    "starter",
+    "coeur"
   ],
   "website": "https://janzheng.com/stylecoeur",
   "author": "Jan Zheng",
   "scripts": {
-    "commit":           "git add . -A ; git commit ; git push origin master ",
-
-    "build":            "cd sites/docs ; npm run build -- _src",
-    "deploy":           "cd sites/docs ; npm run deploy -- _src",
-    "stage":            "cd sites/docs ; npm run stage -- _src",
-    "prod":             "cd sites/docs ; npm run deploy -- _src",
-    "github":           "cd sites/docs ; npm run github -- _src",
-
-    "install_docs":     "mkdir sites/docs; cp -a node_modules/coeur/docs/. sites/docs/.",
-    "start":            "cd sites/docs ; npm run server -- _src"
-  }
+    "commit": "git add . -A ; git commit ; git push origin master ",
+    "build": "cd sites/docs ; npm run build -- _src",
+    "deploy": "cd sites/docs ; npm run deploy -- _src",
+    "stage": "cd sites/docs ; npm run stage -- _src",
+    "prod": "cd sites/docs ; npm run deploy -- _src",
+    "github": "cd sites/docs ; npm run github -- _src",
+    "install_docs": "mkdir sites/docs; cp -a node_modules/coeur/docs/. sites/docs/.",
+    "start": "cd sites/docs ; npm run server -- _src"
+  },
+  "dependencies": {}
 }

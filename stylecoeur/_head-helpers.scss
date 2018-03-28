@@ -27,6 +27,27 @@ Tip: this outputs
 */
 
 
+// combines grid w/ importantize; the name is legacy
+@mixin importantizer($elements) {
+  @include importantize($elements);
+  // these don't really need !important
+  // &-xs   { @include screen-xs-only { #{nth($elements, 1)}: #{nth($elements, 2)} } }
+  // &-sm   { @include screen-sm { #{nth($elements, 1)}: #{nth($elements, 2)} } }
+  @include genGridAttr(('xs','sm','md','lg')) {
+    #{nth($elements, 1)}: #{nth($elements, 2)};
+  }
+};
+@mixin expanderer($element) {
+  @include importantizer($element $size-base);
+  &-half { @include importantizer($element $size-half); }
+  &-none { @include importantizer($element 0); }
+  &-2    { @include importantizer($element $size-2); }
+  &-3    { @include importantizer($element $size-p3); }
+  &-4    { @include importantizer($element $size-p4); }
+};
+
+
+
 
 
 // Site loader
@@ -83,7 +104,7 @@ Tip: this outputs
       content: '';
       display: none;
     }
-    div {
+    & > div {
       @extend %ease-slow;
       opacity: 1;
       top: 0;
@@ -225,20 +246,32 @@ Tip: this outputs
 
 ._block {
   display: block;
-
-  @include genGridAttr(('xs','sm','sm-down','md','lg')) {
-    display: block;
-  }
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {display: block;}
 }
-._inline-block { display: inline-block; }
-._inline { display: inline; }
-._flex { display: flex; }
-._inline_flex { display: inline-flex; }
+._inline-block { 
+  display: inline-block; 
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {display: inline-block;}
+}
+._inline {
+  display: inline; 
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {display: inline;}
+}
+._flex { 
+  display: flex; 
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {display: flex;}
+}
+._inline_flex { 
+  display: inline-flex; 
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {display: inline-flex;}
+}
+._grid     { 
+  display: grid;
+  @include genGridAttr(('xs','sm','sm-down','md','lg')) {display: grid;}
+}
 
 ._relative { position: relative; }
 ._absolute { position: absolute; }
 ._fixed    { position: fixed; }
-
 
 
 
@@ -256,6 +289,10 @@ Tip: this outputs
 ._height-full,
 ._height-100 {
   height: 100%;
+}
+._height-initial {
+  height: initial;
+  @include importantizer('height' initial);
 }
 //    Detailed width and height calculator in _design
 
@@ -310,24 +347,6 @@ Tip: this outputs
 
 */
 
-// combines grid w/ importantize; the name is legacy
-@mixin importantizer($elements) {
-  @include importantize($elements);
-  // these don't really need !important
-  // &-xs   { @include screen-xs-only { #{nth($elements, 1)}: #{nth($elements, 2)} } }
-  // &-sm   { @include screen-sm { #{nth($elements, 1)}: #{nth($elements, 2)} } }
-  @include genGridAttr(('xs','sm','md','lg')) {
-    #{nth($elements, 1)}: #{nth($elements, 2)};
-  }
-};
-@mixin expanderer($element) {
-  @include importantizer($element $size-base);
-  &-half { @include importantizer($element $size-half); }
-  &-none { @include importantizer($element 0); }
-  &-2    { @include importantizer($element $size-2); }
-  &-3    { @include importantizer($element $size-p3); }
-  &-4    { @include importantizer($element $size-p4); }
-};
 
 
 // 
