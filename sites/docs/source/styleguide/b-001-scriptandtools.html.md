@@ -194,7 +194,7 @@ Color Palette Discovery
 </div>
 
 <div class="_card" markdown="1">
-__[Surge Host](https://surge.sh/pricing)__
+__[Surge](https://surge.sh/pricing)__
 
 Static site host w/ password protection
 </div>

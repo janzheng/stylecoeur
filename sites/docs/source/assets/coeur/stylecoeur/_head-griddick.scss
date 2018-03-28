@@ -94,14 +94,19 @@ $grid-gap: $size-base;
   display: grid;
   grid-gap: $grid-gap;
 }
+@mixin gr { // can be extended
+  display: grid;
+  grid-gap: $grid-gap;
+}
 
+// include this if you want the grid to expand to full-width
+// if class appended with -xs, this is ignored
 %grid-xs-full,
   ._grid-xs-full {
   @include screen-xs {
     // display: block; // when block, can't reflow w/ grid-row or grid-col
     display: grid;
     grid-template-columns: 1fr !important;
-
     & > * { width: 100%; }
   }
   &-i {
@@ -123,17 +128,25 @@ $grid-gap: $size-base;
     }
 }
 
+// lack of mixins b/c they can't be nested
+// lack of extend b/c they can't be used within media selectors
+// womp womp, ugly code for now
+
 // generates a number of equal columns
 @mixin gridCols($number) {
   @extend %grid-xs-full;
 
-  // append %-xs option
-  // this case it includes all sizes
-  // (code simplified, but produces both ._grid.. and _grid-xs)
+  // append %-xs option forces grids to appear on tiny devices, AS WELL AS other sizes
+  // (code simplified, but produces both ._grid-#... and _grid-#-xs)
   &, &-xs {
-    @extend %gr;
+    @include gr;
     grid-template-rows:    1fr;
     grid-template-columns: repeat($number, 1fr);
+    @include genGridAttr(('xs','sm','md','lg')) {
+      @include gr;
+      grid-template-rows:    1fr;
+      grid-template-columns: repeat($number, 1fr);
+    }
   }
 }
 
@@ -144,8 +157,11 @@ $grid-gap: $size-base;
 @mixin griddick($array) {
   @extend %grid-xs-full;
 
+  // append %-xs option forces grids to appear on tiny devices, AS WELL AS other sizes
+  // appending sm, md, lg only applies the grid to that size
   &, &-xs {
-    @extend %gr;
+    // @extend %gr;
+    @include gr;
     grid-template-rows:    1fr;
     $cols: '';
     @each $col in $array {
@@ -156,6 +172,19 @@ $grid-gap: $size-base;
       }
     }
     grid-template-columns: $cols;
+    @include genGridAttr(('xs','sm','md','lg')) {
+      @include gr;
+      grid-template-rows:    1fr;
+      $cols: '';
+      @each $col in $array {
+        @if $col == 'auto' {
+          $cols: #{$cols} auto;
+        } @else {
+          $cols: #{$cols} #{$col}fr;
+        }
+      }
+      grid-template-columns: $cols;
+    }
   }
 
   // class name generator / not really necessary
@@ -696,11 +725,12 @@ $grid-gap: $size-base;
 //    ._grid_item- only affects items inside the grid container
 
 
-// useful for images that need to appear above content
-// in xs, but are otherwise to the right or bottom of copy
-._grid_item-row-first-xs {
-  @include screen-xs-only {
-    grid-row-start: 1; // reflow so image is on top
+// right side grid content (e.g. sidebar or image) appear ABOVE
+// the left content (regular flow places it below)
+._grid_item-first, ._grid_item-row-first-xs {
+  grid-row-start: 1;
+  &-xs {
+    @include screen-xs-only { grid-row-start: 1; }
   }
 }
 
