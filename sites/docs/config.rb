@@ -3,6 +3,8 @@
 set :site_title, "coeur <3"
 set :use_default_head, true
 set :use_default_nav, true
+set :content_path, "./"
+
 
 # COEUR ASSETS
 # copy coeur assets to this project

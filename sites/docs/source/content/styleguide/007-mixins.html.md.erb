@@ -1,0 +1,49 @@
+---
+title: Mixins
+type: styleguide
+layout: layout-coeur-knowbase
+name: mixins
+section: fundamental
+source: ../../
+assets: ../../
+reference: _head-mixins.scss
+---
+
+
+<main markdown="1">
+
+## Mixins
+
+<%= partial '/partials/coeur-ref', 
+    :locals => { :refName => current_page.data.reference } %>
+
+Mixin utilities help with design, animation, and the automation of generating attribute tags. Check out the mixin file. Most mixins are expressed as useful example classes like `--ratio-16_9`, `_triangle-up` etc. which can be found as design and layout helpers. Some generators are in `_head-helpers` and elsewhere.
+
+<div class="_styleguide-example" markdown="1">
+
+@include responsive-ratio(16,9);
+{: .--ratio-16_9 ._color-bg-ui ._padding-bottom ._padding-left ._radius }
+
+<div class="_grid-four _relative ">
+  <div class="_triangle-up _margin-top">
+  </div>
+  <div class="_triangle-down _margin-top-i">
+  </div>
+  <div class="_triangle-left ">
+  </div>
+  <div class="_triangle-right ">
+  </div>
+</div>
+
+
+</div>
+
+</main>
+
+
+
+### Resources
+
+- ["Mixin Cheat sheet"](https://gist.github.com/AllThingsSmitty/3bcc79da563df756be46)
+- ["Advanced SCSS, or, 16 cool things you may not have known your stylesheets could do"](https://gist.github.com/jareware/4738651)
+- [10 Useful Mixins](https://engageinteractive.co.uk/blog/top-10-scss-mixins)

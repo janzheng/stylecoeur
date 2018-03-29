@@ -264,6 +264,12 @@ button.--outline, ._button-outline, ._button.--outline {
       background-color: $button-outline-color-bg-hover;
     }
   }
+
+  &.--disabled {
+    border-color: $button-color-disabled;
+    color: $button-color-disabled !important;
+    background: transparent !important;
+  }
 }
 
 // Button w/o borders

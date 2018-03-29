@@ -1,0 +1,190 @@
+---
+title: Tables
+type: styleguide
+layout: layout-coeur-knowbase
+name: tables
+section: components
+source: ../../
+---
+
+<main markdown="1">
+
+## Tables
+
+Tables are often that elephant in the room. They're big, unwieldy, messy. Sometimes they're too heavy and convey too much data. But many times they're more than necessary, and they can be the only way to effectively show large amounts of data.
+
+Tables in coeur are simple, and should focus on content first, layout second. Reduce the amount of visual clutter as much as you can to emphasize the content. There are essentially two ideas behind tables: content-first, or spreadsheet tables. The two links below explore the two different styles:
+
+- Semantic UI table implementation: [Semantic UI](https://semantic-ui.com/collections/table.html).
+- Web typography tables: [A list apart](https://alistapart.com/article/web-typography-tables)
+  - Takeaways:
+    - Keep tables semantic
+      - table
+        - caption
+        - thead
+        - tbody
+    - Use borders and backgrounds sparingly
+    - Don’t stretch tables for sparse amounts of data
+    - Columns should comfortably wrap their data, and not be too wide
+    - Left align as much as possible
+    - Right align numerical data
+    - Align by decimal for large numerical data, but doesn't actually work
+      - `td { text-align: "." center; }` 
+    - For large amounts of numerical data (e.g. financials, stock data), use aligned numericals
+    - For small amounts of numerical data, use old-style numerical
+      - `table { font-variant-numeric:` 
+        - `lining-nums | tabular-nums | proportional-nums; }`
+    - Match alignment headings to data
+    - Use lots of white space
+    - Use `<caption>` tag on every table
+      - `caption { caption-side: bottom; }`
+    - Wrapping tables in a figure:
+      - `<figure class="fig-table"><table> … </table> </figure>`
+      - `.fig-table { max-width: 100%; overflow-x: scroll; }`
+      - use `white-space:nowrap` on cells
+- more [implementation examples](https://freebiesupply.com/blog/css-tables/)
+
+### Responsive Tables
+
+Some prefer to stack rows on smaller screens (each column in a row stack above each other). This can work on small or simple data sets, but can get very confusing with large amounts of data).
+
+
+### Markdown
+
+Markdown supports tables (the kramdown version included in coeur, at least. The original markdown doesn't have table support). It can be kind of awkward, but it's useful nonetheless. Kramdown only supports very simple tables. More on this at the [kramdown docs](https://kramdown.gettalong.org/syntax.html#tables)
+
+<div class="_styleguide-example" markdown="1">
+
+| Item #        | Diameter | Arbor                | Max RPM |
+|---------------|----------|----------------------|--------:|
+| TBS40         | 4''      | 5/8'' - 7/8'' + 22mm | 15,000  |
+| TBS40         | 4''      | 5/8'' - 7/8'' + 22mm | 15,000  |
+| TBS40         | 4''      | 5/8'' - 7/8'' + 22mm | 15,000  |
+|===============|==========|======================|=========|
+| Footer row    |          |                      |         |
+|---------------|----------|----------------------|---------|
+{: ._table}
+
+</div>
+~~~
+| Item #        | Diameter | Arbor                | Max RPM |
+|---------------|----------|----------------------|--------:|
+| TBS40         | 4''      | 5/8'' - 7/8'' + 22mm | 15,000  |
+| TBS40         | 4''      | 5/8'' - 7/8'' + 22mm | 15,000  |
+| TBS40         | 4''      | 5/8'' - 7/8'' + 22mm | 15,000  |
+|===============|==========|======================|=========|
+| Footer row    |          |                      |         |
+|---------------|----------|----------------------|---------|
+~~~
+
+### Simple Table Design
+
+The Semantic UI and alistapart examples have been distilled to a basic set of rules outlined in the following example.
+
+- Add `.--num` to columns that show numbers
+- Add `.--group` to rows that have new row header titles
+- Add `.--nobreak` to force no line breaks (`whitespace: nowrap`)
+- Add `.--stack` or `.--stack-xs` (for only stacked on small screens) to invert the x/y axis to compact the table. Might not always work. Requires `data-titles` on all the `td`s
+
+<div class="_styleguide-example" markdown="1">
+<figure class="_table-figure ">
+<table class="_table --stack-xs --dark">
+<caption>
+  Table Caption
+  <div class="--subcaption">Values are given to three significant figures unless exact.</div>
+</caption>
+
+<thead>
+  <tr>
+    <th></th>
+    <th>To convert</th>
+    <th>into</th>
+    <th class="--num --nobreak">multiply by</th>
+  </tr>
+</thead>
+<tbody>
+  <tr class="--group">
+    <th rowspan="4">Length</th>
+    <td data-title="To convert">inches</td>
+    <td data-title="into">millimetres (mm)</td>
+    <td class="--num" data-title="multiply by">25.4</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">feet</td>
+    <td data-title="into">centimetres (cm)</td>
+    <td class="--num" data-title="multiply by">30.48</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">yards</td>
+    <td data-title="into">metres (m)</td>
+    <td class="--num" data-title="multiply by">0.91444</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">miles</td>
+    <td data-title="into">kilometres (km)</td>
+    <td class="--num" data-title="multiply by">1.61</td>
+  </tr>
+  <tr class="--group">
+    <th rowspan="4">Area</th>
+    <td data-title="To convert">square inches</td>
+    <td class="--nobreak">sq. millimetres (mm²)</td>
+    <td class="--num" data-title="multiply by">645</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">square feet</td>
+    <td data-title="into">square metres (m²)</td>
+    <td class="--num" data-title="multiply by">0.0929</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">square yards</td>
+    <td data-title="into">square metres (m²)</td>
+    <td class="--num" data-title="multiply by">0.836</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">acres</td>
+    <td data-title="into">hectares</td>
+    <td class="--num" data-title="multiply by">2.47</td>
+  </tr>
+  <tr class="--group">
+    <th rowspan="4">Volume</th>
+    <td data-title="To convert">cubic inches</td>
+    <td data-title="into">millitres (ml)</td>
+    <td class="--num" data-title="multiply by">16.4</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">cubic feet</td>
+    <td data-title="into">litres</td>
+    <td class="--num" data-title="multiply by">28.3</td>
+  </tr>
+  <tr>
+    <td data-title="To convert">imperial gallons</td>
+    <td data-title="into">litres</td>
+    <td class="--num" data-title="multiply by">4.55</td>
+  </tr>
+  <tr>
+    <td data-title="To convert"><abbr class="c2sc">US</abbr> barrels</td>
+    <td data-title="into">cubic metres (m³)</td>
+    <td class="--num" data-title="multiply by">0.159</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <td colspan="4">Footer row with footer content, colspan: 4</td>
+  </tr>
+</tfoot>
+
+</table>
+</figure>
+</div>
+
+
+
+<div class="_styleguide-example" haml="1">
+  <%= partial '/partials/_coeur-wireframe', 
+    :locals => { :path => 'wireframes/coeur-wf-table' } %>
+</div>
+
+
+</main>
+
+

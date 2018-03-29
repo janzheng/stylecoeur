@@ -69,8 +69,8 @@ Tip: this outputs
       content: ' ';
       display: block;
       position: fixed;
-      top: calc(50% - $size-p4/2);
-      left: calc(50% - $size-p4/2);
+      top: calc(50% - #{$size-p4/2});
+      left: calc(50% - #{$size-p4/2});
 
       width: $size-p4;
       height: $size-p4;

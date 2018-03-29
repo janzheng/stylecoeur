@@ -1,0 +1,315 @@
+---
+title: Typography
+type: styleguide
+layout: layout-coeur-knowbase
+name: size-typography
+section: fundamental
+<!-- status: --draft -->
+source: ../../
+assets: ../../
+reference: _heart.scss
+submenu:
+  - [Sizes, sizes]
+  - [Typography, typography]
+  - [Baseline, baseline]
+  - [Links, links]
+  - [Code, code]
+---
+
+
+<main markdown="1">
+
+## Size &amp; Typography
+
+<%= partial '/partials/coeur-ref', 
+    :locals => { :refName => current_page.data.reference } %>
+
+Sizing, typography, and baseline are all interconnected.
+
+### Sizes
+
+The heart contains units, sizes and other base definitions. All the spacing, typography, and sizing is derived out of a base sizing unit: `$size: 16px`. 16px is chosen as it's equivalent to `1 rem`, and is easily divisible by 2, 4, and 8. 
+
+16px type is comfortably readable size—not too big nor not too small. 
+
+The following boxes illustrate the other standard available sizes. They're roughly built with a golden ratio typographic scale.
+
+`m4` means `$base` minus 4 levels, while `p4` means `$base` plus 4 levels. Not perfect but flexible enough for real-world use. 
+
+<div class="_styleguide-example box-example" markdown="1">
+
+<div class="">
+  <div class="_box --m4"></div>
+  $size-m4 / 6px
+</div>
+
+<div class="">
+  <div class="_box --m3"></div>
+  $size-m3 / 8px
+</div>
+
+<div class="">
+  <div class="_box --m2"></div>
+  $size-m2 / 10px
+</div>
+
+<div class="">
+  <div class="_box --m1"></div>
+  $size-m1 / 12px
+</div>
+
+<div class="">
+  <div class="_box --smaller"></div>
+  $size-smaller / 14px
+</div>
+
+<div class="">
+  <div class="_box --base"></div>
+  $size-base / 16px
+</div>
+
+<div class="">
+  <div class="_box --larger"></div>
+  $size-larger / 18px
+</div>
+
+<div class="">
+  <div class="_box --p1"></div>
+  $size-p1 / 24px
+</div>
+
+<div class="">
+  <div class="_box --p2"></div>
+  $size-p2 / 28px
+</div>
+
+<div class="">
+  <div class="_box --base-2"></div>
+  $size-2 / 32px (2x base)
+</div>
+
+<div class="">
+  <div class="_box --p3 "></div>
+  $size-p3 / 40px
+</div>
+
+<div class="">
+  <div class="_box --p4"></div>
+  $size-p4 / 48px
+</div>
+
+<div class="">
+  <div class="_box --p5"></div>
+  $size-p5 / 56px
+</div>
+
+<div class="">
+  <div class="_box --p6"></div>
+  $size-p6 / 64px
+</div>
+
+<div class="">
+  <div class="_box --p7"></div>
+  $size-p7 / 80px
+</div>
+
+<div class="">
+  <div class="_box --p8"></div>
+  $size-p8 / 96px
+</div>
+
+<div class="">
+  <div class="_box --p9"></div>
+  $size-p9 / 112px
+</div>
+
+<div class="">
+  <div class="_box --p10"></div>
+  $size-p10 / 128px
+</div>
+
+<div class="">
+  <div class="_box --p11"></div>
+  $size-p11 / 144px
+</div>
+
+
+</div>
+
+
+
+### Typography
+{: .--padding }
+ 
+<%= partial '/partials/coeur-ref', 
+    :locals => { :refName => '_head-typography.scss' } %>
+
+The typographic scale is built on top of the previous measurements.
+
+Font stacks are broken into basic `%font-sans`, `%font-serif`, and `%font-mono` typefaces for easy prototyping. Please reference the file for the full definition. The basic sans-serif font uses the system font stack (Segoe UI for Windows, and San Francisco or Helvetica Neue for Mac OS X.)
+
+~~~scss
+%font-sans,
+%font-basic,
+%font-body {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Encode Sans", "Open Sans", "Oxygen-Sans", Helvetica, arial, sans-serif;
+}
+~~~
+
+- add `h1.--padding` for padded titles
+
+
+
+
+
+<div class="_styleguide-example" markdown="1">
+
+# h1. Headline 
+
+._headline 50/85
+{: ._font-small .styleguide-example-color }
+
+---
+
+## h2. Sub Heading 
+
+._subhead 37/56
+{: ._font-small .styleguide-example-color }
+
+---
+
+### h3. Section Header
+
+._sectionhead 28/42
+{: ._font-small .styleguide-example-color }
+
+---
+
+#### h4. Sub Section Header 
+
+._subsectionhead 21/32
+{: ._font-small .styleguide-example-color }
+
+---
+
+##### h5. Paragraph Header 
+
+._parahead 16/24
+{: ._font-small .styleguide-example-color }
+
+---
+
+###### h6. Micro Header 
+
+._microhead 12/24/1.2
+{: ._font-small .styleguide-example-color }
+
+---
+
+Stylecoeur is a personal cheat sheet and boilerplate to make prototyping or development both quick and look professional. It's my own alternative to Bootstrap. It prioritizes development speed over reliability and load times.
+
+p, ._font-body 16/24 (Main body text)
+{: ._font-small .styleguide-example-color }
+
+
+---
+
+Stylecoeur is a personal cheat sheet and boilerplate to make prototyping or development both quick and look professional. It's my own alternative to Bootstrap. It prioritizes development speed over reliability and load times.
+{: ._font-small }
+
+._font-small 14/23
+{: ._font-small .styleguide-example-color }
+
+---
+
+Stylecoeur is a personal cheat sheet and boilerplate to make prototyping or development both quick and look professional. It's my own alternative to Bootstrap. It prioritizes development speed over reliability and load times.
+{: ._font-smaller }
+
+._font-smaller 10/13
+{: ._font-small .styleguide-example-color }
+
+
+---
+
+Stylecoeur is a personal cheat sheet and boilerplate to make prototyping or development both quick and look professional. It's my own alternative to Bootstrap. It prioritizes development speed over reliability and load times.
+{: ._font-serif }
+
+._font-serif 16/24
+{: ._font-small .styleguide-example-color }
+
+---
+
+Stylecoeur is a personal cheat sheet and boilerplate to make prototyping or development both quick and look professional. It's my own alternative to Bootstrap. It prioritizes development speed over reliability and load times.
+{: ._font-mono }
+
+._font-mono 16/24
+{: ._font-small .styleguide-example-color }
+
+</div>
+
+
+
+
+### Baseline 
+
+Baseline and vertical rhythm are very important for print design, and increasingly important for site design. Having a solidly established vertical rhythm allows for more complex designs, as all components end up aligning to a grid.
+
+With that said, establishing a vertical rhythm for a website, especially a dynamic site where copy and images can be of variable height, is still difficult.
+
+- Base font size is set to `16px` as default.
+- Base line height is set to `16px * 1.5` or `24px` as default.
+- Baseline is based on 8px line-height ($size-base/2) for finer control; all heights should _try_ to adhere to a multiple of 8, like 16px, 24px, 32px, or 40px heights.
+- Padding, and margins are always created using `$size-base` (usually 16) or half or double that value. Ideally all objects should have a baseline of 16 pixels, though this is almost never possible. 
+- Line heights are usually established at the `font size * 1.5` but may need to be tweaked depending on the typeface.
+- Links and other inline elements attempt to flow with the copy at `16px` or the appropriate line height (default to 24px)
+- Elements like form inputs, buttons and so on will need to contain copy at `16px` line-height, so these are naturally going to be larger. 
+
+
+### Links
+
+Links are styled by default with no default browser underline, but with a border-bottom. Borders can be animated with keyframes and are more flexible, but can run into wrapping and other issues (if a link is wrapped around text, the border won't render).
+
+
+<div class="_styleguide-example" markdown="1">
+  This right here [is a link](#) to nowhere.
+</div>
+
+### Code
+
+Code blocks and inline code are pretty straight-forward. Pygments zenburn is used as the default code theme. Examples can be found all throughout stylecoeur.
+
+- code blocks are usually generated by Pygments
+- `.highlight` is used to specify example code
+- colors are hard-coded pygments colors
+- pygments doesn't seem to handle line numbers very well...
+
+<div class="_styleguide-example" markdown="1">
+
+<div class="highlight"><pre class="highlight scss">
+  <code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"></td><td class="rouge-code"><pre><span class="nv">%font-sans</span><span class="o">,</span>
+<span class="nv">%font-basic</span><span class="o">,</span>
+<span class="nv">%font-body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span> <span class="n">BlinkMacSystemFont</span><span class="o">,</span> <span class="n">system-ui</span><span class="o">,</span> <span class="s2">"Segoe UI"</span><span class="o">,</span> <span class="s2">"Encode Sans"</span><span class="o">,</span> <span class="s2">"Open Sans"</span><span class="o">,</span> <span class="s2">"Oxygen-Sans"</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div>
+
+</div>
+~~~html
+
+<div class="highlight"><pre class="highlight scss"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nv">%font-sans</span><span class="o">,</span>
+<span class="nv">%font-basic</span><span class="o">,</span>
+<span class="nv">%font-body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span> <span class="n">BlinkMacSystemFont</span><span class="o">,</span> <span class="n">system-ui</span><span class="o">,</span> <span class="s2">"Segoe UI"</span><span class="o">,</span> <span class="s2">"Encode Sans"</span><span class="o">,</span> <span class="s2">"Open Sans"</span><span class="o">,</span> <span class="s2">"Oxygen-Sans"</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div>
+
+~~~
+
+
+
+</main>

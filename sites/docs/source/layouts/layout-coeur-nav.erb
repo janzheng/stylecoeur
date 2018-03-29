@@ -1,6 +1,5 @@
 
-
-<% source = current_page.data.source || "./" %>  
+<% source = current_page.data.source || config.content_path || "./" %> 
 <% title = current_page.data.title || config.site_title %>
 
 <!doctype html>
@@ -22,4 +21,4 @@
   </body>
 </html>
 
-<script src= <%= source + "./assets/javascripts/site.js" %> type="text/javascript"></script>
+<script src= <%= source + "assets/javascripts/site.js" %> type="text/javascript"></script>

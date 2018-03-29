@@ -1,0 +1,164 @@
+---
+title: Sidebar
+type: styleguide
+layout: layout-coeur-knowbase
+name: sidebar
+section: components
+<!-- status: --draft -->
+source: ../../
+reference: _sidebar.scss
+---
+
+
+<main markdown="1">
+
+## Sidebar
+
+<%= partial '/partials/coeur-ref', 
+    :locals => { :refName => current_page.data.reference } %>
+
+The sidebar is to display long lists of links like the one used for this style guide. It's slightly similar in functionality to the sidenav, but the sidebar should be sticky and scrollable.
+
+- Make sure that the sidebar is made sticky with MagicScroll, and that `--pinned` is toggled.
+- `stylecoeur/smoothscroll.js` is used for smooth scroll transitions
+- The submenu can be flipped open by attaching a `--open` attribute 
+- In the styleguide the sidebar (`_styleguide-index.erb`) is tightly integrated with Middleman
+- The layout grids is setup separately with `_griddick`; here it's a two column setup
+- Sidebar is set at a `100vh` height
+
+
+<div class="_styleguide-example">
+<div class="_grid-two">
+
+<div class="_sidebar --divider" >
+
+<!-- header -->
+<div class="_padding-top">
+  <a class="_font-bold  --submenu" href="#">
+    <h4 class="_padding-bottom-none">Style Guide.</h4>
+  </a>
+  <div class="_font-small _font-italic">A cheat sheet for prototypes </div>
+</div>
+
+<div class="_sidebar-section_title"> Section Name</div>
+
+<div>
+  <span class='_sidebar-submenu_trigger'><i class="fa fa-angle-right"></i></span>
+  <a href="#" 
+     id=""
+     class="--submenu --active"
+  >
+    Submenu Title
+  </a>
+  <div class="_sidebar-submenu">
+    <div>
+      <a href="#">Submenu Item</a>
+      <a href="#">Submenu Item</a>
+      <a href="#">Submenu Item</a>
+    </div>
+  </div>
+</div>
+<div>
+  <a href="#" 
+     id=""
+     class=""
+  >
+    Submenu Title
+  </a>
+</div>
+
+</div>
+
+
+<div>
+  Main content in here
+</div>
+
+</div>
+
+<script src="../coeur/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
+
+<script>
+  $('._sidebar-submenu_trigger').on('click', function() {
+    $(this).toggleClass('--open');
+  });
+</script>
+
+</div>
+~~~html
+<div class="_grid-two">
+
+  <div class="_sidebar --divider" >
+
+    <!-- header -->
+    <div class="_padding-top">
+      <a class="_font-bold  --submenu" href="#">
+        <h4 class="_padding-bottom-none">Style Guide.</h4>
+      </a>
+      <div class="_font-small _font-italic">A cheat sheet for prototypes </div>
+    </div>
+
+    <div class="_sidebar-section_title"> Section Name</div>
+
+    <div>
+      <span class='_sidebar-submenu_trigger'><i class="fa fa-angle-right"></i></span>
+      <a href="#" 
+         id=""
+         class="--submenu --active"
+      >
+        Submenu Title
+      </a>
+      <div class="_sidebar-submenu">
+        <div>
+          <a href="#">Submenu Item</a>
+          <a href="#">Submenu Item</a>
+          <a href="#">Submenu Item</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="#" 
+         id=""
+         class=""
+      >
+        Submenu Title
+      </a>
+    </div>
+
+  </div>
+
+
+  <div>
+    Main content in here
+  </div>
+
+</div>
+
+
+
+<script src="../coeur/scriptcoeur/sticky.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+  if($("._sidebar-trigger").length > 0) {
+    var triggerElement = "._sidebar-trigger", target = "._sidebar", targetClass = "--pinned";
+    _sticky(triggerElement, target, targetClass, 0 );
+  }
+});
+
+</script>
+
+
+<script src="../coeur/scriptcoeur/smoothScroll.js" type="text/javascript"></script>
+
+<script>
+  $('._sidebar-submenu_trigger').on('click', function() {
+    $(this).toggleClass('--open');
+  });
+</script>
+
+
+~~~
+
+
+

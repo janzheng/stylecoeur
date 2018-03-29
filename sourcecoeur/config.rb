@@ -1,30 +1,33 @@
 
 # SITE CONFIG DETAILS
-set :site_title, "Peer Tutor"
-set :use_default_head, false
-set :use_default_nav, false
+set :site_title, "coeur <3"
+set :use_default_head, true
+set :use_default_nav, true
 
 # COEUR ASSETS
-# copy assets over
+# copy coeur assets to this project
 
-coeur = "../node_modules/coeur/" # << use this one to pull from node_modules 
+# what do you want synced to coeur?
+
+styles = true
+scripts = true
+source = true    # fonts, layouts, partials, etc.
+
+coeur = "../../node_modules/coeur" # << use this one to pull from node_modules 
 
 # if _src "flag" was set when running npm script, we don't pull from node_modules
+# (this is used to rebuild the base coeur project docs)
 # http://rubyforadmins.com/passing-arguments-to-script
 unless ARGV.empty?
   for arg in ARGV
     if arg == "_src"
-      coeur = "../"
+      coeur = "../../"
     end
   end
 end
 
-target = "source/coeur"
+target = "source/assets/coeur"
 
-# what do you want copied?
-styles = true
-scripts = true
-source = true    # fonts, layouts, partials, etc.
 
 
 # copy_file "initializer.rb", "config/initializers/#{file_name}.rb"
@@ -33,30 +36,31 @@ source = true    # fonts, layouts, partials, etc.
 # end
 if styles
   # puts "copying stylecoeur..."
+  FileUtils.mkdir_p "source/assets"
   FileUtils.mkdir_p "#{target}/stylecoeur"
   FileUtils.copy_entry "#{coeur}/stylecoeur", "#{target}/stylecoeur"
 end
 if scripts
   # puts "copying scriptcoeur..."
+  FileUtils.mkdir_p "source/assets"
   FileUtils.mkdir_p "#{target}/scriptcoeur"
   FileUtils.copy_entry "#{coeur}/scriptcoeur", "#{target}/scriptcoeur"
 end
 if source
   # puts "copying sourcecoeur..."
-  FileUtils.copy_entry "#{coeur}/sourcecoeur/layouts", "#{target}/../layouts"
-  FileUtils.copy_entry "#{coeur}/sourcecoeur/partials", "#{target}/../partials"
+  FileUtils.copy_entry "#{coeur}/sourcecoeur/layouts", "#{target}/../../layouts"
+  FileUtils.copy_entry "#{coeur}/sourcecoeur/partials", "#{target}/../../partials"
 
-  FileUtils.mkdir_p "#{target}/../fonts"
-  FileUtils.mkdir_p "#{target}/../fonts/coeur"
-  FileUtils.copy_entry "#{coeur}/sourcecoeur/fonts", "#{target}/../fonts/coeur/"
+  FileUtils.mkdir_p "source/assets"
+  FileUtils.mkdir_p "source/assets/fonts"
+  FileUtils.copy_entry "#{coeur}/sourcecoeur/fonts", "#{target}/../fonts/"
 
   FileUtils.mkdir_p "#{target}/../wireframes"
   FileUtils.copy_entry "#{coeur}/sourcecoeur/wireframes", "#{target}/../wireframes"
-  # FileUtils.copy_entry "#{coeur}/sourcecoeur", "#{target}/sourcecoeur"
 end
 
-# copy over the readme to be used in docs
-# FileUtils.copy_file "readme.md", "source/_imported_readme.md.erb"
+# Copy over the project readme to be available in the docs
+FileUtils.copy_file "../../readme.md", "source/_imported_readme.md.erb"
 
 
 

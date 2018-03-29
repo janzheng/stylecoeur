@@ -1,0 +1,177 @@
+---
+title: Wireframes
+type: styleguide
+layout: layout-coeur-knowbase-wf
+name: wireframes
+section: prototyping
+<!-- status: --draft -->
+source: ../../
+---
+
+<main markdown="1">
+
+<div class="_wireframe-desc" markdown="1">
+
+## Wireframes
+
+Stylecoeur can be used to stitch together wireframes. The power of wireframes is the sketchy "throwaway" look, so people don't take them seriously when reviewing them (this is the vast difference between a wireframe and a comp — wireframes need to look kind of crappy, so stakeholders focus on the functionality).
+
+The 'wireframe' idea is inspired by [Balsamiq](https://balsamiq.com/).
+
+- Components: Everything is a component. Keep component class names easy to understand. Document these components well
+- Black &amp; White: Don't use colors unless absolutely neverssay. 
+- Annotations: Wireframes are useless without context
+- Scribble and Blokk fonts help with approximating copy
+- Use real text: don’t use lorem ipsum
+
+### Middleman Template
+
+There's a special knowledge base template: `layout-coeur-knowbase-wf` that's compatible with the wireframe styles. Wireframes are Middleman partial objects, which allow them to be nested and imported anywhere. Store the wireframes in the `/wireframes` folder.
+
+</div>
+
+<div class="_wireframe-section">
+<%= partial '/partials/_coeur-wireframe', 
+    :locals => { :path => 'wireframes/coeur-wf-template' } %>
+</div>
+
+<div markdown="1">
+
+~~~
+<div class="_wireframe-section">
+<%= "\<\%\= partial '/partials/_coeur-wireframe', 
+    :locals => { :path => 'wireframes/coeur-wf-template' } \%\>" %>
+</div>
+~~~
+
+</div>
+
+<div class="_wireframe-desc" markdown="1">
+
+### HAML Wireframe Templates
+
+Middleman supports HAML, which is nice for simple layouts (but that's about it). Read this: [HAML sucks for content](http://chriseppstein.github.io/blog/2010/02/08/haml-sucks-for-content/) for tips on using HAML properly.
+
+~~~
+%wireframe._padding-left
+  %h2 Here is an example of HAML
+  %p Isn't it weird?
+~~~
+
+
+### Wireframe Components
+
+Wireframe components should be simple, generalized, and very easily placeable onto a page, with either Jade/Pug or HTML.
+
+#### Wireframe Text
+
+##### Blokk
+
+<div class="_styleguide-example">
+<div class="_font-blokk">This is BLOKK 1</div>
+<div class="_font-blokk">This is BLOKK 2</div>
+<div class="_font-blokk">This is BLOKK 3</div>
+</div>
+~~~
+<div class="_font-wf">This is BLOKK 1</div>
+<div class="_font-wf2">This is BLOKK 2</div>
+<div class="_font-wf3">This is BLOKK 3</div>
+~~~
+
+##### Redacted Text block
+
+<div class="_styleguide-example">
+<div class="_font-redacted">This is Redacted 1</div>
+<div class="_font-redacted _font-light">This is Redacted 2</div>
+<div class="_font-redacted _font-bold">This is Redacted 1</div>
+<div class="_font-redacted-block">This is Redacted Black</div>
+</div>
+~~~
+<div class="_styleguide-example">
+<div class="_font-redacted">This is Redacted 1</div>
+<div class="_font-redacted _font-light">This is Redacted 2</div>
+<div class="_font-redacted _font-bold">This is Redacted 1</div>
+<div class="_font-redacted-block">This is Redacted Black</div>
+</div>
+~~~
+
+
+#### Placeholder Image 
+
+- Generated with [Better Placeholder](https://betterplaceholder.com/) images
+- Uses `<object>` instead of `<img>` tag to handle fallback support when not connected to the internet
+- Alternately use image-holder CSS placeholders (for no-internet situations)
+- Use width/height to determine sizing
+
+
+<div class="_styleguide-example">
+<object class="_wireframe-image" data="https://via.placeholder.com/300x100" width="302" height="102" alt="This is a caption">
+<div class="_padding">This is a caption (when no data is specified, or no internet is around)</div>
+</object>
+</div>
+~~~
+<object class="_wireframe-image" data="https://via.placeholder.com/300x100" width="300" height="100">
+  This is a caption (when no data is specified, or no internet is around)
+</object>
+~~~
+
+
+#### Simple Forms
+
+Simplify the `_forms` objects to look rougher and sketchier.
+
+
+#### Geometries
+
+Simple family of tags and classes that can be placed anywhere on a page. Use sizing, rotation classes, and colors to approximate other behaviors
+
+- __Shapes:__
+  - Oval/Circle
+    - `_wireframe-circle`
+    - `_wireframe-oval`
+    - `_wireframe-round`
+  - Rectangles 
+    - `_wireframe-rectangle`
+    - `_wireframe-rect`
+    - `_wireframe-square` 
+  - Triangles
+    - `_wireframe-triangle` 
+    - `_wireframe-tri` 
+    - `--up` `--down` `--left` `--right`
+
+- __Properties:__
+  - Labels
+  - Colors
+  - Size
+
+
+<div class="_styleguide-example">
+<div>
+  <object class="_wireframe-circle _color-border-main" height="30" width="30"></object>
+</div>
+<div>
+  <object class="_wireframe-rect _color-border-warning --thick" height="30" width="100"></object>
+</div>
+<div>
+  <object class="_wireframe-triangle --up" height="30"></object>
+</div>
+<div class="_padding-top">
+  <object class="_wireframe-triangle --down" height="30"></object>
+</div>
+<div class="_padding-top">
+  <object class="_wireframe-triangle --left" height="30"></object>
+</div>
+<div class="_padding-top">
+  <object class="_wireframe-triangle --right" height="30"></object>
+</div>
+<div class="_padding-top">
+  <object class="_wireframe-triangle --up-left" height="30"></object>
+</div>
+
+</div>
+</div>
+
+</main>
+
+
+

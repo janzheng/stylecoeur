@@ -1,0 +1,53 @@
+---
+title: Animations
+type: styleguide
+layout: layout-coeur-knowbase
+name: animations
+section: fundamental
+source: ../../
+reference: _head-animations.scss
+---
+
+
+<main markdown="1">
+
+## Animations
+
+<%= partial '/partials/coeur-ref', 
+    :locals => { :refName => current_page.data.reference } %>
+
+Most basic transitions are handled by applying easing and speed (`._ease` or `%ease`) to `:hover` and other state changes:
+
+~~~scss
+%ease,        
+%ease-fast,   
+%ease-slow,   
+%ease-vslow,  
+%ease-xslow,  
+%ease-xxslow, 
+%ease-xxxslow,
+%ease-none,
+~~~~
+
+Still need to implement basic animation helpers and transitions, or find a supporting library
+{: ._message .--warning}
+
+~~~
+fadeIn
+fadeOut
+fadeInUp
+fadeInDown
+scaleUp
+scaleDown
+slideUp
+slideDown
+slideLeft
+slideRight
+flipIn
+rotateRight
+rotateLeft
+flash
+shake
+~~~
+</main>
+

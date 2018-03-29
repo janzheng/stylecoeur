@@ -1,6 +1,6 @@
 
 
-<% source = current_page.data.source || "./" %>  
+<% source = current_page.data.source || config.content_path || "./" %> 
 <% title = current_page.data.title || config.site_title %>
 
 <!doctype html>
@@ -42,15 +42,10 @@
 </html>
 
 
-<script src= <%= source + "./assets/javascripts/site.js" %> type="text/javascript"></script>
-
-<script src= <%= source + "./assets/coeur/scriptcoeur/smoothScroll.js" %> type="text/javascript"></script>
-
-<script src= <%= source + "./assets/coeur/scriptcoeur/sticky.js" %> type="text/javascript"></script>
-
-
-
-<script src= <%= source + "./assets/coeur/scriptcoeur/plugins/js.cookie.js" %> type="text/javascript"></script>
+<script src= <%= source + "assets/javascripts/site.js" %> type="text/javascript"></script>
+<script src= <%= source + "assets/coeur/scriptcoeur/smoothScroll.js" %> type="text/javascript"></script>
+<script src= <%= source + "assets/coeur/scriptcoeur/sticky.js" %> type="text/javascript"></script>
+<script src= <%= source + "assets/coeur/scriptcoeur/plugins/js.cookie.js" %> type="text/javascript"></script>
 <script>
 
 // open and close sidebar
