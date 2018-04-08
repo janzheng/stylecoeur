@@ -40,13 +40,26 @@ These notes won't make sense to anyone but me, and that's ok.
 
 ### Todo
 
+- CSS blend mode: https://kolosek.com/css-blend-mode/
+
+- the scroller code — there's a MUCH BETTER native fn now:
+  - document.getElementById('idName').scrollIntoView({behavior: 'smooth'})
+  - somewhat supported
+
 - lots of colors for a color section on tools:
   - [futuramo colors post](https://futuramo.com/blog/12-color-related-apps-tools/)
+  - [systematic color design](https://uxplanet.org/designing-systematic-colors-b5d2605b15c)
 
 - links section: cede link color by 
     $link-color-copy: none; // cedes link color to classes
 
 - explain the new colorizer and the colors somewhere
+
+- Colorate mixin should have a gradientizer
+  - e.g. color-blue = color-blue-100 (default)
+    - color-blue-70 (70% lighter)
+  - can create autogradients for the colors component
+
 
 - what's inline-size?? super interesting for typographical setting
   .exampleText {
@@ -445,10 +458,19 @@ on design + typography:
 - Cheat Sheet
   - set timeout
   - repeat timer
-  - ajax / promise
+  - ajax / promise / async/await/next
   - throttle
+  - Object.keys/forEach/map/reduce/filter tricks
+    - vs. for in, for of - https://ryanpcmcquen.org/javascript/2015/10/25/map-vs-foreach-vs-for.html
+    - for async... https://gyandeeps.com/array-reduce-async-await/
   - lodash helpers (useful)
+  - merging objects: Object.assign() (old) vs. spread operator (new)
+  - json objects
+    - stringify, parse
+    - jsonobj.get('Name') — use a map 
+  - atob / btoa base64
 
+  - list of uses
 
 
 #### Design
