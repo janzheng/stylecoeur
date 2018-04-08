@@ -1,7 +1,7 @@
 
 
 
-# \coeur
+# coeur
 
 #### The Heart of Design Systems
 
