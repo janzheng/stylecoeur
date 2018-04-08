@@ -21,7 +21,7 @@ $size-smaller:  $size * 14/16    !default; // 14px; dumb but super useful
 $size-base:     $size            !default; // default is 16px
 $size-larger:   $size * 20/16    !default; // 20px; hard choice; 20 div by 2,4,5 and halfway; 18 div by 3, 6, 9 
 $size-p1:       $size * 24/16    !default; // 24px Plus Sizes [p]
-$size-p2:       $size * 28/16    !default; // 28
+$size-p2:       $size * 32/16    !default; // 32
 $size-p3:       $size * 40/16    !default; // 40
 $size-p4:       $size * 48/16    !default; // 48
 $size-p5:       $size * 56/16    !default; // 56
@@ -95,7 +95,7 @@ $width-lg-max: 2100px   !default;
 
 
 // Helper Widths
-$width-site-min: 360px  !default; // absolute minimum site width
+$width-site-min: 320px  !default; // absolute minimum site width: iPhone 5 (320px), there are thinner but whatever
 
 // sometimes sites have a 'magical' breakpoint based on content structure
 $width-magic: 640px     !default;

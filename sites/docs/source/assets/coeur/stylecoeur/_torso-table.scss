@@ -143,6 +143,8 @@ $table-padding-h: $size-base;
   // invert/pivot the x/y axis
   // good for mobile
   @mixin stack {
+    $width: $size-p8;
+
     .--group {
       th:first-of-type {
         border-width: $border-thick;
@@ -161,7 +163,12 @@ $table-padding-h: $size-base;
     th[data-title]:before, td[data-title]:before {
       content: attr(data-title) ":\a0";
       display: inline-block;
-      width: $size-p8;
+      // width: $size-p8;
+      position: absolute;
+      left: $size-base;
+    }
+    td {
+      padding-left: $width !important;
     }
     tbody tr td:first-of-type {
       font-weight: bold;

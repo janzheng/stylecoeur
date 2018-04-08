@@ -73,6 +73,7 @@ $expander-color-hover-bg: $color-silver-light !default;
           height: 0;
           opacity: 0;
           margin: 0;
+          display: inline-block;
           // padding: 0;
           @extend %ease-fast;
           // transform: scaleY(0);
@@ -95,6 +96,7 @@ $expander-color-hover-bg: $color-silver-light !default;
         height: auto;
         opacity: 1;
         @extend %ease-fast;
+        display: initial;
         // transform: scaleY(1);
       }
     }

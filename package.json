@@ -20,9 +20,9 @@
   "scripts": {
     "commit": "git add . -A ; git commit ; git push origin master ",
     "build": "cd sites/docs ; npm run build -- _src",
-    "deploy": "cd sites/docs ; npm run deploy -- _src",
+    "deploy": "cd sites/docs ; npm run prod -- _src",
     "stage": "cd sites/docs ; npm run stage -- _src",
-    "prod": "cd sites/docs ; npm run deploy -- _src",
+    "prod": "cd sites/docs ; npm run prod -- _src",
     "github": "cd sites/docs ; npm run github -- _src",
     "install_docs": "mkdir sites/docs; cp -a node_modules/coeur/docs/. sites/docs/.",
     "start": "cd sites/docs ; npm run server -- _src"
